@@ -1,7 +1,8 @@
-export type View = "home" | "review" | "words" | "sentence" | "speak" | "progress" | "errors";
+export type View = "home" | "review" | "words" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors";
 
 export type LearningState = {
   completedSteps: number[];
+  completedLessons: string[];
   dueReviews: number;
   reviewIndex: number;
   wordIndex: number;
@@ -13,13 +14,12 @@ export type LearningState = {
 };
 
 export type WordItem = {
-  word: string;
-  phonetic: string;
-  part: string;
-  meaning: string;
-  cue: string;
-  example: string;
-  collocation: string;
-  japanese?: string;
-  mongolian?: string;
+  word: string; phonetic: string; part: string; meaning: string; cue: string;
+  example: string; collocation: string; japanese?: string; mongolian?: string;
+};
+
+export type LexiconItem = {
+  id: string; term: string; phonetic: string; part: string; meaning: string;
+  category: string; kind: "word" | "chunk"; level: string;
+  cue?: string; example?: string; collocation?: string;
 };
