@@ -1,14 +1,13 @@
 import {
-  buildLearningLexicon as buildBatch05Lexicon,
+  buildLearningLexicon as buildBatch04Lexicon,
   lexiconQuality,
   verifiedChunkContent,
   verifiedWordBatch01,
   verifiedWordBatch02,
   verifiedWordBatch03,
   verifiedWordBatch04,
-  verifiedWordBatch05,
-} from "./lexicon-content-batch05.mjs";
-import { verifiedWordBatch06 } from "./verified-word-batch-06.mjs";
+} from "./lexicon-content-batch04.mjs";
+import { verifiedWordBatch05 } from "./verified-word-batch-05.mjs";
 
 export {
   lexiconQuality,
@@ -18,12 +17,11 @@ export {
   verifiedWordBatch03,
   verifiedWordBatch04,
   verifiedWordBatch05,
-  verifiedWordBatch06,
 };
 
 export function buildLearningLexicon(items) {
-  return buildBatch05Lexicon(items).map((item) => {
-    const reviewed = verifiedWordBatch06[item.term.toLowerCase()];
+  return buildBatch04Lexicon(items).map((item) => {
+    const reviewed = verifiedWordBatch05[item.term.toLowerCase()];
     if (!reviewed) return item;
     return {
       ...item,

@@ -5,6 +5,8 @@ import { verifiedWordBatch01 } from "../src/content/verified-word-batch-01.mjs";
 import { verifiedWordBatch02 } from "../src/content/verified-word-batch-02.mjs";
 import { verifiedWordBatch03 } from "../src/content/verified-word-batch-03.mjs";
 import { verifiedWordBatch04 } from "../src/content/verified-word-batch-04.mjs";
+import { verifiedWordBatch05 } from "../src/content/verified-word-batch-05.mjs";
+import { verifiedWordBatch06 } from "../src/content/verified-word-batch-06.mjs";
 
 const read = (path) => fs.readFileSync(new URL(path, import.meta.url), "utf8");
 const previousCourses = [
@@ -18,13 +20,13 @@ const batch03 = read("../src/content/curriculum-batch-03.ts");
 
 const values = (source, pattern) => [...source.matchAll(pattern)].map((match) => match[1]);
 
-test("all 600 reviewed word contexts remain unique across four batches", () => {
-  const reviewed = [...Object.values(verifiedWordBatch01), ...Object.values(verifiedWordBatch02), ...Object.values(verifiedWordBatch03), ...Object.values(verifiedWordBatch04)];
-  assert.equal(reviewed.length, 600);
+test("all 868 explicit reviewed word contexts remain unique across six batches", () => {
+  const reviewed = [...Object.values(verifiedWordBatch01), ...Object.values(verifiedWordBatch02), ...Object.values(verifiedWordBatch03), ...Object.values(verifiedWordBatch04), ...Object.values(verifiedWordBatch05), ...Object.values(verifiedWordBatch06)];
+  assert.equal(reviewed.length, 868);
   const examples = reviewed.map((item) => item.example.toLowerCase());
   const collocations = reviewed.map((item) => item.collocation.toLowerCase());
-  assert.equal(new Set(examples).size, 600);
-  assert.equal(new Set(collocations).size, 600);
+  assert.equal(new Set(examples).size, 868);
+  assert.equal(new Set(collocations).size, 868);
 });
 
 test("batch 03 adds only distinct, substantive lesson scenarios", () => {

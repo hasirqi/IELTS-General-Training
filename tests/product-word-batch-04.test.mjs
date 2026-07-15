@@ -8,7 +8,7 @@ import {
   verifiedWordBatch02,
   verifiedWordBatch03,
   verifiedWordBatch04,
-} from "../src/content/lexicon-content.mjs";
+} from "../src/content/lexicon-content-batch04.mjs";
 
 const entries = Object.entries(verifiedWordBatch04);
 const banned = /placeholder|lorem|todo|待补|示例句|example sentence/i;
