@@ -21,8 +21,8 @@ test("verified usage content is explicit and never fabricated for unreviewed wor
   assert.equal(Object.keys(verifiedChunkContent).length, 120);
   const quality = lexiconQuality(lexicon);
   assert.equal(quality.total, 1000);
-  assert.equal(quality.verified, 282);
-  assert.equal(quality.coreOnly, 718);
+  assert.equal(quality.verified, 432);
+  assert.equal(quality.coreOnly, 568);
   for (const item of lexicon.filter((entry) => entry.contentStatus === "verified")) {
     assert.ok(item.cue && item.example && item.collocation, item.term);
   }
@@ -69,8 +69,8 @@ test("wrong recall returns quickly while strong recall increases mastery", () =>
 test("overall progress is derived from real coverage, mastery and lessons", () => {
   const base = introduceLexiconItem(undefined, "chunk-0001", { confidence:5, supportsUse:true });
   const stats = masteryStats({ [base.id]:base });
-  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1000,completedLessons:1,totalLessons:96,masteryAverage:stats.average });
-  const later = overallProgress({ introduced:700,totalVocabulary:1000,completedLessons:72,totalLessons:96,masteryAverage:72 });
+  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1000,completedLessons:1,totalLessons:128,masteryAverage:stats.average });
+  const later = overallProgress({ introduced:700,totalVocabulary:1000,completedLessons:96,totalLessons:128,masteryAverage:72 });
   assert.ok(early < later);
   assert.ok(later > 60);
 });
