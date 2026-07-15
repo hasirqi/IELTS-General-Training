@@ -1,2 +1,4 @@
 import "./course.css";
-export { App } from "./AppCore";
+import "./product-fixes.css";
+
+export { App } from "./AppProduct";

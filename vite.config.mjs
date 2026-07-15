@@ -6,6 +6,20 @@ export default defineConfig({
   base: "./",
   optimizeDeps: { include: ["react", "react-dom/client"] },
   server: { host: "0.0.0.0", allowedHosts: ["terminal.local"] },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return undefined;
+          if (id.includes("@tabler/icons-react")) return "icons";
+          if (id.includes("react")) return "react";
+          if (id.includes("idb")) return "storage";
+          if (id.includes("workbox")) return "pwa";
+          return "vendor";
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({
@@ -20,9 +34,9 @@ export default defineConfig({
         display: "standalone",
         start_url: "./",
         lang: "zh-CN",
-        icons: [{ src: "icons/app-icon.png", sizes: "1024x1024", type: "image/png", purpose: "any maskable" }]
+        icons: [{ src: "icons/app-icon.png", sizes: "1024x1024", type: "image/png", purpose: "any maskable" }],
       },
-      workbox: { globPatterns: ["**/*.{js,css,html,png,woff2,mp3}"] }
-    })
-  ]
+      workbox: { globPatterns: ["**/*.{js,css,html,png,woff2,mp3}"] },
+    }),
+  ],
 });
