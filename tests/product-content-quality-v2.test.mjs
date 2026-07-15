@@ -11,8 +11,11 @@ const batch02 = read("../src/content/curriculum-batch-02.ts");
 const batch03 = read("../src/content/curriculum-batch-03.ts");
 const batch04 = read("../src/content/curriculum-batch-04.ts");
 const batch05 = read("../src/content/curriculum-batch-05.ts");
-const sentence = read("../src/content/sentence-challenges.ts");
-const drills = read("../src/content/speaking-drills.ts");
+const sentenceBase = read("../src/content/sentence-challenges-base.ts");
+const foundationBatch02 = read("../src/content/foundation-batch-02.ts");
+const sentence = `${sentenceBase}\n${foundationBatch02}`;
+const drillsBase = read("../src/content/speaking-drills-base.ts");
+const drills = `${drillsBase}\n${foundationBatch02}`;
 const roadmap = read("../src/content/roadmap.ts");
 
 function ids(source, prefix) {
@@ -100,10 +103,10 @@ test("foundation banks and the 36-week roadmap remain substantive and unique", (
   const sentenceIds = ids(sentence, "g");
   const drillIds = ids(drills, "d");
   const weeks = [...roadmap.matchAll(/week:(\d+)/g)].map((match) => Number(match[1]));
-  assert.equal(sentenceIds.length, 36);
-  assert.equal(new Set(sentenceIds).size, 36);
-  assert.equal(drillIds.length, 36);
-  assert.equal(new Set(drillIds).size, 36);
+  assert.equal(sentenceIds.length, 48);
+  assert.equal(new Set(sentenceIds).size, 48);
+  assert.equal(drillIds.length, 48);
+  assert.equal(new Set(drillIds).size, 48);
   assert.deepEqual(weeks, Array.from({ length: 36 }, (_, index) => index + 1));
 });
 
