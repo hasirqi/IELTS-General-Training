@@ -1,12 +1,12 @@
-import { curriculum as previousCurriculum } from "./course-bank-batch04";
-import { curriculumBatch05 } from "./curriculum-batch-05";
+import { curriculum as previousCurriculum } from "./course-bank-batch03";
+import { curriculumBatch04 } from "./curriculum-batch-04";
 import type { CourseLesson } from "./curriculum-v2";
 
 export type { CourseLesson };
 
 export const curriculum: CourseLesson[] = [
   ...previousCurriculum,
-  ...curriculumBatch05,
+  ...curriculumBatch04,
 ];
 
 const count = (skill: CourseLesson["skill"]) => curriculum.filter((lesson) => lesson.skill === skill).length;
