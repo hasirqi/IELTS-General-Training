@@ -6,7 +6,7 @@ import {
   lexiconQuality,
   verifiedWordBatch01,
   verifiedWordBatch02,
-} from "../src/content/lexicon-content.mjs";
+} from "../src/content/lexicon-content-batch02.mjs";
 
 const entries = Object.entries(verifiedWordBatch02);
 const banned = /placeholder|lorem|todo|待补|示例句|example sentence/i;

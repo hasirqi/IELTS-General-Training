@@ -21,8 +21,8 @@ test("verified usage content is explicit and never fabricated for unreviewed wor
   assert.equal(Object.keys(verifiedChunkContent).length, 120);
   const quality = lexiconQuality(lexicon);
   assert.equal(quality.total, 1000);
-  assert.equal(quality.verified, 432);
-  assert.equal(quality.coreOnly, 568);
+  assert.equal(quality.verified, 582);
+  assert.equal(quality.coreOnly, 418);
   for (const item of lexicon.filter((entry) => entry.contentStatus === "verified")) {
     assert.ok(item.cue && item.example && item.collocation, item.term);
   }

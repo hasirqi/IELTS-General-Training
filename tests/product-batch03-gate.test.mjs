@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { verifiedWordBatch01 } from "../src/content/verified-word-batch-01.mjs";
 import { verifiedWordBatch02 } from "../src/content/verified-word-batch-02.mjs";
+import { verifiedWordBatch03 } from "../src/content/verified-word-batch-03.mjs";
 
 const read = (path) => fs.readFileSync(new URL(path, import.meta.url), "utf8");
 const previousCourses = [
@@ -16,13 +17,13 @@ const batch03 = read("../src/content/curriculum-batch-03.ts");
 
 const values = (source, pattern) => [...source.matchAll(pattern)].map((match) => match[1]);
 
-test("all 300 reviewed word contexts remain unique across both batches", () => {
-  const reviewed = [...Object.values(verifiedWordBatch01), ...Object.values(verifiedWordBatch02)];
-  assert.equal(reviewed.length, 300);
+test("all 450 reviewed word contexts remain unique across three batches", () => {
+  const reviewed = [...Object.values(verifiedWordBatch01), ...Object.values(verifiedWordBatch02), ...Object.values(verifiedWordBatch03)];
+  assert.equal(reviewed.length, 450);
   const examples = reviewed.map((item) => item.example.toLowerCase());
   const collocations = reviewed.map((item) => item.collocation.toLowerCase());
-  assert.equal(new Set(examples).size, 300);
-  assert.equal(new Set(collocations).size, 300);
+  assert.equal(new Set(examples).size, 450);
+  assert.equal(new Set(collocations).size, 450);
 });
 
 test("batch 03 adds only distinct, substantive lesson scenarios", () => {
