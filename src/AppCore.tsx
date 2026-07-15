@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { IconArrowLeft,IconArrowRight,IconBook2,IconBrain,IconCalendarEvent,IconCheck,IconClipboardText,IconFlask2,IconHeadphones,IconLanguage,IconLibrary,IconMicrophone,IconPlayerPlay,IconRefresh,IconRobot,IconSearch,IconTargetArrow,IconVolume,IconWriting,IconX } from "@tabler/icons-react";
+import { IconArrowLeft,IconArrowRight,IconBook2,IconBrain,IconCheck,IconClipboardText,IconFlask2,IconHeadphones,IconLanguage,IconLibrary,IconMicrophone,IconPlayerPlay,IconRefresh,IconRobot,IconSearch,IconTargetArrow,IconVolume,IconWriting,IconX } from "@tabler/icons-react";
 import { newWords, reviewWords, sentenceChallenge } from "./data";
 import { curriculum, skillMeta, type CourseLesson } from "./curriculum";
 import rawLexicon from "./content/lexicon.json";
@@ -14,7 +14,6 @@ const steps=[
  {title:"句型实验室",subtitle:"看清主干，灵活造句",minutes:10,icon:IconFlask2,view:"sentence" as View},
  {title:"开口任务",subtitle:"真实表达，不怕说错",minutes:10,icon:IconMicrophone,view:"speak" as View}
 ];
-const today=new Intl.DateTimeFormat("zh-CN",{year:"numeric",month:"2-digit",day:"2-digit",weekday:"short"}).format(new Date());
 
 let activeFixedAudio:HTMLAudioElement|null=null;
 function playFixedAudio(path:string,fallback:string){if(activeFixedAudio)activeFixedAudio.pause();const audio=new Audio(path);activeFixedAudio=audio;audio.play().catch(()=>speakEnglish(fallback));}
@@ -39,13 +38,22 @@ export function App(){
 }
 
 function Home({state,onOpen,onOpenCourse,onChat,onReset}:{state:LearningState;onOpen:(v:View)=>void;onOpenCourse:(skill:CourseLesson["skill"])=>void;onChat:()=>void;onReset:()=>void}){
- const p=state.completedSteps.length/4, completed=state.completedLessons.length;
- return <main className="home"><header className="brand-row"><button className="brand"><span className="brand-mark"><IconBook2 size={28}/></span><span><strong>破壁 IELTS 6</strong><small>IELTS GENERAL TRAINING</small></span></button><div className="header-actions"><button className="text-button library-header-link" onClick={()=>onOpen("library")}><IconLibrary size={19}/>词库 1,000 条</button><button className="text-button" onClick={onChat}><IconRobot size={19}/>向 ChatGPT 提问</button><span className="date"><IconCalendarEvent size={19}/>{today}</span></div></header>
- <section className="hero-grid"><div className="intro"><p className="eyebrow">每日 30–45 分钟 · 本地保存 · 稳步提升</p><h1>今天学什么</h1><div className="motto">英语难不倒我</div></div><div className="score-panel"><div className="score-copy"><span>当前水平<strong>4.0</strong></span><IconArrowRight/><span>目标分数<strong className="target">6.0</strong></span></div><div className="score-track"><span style={{width:`${Math.max(26,p*100)}%`}}/></div><p>{p?`今天已完成 ${state.completedSteps.length}/4 步`:"你的进步，正在发生"}</p></div></section>
- <section className="path-section"><div className="section-heading"><h2>今天的学习路径</h2><span>预计 38 分钟</span></div><div className="learning-path">{steps.map((s,i)=>{const I=s.icon,d=state.completedSteps.includes(i);return <button key={s.title} className={`path-step ${d?"done":""}`} onClick={()=>onOpen(s.view)}><span className="step-number">{d?<IconCheck size={16}/>:i+1}</span><span className="step-icon"><I size={31}/></span><span className="step-copy"><strong>{s.title}</strong><small>{s.subtitle}</small><em>{s.minutes} 分钟</em></span></button>;})}</div><button className="primary-cta" onClick={()=>onOpen(steps.find((_,i)=>!state.completedSteps.includes(i))?.view??"review")}>{state.completedSteps.length===4?"再练一轮":"开始今天训练"}<IconArrowRight/></button><p className="cta-note">系统会根据回答调整难度，不要求一次完美</p></section>
- <section className="course-overview"><div className="section-heading"><h2>General Training 四项课程</h2><span>当前 22 课 · 首批原创练习</span></div><div className="skill-cards">{Object.entries(skillMeta).map(([key,m])=>{const icons={listening:IconHeadphones,reading:IconBook2,writing:IconWriting,speaking:IconMicrophone};const I=icons[key as keyof typeof icons];const done=state.completedLessons.filter(id=>id.startsWith(key[0])).length;return <button key={key} onClick={()=>onOpenCourse(key as CourseLesson["skill"])}><I/><strong>{m.label}</strong><span>{m.description}</span><em>{done}/{m.count} 课完成</em></button>;})}</div></section>
- <section className="review-strip"><div className="review-count"><IconClipboardText/><span>待复习<strong>{state.dueReviews}</strong>个</span></div><div><strong>及时复习，记得更牢。</strong><p>错词会回来，不用死记硬背。</p></div><button className="outline-button" onClick={()=>onOpen("review")}>去复习<IconArrowRight/></button></section>
- <footer className="home-footer"><button onClick={()=>onOpen("progress")}><IconTargetArrow/>能力进度</button><button onClick={()=>onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer></main>;
+ return <main className="home pragmatic-home">
+  <header className="brand-row"><button className="brand"><span className="brand-mark"><IconBook2 size={28}/></span><span><strong>破壁 IELTS 6</strong><small>IELTS GENERAL TRAINING</small></span></button><div className="header-actions"><button className="text-button library-header-link" onClick={()=>onOpen("library")}><IconLibrary size={19}/>词库 1,000 条</button><button className="text-button" onClick={onChat}><IconRobot size={19}/>向 ChatGPT 提问</button></div></header>
+
+  <section className="direct-learning">
+   <div className="direct-heading"><div><p className="eyebrow">IELTS GENERAL TRAINING · 目标 6.0</p><h1>选择训练</h1></div><p className="quiet-motto">英语难不倒我</p></div>
+   <div className="skill-cards primary-skill-cards">{Object.entries(skillMeta).map(([key,m])=>{const icons={listening:IconHeadphones,reading:IconBook2,writing:IconWriting,speaking:IconMicrophone};const I=icons[key as keyof typeof icons];const done=state.completedLessons.filter(id=>id.startsWith(key[0])).length;return <button key={key} onClick={()=>onOpenCourse(key as CourseLesson["skill"])}><I/><strong>{m.label}</strong><span>{m.description}</span><em>{done}/{m.count} 课完成</em><b>进入训练 <IconArrowRight size={17}/></b></button>;})}</div>
+  </section>
+
+  <section className="foundation-section">
+   <div className="section-heading"><h2>基础训练</h2><span>词汇、句型和开口热身</span></div>
+   <div className="foundation-grid">{steps.map((step,index)=>{const Icon=step.icon;const done=state.completedSteps.includes(index);return <button key={step.title} onClick={()=>onOpen(step.view)}><span className={done?"foundation-icon done":"foundation-icon"}>{done?<IconCheck size={22}/>:<Icon size={25}/>}</span><span><strong>{step.title}</strong><small>{step.subtitle}</small></span><IconArrowRight className="foundation-arrow" size={18}/></button>;})}</div>
+  </section>
+
+  <section className="review-strip"><div className="review-count"><IconClipboardText/><span>待复习<strong>{state.dueReviews}</strong>个</span></div><div><strong>及时复习，记得更牢。</strong><p>错词会回来，不用死记硬背。</p></div><button className="outline-button" onClick={()=>onOpen("review")}>去复习<IconArrowRight/></button></section>
+  <footer className="home-footer"><button onClick={()=>onOpen("progress")}><IconTargetArrow/>能力进度</button><button onClick={()=>onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
+ </main>;
 }
 
 function Shell({view,back,chat,children}:{view:View;back:()=>void;chat:()=>void;children:React.ReactNode}){const labels:Record<View,string>={home:"今日训练",review:"主动回忆",words:"词义实验室",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:"1,000 词库",progress:"能力进度",errors:"错因档案"};return <main className="lesson-page"><header className="lesson-header"><button className="icon-button" onClick={back} aria-label="返回首页"><IconArrowLeft/></button><div><small>破壁 IELTS 6</small><strong>{labels[view]}</strong></div><button className="text-button" onClick={chat}><IconRobot/>问 ChatGPT</button></header><div className="lesson-progress"><span className="active-2"/></div>{children}</main>;}
