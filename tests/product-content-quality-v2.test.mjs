@@ -7,72 +7,101 @@ const listening = read("../src/content/curriculum-v2.ts");
 const reading = read("../src/content/reading-lessons.ts");
 const writing = read("../src/content/writing-lessons.ts");
 const speaking = read("../src/content/speaking-lessons.ts");
+const batch02 = read("../src/content/curriculum-batch-02.ts");
 const sentence = read("../src/content/sentence-challenges.ts");
 const drills = read("../src/content/speaking-drills.ts");
 const roadmap = read("../src/content/roadmap.ts");
 
 function ids(source, prefix) {
-  return [...source.matchAll(new RegExp(`id:\"(${prefix}\\d+)\"`, "g"))].map((match) => match[1]);
+  return [...source.matchAll(new RegExp(`id:\\s*"(${prefix}\\d+)"`, "g"))].map((match) => match[1]);
 }
 
 function questions(source) {
-  const pattern = /q\("([^"]+)",(\[[^\]]+\]),"([^"]+)","([^"]*)"\)/g;
-  return [...source.matchAll(pattern)].map((match) => ({ prompt:match[1], options:JSON.parse(match[2]), answer:match[3], explanation:match[4] }));
+  const pattern = /q\(\s*"([^"]+)"\s*,\s*(\[[^\]]+\])\s*,\s*"([^"]+)"\s*,\s*"([^"]*)"\s*\)/g;
+  return [...source.matchAll(pattern)].map((match) => ({
+    prompt: match[1],
+    options: JSON.parse(match[2]),
+    answer: match[3],
+    explanation: match[4],
+  }));
 }
 
-test("the first complete curriculum batch contains 64 unique lessons", () => {
-  const groups = [ids(listening,"l"),ids(reading,"r"),ids(writing,"w"),ids(speaking,"s")];
+const batchSection = (start, end) => batch02.slice(batch02.indexOf(start), batch02.indexOf(end));
+const batchSections = {
+  listening: batchSection("export const listeningBatch02", "export const readingBatch02"),
+  reading: batchSection("export const readingBatch02", "const task1Checklist"),
+  writing: batchSection("export const writingBatch02", "export const speakingBatch02"),
+  speaking: batchSection("export const speakingBatch02", "export const curriculumBatch02"),
+};
+const combined = {
+  listening: `${listening}\n${batchSections.listening}`,
+  reading: `${reading}\n${batchSections.reading}`,
+  writing: `${writing}\n${batchSections.writing}`,
+  speaking: `${speaking}\n${batchSections.speaking}`,
+};
+
+test("two validated curriculum batches contain 96 unique lessons", () => {
+  const groups = Object.entries(combined).map(([skill, source]) => {
+    const prefix = { listening: "l", reading: "r", writing: "w", speaking: "s" }[skill];
+    return ids(source, prefix);
+  });
   for (const group of groups) {
-    assert.equal(group.length,16);
-    assert.equal(new Set(group).size,16);
+    assert.equal(group.length, 24);
+    assert.equal(new Set(group).size, 24);
   }
-  assert.equal(groups.flat().length,64);
+  assert.equal(groups.flat().length, 96);
+  assert.equal(new Set(groups.flat()).size, 96);
 });
 
-test("all 128 objective questions have English prompts and deterministic answers", () => {
-  const objective = [...questions(listening),...questions(reading)];
-  assert.equal(questions(listening).length,64);
-  assert.equal(questions(reading).length,64);
-  for (const question of objective) {
-    assert.match(question.prompt,/^[A-Za-z]/);
-    assert.doesNotMatch(question.prompt,/[一-鿿]/);
-    assert.equal(question.options.length,3,question.prompt);
-    assert.equal(new Set(question.options).size,3,question.prompt);
-    assert.ok(question.options.includes(question.answer),question.prompt);
-    assert.ok(question.explanation.length>=4,question.prompt);
+test("all 192 objective questions have English prompts and deterministic answers", () => {
+  const listeningQuestions = questions(combined.listening);
+  const readingQuestions = questions(combined.reading);
+  assert.equal(listeningQuestions.length, 96);
+  assert.equal(readingQuestions.length, 96);
+  for (const question of [...listeningQuestions, ...readingQuestions]) {
+    assert.match(question.prompt, /^[A-Za-z]/);
+    assert.doesNotMatch(question.prompt, /[\u3400-\u9fff]/);
+    assert.equal(question.options.length, 3, question.prompt);
+    assert.equal(new Set(question.options).size, 3, question.prompt);
+    assert.ok(question.options.includes(question.answer), question.prompt);
+    assert.ok(question.explanation.length >= 4, question.prompt);
   }
 });
 
-test("listening deliberately gives beginners more Part 1 and Part 2 practice", () => {
-  const expected = {"Part 1":5,"Part 2":5,"Part 3":3,"Part 4":3};
-  for (const [part,count] of Object.entries(expected)) assert.equal((listening.match(new RegExp(`section:\"${part}\"`,"g"))??[]).length,count);
-  const files = [...listening.matchAll(/audioFile:\"(l\d+\.mp3)\"/g)].map((match)=>match[1]);
-  assert.equal(files.length,16);
-  assert.equal(new Set(files).size,16);
+test("listening keeps all four official parts and fixed audio coverage", () => {
+  const expected = { "Part 1": 7, "Part 2": 7, "Part 3": 5, "Part 4": 5 };
+  for (const [part, count] of Object.entries(expected)) {
+    assert.equal((combined.listening.match(new RegExp(`section:\\s*"${part}"`, "g")) ?? []).length, count);
+  }
+  const files = [...combined.listening.matchAll(/audioFile:\s*"(l\d+\.mp3)"/g)].map((match) => match[1]);
+  assert.equal(files.length, 24);
+  assert.equal(new Set(files).size, 24);
 });
 
-test("reading, writing and speaking cover their official structures", () => {
-  assert.equal((reading.match(/section:\"Section 1\"/g)??[]).length,6);
-  assert.equal((reading.match(/section:\"Section 2\"/g)??[]).length,5);
-  assert.equal((reading.match(/section:\"Section 3\"/g)??[]).length,5);
-  assert.equal((writing.match(/section:\"Task 1/g)??[]).length,8);
-  assert.equal((writing.match(/section:\"Task 2/g)??[]).length,8);
-  assert.equal((speaking.match(/section:\"Part 1\"/g)??[]).length,6);
-  assert.equal((speaking.match(/section:\"Part 2\"/g)??[]).length,5);
-  assert.equal((speaking.match(/section:\"Part 3\"/g)??[]).length,5);
+test("reading, writing and speaking retain complete official structures", () => {
+  const expected = [
+    [combined.reading, "Section 1", 9], [combined.reading, "Section 2", 8], [combined.reading, "Section 3", 7],
+    [combined.writing, "Task 1", 12], [combined.writing, "Task 2", 12],
+    [combined.speaking, "Part 1", 9], [combined.speaking, "Part 2", 8], [combined.speaking, "Part 3", 7],
+  ];
+  for (const [source, section, count] of expected) {
+    assert.equal((source.match(new RegExp(`section:\\s*"${section}`, "g")) ?? []).length, count);
+  }
 });
 
-test("foundation banks and the long-term roadmap are substantive and unique", () => {
-  const sentenceIds = ids(sentence,"g");
-  const drillIds = ids(drills,"d");
-  const weeks = [...roadmap.matchAll(/week:(\d+)/g)].map((match)=>Number(match[1]));
-  assert.equal(sentenceIds.length,36);
-  assert.equal(new Set(sentenceIds).size,36);
-  assert.equal(drillIds.length,36);
-  assert.equal(new Set(drillIds).size,36);
-  assert.deepEqual(weeks,Array.from({length:36},(_,index)=>index+1));
+test("foundation banks and the 36-week roadmap remain substantive and unique", () => {
+  const sentenceIds = ids(sentence, "g");
+  const drillIds = ids(drills, "d");
+  const weeks = [...roadmap.matchAll(/week:(\d+)/g)].map((match) => Number(match[1]));
+  assert.equal(sentenceIds.length, 36);
+  assert.equal(new Set(sentenceIds).size, 36);
+  assert.equal(drillIds.length, 36);
+  assert.equal(new Set(drillIds).size, 36);
+  assert.deepEqual(weeks, Array.from({ length: 36 }, (_, index) => index + 1));
 });
 
-test("published course banks contain no placeholder copy", () => {
-  for (const source of [listening,reading,writing,speaking,sentence,drills,roadmap]) assert.doesNotMatch(source,/TODO|TBD|lorem ipsum|待补|示例内容/i);
+test("all published course sources contain no placeholder copy", () => {
+  for (const source of [listening, reading, writing, speaking, batch02, sentence, drills, roadmap]) {
+    assert.doesNotMatch(source, /TODO|TBD|lorem ipsum|待完善|示例内容|placeholder/i);
+  }
 });

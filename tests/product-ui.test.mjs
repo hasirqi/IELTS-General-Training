@@ -10,7 +10,7 @@ const html = fs.readFileSync(new URL("../index.html", import.meta.url), "utf8");
 
 test("the product entry uses the complete learning implementation", () => {
   assert.match(entry,/AppProduct/);
-  assert.match(app,/64 节原创 General Training 训练/);
+  assert.match(app,/\{curriculum\.length\} 节原创 General Training 训练/);
   assert.match(app,/sentenceChallenges\.length/);
   assert.match(app,/speakingDrills\.length/);
 });
