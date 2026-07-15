@@ -69,8 +69,8 @@ test("wrong recall returns quickly while strong recall increases mastery", () =>
 test("overall progress is derived from real coverage, mastery and lessons", () => {
   const base = introduceLexiconItem(undefined, "chunk-0001", { confidence:5, supportsUse:true });
   const stats = masteryStats({ [base.id]:base });
-  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1000,completedLessons:1,totalLessons:128,masteryAverage:stats.average });
-  const later = overallProgress({ introduced:700,totalVocabulary:1000,completedLessons:96,totalLessons:128,masteryAverage:72 });
+  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1000,completedLessons:1,totalLessons:160,masteryAverage:stats.average });
+  const later = overallProgress({ introduced:700,totalVocabulary:1000,completedLessons:120,totalLessons:160,masteryAverage:72 });
   assert.ok(early < later);
   assert.ok(later > 60);
 });
