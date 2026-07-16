@@ -57,5 +57,6 @@ export type LexiconItem = {
   cue?: string;
   example?: string;
   collocation?: string;
+  meaningNote?: string;
   contentStatus?: "verified" | "core-only";
 };
