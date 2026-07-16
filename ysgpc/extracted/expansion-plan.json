@@ -15,7 +15,10 @@
     "sourceReadyBeforeCuration": 3143,
     "curationHeld": 10,
     "eligibleForBatches": 3133,
-    "remainingAfterBatch01": 2933
+    "remainingAfterBatch01": 2933,
+    "remainingAfterBatch02": 2733,
+    "publishedBatchCount": 2,
+    "publishedCandidateCount": 400
   },
   "valueTiers": {
     "active": 882,

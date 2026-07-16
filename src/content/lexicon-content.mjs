@@ -10,6 +10,7 @@ import {
   verifiedWordBatch06,
 } from "./lexicon-content-baseline.mjs";
 import { verifiedCoreWordBatch01 } from "./verified-core-word-batch-01.mjs";
+import { verifiedCoreWordBatch02 } from "./verified-core-word-batch-02.mjs";
 
 const expandedSenseContent = {
   require: {
@@ -28,11 +29,12 @@ export {
   verifiedWordBatch05,
   verifiedWordBatch06,
   verifiedCoreWordBatch01,
+  verifiedCoreWordBatch02,
 };
 
 export function buildLearningLexicon(items) {
   return buildBaselineLexicon(items).map((item) => {
-    const reviewed = verifiedCoreWordBatch01[item.term.toLowerCase()];
+    const reviewed = verifiedCoreWordBatch02[item.term.toLowerCase()] ?? verifiedCoreWordBatch01[item.term.toLowerCase()];
     const expanded = expandedSenseContent[item.term.toLowerCase()];
     const merged = reviewed ? {
       ...item,

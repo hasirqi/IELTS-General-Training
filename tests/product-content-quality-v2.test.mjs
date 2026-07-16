@@ -14,13 +14,15 @@ const batch05 = read("../src/content/curriculum-batch-05.ts");
 const batch06 = read("../src/content/curriculum-batch-06.ts");
 const batch07 = read("../src/content/curriculum-batch-07.ts");
 const batch08 = read("../src/content/curriculum-batch-08.ts");
+const batch09 = read("../src/content/curriculum-batch-09.ts");
 const sentenceBase = read("../src/content/sentence-challenges-base.ts");
 const foundationBatch02 = read("../src/content/foundation-batch-02.ts");
 const foundationBatch03 = read("../src/content/foundation-batch-03.ts");
 const foundationBatch04 = read("../src/content/foundation-batch-04.ts");
-const sentence = `${sentenceBase}\n${foundationBatch02}\n${foundationBatch03}\n${foundationBatch04}`;
+const foundationBatch05 = read("../src/content/foundation-batch-05.ts");
+const sentence = `${sentenceBase}\n${foundationBatch02}\n${foundationBatch03}\n${foundationBatch04}\n${foundationBatch05}`;
 const drillsBase = read("../src/content/speaking-drills-base.ts");
-const drills = `${drillsBase}\n${foundationBatch02}\n${foundationBatch03}\n${foundationBatch04}`;
+const drills = `${drillsBase}\n${foundationBatch02}\n${foundationBatch03}\n${foundationBatch04}\n${foundationBatch05}`;
 const roadmap = read("../src/content/roadmap.ts");
 
 function ids(source, prefix) {
@@ -51,31 +53,32 @@ const batchSections05 = sectionsFor(batch05, "05");
 const batchSections06 = sectionsFor(batch06, "06");
 const batchSections07 = sectionsFor(batch07, "07");
 const batchSections08 = sectionsFor(batch08, "08");
+const batchSections09 = sectionsFor(batch09, "09");
 const combined = {
-  listening: `${listening}\n${batchSections02.listening}\n${batchSections03.listening}\n${batchSections04.listening}\n${batchSections05.listening}\n${batchSections06.listening}\n${batchSections07.listening}\n${batchSections08.listening}`,
-  reading: `${reading}\n${batchSections02.reading}\n${batchSections03.reading}\n${batchSections04.reading}\n${batchSections05.reading}\n${batchSections06.reading}\n${batchSections07.reading}\n${batchSections08.reading}`,
-  writing: `${writing}\n${batchSections02.writing}\n${batchSections03.writing}\n${batchSections04.writing}\n${batchSections05.writing}\n${batchSections06.writing}\n${batchSections07.writing}\n${batchSections08.writing}`,
-  speaking: `${speaking}\n${batchSections02.speaking}\n${batchSections03.speaking}\n${batchSections04.speaking}\n${batchSections05.speaking}\n${batchSections06.speaking}\n${batchSections07.speaking}\n${batchSections08.speaking}`,
+  listening: `${listening}\n${batchSections02.listening}\n${batchSections03.listening}\n${batchSections04.listening}\n${batchSections05.listening}\n${batchSections06.listening}\n${batchSections07.listening}\n${batchSections08.listening}\n${batchSections09.listening}`,
+  reading: `${reading}\n${batchSections02.reading}\n${batchSections03.reading}\n${batchSections04.reading}\n${batchSections05.reading}\n${batchSections06.reading}\n${batchSections07.reading}\n${batchSections08.reading}\n${batchSections09.reading}`,
+  writing: `${writing}\n${batchSections02.writing}\n${batchSections03.writing}\n${batchSections04.writing}\n${batchSections05.writing}\n${batchSections06.writing}\n${batchSections07.writing}\n${batchSections08.writing}\n${batchSections09.writing}`,
+  speaking: `${speaking}\n${batchSections02.speaking}\n${batchSections03.speaking}\n${batchSections04.speaking}\n${batchSections05.speaking}\n${batchSections06.speaking}\n${batchSections07.speaking}\n${batchSections08.speaking}\n${batchSections09.speaking}`,
 };
 
-test("eight validated curriculum batches contain 272 unique lessons", () => {
+test("nine validated curriculum batches contain 288 unique lessons", () => {
   const groups = Object.entries(combined).map(([skill, source]) => {
     const prefix = { listening: "l", reading: "r", writing: "w", speaking: "s" }[skill];
     return ids(source, prefix);
   });
   for (const group of groups) {
-    assert.equal(group.length, 68);
-    assert.equal(new Set(group).size, 68);
+    assert.equal(group.length, 72);
+    assert.equal(new Set(group).size, 72);
   }
-  assert.equal(groups.flat().length, 272);
-  assert.equal(new Set(groups.flat()).size, 272);
+  assert.equal(groups.flat().length, 288);
+  assert.equal(new Set(groups.flat()).size, 288);
 });
 
-test("all 544 objective questions have English prompts and deterministic answers", () => {
+test("all 576 objective questions have English prompts and deterministic answers", () => {
   const listeningQuestions = questions(combined.listening);
   const readingQuestions = questions(combined.reading);
-  assert.equal(listeningQuestions.length, 272);
-  assert.equal(readingQuestions.length, 272);
+  assert.equal(listeningQuestions.length, 288);
+  assert.equal(readingQuestions.length, 288);
   for (const question of [...listeningQuestions, ...readingQuestions]) {
     assert.match(question.prompt, /^[A-Za-z]/);
     assert.doesNotMatch(question.prompt, /[\u3400-\u9fff]/);
@@ -87,20 +90,20 @@ test("all 544 objective questions have English prompts and deterministic answers
 });
 
 test("listening keeps all four official parts and fixed audio coverage", () => {
-  const expected = { "Part 1": 18, "Part 2": 18, "Part 3": 16, "Part 4": 16 };
+  const expected = { "Part 1": 19, "Part 2": 19, "Part 3": 17, "Part 4": 17 };
   for (const [part, count] of Object.entries(expected)) {
     assert.equal((combined.listening.match(new RegExp(`section:\\s*"${part}"`, "g")) ?? []).length, count);
   }
   const files = [...combined.listening.matchAll(/audioFile:\s*"(l\d+\.mp3)"/g)].map((match) => match[1]);
-  assert.equal(files.length, 68);
-  assert.equal(new Set(files).size, 68);
+  assert.equal(files.length, 72);
+  assert.equal(new Set(files).size, 72);
 });
 
 test("reading, writing and speaking retain complete official structures", () => {
   const expected = [
-    [combined.reading, "Section 1", 25], [combined.reading, "Section 2", 25], [combined.reading, "Section 3", 18],
-    [combined.writing, "Task 1", 34], [combined.writing, "Task 2", 34],
-    [combined.speaking, "Part 1", 25], [combined.speaking, "Part 2", 24], [combined.speaking, "Part 3", 19],
+    [combined.reading, "Section 1", 26], [combined.reading, "Section 2", 27], [combined.reading, "Section 3", 19],
+    [combined.writing, "Task 1", 36], [combined.writing, "Task 2", 36],
+    [combined.speaking, "Part 1", 26], [combined.speaking, "Part 2", 25], [combined.speaking, "Part 3", 21],
   ];
   for (const [source, section, count] of expected) {
     assert.equal((source.match(new RegExp(`section:\\s*"${section}`, "g")) ?? []).length, count);
@@ -111,15 +114,15 @@ test("foundation banks and the 36-week roadmap remain substantive and unique", (
   const sentenceIds = ids(sentence, "g");
   const drillIds = ids(drills, "d");
   const weeks = [...roadmap.matchAll(/week:(\d+)/g)].map((match) => Number(match[1]));
-  assert.equal(sentenceIds.length, 72);
-  assert.equal(new Set(sentenceIds).size, 72);
-  assert.equal(drillIds.length, 72);
-  assert.equal(new Set(drillIds).size, 72);
+  assert.equal(sentenceIds.length, 80);
+  assert.equal(new Set(sentenceIds).size, 80);
+  assert.equal(drillIds.length, 80);
+  assert.equal(new Set(drillIds).size, 80);
   assert.deepEqual(weeks, Array.from({ length: 36 }, (_, index) => index + 1));
 });
 
 test("all published course sources contain no placeholder copy", () => {
-  for (const source of [listening, reading, writing, speaking, batch02, batch03, batch04, batch05, batch06, batch07, batch08, sentence, drills, roadmap]) {
+  for (const source of [listening, reading, writing, speaking, batch02, batch03, batch04, batch05, batch06, batch07, batch08, batch09, sentence, drills, roadmap]) {
     assert.doesNotMatch(source, /TODO|TBD|lorem ipsum|待完善|示例内容|placeholder/i);
   }
 });
