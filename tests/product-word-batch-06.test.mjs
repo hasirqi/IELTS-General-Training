@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
+import rawLexicon from "../src/content/lexicon-baseline-1000.json" with { type: "json" };
 import { buildLearningLexicon, lexiconQuality, verifiedWordBatch01, verifiedWordBatch02, verifiedWordBatch03, verifiedWordBatch04, verifiedWordBatch05, verifiedWordBatch06 } from "../src/content/lexicon-content.mjs";
 
 const entries = Object.entries(verifiedWordBatch06);

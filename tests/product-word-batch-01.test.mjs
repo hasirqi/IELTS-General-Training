@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
+import rawLexicon from "../src/content/lexicon-baseline-1000.json" with { type: "json" };
 import {
   buildLearningLexicon,
   lexiconQuality,

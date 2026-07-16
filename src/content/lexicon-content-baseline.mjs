@@ -1,5 +1,5 @@
 import {
-  buildLearningLexicon as buildBaselineLexicon,
+  buildLearningLexicon as buildBatch05Lexicon,
   lexiconQuality,
   verifiedChunkContent,
   verifiedWordBatch01,
@@ -7,9 +7,8 @@ import {
   verifiedWordBatch03,
   verifiedWordBatch04,
   verifiedWordBatch05,
-  verifiedWordBatch06,
-} from "./lexicon-content-baseline.mjs";
-import { verifiedCoreWordBatch01 } from "./verified-core-word-batch-01.mjs";
+} from "./lexicon-content-batch05.mjs";
+import { verifiedWordBatch06 } from "./verified-word-batch-06.mjs";
 
 export {
   lexiconQuality,
@@ -20,12 +19,11 @@ export {
   verifiedWordBatch04,
   verifiedWordBatch05,
   verifiedWordBatch06,
-  verifiedCoreWordBatch01,
 };
 
 export function buildLearningLexicon(items) {
-  return buildBaselineLexicon(items).map((item) => {
-    const reviewed = verifiedCoreWordBatch01[item.term.toLowerCase()];
+  return buildBatch05Lexicon(items).map((item) => {
+    const reviewed = verifiedWordBatch06[item.term.toLowerCase()];
     if (!reviewed) return item;
     return {
       ...item,
