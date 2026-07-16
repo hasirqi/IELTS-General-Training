@@ -1,0 +1,10 @@
+﻿globalIndex,wordList,unit,index,word,start,end,audioFile,status,evidence,confidence,notes
+6,1,1,6,compliment,19.44,20.07,ysgpc/Word List1/Word List1-Unit1.mp3,print-check,whole-track-asr,,homophone cannot be distinguished from audio alone: complement / compliment
+26,1,1,26,abstract,72.0,72.64,ysgpc/Word List1/Word List1-Unit1.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to abstract; likely noun/verb stress pair
+27,1,1,27,abstract,73.66,74.37,ysgpc/Word List1/Word List1-Unit1.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to abstract; likely noun/verb stress pair
+76,1,1,76,export,202.56,203.24,ysgpc/Word List1/Word List1-Unit1.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to export; likely noun/verb stress pair
+77,1,1,77,export,204.32,204.95,ysgpc/Word List1/Word List1-Unit1.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to export; likely noun/verb stress pair
+854,2,4,62,tamper,167.73,168.2,ysgpc/Word List2/Word List2-Unit4.mp3,print-check,isolated-word-double-pass+spelling-decision,0.42578,isolated candidates: tamper / temper; isolated passes split between tamper and temper
+2784,6,4,13,patronage,39.85,40.48,ysgpc/Word List6/Word List6-Unit4.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to patronage
+2785,6,4,14,patronage,42.52,43.11,ysgpc/Word List6/Word List6-Unit4.mp3,print-check,whole-track-asr+additional-duplicate-check,,two consecutive pronunciations both resolve to patronage
+3020,7,1,51,bare,138.03,138.36,ysgpc/Word List7/Word List7-Unit1.mp3,print-check,isolated-word-double-pass+spelling-decision,0.32022,isolated candidates: there / bear; homophone: isolated recognition split between bare and bear
