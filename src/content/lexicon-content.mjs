@@ -11,6 +11,7 @@ import {
 } from "./lexicon-content-baseline.mjs";
 import { verifiedCoreWordBatch01 } from "./verified-core-word-batch-01.mjs";
 import { verifiedCoreWordBatch02 } from "./verified-core-word-batch-02.mjs";
+import { verifiedCoreWordBatch03 } from "./verified-core-word-batch-03.mjs";
 
 const expandedSenseContent = {
   require: {
@@ -30,11 +31,12 @@ export {
   verifiedWordBatch06,
   verifiedCoreWordBatch01,
   verifiedCoreWordBatch02,
+  verifiedCoreWordBatch03,
 };
 
 export function buildLearningLexicon(items) {
   return buildBaselineLexicon(items).map((item) => {
-    const reviewed = verifiedCoreWordBatch02[item.term.toLowerCase()] ?? verifiedCoreWordBatch01[item.term.toLowerCase()];
+    const reviewed = verifiedCoreWordBatch03[item.term.toLowerCase()] ?? verifiedCoreWordBatch02[item.term.toLowerCase()] ?? verifiedCoreWordBatch01[item.term.toLowerCase()];
     const expanded = expandedSenseContent[item.term.toLowerCase()];
     const merged = reviewed ? {
       ...item,

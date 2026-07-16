@@ -10,18 +10,18 @@ import { buildLearningLexicon, lexiconQuality, verifiedChunkContent } from "../s
 const raw = JSON.parse(fs.readFileSync(new URL("../src/content/lexicon.json", import.meta.url), "utf8"));
 const lexicon = buildLearningLexicon(raw);
 
-test("all 1,400 items enter one stable, unique study order", () => {
+test("all 1,600 items enter one stable, unique study order", () => {
   const order = createStudyOrder(lexicon);
-  assert.equal(order.length, 1400);
-  assert.equal(new Set(order).size, 1400);
+  assert.equal(order.length, 1600);
+  assert.equal(new Set(order).size, 1600);
   assert.deepEqual(new Set(order), new Set(lexicon.map((item) => item.id)));
 });
 
 test("verified usage content is explicit and never fabricated for unreviewed words", () => {
   assert.equal(Object.keys(verifiedChunkContent).length, 120);
   const quality = lexiconQuality(lexicon);
-  assert.equal(quality.total, 1400);
-  assert.equal(quality.verified, 1400);
+  assert.equal(quality.total, 1600);
+  assert.equal(quality.verified, 1600);
   assert.equal(quality.coreOnly, 0);
   for (const item of lexicon.filter((entry) => entry.contentStatus === "verified")) {
     assert.ok(item.cue && item.example && item.collocation, item.term);
@@ -36,8 +36,8 @@ test("the 36-week vocabulary roadmap covers every item exactly once", () => {
   const weeks = buildThirtySixWeekRoadmap(lexicon);
   assert.equal(weeks.length, 36);
   const ids = weeks.flatMap((week) => week.ids);
-  assert.equal(ids.length, 1400);
-  assert.equal(new Set(ids).size, 1400);
+  assert.equal(ids.length, 1600);
+  assert.equal(new Set(ids).size, 1600);
   assert.ok(Math.max(...weeks.map((week) => week.ids.length)) - Math.min(...weeks.map((week) => week.ids.length)) <= 1);
 });
 
@@ -69,8 +69,8 @@ test("wrong recall returns quickly while strong recall increases mastery", () =>
 test("overall progress is derived from real coverage, mastery and lessons", () => {
   const base = introduceLexiconItem(undefined, "chunk-0001", { confidence:5, supportsUse:true });
   const stats = masteryStats({ [base.id]:base });
-  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1400,completedLessons:1,totalLessons:288,masteryAverage:stats.average });
-  const later = overallProgress({ introduced:950,totalVocabulary:1400,completedLessons:216,totalLessons:288,masteryAverage:72 });
+  const early = overallProgress({ introduced:stats.introduced,totalVocabulary:1600,completedLessons:1,totalLessons:304,masteryAverage:stats.average });
+  const later = overallProgress({ introduced:1100,totalVocabulary:1600,completedLessons:228,totalLessons:304,masteryAverage:72 });
   assert.ok(early < later);
   assert.ok(later > 60);
 });

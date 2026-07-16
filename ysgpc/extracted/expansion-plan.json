@@ -17,8 +17,9 @@
     "eligibleForBatches": 3133,
     "remainingAfterBatch01": 2933,
     "remainingAfterBatch02": 2733,
-    "publishedBatchCount": 2,
-    "publishedCandidateCount": 400
+    "remainingAfterBatch03": 2533,
+    "publishedBatchCount": 3,
+    "publishedCandidateCount": 600
   },
   "valueTiers": {
     "active": 882,

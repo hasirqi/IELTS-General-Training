@@ -1,10 +1,11 @@
 import { curriculum as previousCurriculum } from "./course-bank-batch07";
 import { curriculumBatch08 } from "./curriculum-batch-08";
 import { curriculumBatch09 } from "./curriculum-batch-09";
+import { curriculumBatch10 } from "./curriculum-batch-10";
 import type { CourseLesson } from "./curriculum-v2";
 
 export type { CourseLesson };
-export const curriculum: CourseLesson[] = [...previousCurriculum, ...curriculumBatch08, ...curriculumBatch09];
+export const curriculum: CourseLesson[] = [...previousCurriculum, ...curriculumBatch08, ...curriculumBatch09, ...curriculumBatch10];
 const count = (skill: CourseLesson["skill"]) => curriculum.filter((lesson) => lesson.skill === skill).length;
 export const skillMeta = {
   listening: { label: "听力", description: "Part 1–4 · 学习与模考模式", count: count("listening") },
