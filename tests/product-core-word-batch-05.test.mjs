@@ -24,10 +24,10 @@ test("batch 05 follows exact source priority 801-1000 and publishes only reviewe
   assert.ok(candidates.every((item)=>item.batch===5&&item.sourceStatus==="ready"));
   assert.equal(new Set(candidates.map((item)=>item.term)).size,200);
   assert.deepEqual(Object.keys(verifiedCoreWordBatch05),candidates.map((item)=>item.term));
-  assert.equal(raw.length,2000);
-  assert.equal(new Set(raw.map((item)=>item.term.toLowerCase())).size,2000);
-  assert.deepEqual(raw.slice(1800).map((item)=>item.term),candidates.map((item)=>item.term));
-  assert.deepEqual(raw.slice(1800).map((item)=>item.id),Array.from({length:200},(_,index)=>`word-${String(index+1801).padStart(4,"0")}`));
+  assert.ok(raw.length>=2000);
+  assert.equal(new Set(raw.map((item)=>item.term.toLowerCase())).size,raw.length);
+  assert.deepEqual(raw.slice(1800,2000).map((item)=>item.term),candidates.map((item)=>item.term));
+  assert.deepEqual(raw.slice(1800,2000).map((item)=>item.id),Array.from({length:200},(_,index)=>`word-${String(index+1801).padStart(4,"0")}`));
 });
 
 test("all batch 05 meanings, contexts and collocations pass every earlier-batch gate",()=>{
@@ -49,7 +49,7 @@ test("all batch 05 meanings, contexts and collocations pass every earlier-batch 
     examples.push(item.example);collocations.push(item.collocation.toLowerCase());
   }
   assert.equal(new Set(examples).size,200);assert.equal(new Set(collocations).size,200);
-  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)),{total:2000,verified:2000,coreOnly:0});
+  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)),{total:raw.length,verified:raw.length,coreOnly:0});
 });
 
 test("batch 12 synchronously adds four complete lessons per IELTS skill",()=>{
