@@ -5,11 +5,11 @@ import fs from "node:fs";
 const lexicon = JSON.parse(fs.readFileSync(new URL("../src/content/lexicon.json", import.meta.url), "utf8"));
 const curriculum = fs.readFileSync(new URL("../src/curriculum.ts", import.meta.url), "utf8");
 
-test("ships exactly 2,600 unique lexical items", () => {
-  assert.equal(lexicon.length, 2600);
-  assert.equal(new Set(lexicon.map((item) => item.term.toLowerCase())).size, 2600);
+test("ships exactly 2,800 unique lexical items", () => {
+  assert.equal(lexicon.length, 2800);
+  assert.equal(new Set(lexicon.map((item) => item.term.toLowerCase())).size, 2800);
   assert.equal(lexicon.filter((item) => item.kind === "chunk").length, 120);
-  assert.equal(lexicon.filter((item) => item.kind === "word").length, 2480);
+  assert.equal(lexicon.filter((item) => item.kind === "word").length, 2680);
 });
 
 test("every lexical item has the required offline learning fields", () => {
