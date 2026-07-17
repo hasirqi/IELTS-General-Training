@@ -45,7 +45,8 @@ test("the assessment is a real multiple-choice test without self-rating", () => 
 test("word study gives the example sentence its own pronunciation button", () => {
   assert.match(app, /className="study-example"/);
   assert.match(app, /speakEnglish\(item\.example!\)/);
-  assert.match(app, /aria-label="播放例句"/);
+  assert.match(app, /className="round-button" onClick=\{\(\) => speakEnglish\(item\.example!\)\} aria-label="播放例句"><IconVolume\/><\/button>/);
+  assert.doesNotMatch(app, /<IconVolume\/>播放例句/);
 });
 
 test("both vocabulary modules share the real lexicon and local state", () => {
