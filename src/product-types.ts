@@ -1,6 +1,8 @@
-export type View = "home" | "review" | "words" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors";
+export type View = "home" | "review" | "words" | "vocabulary-study" | "vocabulary-test" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors";
 export type Skill = "listening" | "reading" | "writing" | "speaking";
 export type MasteryAspect = "form" | "meaning" | "use";
+export type VocabularyStudyMode = "order" | "weak" | "random";
+export type VocabularyRecognition = "know" | "unsure" | "unknown";
 
 export type LexiconProgress = {
   id: string;
@@ -27,8 +29,45 @@ export type LearningError = {
   resolvedAt?: string;
 };
 
+export type VocabularyStudyState = {
+  cursor: number;
+  mode: VocabularyStudyMode;
+  category: string;
+};
+
+export type VocabularyTestAnswer = {
+  lexiconId: string;
+  recognition: VocabularyRecognition;
+  meaningCorrect: boolean;
+  useCorrect: boolean;
+};
+
+export type VocabularyEstimate = {
+  value: number;
+  low: number;
+  high: number;
+};
+
+export type VocabularyTestResult = {
+  id: string;
+  completedAt: string;
+  sampleSize: number;
+  totalVocabulary: number;
+  recognition: VocabularyEstimate;
+  meaning: VocabularyEstimate;
+  use: VocabularyEstimate;
+  weakCategories: string[];
+};
+
+export type VocabularyTestDraft = {
+  ids: string[];
+  index: number;
+  answers: VocabularyTestAnswer[];
+  startedAt: string;
+};
+
 export type LearningState = {
-  schemaVersion: 2;
+  schemaVersion: 3;
   completedSteps: number[];
   completedLessons: string[];
   reviewIndex: number;
@@ -43,6 +82,9 @@ export type LearningState = {
   lastStudied: string;
   skill: Record<Skill, number>;
   errorLog: LearningError[];
+  vocabularyStudy: VocabularyStudyState;
+  vocabularyTestDraft: VocabularyTestDraft | null;
+  vocabularyTests: VocabularyTestResult[];
 };
 
 export type LexiconItem = {

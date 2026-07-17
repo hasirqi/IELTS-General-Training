@@ -16,7 +16,8 @@ import {
   overallProgress, scheduleLexiconReview, scoreRecall, selectReviewAspect,
 } from "./learning-engine.mjs";
 import { freshState, loadLearningState, saveLearningState } from "./product-storage";
-import type { LearningState, LexiconItem, MasteryAspect, Skill, View } from "./product-types";
+import type { LearningState, LexiconItem, MasteryAspect, Skill, View, VocabularyRecognition, VocabularyTestAnswer } from "./product-types";
+import { buildVocabularyOptions, buildVocabularyTestSample, estimateVocabularyProfile } from "./vocabulary-engine.mjs";
 import "./product.css";
 
 const lexicon = buildLearningLexicon(rawLexicon) as LexiconItem[];
@@ -25,10 +26,11 @@ const studyOrder = createStudyOrder(lexicon);
 const quality = lexiconQuality(lexicon);
 
 const steps = [
-  {title:"复习旧词",subtitle:"到期词和错词优先回来",icon:IconBook2,view:"review" as View},
-  {title:"新词与词块",subtitle:"每天 5–10 条，覆盖全部词库",icon:IconLanguage,view:"words" as View},
-  {title:"句型实验室",subtitle:`${sentenceChallenges.length} 套递进训练`,icon:IconFlask2,view:"sentence" as View},
-  {title:"开口任务",subtitle:`${speakingDrills.length} 个真实场景`,icon:IconMicrophone,view:"speak" as View},
+  {title:"复习旧词",subtitle:"到期和错词优先回来",icon:IconBook2,view:"review" as View,completeKey:0},
+  {title:"单词学习",subtitle:"自主选择顺序、场景和数量",icon:IconLanguage,view:"vocabulary-study" as View,completeKey:1},
+  {title:"词汇量测试",subtitle:"分开估计识别、理解和使用",icon:IconTargetArrow,view:"vocabulary-test" as View,completeKey:null},
+  {title:"句型实验室",subtitle:`${sentenceChallenges.length} 套递进训练`,icon:IconFlask2,view:"sentence" as View,completeKey:2},
+  {title:"开口任务",subtitle:`${speakingDrills.length} 个真实场景`,icon:IconMicrophone,view:"speak" as View,completeKey:3},
 ];
 
 function speakEnglish(text: string, onFinish?: () => void) {
@@ -106,6 +108,8 @@ export function App() {
       <Shell view={view} back={() => setView("home")} progress={completion}>
         {view === "review" && <Review state={state} update={update} done={() => completeStep(0, "words")}/>}
         {view === "words" && <WordLab state={state} update={update} done={() => completeStep(1, "sentence")}/>}
+        {view === "vocabulary-study" && <VocabularyStudy state={state} update={update}/>}
+        {view === "vocabulary-test" && <VocabularyTest state={state} update={update}/>}
         {view === "sentence" && <SentenceLab state={state} update={update} done={() => completeStep(2, "speak")}/>}
         {view === "speak" && <QuickSpeak state={state} update={update} onCoach={openChat} done={() => completeStep(3)}/>}
         {view === "courses" && <CourseHub state={state} update={update} initialSkill={courseSkill} onCoach={openChat}/>}
@@ -129,7 +133,7 @@ function Home({state,dueCount,onOpen,onOpenCourse,onReset}:{state:LearningState;
     </section>
     <section className="foundation-section">
       <div className="section-heading"><h2>基础训练</h2><span>词汇、句型和开口热身</span></div>
-      <div className="foundation-grid">{steps.map((step, index) => { const Icon = step.icon; const done = state.completedSteps.includes(index); return <button key={step.title} onClick={() => onOpen(step.view)}><span className={done ? "foundation-icon done" : "foundation-icon"}>{done ? <IconCheck size={22}/> : <Icon size={25}/>}</span><span><strong>{step.title}</strong><small>{step.subtitle}</small></span><IconArrowRight className="foundation-arrow" size={18}/></button>; })}</div>
+      <div className="foundation-grid">{steps.map((step, index) => { const Icon = step.icon; const done = step.completeKey !== null && state.completedSteps.includes(step.completeKey); return <button key={step.title} onClick={() => onOpen(step.view)}><span className={done ? "foundation-icon done" : "foundation-icon"}>{done ? <IconCheck size={22}/> : <Icon size={25}/>}</span><span><strong>{step.title}</strong><small>{step.subtitle}</small></span><IconArrowRight className="foundation-arrow" size={18}/></button>; })}</div>
     </section>
     <section className="review-strip"><div className="review-count"><IconClipboardText/><span>待复习<span className="review-number"><strong>{dueCount}</strong><small>个</small></span></span></div><div><strong>到期再复习，错词一定回来。</strong><p>不是固定天数，系统会根据正确率和遗忘情况调整。</p></div><button className="outline-button" onClick={() => onOpen("review")}>去复习<IconArrowRight/></button></section>
     <footer className="home-footer"><button onClick={() => onOpen("progress")}><IconTargetArrow/>能力进度</button><button onClick={() => onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
@@ -141,7 +145,7 @@ function GlobalHeader({onHome,onLibrary,onChat}:{onHome:()=>void;onLibrary:()=>v
 }
 
 function Shell({view,back,progress,children}:{view:View;back:()=>void;progress:number;children:React.ReactNode}) {
-  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
+  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"词汇量测试",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
   return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label="返回首页"><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
 }
 
@@ -196,6 +200,104 @@ function WordLab({state,update,done}:{state:LearningState;update:UpdateState;don
   return <section className="lesson-content word-lab"><div className="lesson-kicker">新词 {index+1} / {ids.length} · 词库总进度 {state.nextLexiconIndex}/{lexicon.length}</div><div className="word-heading"><div><div className={`content-status ${item.contentStatus}`}>{item.contentStatus === "verified" ? "形·义·用已审核" : "当前练形·义"}</div><h1>{item.term}</h1><p>{item.phonetic || "发音标记待补"} · {item.part}</p></div><button className="round-button" onClick={() => speakEnglish(item.term)} aria-label={`播放 ${item.term} 的英语发音`}><IconVolume/></button></div><div className="meaning-block"><span>常用意思</span><strong>{item.meaning}</strong>{item.meaningNote && <small>{item.meaningNote}</small>}{item.example && <p>{item.example}</p>}</div>{item.contentStatus === "verified" ? <div className="word-grid"><div><span>常见搭配</span><strong>{item.collocation}</strong></div><div><span>使用场景</span><strong>{item.category}</strong></div></div> : <div className="content-gate"><IconAlertTriangle/><div><strong>用法内容尚未通过人工审核</strong><p>本轮只练词形和核心义，不用模板例句冒充真实语境。</p></div></div>}<div className="confidence-row word-confidence" aria-label="选择你对这个词的熟悉程度"><button onClick={() => learn(5)}>认识</button><button onClick={() => learn(3)}>不确定</button><button onClick={() => learn(1)}>不认识</button></div></section>;
 }
 
+function vocabularyHash(value: string) {
+  return [...value].reduce((hash, character) => (hash * 31 + character.charCodeAt(0)) >>> 0, 7);
+}
+
+function VocabularyStudy({state,update}:{state:LearningState;update:UpdateState}) {
+  const categories = useMemo(() => [...new Set(lexicon.map((item) => item.category))].sort((a,b) => a.localeCompare(b,"zh-CN")), []);
+  const items = useMemo(() => {
+    let result = studyOrder.map((id) => lexiconById.get(id)!).filter(Boolean);
+    if (state.vocabularyStudy.category !== "all") result = result.filter((item) => item.category === state.vocabularyStudy.category);
+    if (state.vocabularyStudy.mode === "weak") result = result.filter((item) => !state.lexiconProgress[item.id] || state.lexiconProgress[item.id].mastery.meaning < 60);
+    if (state.vocabularyStudy.mode === "random") result = result.slice().sort((a,b) => vocabularyHash(a.id) - vocabularyHash(b.id));
+    return result;
+  }, [state.vocabularyStudy.mode,state.vocabularyStudy.category,state.lexiconProgress]);
+  const cursor = items.length ? state.vocabularyStudy.cursor % items.length : 0;
+  const item = items[cursor];
+  const setStudy = (next: Partial<LearningState["vocabularyStudy"]>) => update((current) => ({...current,vocabularyStudy:{...current.vocabularyStudy,...next,cursor:next.cursor ?? 0}}));
+  const move = (direction:number) => {
+    if (!items.length) return;
+    setStudy({cursor:(cursor + direction + items.length) % items.length});
+  };
+  const rate = (confidence:number,label:string) => {
+    if (!item) return;
+    update((current) => {
+      const progress = introduceLexiconItem(current.lexiconProgress[item.id],item.id,{confidence,supportsUse:false});
+      const hasOpenError = current.errorLog.some((error) => error.lexiconId === item.id && !error.resolvedAt);
+      const now = new Date().toISOString();
+      const errorLog = confidence >= 5
+        ? current.errorLog.map((error) => error.lexiconId === item.id && !error.resolvedAt ? {...error,resolvedAt:now} : error)
+        : hasOpenError ? current.errorLog : [...current.errorLog,{id:crypto.randomUUID(),lexiconId:item.id,aspect:"meaning" as MasteryAspect,prompt:`“${item.term}”是什么意思？`,answer:label,expected:item.meaning,createdAt:now}];
+      return {...current,completedSteps:[...new Set([...current.completedSteps,1])],lexiconProgress:{...current.lexiconProgress,[item.id]:progress},errorLog,lastStudied:now,vocabularyStudy:{...current.vocabularyStudy,cursor:(cursor+1)%Math.max(1,items.length)}};
+    });
+  };
+  return <section className="lesson-content vocabulary-study-page">
+    <div className="lesson-kicker">自主学习 · 当前已审核词库 {lexicon.length.toLocaleString()} 条</div><h1>单词学习</h1>
+    <div className="vocabulary-controls"><label><span>学习方式</span><select value={state.vocabularyStudy.mode} onChange={(event) => setStudy({mode:event.target.value as LearningState["vocabularyStudy"]["mode"]})}><option value="order">按学习顺序</option><option value="weak">只学薄弱词</option><option value="random">随机学习</option></select></label><label><span>场景</span><select value={state.vocabularyStudy.category} onChange={(event) => setStudy({category:event.target.value})}><option value="all">全部场景</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select></label></div>
+    {!item ? <div className="empty-state"><IconCheck/><strong>当前筛选下没有薄弱词</strong><p>可以切换学习方式或场景继续学习。</p></div> : <>
+      <div className="study-position"><button className="icon-button" onClick={() => move(-1)} aria-label="上一个单词"><IconArrowLeft/></button><span>第 {cursor+1}/{items.length} 条</span><button className="icon-button" onClick={() => move(1)} aria-label="下一个单词"><IconArrowRight/></button></div>
+      <article className="vocabulary-study-card"><div className="word-heading"><div><span className="content-status verified">形 · 义 · 用已审核</span><h2>{item.term}</h2><p>{item.phonetic || "发音标记待补充"} · {item.part}</p></div><button className="round-button" onClick={() => speakEnglish(item.term)} aria-label={`播放 ${item.term} 的英语发音`}><IconVolume/></button></div><div className="study-meaning"><span>常用意思</span><strong>{item.meaning}</strong>{item.meaningNote && <small>{item.meaningNote}</small>}</div><div className="study-details"><div><span>常见搭配</span><strong>{item.collocation || "—"}</strong></div><div><span>使用场景</span><strong>{item.category}</strong></div></div>{item.example && <blockquote>{item.example}</blockquote>}</article>
+      <div className="confidence-row vocabulary-rating" aria-label="选择你对这个词的熟悉程度"><button onClick={() => rate(5,"认识")}>认识</button><button onClick={() => rate(3,"不确定")}>不确定</button><button onClick={() => rate(1,"不认识")}>不认识</button></div>
+    </>}
+  </section>;
+}
+
+function VocabularyResult({result,onRestart}:{result:LearningState["vocabularyTests"][number];onRestart:()=>void}) {
+  const rows = [{label:"识别词汇量",estimate:result.recognition},{label:"理解词汇量",estimate:result.meaning},{label:"可用词汇量",estimate:result.use}];
+  return <div className="vocabulary-result"><div className="test-scope"><IconTargetArrow/><div><strong>当前 IELTS 核心词库掌握结果</strong><p>这是对已审核 {result.totalVocabulary.toLocaleString()} 条词与词块的估计，不冒充你的全部英语词汇量。</p></div></div><div className="estimate-grid">{rows.map((row) => <div key={row.label}><span>{row.label}</span><strong>{row.estimate.value.toLocaleString()}</strong><small>估计范围 {row.estimate.low.toLocaleString()}–{row.estimate.high.toLocaleString()}</small></div>)}</div><div className="test-summary"><span>本次分层抽样 {result.sampleSize} 条</span><span>薄弱场景：{result.weakCategories.length ? result.weakCategories.join("、") : "暂未发现明显集中项"}</span><span>{new Date(result.completedAt).toLocaleDateString("zh-CN")}</span></div><button className="primary-button wide" onClick={onRestart}>开始新测试<IconRefresh/></button></div>;
+}
+
+function VocabularyTest({state,update}:{state:LearningState;update:UpdateState}) {
+  const draft = state.vocabularyTestDraft;
+  const latest = state.vocabularyTests.at(-1);
+  const [recognition,setRecognition] = useState<VocabularyRecognition|null>(null);
+  const [meaningCorrect,setMeaningCorrect] = useState<boolean|null>(null);
+  useEffect(() => { setRecognition(null); setMeaningCorrect(null); }, [draft?.index,draft?.startedAt]);
+  const start = () => {
+    const orderedItems = studyOrder.map((id) => lexiconById.get(id)!).filter(Boolean);
+    const ids = buildVocabularyTestSample(orderedItems,40,state.vocabularyTests.length);
+    update({vocabularyTestDraft:{ids,index:0,answers:[],startedAt:new Date().toISOString()}});
+  };
+  const finish = (answers:VocabularyTestAnswer[]) => {
+    const estimates = estimateVocabularyProfile(answers,lexicon.length);
+    const categoryFailures = new Map<string,number>();
+    for (const answer of answers) if (!answer.meaningCorrect || !answer.useCorrect) {
+      const category = lexiconById.get(answer.lexiconId)?.category ?? "其他";
+      categoryFailures.set(category,(categoryFailures.get(category) ?? 0)+1);
+    }
+    const weakCategories = [...categoryFailures.entries()].sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0],"zh-CN")).slice(0,3).map(([category]) => category);
+    const result = {id:crypto.randomUUID(),completedAt:new Date().toISOString(),sampleSize:answers.length,totalVocabulary:lexicon.length,...estimates,weakCategories};
+    update((current) => {
+      const now = new Date().toISOString();
+      const progress = {...current.lexiconProgress};
+      const errors = [...current.errorLog];
+      for (const answer of answers) {
+        const item = lexiconById.get(answer.lexiconId)!;
+        const confidence = answer.recognition === "unknown" ? 1 : answer.meaningCorrect ? 5 : 3;
+        progress[item.id] = introduceLexiconItem(progress[item.id],item.id,{confidence,supportsUse:answer.useCorrect});
+        if ((!answer.meaningCorrect || !answer.useCorrect) && !errors.some((error) => error.lexiconId === item.id && !error.resolvedAt)) errors.push({id:crypto.randomUUID(),lexiconId:item.id,aspect:answer.meaningCorrect?"use":"meaning",prompt:`词汇量测试：${item.term}`,answer:answer.recognition === "unknown" ? "不认识" : "选择错误",expected:answer.meaningCorrect ? item.collocation || item.term : item.meaning,createdAt:now});
+      }
+      return {...current,lexiconProgress:progress,errorLog:errors,vocabularyTestDraft:null,vocabularyTests:[...current.vocabularyTests,result].slice(-20),lastStudied:now};
+    });
+  };
+  const record = (answer:VocabularyTestAnswer) => {
+    if (!draft) return;
+    const answers = [...draft.answers,answer];
+    if (draft.index + 1 >= draft.ids.length) finish(answers);
+    else update({vocabularyTestDraft:{...draft,index:draft.index+1,answers}});
+  };
+  if (!draft) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">分层抽样 · 约 8–12 分钟</div><h1>词汇量测试</h1>{latest ? <VocabularyResult result={latest} onRestart={start}/> : <div className="test-intro"><IconTargetArrow/><h2>测试当前核心词库掌握量</h2><p>从1,600条已审核词库中分层抽取40条，分别检查识别、语义和搭配使用。结果显示估计范围，不给虚假的精确数字。</p><ul><li>不认识可以直接选择，不需要猜。</li><li>“眼熟”不等于理解，后面会检查语境。</li><li>结果只调整词汇学习顺序，不修改IELTS四项估分。</li></ul><button className="primary-button" onClick={start}>开始测试<IconArrowRight/></button></div>}</section>;
+  const item = lexiconById.get(draft.ids[draft.index])!;
+  const meaningOptions = buildVocabularyOptions(lexicon,item,"meaning",draft.index);
+  const useOptions = buildVocabularyOptions(lexicon,item,"collocation",draft.index+17);
+  const correctUse = item.collocation || item.term;
+  const chooseRecognition = (value:VocabularyRecognition) => {
+    if (value === "unknown") record({lexiconId:item.id,recognition:value,meaningCorrect:false,useCorrect:false});
+    else setRecognition(value);
+  };
+  return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">第 {draft.index+1}/{draft.ids.length} 条 · 已自动保存</div><div className="test-progress" role="progressbar" aria-label="词汇量测试进度" aria-valuemin={0} aria-valuemax={draft.ids.length} aria-valuenow={draft.index}><span style={{width:`${draft.index/draft.ids.length*100}%`}}/></div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(item.term)} aria-label={`播放 ${item.term} 的英语发音`}><IconVolume/></button><h1>{item.term}</h1><p>{item.part} · {item.level}</p></div>{!recognition ? <div className="test-stage"><h2>你认识这个词或词块吗？</h2><div className="confidence-row"><button onClick={() => chooseRecognition("know")}>认识</button><button onClick={() => chooseRecognition("unsure")}>不确定</button><button onClick={() => chooseRecognition("unknown")}>不认识</button></div></div> : meaningCorrect === null ? <div className="test-stage"><h2>哪个是它在本词库中的核心意思？</h2><div className="test-options">{meaningOptions.map((option) => <button key={option} onClick={() => setMeaningCorrect(option === item.meaning)}>{option}</button>)}</div></div> : <div className="test-stage"><h2>哪个搭配更自然？</h2><div className="test-options">{useOptions.map((option) => <button key={option} onClick={() => record({lexiconId:item.id,recognition,meaningCorrect,useCorrect:option === correctUse})}>{option}</button>)}</div></div>}</section>;
+}
 function SentenceLab({state,update,done}:{state:LearningState;update:UpdateState;done:()=>void}) {
   const challenge = sentenceChallenges[state.sentenceIndex % sentenceChallenges.length];
   const [choice,setChoice] = useState("");
