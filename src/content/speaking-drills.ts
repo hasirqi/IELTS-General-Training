@@ -5,6 +5,7 @@ import { speakingDrillBatch04 } from "./foundation-batch-04";
 import { speakingDrillBatch05 } from "./foundation-batch-05";
 import { speakingDrillBatch06 } from "./foundation-batch-06";
 import { speakingDrillBatch07 } from "./foundation-batch-07";
+import { speakingDrillBatch08 } from "./foundation-batch-08";
 
 export type { SpeakingDrill } from "./speaking-drills-base";
-export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07];
+export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07, ...speakingDrillBatch08];

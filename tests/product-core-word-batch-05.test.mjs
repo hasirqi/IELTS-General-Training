@@ -7,35 +7,36 @@ import { verifiedCoreWordBatch01 } from "../src/content/verified-core-word-batch
 import { verifiedCoreWordBatch02 } from "../src/content/verified-core-word-batch-02.mjs";
 import { verifiedCoreWordBatch03 } from "../src/content/verified-core-word-batch-03.mjs";
 import { verifiedCoreWordBatch04 } from "../src/content/verified-core-word-batch-04.mjs";
+import { verifiedCoreWordBatch05 } from "../src/content/verified-core-word-batch-05.mjs";
 const read=(relative)=>fs.readFileSync(new URL(relative,import.meta.url),"utf8");
 const json=(relative)=>JSON.parse(read(relative));
 const raw=json("../src/content/lexicon.json");
-const candidates=json("../src/content/core-word-batch-04-candidates.json");
+const candidates=json("../src/content/core-word-batch-05-candidates.json");
 const baselineRaw=json("../src/content/lexicon-baseline-1000.json");
-const course=read("../src/content/curriculum-batch-11.ts");
-const foundation=read("../src/content/foundation-batch-07.ts");
+const course=read("../src/content/curriculum-batch-12.ts");
+const foundation=read("../src/content/foundation-batch-08.ts");
 const ids=(source,prefix)=>[...source.matchAll(new RegExp(`id:\\s*"(${prefix}\\d+)"`,"g"))].map((match)=>match[1]);
 const questions=(source)=>[...source.matchAll(/q\(\s*"([^"]+)"\s*,\s*(\[[^\]]+\])\s*,\s*"([^"]+)"\s*,\s*"([^"]*)"\s*\)/g)].map((match)=>({prompt:match[1],options:JSON.parse(match[2]),answer:match[3],explanation:match[4]}));
 
-test("batch 04 follows exact source priority 601-800 and publishes only reviewed rows",()=>{
+test("batch 05 follows exact source priority 801-1000 and publishes only reviewed rows",()=>{
   assert.equal(candidates.length,200);
-  assert.deepEqual(candidates.map((item)=>item.priorityIndex),Array.from({length:200},(_,index)=>index+601));
-  assert.ok(candidates.every((item)=>item.batch===4&&item.sourceStatus==="ready"));
+  assert.deepEqual(candidates.map((item)=>item.priorityIndex),Array.from({length:200},(_,index)=>index+801));
+  assert.ok(candidates.every((item)=>item.batch===5&&item.sourceStatus==="ready"));
   assert.equal(new Set(candidates.map((item)=>item.term)).size,200);
-  assert.deepEqual(Object.keys(verifiedCoreWordBatch04),candidates.map((item)=>item.term));
-  assert.ok(raw.length>=1800);
-  assert.equal(new Set(raw.map((item)=>item.term.toLowerCase())).size,raw.length);
-  assert.deepEqual(raw.slice(1600,1800).map((item)=>item.term),candidates.map((item)=>item.term));
-  assert.deepEqual(raw.slice(1600,1800).map((item)=>item.id),Array.from({length:200},(_,index)=>`word-${String(index+1601).padStart(4,"0")}`));
+  assert.deepEqual(Object.keys(verifiedCoreWordBatch05),candidates.map((item)=>item.term));
+  assert.equal(raw.length,2000);
+  assert.equal(new Set(raw.map((item)=>item.term.toLowerCase())).size,2000);
+  assert.deepEqual(raw.slice(1800).map((item)=>item.term),candidates.map((item)=>item.term));
+  assert.deepEqual(raw.slice(1800).map((item)=>item.id),Array.from({length:200},(_,index)=>`word-${String(index+1801).padStart(4,"0")}`));
 });
 
-test("all batch 04 meanings, contexts and collocations pass every earlier-batch gate",()=>{
+test("all batch 05 meanings, contexts and collocations pass every earlier-batch gate",()=>{
   const baseline=buildBaselineLexicon(baselineRaw);
-  const previous=[...Object.values(verifiedCoreWordBatch01),...Object.values(verifiedCoreWordBatch02),...Object.values(verifiedCoreWordBatch03)];
+  const previous=[...Object.values(verifiedCoreWordBatch01),...Object.values(verifiedCoreWordBatch02),...Object.values(verifiedCoreWordBatch03),...Object.values(verifiedCoreWordBatch04)];
   const oldExamples=new Set([...baseline.map((item)=>item.example),...previous.map((item)=>item.example)].filter(Boolean));
   const oldCollocations=new Set([...baseline.map((item)=>item.collocation?.toLowerCase()),...previous.map((item)=>item.collocation.toLowerCase())].filter(Boolean));
   const examples=[],collocations=[];
-  for(const [term,item] of Object.entries(verifiedCoreWordBatch04)){
+  for(const [term,item] of Object.entries(verifiedCoreWordBatch05)){
     const escaped=term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
     assert.match(item.meaning,/[\u3400-\u9fff]/,term);
     assert.match(item.example.toLowerCase(),new RegExp(`\\b${escaped}\\b`),term);
@@ -48,28 +49,28 @@ test("all batch 04 meanings, contexts and collocations pass every earlier-batch 
     examples.push(item.example);collocations.push(item.collocation.toLowerCase());
   }
   assert.equal(new Set(examples).size,200);assert.equal(new Set(collocations).size,200);
-  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)),{total:raw.length,verified:raw.length,coreOnly:0});
+  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)),{total:2000,verified:2000,coreOnly:0});
 });
 
-test("batch 11 synchronously adds four complete lessons per IELTS skill",()=>{
-  for(const prefix of ["l","r","w","s"]) assert.deepEqual(ids(course,prefix),Array.from({length:4},(_,index)=>`${prefix}${index+77}`));
+test("batch 12 synchronously adds four complete lessons per IELTS skill",()=>{
+  for(const prefix of ["l","r","w","s"]) assert.deepEqual(ids(course,prefix),Array.from({length:4},(_,index)=>`${prefix}${index+81}`));
   const titles=[...course.matchAll(/title:\s*"([^"]+)"/g)].map((match)=>match[1]);
   assert.equal(titles.length,16);assert.equal(new Set(titles).size,16);
   for(const marker of ["Part 1","Part 2","Part 3","Part 4","Section 1","Section 2","Section 3","Task 1","Task 2"]) assert.match(course,new RegExp(marker));
   assert.doesNotMatch(course,/TODO|TBD|placeholder|待完善|示例内容/i);
 });
 
-test("all batch 11 objective questions are English, unique and answerable",()=>{
+test("all batch 12 objective questions are English, unique and answerable",()=>{
   const items=questions(course);assert.equal(items.length,32);assert.equal(new Set(items.map((item)=>item.prompt)).size,32);
   for(const item of items){assert.match(item.prompt,/^[A-Za-z]/);assert.doesNotMatch(item.prompt,/[\u3400-\u9fff]/);assert.equal(item.options.length,3);assert.equal(new Set(item.options).size,3);assert.ok(item.options.includes(item.answer));assert.ok(item.explanation.length>=4);}
 });
 
-test("batch 11 listening uses four valid fixed MP3 files",()=>{
-  for(let index=77;index<=80;index+=1){const bytes=fs.readFileSync(new URL(`../public/audio/l${index}.mp3`,import.meta.url));assert.ok(bytes.length>100_000);assert.ok(bytes.subarray(0,3).toString("ascii")==="ID3"||bytes[0]===0xff);}
+test("batch 12 listening uses four valid fixed MP3 files",()=>{
+  for(let index=81;index<=84;index+=1){const bytes=fs.readFileSync(new URL(`../public/audio/l${index}.mp3`,import.meta.url));assert.ok(bytes.length>100_000);assert.ok(bytes.subarray(0,3).toString("ascii")==="ID3"||bytes[0]===0xff);}
 });
 
-test("foundation batch 07 adds exact ids 89-96 with unique usable tasks",()=>{
-  assert.deepEqual(ids(foundation,"g"),Array.from({length:8},(_,index)=>`g${index+89}`));
-  assert.deepEqual(ids(foundation,"d"),Array.from({length:8},(_,index)=>`d${index+89}`));
+test("foundation batch 08 adds exact ids 97-104 with unique usable tasks",()=>{
+  assert.deepEqual(ids(foundation,"g"),Array.from({length:8},(_,index)=>`g${index+97}`));
+  assert.deepEqual(ids(foundation,"d"),Array.from({length:8},(_,index)=>`d${index+97}`));
   const prompts=[...foundation.matchAll(/prompt:\s*"([^"]+)"/g)].map((match)=>match[1]);assert.equal(prompts.length,16);assert.equal(new Set(prompts).size,16);assert.doesNotMatch(foundation,/TODO|TBD|placeholder|待完善|示例内容/i);
 });

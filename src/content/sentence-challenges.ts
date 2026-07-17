@@ -5,6 +5,7 @@ import { sentenceChallengeBatch04 } from "./foundation-batch-04";
 import { sentenceChallengeBatch05 } from "./foundation-batch-05";
 import { sentenceChallengeBatch06 } from "./foundation-batch-06";
 import { sentenceChallengeBatch07 } from "./foundation-batch-07";
+import { sentenceChallengeBatch08 } from "./foundation-batch-08";
 
 export type { SentenceChallenge } from "./sentence-challenges-base";
-export const sentenceChallenges = [...foundationChallenges, ...sentenceChallengeBatch02, ...sentenceChallengeBatch03, ...sentenceChallengeBatch04, ...sentenceChallengeBatch05, ...sentenceChallengeBatch06, ...sentenceChallengeBatch07];
+export const sentenceChallenges = [...foundationChallenges, ...sentenceChallengeBatch02, ...sentenceChallengeBatch03, ...sentenceChallengeBatch04, ...sentenceChallengeBatch05, ...sentenceChallengeBatch06, ...sentenceChallengeBatch07, ...sentenceChallengeBatch08];
