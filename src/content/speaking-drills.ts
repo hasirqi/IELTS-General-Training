@@ -8,6 +8,7 @@ import { speakingDrillBatch07 } from "./foundation-batch-07";
 import { speakingDrillBatch08 } from "./foundation-batch-08";
 import { speakingDrillBatch09 } from "./foundation-batch-09";
 import { speakingDrillBatch10 } from "./foundation-batch-10";
+import { speakingDrillBatch11 } from "./foundation-batch-11";
 
 export type { SpeakingDrill } from "./speaking-drills-base";
-export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07, ...speakingDrillBatch08, ...speakingDrillBatch09, ...speakingDrillBatch10];
+export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07, ...speakingDrillBatch08, ...speakingDrillBatch09, ...speakingDrillBatch10, ...speakingDrillBatch11];
