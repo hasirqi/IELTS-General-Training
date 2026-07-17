@@ -11,6 +11,7 @@ import { sentenceChallengeBatch10 } from "./foundation-batch-10";
 import { sentenceChallengeBatch11 } from "./foundation-batch-11";
 import { sentenceChallengeBatch12 } from "./foundation-batch-12";
 import { sentenceChallengeBatch13 } from "./foundation-batch-13";
+import { sentenceChallengeBatch14 } from "./foundation-batch-14";
 
 export type { SentenceChallenge } from "./sentence-challenges-base";
-export const sentenceChallenges = [...foundationChallenges, ...sentenceChallengeBatch02, ...sentenceChallengeBatch03, ...sentenceChallengeBatch04, ...sentenceChallengeBatch05, ...sentenceChallengeBatch06, ...sentenceChallengeBatch07, ...sentenceChallengeBatch08, ...sentenceChallengeBatch09, ...sentenceChallengeBatch10, ...sentenceChallengeBatch11, ...sentenceChallengeBatch12, ...sentenceChallengeBatch13];
+export const sentenceChallenges = [...foundationChallenges, ...sentenceChallengeBatch02, ...sentenceChallengeBatch03, ...sentenceChallengeBatch04, ...sentenceChallengeBatch05, ...sentenceChallengeBatch06, ...sentenceChallengeBatch07, ...sentenceChallengeBatch08, ...sentenceChallengeBatch09, ...sentenceChallengeBatch10, ...sentenceChallengeBatch11, ...sentenceChallengeBatch12, ...sentenceChallengeBatch13, ...sentenceChallengeBatch14];

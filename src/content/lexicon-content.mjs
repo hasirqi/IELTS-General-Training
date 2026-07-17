@@ -19,6 +19,7 @@ import { verifiedCoreWordBatch07 } from "./verified-core-word-batch-07.mjs";
 import { verifiedCoreWordBatch08 } from "./verified-core-word-batch-08.mjs";
 import { verifiedCoreWordBatch09 } from "./verified-core-word-batch-09.mjs";
 import { verifiedCoreWordBatch10 } from "./verified-core-word-batch-10.mjs";
+import { verifiedCoreWordBatch11 } from "./verified-core-word-batch-11.mjs";
 
 const expandedSenseContent = {
   require: {
@@ -46,11 +47,12 @@ export {
   verifiedCoreWordBatch08,
   verifiedCoreWordBatch09,
   verifiedCoreWordBatch10,
+  verifiedCoreWordBatch11,
 };
 
 export function buildLearningLexicon(items) {
   return buildBaselineLexicon(items).map((item) => {
-    const reviewed = verifiedCoreWordBatch10[item.term.toLowerCase()] ?? verifiedCoreWordBatch09[item.term.toLowerCase()] ?? verifiedCoreWordBatch08[item.term.toLowerCase()] ?? verifiedCoreWordBatch07[item.term.toLowerCase()] ?? verifiedCoreWordBatch06[item.term.toLowerCase()] ?? verifiedCoreWordBatch05[item.term.toLowerCase()] ?? verifiedCoreWordBatch04[item.term.toLowerCase()] ?? verifiedCoreWordBatch03[item.term.toLowerCase()] ?? verifiedCoreWordBatch02[item.term.toLowerCase()] ?? verifiedCoreWordBatch01[item.term.toLowerCase()];
+    const reviewed = verifiedCoreWordBatch11[item.term.toLowerCase()] ?? verifiedCoreWordBatch10[item.term.toLowerCase()] ?? verifiedCoreWordBatch09[item.term.toLowerCase()] ?? verifiedCoreWordBatch08[item.term.toLowerCase()] ?? verifiedCoreWordBatch07[item.term.toLowerCase()] ?? verifiedCoreWordBatch06[item.term.toLowerCase()] ?? verifiedCoreWordBatch05[item.term.toLowerCase()] ?? verifiedCoreWordBatch04[item.term.toLowerCase()] ?? verifiedCoreWordBatch03[item.term.toLowerCase()] ?? verifiedCoreWordBatch02[item.term.toLowerCase()] ?? verifiedCoreWordBatch01[item.term.toLowerCase()];
     const expanded = expandedSenseContent[item.term.toLowerCase()];
     const merged = reviewed ? {
       ...item,
