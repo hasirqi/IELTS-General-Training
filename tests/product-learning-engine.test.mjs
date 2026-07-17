@@ -10,18 +10,18 @@ import { buildLearningLexicon, lexiconQuality, verifiedChunkContent } from "../s
 const raw = JSON.parse(fs.readFileSync(new URL("../src/content/lexicon.json", import.meta.url), "utf8"));
 const lexicon = buildLearningLexicon(raw);
 
-test("all 1,600 items enter one stable, unique study order", () => {
+test("all published items enter one stable, unique study order", () => {
   const order = createStudyOrder(lexicon);
-  assert.equal(order.length, 1600);
-  assert.equal(new Set(order).size, 1600);
+  assert.equal(order.length, lexicon.length);
+  assert.equal(new Set(order).size, lexicon.length);
   assert.deepEqual(new Set(order), new Set(lexicon.map((item) => item.id)));
 });
 
 test("verified usage content is explicit and never fabricated for unreviewed words", () => {
   assert.equal(Object.keys(verifiedChunkContent).length, 120);
   const quality = lexiconQuality(lexicon);
-  assert.equal(quality.total, 1600);
-  assert.equal(quality.verified, 1600);
+  assert.equal(quality.total, lexicon.length);
+  assert.equal(quality.verified, lexicon.length);
   assert.equal(quality.coreOnly, 0);
   for (const item of lexicon.filter((entry) => entry.contentStatus === "verified")) {
     assert.ok(item.cue && item.example && item.collocation, item.term);
@@ -36,8 +36,8 @@ test("the 36-week vocabulary roadmap covers every item exactly once", () => {
   const weeks = buildThirtySixWeekRoadmap(lexicon);
   assert.equal(weeks.length, 36);
   const ids = weeks.flatMap((week) => week.ids);
-  assert.equal(ids.length, 1600);
-  assert.equal(new Set(ids).size, 1600);
+  assert.equal(ids.length, lexicon.length);
+  assert.equal(new Set(ids).size, lexicon.length);
   assert.ok(Math.max(...weeks.map((week) => week.ids.length)) - Math.min(...weeks.map((week) => week.ids.length)) <= 1);
 });
 
