@@ -27,9 +27,9 @@ test("batch 09 follows source priority 1601-1800", () => {
   assert.equal(candidates.length, 200);
   assert.deepEqual(candidates.map((item) => item.priorityIndex), Array.from({ length: 200 }, (_, index) => 1601 + index));
   assert.deepEqual(Object.keys(b9), candidates.map((item) => item.term));
-  assert.equal(raw.length, 2800);
-  assert.equal(new Set(raw.map((item) => item.term.toLowerCase())).size, 2800);
-  assert.deepEqual(raw.slice(2600).map((item) => item.term), candidates.map((item) => item.term));
+  assert.ok(raw.length >= 2800);
+  assert.equal(new Set(raw.map((item) => item.term.toLowerCase())).size, raw.length);
+  assert.deepEqual(raw.slice(2600, 2800).map((item) => item.term), candidates.map((item) => item.term));
 });
 
 test("batch 09 word content passes all gates", () => {
@@ -53,7 +53,7 @@ test("batch 09 word content passes all gates", () => {
   }
   assert.equal(new Set(examples).size, 200);
   assert.equal(new Set(collocations).size, 200);
-  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)), { total: 2800, verified: 2800, coreOnly: 0 });
+  assert.deepEqual(lexiconQuality(buildLearningLexicon(raw)), { total: raw.length, verified: raw.length, coreOnly: 0 });
 });
 
 test("batch 16 adds complete IELTS lessons", () => {
