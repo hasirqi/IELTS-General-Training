@@ -20,7 +20,8 @@ test("listening has explicit learning and one-play mock modes", () => {
   assert.match(app,/模考模式/);
   assert.match(app,/只能播放一次，不能拖动/);
   assert.match(app,/disabled=\{audioStarted\}/);
-  assert.match(app,/完成全部题目后才能查看听力原文/);
+  assert.doesNotMatch(app,/完成全部题目后才能查看听力原文/);
+  assert.match(app,/<details open=\{submitted \|\| undefined\}><summary>听力原文<\/summary>/);
   assert.match(app,/!submitted/);
 });
 
