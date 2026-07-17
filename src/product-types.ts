@@ -2,7 +2,6 @@ export type View = "home" | "review" | "words" | "vocabulary-study" | "vocabular
 export type Skill = "listening" | "reading" | "writing" | "speaking";
 export type MasteryAspect = "form" | "meaning" | "use";
 export type VocabularyStudyMode = "order" | "weak" | "random";
-export type VocabularyRecognition = "know" | "unsure" | "unknown";
 
 export type LexiconProgress = {
   id: string;
@@ -37,9 +36,7 @@ export type VocabularyStudyState = {
 
 export type VocabularyTestAnswer = {
   lexiconId: string;
-  recognition: VocabularyRecognition;
-  meaningCorrect: boolean;
-  useCorrect: boolean;
+  correct: boolean;
 };
 
 export type VocabularyEstimate = {
@@ -52,10 +49,9 @@ export type VocabularyTestResult = {
   id: string;
   completedAt: string;
   sampleSize: number;
+  correctCount: number;
   totalVocabulary: number;
-  recognition: VocabularyEstimate;
-  meaning: VocabularyEstimate;
-  use: VocabularyEstimate;
+  vocabulary: VocabularyEstimate;
   weakCategories: string[];
 };
 

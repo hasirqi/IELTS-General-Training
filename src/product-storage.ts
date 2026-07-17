@@ -44,7 +44,7 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     nextLexiconIndex: saved?.nextLexiconIndex ?? 0,
     vocabularyStudy: { ...initialState.vocabularyStudy, ...(saved?.vocabularyStudy ?? {}) },
     vocabularyTestDraft: saved?.vocabularyTestDraft ?? null,
-    vocabularyTests: saved?.vocabularyTests ?? [],
+    vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result),
   };
 }
 

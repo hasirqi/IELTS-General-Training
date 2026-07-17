@@ -32,12 +32,12 @@ export function buildVocabularyTestSample(items, sampleSize = 40, attempt = 0) {
   return selected.slice(0, size).map((item) => item.id);
 }
 
-export function buildVocabularyOptions(items, target, field, seed = 0) {
+export function buildVocabularyOptions(items, target, field, seed = 0, optionCount = 3) {
   const correct = target[field] || target.term;
   const pool = [...new Set(items.map((item) => item[field] || item.term).filter((value) => value && value !== correct))];
   const distractors = [];
   let cursor = Math.abs(seed * 37 + target.id.length * 11) % Math.max(1, pool.length);
-  while (distractors.length < 2 && distractors.length < pool.length) {
+  while (distractors.length < optionCount - 1 && distractors.length < pool.length) {
     const value = pool[cursor % pool.length];
     if (!distractors.includes(value)) distractors.push(value);
     cursor += 53;
@@ -58,14 +58,7 @@ function estimate(score, sampleSize, totalVocabulary) {
   return { value: scale(proportion), low: scale(centre - margin), high: scale(centre + margin) };
 }
 
-export function estimateVocabularyProfile(answers, totalVocabulary) {
-  const sampleSize = answers.length;
-  const recognitionScore = answers.reduce((sum, answer) => sum + (answer.recognition === "know" ? 1 : answer.recognition === "unsure" ? 0.5 : 0), 0);
-  const meaningScore = answers.filter((answer) => answer.meaningCorrect).length;
-  const useScore = answers.filter((answer) => answer.useCorrect).length;
-  return {
-    recognition: estimate(recognitionScore, sampleSize, totalVocabulary),
-    meaning: estimate(meaningScore, sampleSize, totalVocabulary),
-    use: estimate(useScore, sampleSize, totalVocabulary),
-  };
+export function estimateVocabularySize(answers, totalVocabulary) {
+  const correctCount = answers.filter((answer) => answer.correct).length;
+  return estimate(correctCount, answers.length, totalVocabulary);
 }

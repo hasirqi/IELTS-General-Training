@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { buildVocabularyOptions, buildVocabularyTestSample, estimateVocabularyProfile } from "../src/vocabulary-engine.mjs";
+import { buildVocabularyOptions, buildVocabularyTestSample, estimateVocabularySize } from "../src/vocabulary-engine.mjs";
 
 const app = fs.readFileSync(new URL("../src/AppProduct.tsx", import.meta.url), "utf8");
 const storage = fs.readFileSync(new URL("../src/product-storage.ts", import.meta.url), "utf8");
@@ -17,33 +17,41 @@ test("vocabulary test draws 40 unique items across all four strata", () => {
   assert.notDeepEqual(ids, buildVocabularyTestSample(items, 40, 1));
 });
 
-test("meaning and collocation questions always contain one valid answer", () => {
+test("each test question contains four unique Chinese choices and one answer", () => {
   const target = items[17];
-  for (const field of ["meaning", "collocation"]) {
-    const options = buildVocabularyOptions(items, target, field, 9);
-    assert.equal(options.length, 3);
-    assert.equal(new Set(options).size, 3);
-    assert.equal(options.filter((option) => option === target[field]).length, 1);
-  }
+  const options = buildVocabularyOptions(items, target, "meaning", 9, 4);
+  assert.equal(options.length, 4);
+  assert.equal(new Set(options).size, 4);
+  assert.equal(options.filter((option) => option === target.meaning).length, 1);
 });
 
-test("vocabulary estimates are conservative, ordered and bounded", () => {
-  const answers = Array.from({ length: 40 }, (_, index) => ({ recognition: index < 32 ? "know" : index < 36 ? "unsure" : "unknown", meaningCorrect: index < 28, useCorrect: index < 18 }));
-  const result = estimateVocabularyProfile(answers, 1600);
-  assert.ok(result.recognition.value > result.meaning.value);
-  assert.ok(result.meaning.value > result.use.value);
-  for (const estimate of Object.values(result)) {
-    assert.ok(estimate.low <= estimate.value && estimate.value <= estimate.high);
-    assert.ok(estimate.low >= 0 && estimate.high <= 1600);
-  }
+test("vocabulary size is estimated only from actual correct answers", () => {
+  const answers = Array.from({ length: 40 }, (_, index) => ({ correct: index < 30 }));
+  const result = estimateVocabularySize(answers, 1600);
+  assert.equal(result.value, 1200);
+  assert.ok(result.low <= result.value && result.value <= result.high);
+  assert.ok(result.low >= 0 && result.high <= 1600);
 });
 
-test("both vocabulary modules share the real lexicon and local learning state", () => {
+test("the assessment is a real multiple-choice test without self-rating", () => {
+  assert.match(app, /请选择正确的中文意思/);
+  assert.match(app, /buildVocabularyOptions\(lexicon,item,"meaning",draft\.index,4\)/);
+  assert.match(app, /correct:option === item\.meaning/);
+  assert.doesNotMatch(app, /你认识这个词或词块吗/);
+  assert.doesNotMatch(app, /chooseRecognition|VocabularyRecognition/);
+  assert.match(app, /系统只根据实际答题结果估算词汇量/);
+});
+
+test("word study gives the example sentence its own pronunciation button", () => {
+  assert.match(app, /className="study-example"/);
+  assert.match(app, /speakEnglish\(item\.example!\)/);
+  assert.match(app, /aria-label="播放例句"/);
+});
+
+test("both vocabulary modules share the real lexicon and local state", () => {
   assert.match(app, /function VocabularyStudy/);
   assert.match(app, /function VocabularyTest/);
-  assert.match(app, /自主学习 · 当前已审核词库 \{lexicon\.length\.toLocaleString\(\)\} 条/);
   assert.match(app, /buildVocabularyTestSample\(orderedItems,40/);
-  assert.match(app, /vocabularyTestDraft:null/);
   assert.match(app, /errorLog:errors/);
   assert.match(storage, /vocabularyStudy:/);
   assert.match(storage, /vocabularyTestDraft:/);
@@ -53,7 +61,6 @@ test("both vocabulary modules share the real lexicon and local learning state", 
 
 test("the result explicitly avoids claiming total English vocabulary", () => {
   assert.match(app, /不冒充你的全部英语词汇量/);
-  assert.match(app, /识别词汇量/);
-  assert.match(app, /理解词汇量/);
-  assert.match(app, /可用词汇量/);
+  assert.match(app, /核心词汇量估计/);
+  assert.match(app, /实际答题结果/);
 });
