@@ -5,27 +5,20 @@ import fs from "node:fs";
 const app = fs.readFileSync(new URL("../src/AppProduct.tsx", import.meta.url), "utf8");
 const css = fs.readFileSync(new URL("../src/product.css", import.meta.url), "utf8");
 
-test("speaking reference audio exposes real playback state", () => {
-  assert.match(app, /ref=\{modelAudioRef\}/);
-  assert.match(app, /onTimeUpdate=/);
-  assert.match(app, /onPlay=/);
-  assert.match(app, /onPause=/);
-  assert.match(app, /onEnded=/);
-  assert.match(app, /audioPlaying\?<IconPlayerPause\/>:<IconPlayerPlay\/>/);
-  assert.doesNotMatch(app, /playFixedAudio/);
+test("every speaking reference shows one simple play button", () => {
+  assert.match(app, /className=\{`reference-play-button/);
+  assert.match(app, /audioPlaying\?"正在播放…":"播放参考表达"/);
+  assert.match(app, /disabled=\{audioPlaying\}/);
+  assert.doesNotMatch(app, /model-audio-track|model-audio-replay|formatAudioTime/);
 });
 
-test("speaking reference audio reports progress and supports replay", () => {
-  assert.match(app, /role="progressbar" aria-label="录音播放进度"/);
-  assert.match(app, /formatAudioTime\(audioPosition\)/);
-  assert.match(app, /aria-label="从头播放英式示范录音"/);
-  assert.match(app, /正在播放英式示范/);
-  assert.match(app, /录音播放完成/);
+test("reference play state returns to idle when playback finishes", () => {
+  assert.match(app, /onEnded=\{\(\) => setAudioPlaying\(false\)\}/);
+  assert.match(app, /speakEnglish\(drill\.model, \(\) => setAudioPlaying\(false\)\)/);
+  assert.match(app, /aria-label=\{audioPlaying\?"参考表达正在播放":"播放参考表达"\}/);
 });
 
-test("speaking reference audio has responsive and reduced-motion styles", () => {
-  assert.match(css, /\.model-audio-player\.is-playing/);
-  assert.match(css, /\.model-audio-track/);
-  assert.match(css, /@media\(max-width:560px\)/);
-  assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
+test("simple reference button keeps the existing fixed first recording", () => {
+  assert.match(app, /src="\.\/audio\/quick-speak\.mp3"/);
+  assert.match(css, /\.reference-play-button\.is-playing/);
 });

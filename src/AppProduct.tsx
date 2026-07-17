@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   IconAlertTriangle, IconArrowLeft, IconArrowRight, IconBook2, IconBrain, IconCheck,
   IconClipboardText, IconEye, IconFlask2, IconHeadphones, IconLanguage, IconLibrary,
-  IconLock, IconMicrophone, IconPlayerPause, IconPlayerPlay, IconRefresh, IconRobot, IconSearch,
+  IconLock, IconMicrophone, IconPlayerPlay, IconRefresh, IconRobot, IconSearch,
   IconTargetArrow, IconVolume, IconWriting, IconX,
 } from "@tabler/icons-react";
 import rawLexicon from "./content/lexicon.json";
@@ -31,13 +31,7 @@ const steps = [
   {title:"开口任务",subtitle:`${speakingDrills.length} 个真实场景`,icon:IconMicrophone,view:"speak" as View},
 ];
 
-function formatAudioTime(seconds: number) {
-  if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
-  const minutes = Math.floor(seconds / 60);
-  return `${minutes}:${Math.floor(seconds % 60).toString().padStart(2, "0")}`;
-}
-
-function speakEnglish(text: string) {
+function speakEnglish(text: string, onFinish?: () => void) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-GB";
   utterance.rate = .86;
@@ -47,6 +41,8 @@ function speakEnglish(text: string) {
     ?? voices.find((v) => v.lang.toLowerCase() === "en-gb")
     ?? voices.find((v) => v.lang.toLowerCase().startsWith("en"));
   if (voice) utterance.voice = voice;
+  utterance.onend = () => onFinish?.();
+  utterance.onerror = () => onFinish?.();
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
 }
@@ -215,11 +211,6 @@ function QuickSpeak({state,update,onCoach,done}:{state:LearningState;update:Upda
   const [modelShown,setModelShown] = useState(false);
   const modelAudioRef = useRef<HTMLAudioElement | null>(null);
   const [audioPlaying,setAudioPlaying] = useState(false);
-  const [audioPosition,setAudioPosition] = useState(0);
-  const [audioDuration,setAudioDuration] = useState(0);
-  const [audioError,setAudioError] = useState(false);
-  const audioComplete = audioDuration > 0 && audioPosition >= audioDuration - .1;
-  const audioPercent = audioDuration > 0 ? Math.min(100, audioPosition / audioDuration * 100) : 0;
   const keywordScore = useMemo(() => drill.keywords.filter((word) => text.toLowerCase().includes(word.toLowerCase())).length,[text,drill]);
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
   const supported = "webkitSpeechRecognition" in window || "SpeechRecognition" in window;
@@ -235,21 +226,29 @@ function QuickSpeak({state,update,onCoach,done}:{state:LearningState;update:Upda
   };
   useEffect(() => {
     setAudioPlaying(false);
-    setAudioPosition(0);
-    setAudioDuration(0);
-    setAudioError(false);
-    return () => modelAudioRef.current?.pause();
+    return () => {
+      modelAudioRef.current?.pause();
+      speechSynthesis.cancel();
+    };
   }, [drill.id]);
   const toggleModel = () => {
-    if (modelShown) modelAudioRef.current?.pause();
+    if (modelShown) {
+      modelAudioRef.current?.pause();
+      speechSynthesis.cancel();
+      setAudioPlaying(false);
+    }
     setModelShown((shown) => !shown);
   };
-  const toggleModelAudio = async () => {
+  const playReference = async () => {
+    if (audioPlaying) return;
+    setAudioPlaying(true);
+    if (drill.id !== "d01") {
+      speakEnglish(drill.model, () => setAudioPlaying(false));
+      return;
+    }
     const audio = modelAudioRef.current;
-    if (!audio) return;
-    setAudioError(false);
-    if (!audio.paused) {
-      audio.pause();
+    if (!audio) {
+      setAudioPlaying(false);
       return;
     }
     if (audio.ended) audio.currentTime = 0;
@@ -257,33 +256,10 @@ function QuickSpeak({state,update,onCoach,done}:{state:LearningState;update:Upda
       await audio.play();
     } catch {
       setAudioPlaying(false);
-      setAudioError(true);
-    }
-  };
-  const replayModelAudio = async () => {
-    const audio = modelAudioRef.current;
-    if (!audio) return;
-    audio.currentTime = 0;
-    setAudioPosition(0);
-    setAudioError(false);
-    try {
-      await audio.play();
-    } catch {
-      setAudioPlaying(false);
-      setAudioError(true);
     }
   };
   const finish = () => { update((current) => ({...current,speakingIndex:current.speakingIndex+1})); done(); };
-  return <section className="lesson-content speak-lab"><div className="lesson-kicker">开口 {state.speakingIndex % speakingDrills.length + 1} / {speakingDrills.length} · {drill.level} · {drill.scenario}</div><h1>{drill.title}</h1><div className="speaking-prompt-card"><span>任务</span><strong>{drill.prompt}</strong><p>追问：{drill.followUp}</p></div>{supported && <button className={`record-button ${listening?"recording":""}`} onClick={record}><IconMicrophone/><span>{listening?"正在听…":"按下开始说"}</span></button>}<label className="writing-area compact"><span>{supported?"识别不准时可手动修正":"输入你说的话"} · {wordCount} 词</span><textarea value={text} onChange={(event) => setText(event.target.value)} placeholder="Type or correct your spoken answer here..."/></label>{text && <div className="transcript"><span>本地检查</span><strong>关键词 {keywordScore}/{drill.keywords.length}</strong><p>先保证意思完整；关键词只是提醒，不是口语分数。</p></div>}<div className="speak-actions"><button className="outline-button" onClick={toggleModel}><IconEye/>{modelShown?"收起参考":"查看参考表达"}</button><button className="outline-button" disabled={!text.trim()} onClick={() => onCoach(`请按 IELTS Speaking 的 Fluency and Coherence、Lexical Resource、Grammatical Range and Accuracy、Pronunciation 四项反馈。不要假装听到音频；只能评价下面的转写。\n题目：${drill.prompt}\n我的回答：${text}`)}><IconRobot/>复制给 ChatGPT</button></div>{modelShown && <div className="model-answer"><span>参考，不必背诵</span><p>{drill.model}</p>{drill.id === "d01" && <div className={`model-audio-player ${audioPlaying?"is-playing":""} ${audioError?"has-error":""}`}>
-          <audio ref={modelAudioRef} src="./audio/quick-speak.mp3" preload="metadata" onLoadedMetadata={(event) => setAudioDuration(event.currentTarget.duration)} onDurationChange={(event) => setAudioDuration(event.currentTarget.duration)} onTimeUpdate={(event) => setAudioPosition(event.currentTarget.currentTime)} onPlay={() => setAudioPlaying(true)} onPause={() => setAudioPlaying(false)} onEnded={(event) => { setAudioPlaying(false); setAudioPosition(event.currentTarget.duration); }} onError={() => { setAudioPlaying(false); setAudioError(true); }}/>
-          <button type="button" className="model-audio-toggle" onClick={toggleModelAudio} aria-label={audioPlaying?"暂停英式示范录音":audioComplete?"重新播放英式示范录音":"播放英式示范录音"}>{audioPlaying?<IconPlayerPause/>:<IconPlayerPlay/>}</button>
-          <div className="model-audio-main">
-            <div className="model-audio-heading"><span className="model-audio-copy"><strong>{audioError?"录音加载失败":audioPlaying?"正在播放英式示范":audioComplete?"播放完成":"英式示范录音"}</strong><small>{audioError?"请检查网络后重试":audioPlaying?"跟读时注意重音和停顿":"固定英式录音 · 可重复播放"}</small></span><span className="model-audio-time" aria-label={`已播放 ${formatAudioTime(audioPosition)}，总时长 ${formatAudioTime(audioDuration)}`}>{formatAudioTime(audioPosition)} / {audioDuration?formatAudioTime(audioDuration):"--:--"}</span></div>
-            <div className="model-audio-track" role="progressbar" aria-label="录音播放进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(audioPercent)}><span style={{width:`${audioPercent}%`}}/></div>
-          </div>
-          {audioPosition > 0 && <button type="button" className="model-audio-replay" onClick={replayModelAudio} aria-label="从头播放英式示范录音"><IconRefresh/></button>}
-          <span className="sr-only" role="status" aria-live="polite">{audioPlaying?"录音正在播放":audioComplete?"录音播放完成":""}</span>
-        </div>}</div>}<button className="primary-button wide" disabled={wordCount<5} onClick={finish}>完成本轮开口<IconCheck/></button></section>;
+  return <section className="lesson-content speak-lab"><div className="lesson-kicker">开口 {state.speakingIndex % speakingDrills.length + 1} / {speakingDrills.length} · {drill.level} · {drill.scenario}</div><h1>{drill.title}</h1><div className="speaking-prompt-card"><span>任务</span><strong>{drill.prompt}</strong><p>追问：{drill.followUp}</p></div>{supported && <button className={`record-button ${listening?"recording":""}`} onClick={record}><IconMicrophone/><span>{listening?"正在听…":"按下开始说"}</span></button>}<label className="writing-area compact"><span>{supported?"识别不准时可手动修正":"输入你说的话"} · {wordCount} 词</span><textarea value={text} onChange={(event) => setText(event.target.value)} placeholder="Type or correct your spoken answer here..."/></label>{text && <div className="transcript"><span>本地检查</span><strong>关键词 {keywordScore}/{drill.keywords.length}</strong><p>先保证意思完整；关键词只是提醒，不是口语分数。</p></div>}<div className="speak-actions"><button className="outline-button" onClick={toggleModel}><IconEye/>{modelShown?"收起参考":"查看参考表达"}</button><button className="outline-button" disabled={!text.trim()} onClick={() => onCoach(`请按 IELTS Speaking 的 Fluency and Coherence、Lexical Resource、Grammatical Range and Accuracy、Pronunciation 四项反馈。不要假装听到音频；只能评价下面的转写。\n题目：${drill.prompt}\n我的回答：${text}`)}><IconRobot/>复制给 ChatGPT</button></div>{modelShown && <div className="model-answer"><span>参考，不必背诵</span><p>{drill.model}</p>{drill.id === "d01" && <audio ref={modelAudioRef} src="./audio/quick-speak.mp3" preload="metadata" onPlay={() => setAudioPlaying(true)} onPause={() => setAudioPlaying(false)} onEnded={() => setAudioPlaying(false)} onError={() => setAudioPlaying(false)}/>}<button type="button" className={`reference-play-button ${audioPlaying?"is-playing":""}`} onClick={playReference} disabled={audioPlaying} aria-label={audioPlaying?"参考表达正在播放":"播放参考表达"}><IconPlayerPlay/>{audioPlaying?"正在播放…":"播放参考表达"}</button><span className="sr-only" role="status" aria-live="polite">{audioPlaying?"参考表达正在播放":"待播放"}</span></div>}<button className="primary-button wide" disabled={wordCount<5} onClick={finish}>完成本轮开口<IconCheck/></button></section>;
 }
 
 function CourseHub({state,update,initialSkill,onCoach}:{state:LearningState;update:UpdateState;initialSkill:Skill;onCoach:(extra:string)=>void}) {
