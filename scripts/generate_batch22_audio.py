@@ -1,0 +1,17 @@
+import asyncio
+from pathlib import Path
+import edge_tts
+TEXTS={
+121:"Agent. Bright Appliance Repairs. Customer. My washing machine rattles and sometimes stops before the final cycle. Agent. What is the model number? Customer. H N forty-six B. Agent. And your address? Customer. Flat seven, eighteen Larch Avenue. Agent. We can visit on Wednesday from eight to ten or Friday from one to three. Customer. Friday afternoon suits me. Agent. The call-out fee is thirty-five pounds. Parts are additional, but we will not fit anything without your approval. Please remove laundry from the machine and keep the utility cupboard accessible. Customer. Fine. Agent. You will receive a text twenty minutes before the technician arrives.",
+122:"Heavy rain has saturated the upper valley, so we are closing the riverside field tonight. Campers in rows A to D must move to the school sports hall by seven thirty. Do not drive across the old ford; water there is already forty centimetres deep. Follow the blue signs to Mill Road and park behind the library. Take medication, identification, warm clothing and a phone charger. Pets are permitted in the smaller hall beside the main entrance. Staff will check every pitch at seven fifteen, but do not wait for them if you are ready. A hot meal will be served at eight thirty. The decision about reopening will be announced at ten tomorrow morning.",
+123:"Supervisor. Your study asks whether rotating tasks reduces fatigue on night shifts. Sam. We planned to observe one warehouse for two weeks. Priya. Workers will record alertness every two hours. Supervisor. Add objective measures, perhaps picking errors and reaction time. Sam. Can supervisors identify individual workers in the dataset? Supervisor. No. Use coded identifiers and explain that participation is voluntary. Priya. We also want to compare permanent and temporary staff. Supervisor. That is tenable, but hours worked may confound the comparison, so record overtime. Conduct a short pilot with six volunteers next Monday. Do not begin the main study until the ethics amendment is approved.",
+124:"Debates about repatriation ask more than who legally owns an object. Many collections expanded during colonisation, when unequal power could make an apparently voluntary sale equivocal. A museum should therefore investigate provenance, annotate gaps honestly and liaise with source communities. Return is not always a simple transfer. Fragile objects may need conservation, appropriate storage and agreement about future access. Some communities request permanent repatriation; others prefer shared custody, rotating exhibitions or digital records. Critics fear that return will deplete encyclopaedic museums, but this can overstate the loss. Cooperation may generate new research and allow institutions to exhibit objects with richer interpretation. The most effectual process is transparent, adequately funded and free from servile deference or institutional arrogance. It treats communities as decision-makers, not merely as sources of information."
+}
+async def main():
+    output=Path(__file__).resolve().parents[1]/"public"/"audio";output.mkdir(parents=True,exist_ok=True)
+    for lesson_id,text in TEXTS.items():
+        destination=output/f"l{lesson_id}.mp3"
+        await edge_tts.Communicate(text,"en-GB-SoniaNeural",rate="-8%").save(str(destination))
+        if destination.stat().st_size<=100_000: raise RuntimeError(f"Audio too small: {destination}")
+        print(destination.name,destination.stat().st_size)
+asyncio.run(main())
