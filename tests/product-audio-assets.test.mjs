@@ -2,8 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 
-test("all 124 listening lessons ship fixed MP3 audio", () => {
-  for (let index = 1; index <= 124; index += 1) {
+test("all 128 listening lessons ship fixed MP3 audio", () => {
+  for (let index = 1; index <= 128; index += 1) {
     const file = new URL(`../public/audio/l${index}.mp3`, import.meta.url);
     const bytes = fs.readFileSync(file);
     assert.ok(bytes.length > 100_000, `l${index}.mp3 is unexpectedly small`);

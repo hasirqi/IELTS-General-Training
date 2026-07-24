@@ -14,10 +14,11 @@ import { curriculumBatch19 } from "./curriculum-batch-19";
 import { curriculumBatch20 } from "./curriculum-batch-20";
 import { curriculumBatch21 } from "./curriculum-batch-21";
 import { curriculumBatch22 } from "./curriculum-batch-22";
+import { curriculumBatch23 } from "./curriculum-batch-23";
 import type { CourseLesson } from "./curriculum-v2";
 
 export type { CourseLesson };
-export const curriculum: CourseLesson[] = [...previousCurriculum, ...curriculumBatch08, ...curriculumBatch09, ...curriculumBatch10, ...curriculumBatch11, ...curriculumBatch12, ...curriculumBatch13, ...curriculumBatch14, ...curriculumBatch15, ...curriculumBatch16, ...curriculumBatch17, ...curriculumBatch18, ...curriculumBatch19, ...curriculumBatch20, ...curriculumBatch21, ...curriculumBatch22];
+export const curriculum: CourseLesson[] = [...previousCurriculum, ...curriculumBatch08, ...curriculumBatch09, ...curriculumBatch10, ...curriculumBatch11, ...curriculumBatch12, ...curriculumBatch13, ...curriculumBatch14, ...curriculumBatch15, ...curriculumBatch16, ...curriculumBatch17, ...curriculumBatch18, ...curriculumBatch19, ...curriculumBatch20, ...curriculumBatch21, ...curriculumBatch22, ...curriculumBatch23];
 const count = (skill: CourseLesson["skill"]) => curriculum.filter((lesson) => lesson.skill === skill).length;
 export const skillMeta = {
   listening: { label: "听力", description: "Part 1–4 · 学习与模考模式", count: count("listening") },

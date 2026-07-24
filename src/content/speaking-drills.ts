@@ -16,6 +16,7 @@ import { speakingDrillBatch15 } from "./foundation-batch-15";
 import { speakingDrillBatch16 } from "./foundation-batch-16";
 import { speakingDrillBatch17 } from "./foundation-batch-17";
 import { speakingDrillBatch18 } from "./foundation-batch-18";
+import { speakingDrillBatch19 } from "./foundation-batch-19";
 
 export type { SpeakingDrill } from "./speaking-drills-base";
-export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07, ...speakingDrillBatch08, ...speakingDrillBatch09, ...speakingDrillBatch10, ...speakingDrillBatch11, ...speakingDrillBatch12, ...speakingDrillBatch13, ...speakingDrillBatch14, ...speakingDrillBatch15, ...speakingDrillBatch16, ...speakingDrillBatch17, ...speakingDrillBatch18];
+export const speakingDrills = [...foundationDrills, ...speakingDrillBatch02, ...speakingDrillBatch03, ...speakingDrillBatch04, ...speakingDrillBatch05, ...speakingDrillBatch06, ...speakingDrillBatch07, ...speakingDrillBatch08, ...speakingDrillBatch09, ...speakingDrillBatch10, ...speakingDrillBatch11, ...speakingDrillBatch12, ...speakingDrillBatch13, ...speakingDrillBatch14, ...speakingDrillBatch15, ...speakingDrillBatch16, ...speakingDrillBatch17, ...speakingDrillBatch18, ...speakingDrillBatch19];
