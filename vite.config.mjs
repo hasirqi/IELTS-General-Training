@@ -36,7 +36,10 @@ export default defineConfig({
         lang: "zh-CN",
         icons: [{ src: "icons/app-icon.png", sizes: "1024x1024", type: "image/png", purpose: "any maskable" }],
       },
-      workbox: { globPatterns: ["**/*.{js,css,html,png,woff2,mp3}"] },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,woff2,mp3}"],
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
+      },
     }),
   ],
 });
