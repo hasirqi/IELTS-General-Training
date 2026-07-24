@@ -22,6 +22,50 @@ const currentCounts = currentAnchors.reduce((counts, anchor) => {
   return counts;
 }, {});
 
+function bandBounds(band) {
+  const index = Number.parseInt(band, 10);
+  return { start: (index - 1) * 1000 + 1, end: index * 1000 };
+}
+
+function selectStratified(pool, finalTarget, currentBandAnchors) {
+  const { start, end } = bandBounds(pool[0].family.frequencyBand);
+  const targets = Array.from({ length: finalTarget }, (_, index) =>
+    start + ((index + 0.5) * (end - start + 1)) / finalTarget,
+  );
+  const occupiedSlots = new Set();
+  const assignedAnchors = new Set();
+  const assignments = currentBandAnchors
+    .flatMap((anchor) => targets.map((target, slot) => ({
+      anchorId: anchor.id,
+      slot,
+      distance: Math.abs(anchor.frequencyRank - target),
+    })))
+    .sort((a, b) => a.distance - b.distance || a.slot - b.slot);
+
+  for (const assignment of assignments) {
+    if (assignedAnchors.has(assignment.anchorId) || occupiedSlots.has(assignment.slot)) continue;
+    assignedAnchors.add(assignment.anchorId);
+    occupiedSlots.add(assignment.slot);
+  }
+
+  const usedFamilies = new Set();
+  const selected = [];
+  for (let slot = 0; slot < targets.length; slot += 1) {
+    if (occupiedSlots.has(slot)) continue;
+    const candidate = pool
+      .filter(({ family }) => !usedFamilies.has(family.familyId))
+      .sort((a, b) =>
+        Math.abs(a.family.frequencyRank - targets[slot])
+        - Math.abs(b.family.frequencyRank - targets[slot])
+        || a.family.frequencyRank - b.family.frequencyRank,
+      )[0];
+    if (!candidate) break;
+    usedFamilies.add(candidate.family.familyId);
+    selected.push(candidate);
+  }
+  return selected;
+}
+
 function containsTerm(text, term) {
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return new RegExp(`\\b${escaped}(?:s|es|ed|ing)?\\b`, "i").test(text);
@@ -62,8 +106,13 @@ for (const [band, finalTarget] of Object.entries(FINAL_TARGETS)) {
   if (pool.length < needed) {
     throw new Error(`${band} needs ${needed} candidates but only ${pool.length} are eligible`);
   }
+  const currentBandAnchors = currentAnchors.filter((anchor) => anchor.frequencyBand === band);
+  const stratified = selectStratified(pool, finalTarget, currentBandAnchors);
+  if (stratified.length !== needed) {
+    throw new Error(`${band} stratified selection produced ${stratified.length}, expected ${needed}`);
+  }
   const selectedOffset = selected.length;
-  selected.push(...pool.slice(0, needed).map(({ item, family }, index) => ({
+  selected.push(...stratified.map(({ item, family }, index) => ({
     candidateId: `candidate-${String(selectedOffset + index + 1).padStart(3, "0")}`,
     plannedAnchorId: `anchor-${String(currentAnchors.length + selectedOffset + index + 1).padStart(3, "0")}`,
     familyId: family.familyId,

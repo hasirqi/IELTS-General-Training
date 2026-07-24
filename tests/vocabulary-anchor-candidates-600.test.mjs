@@ -86,3 +86,22 @@ test("unreviewed candidate data is not imported by the runtime CAT", () => {
     assert.doesNotMatch(source, /vocabulary-anchor-candidates-600/);
   }
 });
+
+test("final anchors cover each frequency band instead of clustering at its start", () => {
+  const combined = [...reviewed, ...manifest.candidates];
+  for (let index = 1; index <= 20; index += 1) {
+    const band = `${index}K`;
+    const lowerBoundary = (index - 1) * 1000;
+    const upperBoundary = index * 1000 + 1;
+    const ranks = combined
+      .filter((anchor) => anchor.frequencyBand === band)
+      .map((anchor) => anchor.frequencyRank)
+      .sort((a, b) => a - b);
+    const bounded = [lowerBoundary, ...ranks, upperBoundary];
+    const maximumGap = Math.max(
+      ...bounded.slice(1).map((rank, rankIndex) => rank - bounded[rankIndex]),
+    );
+    const allowedGap = index <= 8 ? 80 : index <= 14 ? 100 : 250;
+    assert.ok(maximumGap <= allowedGap, `${band} maximum gap is ${maximumGap}`);
+  }
+});
