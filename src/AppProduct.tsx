@@ -34,7 +34,7 @@ const quality = lexiconQuality(lexicon);
 const steps = [
   {title:"复习旧词",subtitle:"到期和错词优先回来",icon:IconBook2,view:"review" as View,completeKey:0},
   {title:"单词学习",subtitle:"自主选择顺序、场景和数量",icon:IconLanguage,view:"vocabulary-study" as View,completeKey:1},
-  {title:"词汇量测试",subtitle:"人工锚点，自适应定位",icon:IconTargetArrow,view:"vocabulary-test" as View,completeKey:null},
+  {title:"测试中心",subtitle:"人工锚点，自适应定位",icon:IconTargetArrow,view:"vocabulary-test" as View,completeKey:null},
   {title:"句型实验室",subtitle:`${sentenceChallenges.length} 套递进训练`,icon:IconFlask2,view:"sentence" as View,completeKey:2},
   {title:"开口任务",subtitle:`${speakingDrills.length} 个真实场景`,icon:IconMicrophone,view:"speak" as View,completeKey:3},
 ];
@@ -151,7 +151,7 @@ function GlobalHeader({onHome,onLibrary,onChat}:{onHome:()=>void;onLibrary:()=>v
 }
 
 function Shell({view,back,progress,children}:{view:View;back:()=>void;progress:number;children:React.ReactNode}) {
-  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"词汇量测试",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
+  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
   return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label="返回首页"><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
 }
 
@@ -354,7 +354,7 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
           ? {eyebrow:"建议复测",title:"重新完成词汇量精测",time:"12–18 分钟",copy:"距离上次测评已超过 4 个月，重新确认当前层级",action:() => start("vocabulary-cat"),button:"重新精测"}
           : {eyebrow:"推荐",title:"继续词汇量精测",time:"12–18 分钟",copy:"英文语境题是当前正式计分主体",action:() => start("vocabulary-cat"),button:"开始精测"};
     const routeLabel = routeSnapshot ? (routeSnapshot.theta < -1.4 ? "1K–2K 起点" : routeSnapshot.theta < -.5 ? "2K–4K 起点" : "4K–5K 起点") : "";
-    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><h1>测试中心</h1><p className="assessment-lead">选择需要的测量方式。正式词汇结果只由英文语境释义 CAT 产生；阅读模拟 L 值将在文章题库通过门禁后开放。</p>
+    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">选择需要的测量方式。正式词汇结果只由英文语境释义 CAT 产生；阅读模拟 L 值将在文章题库通过门禁后开放。</p>
       <article className="assessment-recommendation"><div className="recommend-icon"><IconTargetArrow/></div><div><span>{recommendation.eyebrow}</span><h2>{recommendation.title}</h2><p>{recommendation.time} · {recommendation.copy}</p>{routeSnapshot && <small>{routeLabel} · 非词误认 {routeSnapshot.claimedPseudowords}/{routeSnapshot.pseudoTotal}</small>}</div><button className="primary-button" onClick={recommendation.action}>{recommendation.button}<IconArrowRight/></button></article>
       <div className="assessment-section-title"><h2>选择测试模式</h2><span>五种模式并列展示</span></div><div className="assessment-mode-grid">
         <button className="assessment-mode-card" onClick={() => start("quick-route")}><span className="mode-icon"><IconTargetArrow/></span><strong>快速定位</strong><em>3–5 分钟</em><small>Yes/No 路由＋非词检查<br/>快速确定 1K–5K 起点</small><b>开始定位<IconArrowRight/></b></button>
