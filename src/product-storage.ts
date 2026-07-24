@@ -2,7 +2,7 @@ import { openDB } from "idb";
 import type { LearningState } from "./product-types";
 
 const initialState: LearningState = {
-  schemaVersion: 3,
+  schemaVersion: 5,
   completedSteps: [],
   completedLessons: [],
   reviewIndex: 0,
@@ -32,7 +32,7 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
   return {
     ...structuredClone(initialState),
     ...(saved ?? {}),
-    schemaVersion: 3,
+    schemaVersion: 5,
     skill: { ...initialState.skill, ...(saved?.skill ?? {}) },
     completedSteps: saved?.completedSteps ?? [],
     completedLessons: saved?.completedLessons ?? [],
@@ -43,8 +43,8 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     speakingIndex: saved?.speakingIndex ?? 0,
     nextLexiconIndex: saved?.nextLexiconIndex ?? 0,
     vocabularyStudy: { ...initialState.vocabularyStudy, ...(saved?.vocabularyStudy ?? {}) },
-    vocabularyTestDraft: saved?.vocabularyTestDraft ?? null,
-    vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result),
+    vocabularyTestDraft: saved?.vocabularyTestDraft?.mode === "adaptive-v2" ? saved.vocabularyTestDraft : null,
+    vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result || result.mode === "adaptive-v1" || result.mode === "adaptive-v2"),
   };
 }
 
