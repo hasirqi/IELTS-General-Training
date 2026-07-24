@@ -1,5 +1,7 @@
 # Third-party notices
 
+## ECDICT
+
 The offline English–Chinese lexical records in `src/content/lexicon.json` were selected and transformed from [ECDICT](https://github.com/skywind3000/ECDICT).
 
 ECDICT is distributed under the MIT License:
@@ -11,5 +13,20 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## wordfreq 3.1.1
+
+The 20K measurement index uses frequency ranks derived from
+[wordfreq](https://github.com/rspeer/wordfreq) by Robyn Speer.
+
+- Library code: Apache License 2.0.
+- Bundled frequency data: Creative Commons Attribution-ShareAlike 4.0.
+- The upstream project combines and credits Google Books Ngrams, the Leeds
+  Internet Corpus, Wikipedia, ParaCrawl, OPUS OpenSubtitles, SUBTLEX and other
+  sources. Refer to the upstream README and `LICENSE.txt` for the complete
+  notices and citations.
+
+The derived index in this repository remains explicitly attributed and is
+distributed under the same share-alike data conditions where applicable.
 
 All IELTS-style lesson passages, scripts, prompts, questions and explanations in this repository are original practice content written for this product. They are not past IELTS papers and are not endorsed by IELTS.

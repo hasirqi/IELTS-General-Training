@@ -1,0 +1,39 @@
+{
+  "version": "wf20k-2026.07.24-v1",
+  "generatedAt": "2026-07-24",
+  "measurementUnit": "frequency-seeded word-family candidate",
+  "scoringEligibleStatuses": [
+    "item-authored",
+    "pilot-active",
+    "calibrated"
+  ],
+  "nonScoringStatuses": [
+    "frequency-seeded",
+    "expert-reviewed"
+  ],
+  "source": {
+    "id": "wordfreq-en-3.1.1",
+    "name": "wordfreq",
+    "version": "3.1.1",
+    "upstream": "https://github.com/rspeer/wordfreq",
+    "codeLicence": "Apache-2.0",
+    "dataLicence": "CC-BY-SA-4.0 with upstream source attributions",
+    "redistribution": "Derived ranks may be redistributed with attribution and share-alike notice"
+  },
+  "familyPolicy": {
+    "status": "frequency-seeded; every scored anchor requires human review",
+    "inflections": "conservative rule-based grouping plus explicit irregular forms",
+    "transparentDerivations": "candidate grouping only; false merges are corrected during expert review",
+    "multiwordChunks": "mapped to component families; never counted as an extra word family",
+    "properNouns": "excluded by lowercase source filtering unless explicitly reviewed later",
+    "numbers": "excluded from the 20K family count and handled separately"
+  },
+  "counts": {
+    "families": 20000,
+    "teachingItems": 4133,
+    "direct": 3187,
+    "member": 121,
+    "components": 121,
+    "unmatched": 704
+  }
+}
