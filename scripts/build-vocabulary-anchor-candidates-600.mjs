@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
-import currentAnchors from "../src/content/vocabulary-anchor-bank-150.json" with { type: "json" };
+import currentAnchors from "../src/content/vocabulary-anchor-bank-186.json" with { type: "json" };
 import familyIndex from "../src/content/word-family-index-20k.json" with { type: "json" };
 import familyMap from "../src/content/teaching-lexicon-family-map.json" with { type: "json" };
 import { buildLearningLexicon } from "../src/content/lexicon-content.mjs";

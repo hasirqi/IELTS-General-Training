@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { vocabularyAnchorReview1K } from "../src/content/vocabulary-anchor-review-1k.mjs";
 import {
   VOCABULARY_CAT_LIMITS, VOCABULARY_ROUTE_PSEUDOWORDS,
   buildVocabularyPilotResult, buildVocabularyRoute, eligibleVocabularyAnchors,
@@ -8,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-150.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-186.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -19,12 +20,13 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("150 reviewed anchors match the exact pilot distribution", () => {
-  assert.equal(anchors.length,150); assert.equal(new Set(anchors.map((item)=>item.id)).size,150);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,150);
-  for(let band=1;band<=5;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,24);
+test("186 reviewed anchors include the completed 1K M3 batch", () => {
+  assert.equal(anchors.length,186); assert.equal(new Set(anchors.map((item)=>item.id)).size,186);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,186);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
+  for(let band=2;band<=5;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,24);
   for(let band=6;band<=8;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,10);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,150);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,186);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {
@@ -36,7 +38,7 @@ test("every scored anchor has reviewed context, English definitions and separate
     assert.equal(anchor.definitionOptions.filter((option)=>option===anchor.correctDefinition).length,1);
     assert.equal(anchor.chineseOptions.length,4); assert.equal(new Set(anchor.chineseOptions).size,4);
     assert.equal(anchor.chineseOptions.filter((option)=>option===anchor.correctChinese).length,1);
-    assert.deepEqual(anchor.review.checks,["family","frequency-band","part-of-speech","focused-meaning","english-definition","unique-definition-options","unique-chinese-options","context"]);
+    for(const check of ["family","frequency-band","part-of-speech","focused-meaning","english-definition","unique-definition-options","unique-chinese-options","context"]) assert.ok(anchor.review.checks.includes(check));
   }
 });
 
@@ -98,8 +100,8 @@ test("pilot result excludes route items from score and reports route credibility
 test("unreviewed or incomplete candidates are blocked from scoring", () => {
   const blocked=anchors.map((anchor,index)=>index===0?{...anchor,reviewStatus:"frequency-seeded"}:anchor);
   const incomplete=blocked.map((anchor,index)=>index===1?{...anchor,definitionOptions:anchor.definitionOptions.slice(0,3)}:anchor);
-  assert.equal(eligibleVocabularyAnchors(blocked).length,149);
-  assert.equal(eligibleVocabularyAnchors(incomplete).length,148);
+  assert.equal(eligibleVocabularyAnchors(blocked).length,anchors.length-1);
+  assert.equal(eligibleVocabularyAnchors(incomplete).length,anchors.length-2);
 });
 
 test("rapid responses and multiple pseudoword claims lower credibility", () => {
@@ -116,4 +118,19 @@ test("chance-like contextual performance cannot produce a high pilot band", () =
   const sample=anchors.slice(0,30).map((anchor,index)=>answer(anchor,index%4===0));
   const result=buildVocabularyPilotResult(sample,route,"2026-07-24T00:00:00.000Z");
   assert.ok(["1K以内","1K–2K"].includes(result.broadBand));
+});
+
+test("the first M3 batch contains 36 manually authored 1K items", () => {
+  const batch = anchors.filter((anchor) => Number(anchor.id.slice(7)) >= 151);
+  assert.equal(batch.length, 36);
+  assert.equal(Object.keys(vocabularyAnchorReview1K).length, 36);
+  for (const anchor of batch) {
+    const authored = vocabularyAnchorReview1K[anchor.term.toLowerCase()];
+    assert.ok(authored, anchor.term);
+    assert.equal(anchor.frequencyBand, "1K");
+    assert.equal(anchor.partOfSpeech, authored.partOfSpeech);
+    assert.equal(anchor.englishDefinition, authored.englishDefinition);
+    assert.ok(anchor.review.checks.includes("same-pos-distractors"));
+    assert.ok(anchor.review.checks.includes("sense-context-match"));
+  }
 });
