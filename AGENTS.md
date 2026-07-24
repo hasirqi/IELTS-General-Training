@@ -10,6 +10,11 @@ Durable product decisions:
 - ChatGPT cooperation means copying a structured prompt and opening `https://chatgpt.com/`; never imply access to the user's web session or responses.
 - Use a patient, direct, non-shaming voice. Wrong answers must return through review.
 
+Project continuity documents:
+- Read `PROJECT_OVERVIEW.md` for the complete rationale, current baseline, measurement architecture and durable decisions.
+- Read `PROJECT_PLAN.md` for ordered milestones, quantities, gates, tests and the exact next action.
+- If an old conversational summary conflicts with these files, prefer the latest committed documents and verified repository state.
+
 # 与用户共同确定的项目上下文
 
 ## 用户与目标
@@ -61,15 +66,16 @@ Durable product decisions:
 - 雅思核心词扩展全部 16 批已完成并发布，源优先级 `1–3133` 无剩余；产品词库共 4,133 条。
 - 最终扩词节点：`c82b551 Expand core vocabulary batch 16`；GitHub Actions 运行 `30062754904` 已成功，线上最终词 `gullibly`、总数 `4133` 与 `l128.mp3` 已核对。
 - 下一阶段直接完善标准化词汇量测试，不再生成第 17 批。
-- 词汇量测试先审计现有 10K 频率索引和题库覆盖，再实现分层抽样、难度自适应、词族量估算与置信区间，最后补齐结果解释、错词回流、测试和线上验收。
+- 标准化测量平台最终范围已经确定为 20,000 词族、1,000 个锚点，按 150 锚点验证版、600 锚点可用版、1,000 锚点完整版推进；详细数量和门禁以 `PROJECT_PLAN.md` 为准。
 - 扩词候选剩余 0 条；后续不得用未审核词条虚增总数。
-- 标准化词汇量测试必须采用英文词／词块＋中文四选一的客观题，按约 10,000 个词族的内部频率索引分层抽题，处理专有名词、数字和透明派生词，并输出词族量估算、置信区间与内部模拟蓝思区间。不得退回“认识／不认识”自评，也不得把内部结果表述成 MetaMetrics 官方认证。
+- 下一次直接执行 `PROJECT_PLAN.md` 的 M1：审计现有 10K 实验索引的来源和词形粒度，制定 20K 词族归并规则并建立 4,133 教学词映射报告。不得直接把未跟踪实验文件接入正式 UI。
+- 正式计分以英文词／词块＋中文四选一为主体；低阶使用分层路由，高阶使用 CAT。词汇 CAT 输出接受性词族估计，阅读 CAT 独立决定内部模拟阅读值。不得把内部结果表述成 MetaMetrics 官方认证。
 - 本地未跟踪的 `audit/`、7 个原始 Word List、10K 频率索引与阅读评估实验文件继续保留，除非用户明确要求，否则不得加入批次提交。
 
 ## 换电脑继续开发
 
 - GitHub `main` 是跨电脑开发的唯一基准。家里电脑第一次工作时克隆 `https://github.com/hasirqi/IELTS-General-Training`；已有仓库时先检查并保留本地修改，再使用快进方式拉取 `origin/main`。不要从旧压缩包或浏览器缓存继续。
-- 拉取后先确认最近提交至少包含最终扩词节点和续作检查点，再运行 `pnpm install --frozen-lockfile`、`pnpm test` 和 `pnpm build`。Codex 打开仓库后必须先完整读取本文件，然后直接继续标准化词汇量测试。
+- 拉取后先确认最近提交包含项目文档和续作检查点，再运行 `pnpm install --frozen-lockfile`、`pnpm test` 和 `pnpm build`。Codex 打开仓库后必须依次阅读 `PROJECT_OVERVIEW.md`、`PROJECT_PLAN.md` 和本文件，然后从计划书第一个未完成里程碑继续。
 - 全部扩词批次所需的 `ysgpc/extracted/expansion-plan.json`、已发布词库、课程、测试、音频和接入脚本均已跟踪在 GitHub。办公室电脑未跟踪的 `audit/`、原始 Word List 和实验文件不会出现在家里电脑，也不是继续词汇量测试的前置条件。
 - 生成固定英式 MP3 需要 Python 和 `requirements-audio.txt` 中锁定的 `edge-tts`。若新环境没有该依赖，由执行代理安装后再运行批次音频脚本；不得用浏览器朗读代替正式听力 MP3。
 - “项目开发内容”可通过 GitHub 跨电脑同步；“用户个人学习进度”目前保存在各浏览器的 IndexedDB，不会随 Git 拉取，也不会自动跨电脑同步。不要把两者混为一谈。
