@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-186.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-222.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,13 +20,14 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("186 reviewed anchors include the completed 1K M3 batch", () => {
-  assert.equal(anchors.length,186); assert.equal(new Set(anchors.map((item)=>item.id)).size,186);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,186);
+test("222 reviewed anchors include completed 1K and 2K M3 batches", () => {
+  assert.equal(anchors.length,222); assert.equal(new Set(anchors.map((item)=>item.id)).size,222);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,222);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
-  for(let band=2;band<=5;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,24);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
+  for(let band=3;band<=5;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,24);
   for(let band=6;band<=8;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,10);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,186);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,222);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {
@@ -121,7 +122,7 @@ test("chance-like contextual performance cannot produce a high pilot band", () =
 });
 
 test("the first M3 batch contains 36 manually authored 1K items", () => {
-  const batch = anchors.filter((anchor) => Number(anchor.id.slice(7)) >= 151);
+  const batch = anchors.filter((anchor) => Number(anchor.id.slice(7)) >= 151 && Number(anchor.id.slice(7)) <= 186);
   assert.equal(batch.length, 36);
   assert.equal(Object.keys(vocabularyAnchorReview1K).length, 36);
   for (const anchor of batch) {
