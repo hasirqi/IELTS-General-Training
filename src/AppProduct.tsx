@@ -68,6 +68,7 @@ export function App() {
   const [state, setState] = useState<LearningState>(freshState());
   const [ready, setReady] = useState(false);
   const [toast, setToast] = useState("");
+  const [vocabularyTestActive, setVocabularyTestActive] = useState(false);
 
   useEffect(() => { loadLearningState().then((saved) => { setState(saved); setReady(true); }); }, []);
   useEffect(() => { if (ready) saveLearningState(state); }, [state, ready]);
@@ -108,14 +109,14 @@ export function App() {
   };
 
   return <div className="app-shell">
-    <GlobalHeader onHome={() => setView("home")} onLibrary={() => setView("library")} onChat={() => openChat()}/>
+    <GlobalHeader onHome={() => { setVocabularyTestActive(false); setView("home"); }} onLibrary={() => { setVocabularyTestActive(false); setView("library"); }} onChat={() => openChat()}/>
     {toast && <div className="toast" role="status">{toast}</div>}
     {view === "home" ? <Home state={state} dueCount={dueCount} onOpen={setView} onOpenCourse={(skill) => { setCourseSkill(skill); setView("courses"); }} onReset={reset}/> :
-      <Shell view={view} back={() => setView("home")} progress={completion}>
+      <Shell view={view} back={() => { if (view === "vocabulary-test" && vocabularyTestActive) { setVocabularyTestActive(false); return; } setView("home"); }} backLabel={view === "vocabulary-test" && vocabularyTestActive ? "返回测试中心" : "返回首页"} progress={completion}>
         {view === "review" && <Review state={state} update={update} done={() => completeStep(0, "words")}/>}
         {view === "words" && <WordLab state={state} update={update} done={() => completeStep(1, "sentence")}/>}
         {view === "vocabulary-study" && <VocabularyStudy state={state} update={update}/>}
-        {view === "vocabulary-test" && <VocabularyTest state={state} update={update}/>}
+        {view === "vocabulary-test" && <VocabularyTest state={state} update={update} activeTest={vocabularyTestActive} setActiveTest={setVocabularyTestActive}/>}
         {view === "sentence" && <SentenceLab state={state} update={update} done={() => completeStep(2, "speak")}/>}
         {view === "speak" && <QuickSpeak state={state} update={update} onCoach={openChat} done={() => completeStep(3)}/>}
         {view === "courses" && <CourseHub state={state} update={update} initialSkill={courseSkill} onCoach={openChat}/>}
@@ -150,9 +151,9 @@ function GlobalHeader({onHome,onLibrary,onChat}:{onHome:()=>void;onLibrary:()=>v
   return <header className="global-header"><div className="global-header-inner"><button className="brand" onClick={onHome} aria-label="返回学习首页"><span className="brand-mark"><IconBook2 size={28}/></span><span><strong>破壁 IELTS 6</strong><small>IELTS GENERAL TRAINING</small></span></button><nav className="header-actions" aria-label="全局导航"><button className="text-button library-header-link" onClick={onLibrary}><IconLibrary size={19}/>词库 {lexicon.length.toLocaleString()} 条</button><button className="text-button" onClick={onChat}><IconRobot size={19}/>向 ChatGPT 提问</button></nav></div></header>;
 }
 
-function Shell({view,back,progress,children}:{view:View;back:()=>void;progress:number;children:React.ReactNode}) {
+function Shell({view,back,backLabel,progress,children}:{view:View;back:()=>void;backLabel:string;progress:number;children:React.ReactNode}) {
   const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
-  return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label="返回首页"><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
+  return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label={backLabel}><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
 }
 
 function aspectName(aspect: MasteryAspect) { return ({form:"词形",meaning:"词义",use:"使用"} as const)[aspect]; }
@@ -258,7 +259,7 @@ function VocabularyResult({result,onRestart,onQuick,onBack}:{result:VocabularyTe
   return <div className="vocabulary-result"><div className="test-scope"><IconTargetArrow/><div><strong>历史测试结果</strong><p>这是旧版结果，仅供回看。重新测试将使用新的基础路由与英文语境释义 CAT。</p></div></div><div className="estimate-grid single"><div><span>旧版正确率</span><strong>{accuracy}%</strong><small>答对 {result.correctCount}/{result.sampleSize} 题</small></div></div><button className="primary-button wide" onClick={onRestart}>开始新版测试<IconRefresh/></button></div>;
 }
 
-function VocabularyTest({state,update}:{state:LearningState;update:UpdateState}) {
+function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningState;update:UpdateState;activeTest:boolean;setActiveTest:(active:boolean)=>void}) {
   const draft = state.vocabularyTestDraft;
   const latest = state.vocabularyTests.at(-1);
   const [quickMode,setQuickMode] = useState(false);
@@ -267,9 +268,9 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
   const [quickChoice,setQuickChoice] = useState("");
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(null);
   const [showResult,setShowResult] = useState(false);
-  const [activeTest,setActiveTest] = useState(false);
+  useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); } }, [activeTest]);
   const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
-  const startQuick = () => { setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); setQuickChoice(""); };
+  const startQuick = () => { setActiveTest(true); setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); setQuickChoice(""); };
   const start = (intent: "quick-route" | "vocabulary-cat" = "vocabulary-cat") => {
     setActiveTest(true);
     setQuickMode(false);
@@ -342,7 +343,7 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
   };
   if (quickMode) {
     const quickDone = quickIndex >= 20;
-    if (quickDone) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 · 不计入标准测试</div><h1>完成</h1><div className="test-intro compact"><IconCheck/><h2>{quickCorrect}/20</h2><p>这个结果只用于日常复习，不改变词族量级、CAT 结果或模拟 L 值。</p><button className="primary-button" onClick={() => setQuickMode(false)}>返回测试入口<IconArrowLeft/></button></div></section>;
+    if (quickDone) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 · 不计入标准测试</div><h1>完成</h1><div className="test-intro compact"><IconCheck/><h2>{quickCorrect}/20</h2><p>这个结果只用于日常复习，不改变词族量级、CAT 结果或模拟 L 值。</p><button className="primary-button" onClick={() => { setQuickMode(false); setActiveTest(false); }}>返回测试入口<IconArrowLeft/></button></div></section>;
     return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 {quickIndex+1}/20 · 不计入标准测试</div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(quickAnchor.term)} aria-label={`播放 ${quickAnchor.term} 的英语发音`}><IconVolume/></button><h1>{quickAnchor.term}</h1><p>{quickAnchor.frequencyBand}</p></div><div className="test-stage"><h2>选择最合适的中文意思</h2><div className="test-options">{quickAnchor.chineseOptions.map((option) => <button className={quickChoice ? option===quickAnchor.correctChinese?"correct":option===quickChoice?"wrong":"" : ""} disabled={Boolean(quickChoice)} key={option} onClick={() => { setQuickChoice(option); if(option===quickAnchor.correctChinese) setQuickCorrect((value) => value+1); }}>{option}</button>)}</div>{quickChoice && <button className="primary-button" onClick={() => { setQuickIndex((value) => value+1); setQuickChoice(""); }}>下一题<IconArrowRight/></button>}</div></section>;
   }
   if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={startQuick} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
