@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v9",
+  "version": "anchor-candidates-600-2026.07.28-v10",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 495,
-  "candidateCount": 105,
+  "currentReviewedCount": 510,
+  "candidateCount": 90,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -36,10 +36,10 @@
     "6K": 60,
     "7K": 60,
     "8K": 60,
-    "9K": 15
+    "9K": 15,
+    "10K": 15
   },
   "additionsByBand": {
-    "10K": 15,
     "11K": 15,
     "12K": 15,
     "13K": 15,
@@ -76,411 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-016",
-      "plannedAnchorId": "anchor-496",
-      "familyId": "wf-09035",
-      "lexiconId": "word-1174",
-      "term": "symptom",
-      "focusedMeaning": "症状",
-      "meaningNote": "",
-      "contextSentence": "A high temperature may be a symptom of infection.",
-      "collocation": "common symptom",
-      "frequencyRank": 9035,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-1174",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-017",
-      "plannedAnchorId": "anchor-497",
-      "familyId": "wf-09098",
-      "lexiconId": "word-2498",
-      "term": "gigantic",
-      "focusedMeaning": "巨大的",
-      "meaningNote": "",
-      "contextSentence": "A gigantic crane will lift the bridge section overnight.",
-      "collocation": "gigantic construction crane",
-      "frequencyRank": 9098,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2498",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-018",
-      "plannedAnchorId": "anchor-498",
-      "familyId": "wf-09177",
-      "lexiconId": "word-2508",
-      "term": "aquatic",
-      "focusedMeaning": "水生的；水上的",
-      "meaningNote": "",
-      "contextSentence": "The centre protects aquatic plants in the restored pond.",
-      "collocation": "aquatic wildlife habitat",
-      "frequencyRank": 9177,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2508",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-019",
-      "plannedAnchorId": "anchor-499",
-      "familyId": "wf-09233",
-      "lexiconId": "word-2515",
-      "term": "humane",
-      "focusedMeaning": "人道的；仁慈的",
-      "meaningNote": "",
-      "contextSentence": "The shelter follows humane standards for rescued animals.",
-      "collocation": "humane animal treatment",
-      "frequencyRank": 9233,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2515",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-020",
-      "plannedAnchorId": "anchor-500",
-      "familyId": "wf-09300",
-      "lexiconId": "word-2518",
-      "term": "affinity",
-      "focusedMeaning": "亲和力；密切关系",
-      "meaningNote": "",
-      "contextSentence": "She has a natural affinity with young learners.",
-      "collocation": "affinity with a community",
-      "frequencyRank": 9300,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2518",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-021",
-      "plannedAnchorId": "anchor-501",
-      "familyId": "wf-09361",
-      "lexiconId": "word-2529",
-      "term": "lantern",
-      "focusedMeaning": "灯笼；提灯",
-      "meaningNote": "",
-      "contextSentence": "Carry a battery lantern rather than an open flame.",
-      "collocation": "portable emergency lantern",
-      "frequencyRank": 9361,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2529",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-022",
-      "plannedAnchorId": "anchor-502",
-      "familyId": "wf-09435",
-      "lexiconId": "word-2550",
-      "term": "adulthood",
-      "focusedMeaning": "成年期",
-      "meaningNote": "",
-      "contextSentence": "The service supports young people moving into adulthood.",
-      "collocation": "transition into adulthood",
-      "frequencyRank": 9435,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2550",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-023",
-      "plannedAnchorId": "anchor-503",
-      "familyId": "wf-09499",
-      "lexiconId": "word-2542",
-      "term": "humorous",
-      "focusedMeaning": "幽默的",
-      "meaningNote": "",
-      "contextSentence": "A humorous example made the safety message easier to remember.",
-      "collocation": "humorous teaching example",
-      "frequencyRank": 9499,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2542",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-024",
-      "plannedAnchorId": "anchor-504",
-      "familyId": "wf-09572",
-      "lexiconId": "word-2558",
-      "term": "banquet",
-      "focusedMeaning": "宴会",
-      "meaningNote": "",
-      "contextSentence": "The charity banquet will raise funds for the shelter.",
-      "collocation": "annual charity banquet",
-      "frequencyRank": 9572,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2558",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-025",
-      "plannedAnchorId": "anchor-505",
-      "familyId": "wf-09641",
-      "lexiconId": "word-2568",
-      "term": "marital",
-      "focusedMeaning": "婚姻的",
-      "meaningNote": "",
-      "contextSentence": "Marital status is irrelevant to the recruitment decision.",
-      "collocation": "marital status information",
-      "frequencyRank": 9641,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2568",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-026",
-      "plannedAnchorId": "anchor-506",
-      "familyId": "wf-09697",
-      "lexiconId": "word-2574",
-      "term": "adolescent",
-      "focusedMeaning": "青少年的；青少年",
-      "meaningNote": "",
-      "contextSentence": "The clinic provides confidential advice to every adolescent.",
-      "collocation": "adolescent health service",
-      "frequencyRank": 9697,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2574",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-027",
-      "plannedAnchorId": "anchor-507",
-      "familyId": "wf-09770",
-      "lexiconId": "word-2573",
-      "term": "orphan",
-      "focusedMeaning": "孤儿",
-      "meaningNote": "",
-      "contextSentence": "The charity supports each orphan through education and housing.",
-      "collocation": "support an orphan",
-      "frequencyRank": 9770,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2573",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-028",
-      "plannedAnchorId": "anchor-508",
-      "familyId": "wf-09837",
-      "lexiconId": "word-2584",
-      "term": "discourage",
-      "focusedMeaning": "阻止；使泄气",
-      "meaningNote": "",
-      "contextSentence": "High fees discourage families from using the leisure centre.",
-      "collocation": "discourage public participation",
-      "frequencyRank": 9837,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2584",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-029",
-      "plannedAnchorId": "anchor-509",
-      "familyId": "wf-09905",
-      "lexiconId": "word-2589",
-      "term": "purge",
-      "focusedMeaning": "清除；肃清",
-      "meaningNote": "",
-      "contextSentence": "The technician will purge old duplicate files from the archive.",
-      "collocation": "purge obsolete records",
-      "frequencyRank": 9905,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2589",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
-      "candidateId": "candidate-030",
-      "plannedAnchorId": "anchor-510",
-      "familyId": "wf-09968",
-      "lexiconId": "word-2611",
-      "term": "consulate",
-      "focusedMeaning": "领事馆",
-      "meaningNote": "",
-      "contextSentence": "The consulate can issue emergency travel documents.",
-      "collocation": "contact a foreign consulate",
-      "frequencyRank": 9968,
-      "frequencyBand": "10K",
-      "source": {
-        "teachingLexiconId": "word-2611",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
-    },
-    {
       "candidateId": "candidate-031",
       "plannedAnchorId": "anchor-511",
       "familyId": "wf-10049",
@@ -505,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-032",
@@ -532,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-033",
@@ -559,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-034",
@@ -586,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-035",
@@ -613,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-036",
@@ -640,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-037",
@@ -667,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-038",
@@ -694,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-039",
@@ -721,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-040",
@@ -748,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-041",
@@ -775,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-042",
@@ -802,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-043",
@@ -829,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-044",
@@ -856,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-045",
@@ -883,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-046",
@@ -910,7 +505,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-047",
@@ -937,7 +532,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-048",
@@ -964,7 +559,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-049",
@@ -991,7 +586,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-050",
@@ -1018,7 +613,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-051",
@@ -1045,7 +640,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-052",
@@ -1072,7 +667,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-053",
@@ -1099,7 +694,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-054",
@@ -1126,7 +721,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-055",
@@ -1153,7 +748,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-056",
@@ -1180,7 +775,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-057",
@@ -1207,7 +802,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-058",
@@ -1234,7 +829,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-059",
@@ -1261,7 +856,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-060",
@@ -1288,7 +883,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-061",
@@ -1315,7 +910,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-062",
@@ -1342,7 +937,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-063",
@@ -1369,7 +964,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-064",
@@ -1396,7 +991,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-065",
@@ -1423,7 +1018,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-066",
@@ -1450,7 +1045,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-067",
@@ -1477,7 +1072,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-068",
@@ -1504,7 +1099,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-069",
@@ -1531,7 +1126,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-070",
@@ -1558,7 +1153,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-071",
@@ -1585,7 +1180,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-072",
@@ -1612,7 +1207,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-073",
@@ -1639,7 +1234,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-074",
@@ -1666,7 +1261,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-075",
@@ -1693,7 +1288,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-076",
@@ -1720,7 +1315,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-077",
@@ -1747,7 +1342,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-078",
@@ -1774,7 +1369,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-079",
@@ -1801,7 +1396,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-080",
@@ -1828,7 +1423,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-081",
@@ -1855,7 +1450,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-082",
@@ -1882,7 +1477,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-083",
@@ -1909,7 +1504,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-084",
@@ -1936,7 +1531,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-085",
@@ -1963,7 +1558,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-086",
@@ -1990,7 +1585,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-087",
@@ -2017,7 +1612,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-088",
@@ -2044,7 +1639,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-089",
@@ -2071,7 +1666,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-090",
@@ -2098,7 +1693,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-091",
@@ -2125,7 +1720,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-092",
@@ -2152,7 +1747,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-093",
@@ -2179,7 +1774,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-094",
@@ -2206,7 +1801,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-095",
@@ -2233,7 +1828,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-096",
@@ -2260,7 +1855,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-097",
@@ -2287,7 +1882,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-098",
@@ -2314,7 +1909,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-099",
@@ -2341,7 +1936,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-100",
@@ -2368,7 +1963,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-101",
@@ -2395,7 +1990,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-102",
@@ -2422,7 +2017,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-103",
@@ -2449,7 +2044,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-104",
@@ -2476,7 +2071,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-105",
@@ -2503,7 +2098,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-106",
@@ -2530,7 +2125,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-107",
@@ -2557,7 +2152,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-108",
@@ -2584,7 +2179,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-109",
@@ -2611,7 +2206,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-110",
@@ -2638,7 +2233,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-111",
@@ -2665,7 +2260,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-112",
@@ -2692,7 +2287,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-113",
@@ -2719,7 +2314,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-114",
@@ -2746,7 +2341,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-115",
@@ -2773,7 +2368,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-116",
@@ -2800,7 +2395,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-117",
@@ -2827,7 +2422,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-118",
@@ -2854,7 +2449,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-119",
@@ -2881,7 +2476,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     },
     {
       "candidateId": "candidate-120",
@@ -2908,7 +2503,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v9"
+      "version": "anchor-candidates-600-2026.07.28-v10"
     }
   ]
 }

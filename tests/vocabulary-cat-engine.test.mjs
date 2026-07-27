@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-495.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-510.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,9 +20,9 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("495 reviewed anchors extend M3 into the 9K band", () => {
-  assert.equal(anchors.length,495); assert.equal(new Set(anchors.map((item)=>item.id)).size,495);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,495);
+test("510 reviewed anchors extend M3 into the 10K band", () => {
+  assert.equal(anchors.length,510); assert.equal(new Set(anchors.map((item)=>item.id)).size,510);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,510);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="3K").length,60);
@@ -32,7 +32,8 @@ test("495 reviewed anchors extend M3 into the 9K band", () => {
   assert.equal(anchors.filter((item)=>item.frequencyBand==="7K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="8K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="9K").length,15);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,495);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="10K").length,15);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,510);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {
