@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
-import currentAnchors from "../src/content/vocabulary-anchor-bank-430.json" with { type: "json" };
+import currentAnchors from "../src/content/vocabulary-anchor-bank-480.json" with { type: "json" };
 import familyIndex from "../src/content/word-family-index-20k.json" with { type: "json" };
 import familyMap from "../src/content/teaching-lexicon-family-map.json" with { type: "json" };
 import { buildLearningLexicon } from "../src/content/lexicon-content.mjs";
 
-const VERSION = "anchor-candidates-600-2026.07.27-v7";
+const VERSION = "anchor-candidates-600-2026.07.28-v8";
 const FINAL_TARGETS = {
   "1K": 60, "2K": 60, "3K": 60, "4K": 60, "5K": 60, "6K": 60, "7K": 60, "8K": 60,
   "9K": 15, "10K": 15, "11K": 15, "12K": 15, "13K": 15, "14K": 15,
@@ -152,7 +152,7 @@ const finalCounts = Object.fromEntries(Object.keys(FINAL_TARGETS).map((band) => 
 
 const manifest = {
   version: VERSION,
-  generatedAt: "2026-07-27",
+  generatedAt: "2026-07-28",
   scoringEligible: false,
   currentReviewedCount: currentAnchors.length,
   candidateCount: selected.length,
