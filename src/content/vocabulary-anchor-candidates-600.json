@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v10",
+  "version": "anchor-candidates-600-2026.07.28-v11",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 510,
-  "candidateCount": 90,
+  "currentReviewedCount": 525,
+  "candidateCount": 75,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -37,10 +37,10 @@
     "7K": 60,
     "8K": 60,
     "9K": 15,
-    "10K": 15
+    "10K": 15,
+    "11K": 15
   },
   "additionsByBand": {
-    "11K": 15,
     "12K": 15,
     "13K": 15,
     "14K": 15,
@@ -76,411 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-031",
-      "plannedAnchorId": "anchor-511",
-      "familyId": "wf-10049",
-      "lexiconId": "word-1149",
-      "term": "subsidy",
-      "focusedMeaning": "补贴",
-      "meaningNote": "",
-      "contextSentence": "Low-income households can apply for a heating subsidy.",
-      "collocation": "government subsidy",
-      "frequencyRank": 10049,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-1149",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-032",
-      "plannedAnchorId": "anchor-512",
-      "familyId": "wf-10114",
-      "lexiconId": "word-2623",
-      "term": "distortion",
-      "focusedMeaning": "歪曲；失真",
-      "meaningNote": "",
-      "contextSentence": "The speaker corrected a distortion of the published statistics.",
-      "collocation": "distortion of factual evidence",
-      "frequencyRank": 10114,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2623",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-033",
-      "plannedAnchorId": "anchor-513",
-      "familyId": "wf-10169",
-      "lexiconId": "word-2620",
-      "term": "penetrate",
-      "focusedMeaning": "穿透；进入",
-      "meaningNote": "",
-      "contextSentence": "Moisture can penetrate the wall through damaged brickwork.",
-      "collocation": "penetrate a protective layer",
-      "frequencyRank": 10169,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2620",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-034",
-      "plannedAnchorId": "anchor-514",
-      "familyId": "wf-10233",
-      "lexiconId": "word-2631",
-      "term": "boutique",
-      "focusedMeaning": "精品店；小型专业机构",
-      "meaningNote": "",
-      "contextSentence": "A small boutique sells locally made jewellery near the station.",
-      "collocation": "independent fashion boutique",
-      "frequencyRank": 10233,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2631",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-035",
-      "plannedAnchorId": "anchor-515",
-      "familyId": "wf-10299",
-      "lexiconId": "word-2653",
-      "term": "lax",
-      "focusedMeaning": "松懈的；不严格的",
-      "meaningNote": "",
-      "contextSentence": "Lax inspection allowed the defect to remain unnoticed.",
-      "collocation": "lax safety enforcement",
-      "frequencyRank": 10299,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2653",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-036",
-      "plannedAnchorId": "anchor-516",
-      "familyId": "wf-10373",
-      "lexiconId": "word-2676",
-      "term": "almond",
-      "focusedMeaning": "杏仁",
-      "meaningNote": "",
-      "contextSentence": "The label warns that the sauce contains almond.",
-      "collocation": "almond allergy warning",
-      "frequencyRank": 10373,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2676",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-037",
-      "plannedAnchorId": "anchor-517",
-      "familyId": "wf-10441",
-      "lexiconId": "word-2661",
-      "term": "maneuver",
-      "focusedMeaning": "操作；策略；移动",
-      "meaningNote": "",
-      "contextSentence": "Drivers must maneuver carefully inside the narrow depot.",
-      "collocation": "maneuver a large vehicle",
-      "frequencyRank": 10441,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2661",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-038",
-      "plannedAnchorId": "anchor-518",
-      "familyId": "wf-10503",
-      "lexiconId": "word-2671",
-      "term": "vomit",
-      "focusedMeaning": "呕吐",
-      "meaningNote": "",
-      "contextSentence": "Seek urgent advice if the child continues to vomit.",
-      "collocation": "vomit after eating",
-      "frequencyRank": 10503,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2671",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-039",
-      "plannedAnchorId": "anchor-519",
-      "familyId": "wf-10569",
-      "lexiconId": "word-2693",
-      "term": "fluent",
-      "focusedMeaning": "流利的",
-      "meaningNote": "",
-      "contextSentence": "The role requires fluent spoken English and accurate writing.",
-      "collocation": "fluent language ability",
-      "frequencyRank": 10569,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2693",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-040",
-      "plannedAnchorId": "anchor-520",
-      "familyId": "wf-10629",
-      "lexiconId": "word-2691",
-      "term": "rye",
-      "focusedMeaning": "黑麦",
-      "meaningNote": "",
-      "contextSentence": "The bakery labels every loaf containing rye.",
-      "collocation": "wholegrain rye bread",
-      "frequencyRank": 10629,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2691",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-041",
-      "plannedAnchorId": "anchor-521",
-      "familyId": "wf-10701",
-      "lexiconId": "word-2701",
-      "term": "dedicate",
-      "focusedMeaning": "奉献；专用于",
-      "meaningNote": "",
-      "contextSentence": "The centre will dedicate one room to quiet study.",
-      "collocation": "dedicate space to learning",
-      "frequencyRank": 10701,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2701",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-042",
-      "plannedAnchorId": "anchor-522",
-      "familyId": "wf-10766",
-      "lexiconId": "word-2706",
-      "term": "repression",
-      "focusedMeaning": "镇压；抑制",
-      "meaningNote": "",
-      "contextSentence": "The exhibition documents political repression under the regime.",
-      "collocation": "state political repression",
-      "frequencyRank": 10766,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2706",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-043",
-      "plannedAnchorId": "anchor-523",
-      "familyId": "wf-10841",
-      "lexiconId": "word-2723",
-      "term": "equip",
-      "focusedMeaning": "装备；使具备",
-      "meaningNote": "",
-      "contextSentence": "The course will equip carers with practical first-aid skills.",
-      "collocation": "equip staff for emergencies",
-      "frequencyRank": 10841,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2723",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-044",
-      "plannedAnchorId": "anchor-524",
-      "familyId": "wf-10901",
-      "lexiconId": "word-2718",
-      "term": "obedience",
-      "focusedMeaning": "服从；遵守",
-      "meaningNote": "",
-      "contextSentence": "Blind obedience cannot replace professional judgment.",
-      "collocation": "demand unquestioning obedience",
-      "frequencyRank": 10901,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2718",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
-      "candidateId": "candidate-045",
-      "plannedAnchorId": "anchor-525",
-      "familyId": "wf-10965",
-      "lexiconId": "word-2738",
-      "term": "brag",
-      "focusedMeaning": "吹嘘",
-      "meaningNote": "",
-      "contextSentence": "The advertisement should inform rather than brag about vague awards.",
-      "collocation": "brag about success",
-      "frequencyRank": 10965,
-      "frequencyBand": "11K",
-      "source": {
-        "teachingLexiconId": "word-2738",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
-    },
-    {
       "candidateId": "candidate-046",
       "plannedAnchorId": "anchor-526",
       "familyId": "wf-11034",
@@ -505,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-047",
@@ -532,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-048",
@@ -559,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-049",
@@ -586,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-050",
@@ -613,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-051",
@@ -640,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-052",
@@ -667,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-053",
@@ -694,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-054",
@@ -721,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-055",
@@ -748,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-056",
@@ -775,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-057",
@@ -802,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-058",
@@ -829,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-059",
@@ -856,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-060",
@@ -883,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-061",
@@ -910,7 +505,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-062",
@@ -937,7 +532,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-063",
@@ -964,7 +559,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-064",
@@ -991,7 +586,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-065",
@@ -1018,7 +613,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-066",
@@ -1045,7 +640,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-067",
@@ -1072,7 +667,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-068",
@@ -1099,7 +694,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-069",
@@ -1126,7 +721,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-070",
@@ -1153,7 +748,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-071",
@@ -1180,7 +775,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-072",
@@ -1207,7 +802,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-073",
@@ -1234,7 +829,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-074",
@@ -1261,7 +856,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-075",
@@ -1288,7 +883,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-076",
@@ -1315,7 +910,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-077",
@@ -1342,7 +937,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-078",
@@ -1369,7 +964,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-079",
@@ -1396,7 +991,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-080",
@@ -1423,7 +1018,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-081",
@@ -1450,7 +1045,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-082",
@@ -1477,7 +1072,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-083",
@@ -1504,7 +1099,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-084",
@@ -1531,7 +1126,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-085",
@@ -1558,7 +1153,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-086",
@@ -1585,7 +1180,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-087",
@@ -1612,7 +1207,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-088",
@@ -1639,7 +1234,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-089",
@@ -1666,7 +1261,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-090",
@@ -1693,7 +1288,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-091",
@@ -1720,7 +1315,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-092",
@@ -1747,7 +1342,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-093",
@@ -1774,7 +1369,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-094",
@@ -1801,7 +1396,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-095",
@@ -1828,7 +1423,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-096",
@@ -1855,7 +1450,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-097",
@@ -1882,7 +1477,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-098",
@@ -1909,7 +1504,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-099",
@@ -1936,7 +1531,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-100",
@@ -1963,7 +1558,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-101",
@@ -1990,7 +1585,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-102",
@@ -2017,7 +1612,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-103",
@@ -2044,7 +1639,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-104",
@@ -2071,7 +1666,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-105",
@@ -2098,7 +1693,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-106",
@@ -2125,7 +1720,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-107",
@@ -2152,7 +1747,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-108",
@@ -2179,7 +1774,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-109",
@@ -2206,7 +1801,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-110",
@@ -2233,7 +1828,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-111",
@@ -2260,7 +1855,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-112",
@@ -2287,7 +1882,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-113",
@@ -2314,7 +1909,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-114",
@@ -2341,7 +1936,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-115",
@@ -2368,7 +1963,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-116",
@@ -2395,7 +1990,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-117",
@@ -2422,7 +2017,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-118",
@@ -2449,7 +2044,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-119",
@@ -2476,7 +2071,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     },
     {
       "candidateId": "candidate-120",
@@ -2503,7 +2098,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v10"
+      "version": "anchor-candidates-600-2026.07.28-v11"
     }
   ]
 }
