@@ -266,9 +266,10 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   const [quickIndex,setQuickIndex] = useState(0);
   const [quickCorrect,setQuickCorrect] = useState(0);
   const [quickChoice,setQuickChoice] = useState("");
-  const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(null);
+  const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
   const [showResult,setShowResult] = useState(false);
   useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); } }, [activeTest]);
+  useEffect(() => { if (state.vocabularyRouteResult) setRouteSnapshot(state.vocabularyRouteResult); }, [state.vocabularyRouteResult]);
   const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
   const startQuick = () => { setActiveTest(true); setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); setQuickChoice(""); };
   const start = (intent: "quick-route" | "vocabulary-cat" = "vocabulary-cat") => {
@@ -277,12 +278,25 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     setShowResult(false);
     setRouteSnapshot(null);
     const attempt = state.vocabularyTests.length;
-    const routeItems = buildVocabularyRoute(vocabularyAnchors,attempt);
     const now = new Date().toISOString();
-    update({vocabularyTestDraft:{mode:"adaptive-v2",phase:"route",intent,routeItems,routeIndex:0,routeResponses:[],answers:[],startedAt:now,presentedAt:now,attempt}});
+    if (intent === "quick-route") {
+      const routeItems = buildVocabularyRoute(vocabularyAnchors,attempt);
+      update({vocabularyTestDraft:{mode:"adaptive-v2",phase:"route",intent,routeItems,routeIndex:0,routeResponses:[],answers:[],startedAt:now,presentedAt:now,attempt}});
+      return;
+    }
+    const savedRoute = state.vocabularyRouteResult;
+    const routeAge = savedRoute ? Date.now() - new Date(savedRoute.completedAt).getTime() : Number.POSITIVE_INFINITY;
+    const recentRoute = savedRoute && routeAge >= 0 && routeAge <= 120 * 86_400_000 ? savedRoute : null;
+    const initialTheta = recentRoute?.theta ?? 0;
+    const next = selectNextVocabularyAnchor(vocabularyAnchors,[],initialTheta,attempt);
+    if (!next) return;
+    update({vocabularyTestDraft:{mode:"adaptive-v2",phase:"cat",intent,routeItems:[],routeIndex:0,routeResponses:[],currentAnchorId:next.id,initialTheta,answers:[],startedAt:now,presentedAt:now,attempt}});
   };
   const finish = (currentDraft:NonNullable<LearningState["vocabularyTestDraft"]>,answers:VocabularyTestAnswer[]) => {
-    const pilot = buildVocabularyPilotResult(answers,currentDraft.routeResponses,currentDraft.startedAt);
+    const savedRoute = state.vocabularyRouteResult;
+    const routeAge = savedRoute ? Date.now() - new Date(savedRoute.completedAt).getTime() : Number.POSITIVE_INFINITY;
+    const recentRoute = savedRoute && routeAge >= 0 && routeAge <= 120 * 86_400_000 ? savedRoute : undefined;
+    const pilot = buildVocabularyPilotResult(answers,currentDraft.routeResponses,currentDraft.startedAt,undefined,recentRoute);
     const categoryFailures = new Map<string,number>();
     for (const answer of answers) if (!answer.correct) {
       const category = lexiconById.get(answer.lexiconId)?.category ?? "其他";
@@ -305,7 +319,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     });
   };
   const recordRoute = (recognized:boolean) => {
-    if (!draft || draft.phase !== "route") return;
+    if (!draft || draft.phase !== "route" || draft.intent !== "quick-route") return;
     const routeItem = draft.routeItems[draft.routeIndex];
     if (!routeItem) return;
     const now = new Date();
@@ -317,15 +331,9 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
       return;
     }
     const routeEstimate = estimateVocabularyRoute(routeResponses);
-    if (draft.intent === "quick-route") {
-      setRouteSnapshot(routeEstimate);
-      setActiveTest(false);
-      update({vocabularyTestDraft:null});
-      return;
-    }
-    const next = selectNextVocabularyAnchor(vocabularyAnchors,[],routeEstimate.theta,draft.attempt);
-    if (!next) return;
-    update({vocabularyTestDraft:{...draft,phase:"cat",routeIndex:nextIndex,routeResponses,currentAnchorId:next.id,initialTheta:routeEstimate.theta,presentedAt:now.toISOString()}});
+    setRouteSnapshot(routeEstimate);
+    setActiveTest(false);
+    update({vocabularyTestDraft:null,vocabularyRouteResult:{...routeEstimate,completedAt:now.toISOString()}});
   };
   const recordCat = (selectedOption:string) => {
     if (!draft || draft.phase !== "cat" || !draft.currentAnchorId) return;
@@ -364,7 +372,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
       <article className="assessment-recommendation"><div className="recommend-icon"><IconTargetArrow/></div><div><span>{recommendation.eyebrow}</span><h2>{recommendation.title}</h2><p>{recommendation.time} · {recommendation.copy}</p>{routeSnapshot && <small>{routeLabel} · 非词误认 {routeSnapshot.claimedPseudowords}/{routeSnapshot.pseudoTotal}</small>}</div><button className="primary-button" onClick={recommendation.action}>{recommendation.button}<IconArrowRight/></button></article>
       <div className="assessment-section-title"><h2>选择测试模式</h2><span>五种模式并列展示</span></div><div className="assessment-mode-grid">
         <button className="assessment-mode-card" onClick={() => start("quick-route")}><span className="mode-icon"><IconTargetArrow/></span><strong>快速定位</strong><em>3–5 分钟</em><small>Yes/No 路由＋非词检查<br/>快速确定 1K–5K 起点</small><b>开始定位<IconArrowRight/></b></button>
-        <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>英文语境＋英文释义 CAT<br/>{vocabularyAnchors.length} 个已审核计分锚点</small><b>开始精测<IconArrowRight/></b></button>
+        <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>直接进入英文语境释义 CAT<br/>{vocabularyAnchors.length} 个已审核计分锚点</small><b>开始精测<IconArrowRight/></b></button>
         <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>功能短文＋连续篇章 CAT<br/>决定内部模拟 L 值</small><b>题库建设中</b></button>
         <button className="assessment-mode-card" onClick={startQuick}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
         <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>完形填空与语境应用<br/>测量词汇实际运用</small><b>题库建设中</b></button>

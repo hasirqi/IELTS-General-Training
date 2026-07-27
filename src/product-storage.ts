@@ -19,6 +19,7 @@ const initialState: LearningState = {
   errorLog: [],
   vocabularyStudy: { cursor: 0, mode: "order", category: "all" },
   vocabularyTestDraft: null,
+  vocabularyRouteResult: null,
   vocabularyTests: [],
 };
 
@@ -29,6 +30,8 @@ const dbPromise = openDB("breakthrough-ielts", 2, {
 });
 
 function migrate(saved?: Partial<LearningState> | null): LearningState {
+  const savedDraft = saved?.vocabularyTestDraft;
+  const compatibleDraft = savedDraft?.mode === "adaptive-v2" && !(savedDraft.intent === "vocabulary-cat" && savedDraft.phase === "route") ? savedDraft : null;
   return {
     ...structuredClone(initialState),
     ...(saved ?? {}),
@@ -43,7 +46,8 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     speakingIndex: saved?.speakingIndex ?? 0,
     nextLexiconIndex: saved?.nextLexiconIndex ?? 0,
     vocabularyStudy: { ...initialState.vocabularyStudy, ...(saved?.vocabularyStudy ?? {}) },
-    vocabularyTestDraft: saved?.vocabularyTestDraft?.mode === "adaptive-v2" ? saved.vocabularyTestDraft : null,
+    vocabularyTestDraft: compatibleDraft,
+    vocabularyRouteResult: saved?.vocabularyRouteResult ?? null,
     vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result || result.mode === "adaptive-v1" || result.mode === "adaptive-v2"),
   };
 }

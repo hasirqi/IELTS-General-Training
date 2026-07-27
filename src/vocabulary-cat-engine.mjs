@@ -185,9 +185,9 @@ function confidenceFor(answers, standardError, routeSummary) {
   return { label: "中等", reasons: ["150 锚点实验版本"] };
 }
 
-export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString()) {
-  const routeSummary = estimateVocabularyRoute(routeResponses);
-  const estimate = estimateVocabularyAbility(answers, routeSummary.theta);
+export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString(), savedRoute) {
+  const routeSummary = routeResponses.length ? estimateVocabularyRoute(routeResponses) : savedRoute;
+  const estimate = estimateVocabularyAbility(answers, routeSummary?.theta ?? 0);
   const margin = 1.64 * estimate.standardError;
   const rank = thetaToPilotRank(estimate.theta);
   const lowRank = thetaToPilotRank(estimate.theta - margin);

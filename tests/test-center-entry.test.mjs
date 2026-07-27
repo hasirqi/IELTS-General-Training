@@ -20,7 +20,7 @@ test("an unfinished local draft is offered as an explicit resume choice", () => 
 
 test("starting a mode enters its task while quick routing returns to the center", () => {
   assert.ok(app.includes("setActiveTest(true);\n    setQuickMode(false)"));
-  assert.ok(app.includes("setRouteSnapshot(routeEstimate);\n      setActiveTest(false)"));
+  assert.ok(app.includes("setRouteSnapshot(routeEstimate);\n    setActiveTest(false)"));
   assert.ok(app.includes("setShowResult(false); setActiveTest(false);"));
 });
 
@@ -32,4 +32,12 @@ test("back from an active test returns to the five-mode center before home", () 
   assert.ok(app.includes("activeTest={vocabularyTestActive} setActiveTest={setVocabularyTestActive}"));
   assert.ok(app.includes("if (!activeTest) { setQuickMode(false); setShowResult(false); }"));
   assert.ok(app.includes('? "返回测试中心" : "返回首页"'));
+});
+
+
+test("precision CAT starts with scored context items instead of repeating the Yes-No route", () => {
+  assert.ok(app.includes('if (intent === "quick-route")'));
+  assert.ok(app.includes('phase:"cat",intent,routeItems:[]'));
+  assert.ok(app.includes("const initialTheta = recentRoute?.theta ?? 0"));
+  assert.ok(app.includes("直接进入英文语境释义 CAT"));
 });

@@ -63,6 +63,16 @@ export type VocabularyRouteResponse = VocabularyRouteItem & {
   responseMs: number;
 };
 
+export type VocabularyRouteResult = {
+  theta: number;
+  realRecognized: number;
+  realTotal: number;
+  claimedPseudowords: number;
+  pseudoTotal: number;
+  reliable: boolean;
+  completedAt: string;
+};
+
 export type VocabularyEstimate = { value: number; low: number; high: number };
 
 export type VocabularyTestResult = {
@@ -121,6 +131,7 @@ export type LearningState = {
   errorLog: LearningError[];
   vocabularyStudy: VocabularyStudyState;
   vocabularyTestDraft: VocabularyTestDraft | null;
+  vocabularyRouteResult: VocabularyRouteResult | null;
   vocabularyTests: VocabularyTestResult[];
 };
 

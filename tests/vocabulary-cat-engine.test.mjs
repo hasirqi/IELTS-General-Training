@@ -136,3 +136,12 @@ test("the first M3 batch contains 36 manually authored 1K items", () => {
     assert.ok(anchor.review.checks.includes("sense-context-match"));
   }
 });
+
+test("direct CAT can reuse a recent route only as its starting estimate", () => {
+  const savedRoute={theta:.35,realRecognized:9,realTotal:12,claimedPseudowords:0,pseudoTotal:3,reliable:true,completedAt:"2026-07-27T00:00:00.000Z"};
+  const sample=anchors.slice(0,24).map((anchor,index)=>answer(anchor,index<16));
+  const result=buildVocabularyPilotResult(sample,[],"2026-07-27T00:00:00.000Z",undefined,savedRoute);
+  assert.equal(result.sampleSize,24);
+  assert.equal(result.routeSummary.theta,.35);
+  assert.equal(result.routeSummary.realTotal,12);
+});
