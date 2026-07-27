@@ -34,7 +34,7 @@ const quality = lexiconQuality(lexicon);
 const steps = [
   {title:"复习旧词",subtitle:"到期和错词优先回来",icon:IconBook2,view:"review" as View,completeKey:0},
   {title:"单词学习",subtitle:"自主选择顺序、场景和数量",icon:IconLanguage,view:"vocabulary-study" as View,completeKey:1},
-  {title:"测试中心",subtitle:"人工锚点，自适应定位",icon:IconTargetArrow,view:"vocabulary-test" as View,completeKey:null},
+  {title:"测试中心",subtitle:`${vocabularyAnchors.length} 个已审核锚点，自适应定位`,icon:IconTargetArrow,view:"vocabulary-test" as View,completeKey:null},
   {title:"句型实验室",subtitle:`${sentenceChallenges.length} 套递进训练`,icon:IconFlask2,view:"sentence" as View,completeKey:2},
   {title:"开口任务",subtitle:`${speakingDrills.length} 个真实场景`,icon:IconMicrophone,view:"speak" as View,completeKey:3},
 ];
@@ -354,11 +354,11 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
           ? {eyebrow:"建议复测",title:"重新完成词汇量精测",time:"12–18 分钟",copy:"距离上次测评已超过 4 个月，重新确认当前层级",action:() => start("vocabulary-cat"),button:"重新精测"}
           : {eyebrow:"推荐",title:"继续词汇量精测",time:"12–18 分钟",copy:"英文语境题是当前正式计分主体",action:() => start("vocabulary-cat"),button:"开始精测"};
     const routeLabel = routeSnapshot ? (routeSnapshot.theta < -1.4 ? "1K–2K 起点" : routeSnapshot.theta < -.5 ? "2K–4K 起点" : "4K–5K 起点") : "";
-    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">选择需要的测量方式。正式词汇结果只由英文语境释义 CAT 产生；阅读模拟 L 值将在文章题库通过门禁后开放。</p>
+    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">当前 {vocabularyAnchors.length} 个已审核锚点进入正式词汇 CAT。阅读模拟 L 值将在文章题库通过门禁后开放。</p>
       <article className="assessment-recommendation"><div className="recommend-icon"><IconTargetArrow/></div><div><span>{recommendation.eyebrow}</span><h2>{recommendation.title}</h2><p>{recommendation.time} · {recommendation.copy}</p>{routeSnapshot && <small>{routeLabel} · 非词误认 {routeSnapshot.claimedPseudowords}/{routeSnapshot.pseudoTotal}</small>}</div><button className="primary-button" onClick={recommendation.action}>{recommendation.button}<IconArrowRight/></button></article>
       <div className="assessment-section-title"><h2>选择测试模式</h2><span>五种模式并列展示</span></div><div className="assessment-mode-grid">
         <button className="assessment-mode-card" onClick={() => start("quick-route")}><span className="mode-icon"><IconTargetArrow/></span><strong>快速定位</strong><em>3–5 分钟</em><small>Yes/No 路由＋非词检查<br/>快速确定 1K–5K 起点</small><b>开始定位<IconArrowRight/></b></button>
-        <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>英文语境＋英文释义 CAT<br/>测量接受性词汇层级</small><b>开始精测<IconArrowRight/></b></button>
+        <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>英文语境＋英文释义 CAT<br/>{vocabularyAnchors.length} 个已审核计分锚点</small><b>开始精测<IconArrowRight/></b></button>
         <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>功能短文＋连续篇章 CAT<br/>决定内部模拟 L 值</small><b>题库建设中</b></button>
         <button className="assessment-mode-card" onClick={startQuick}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
         <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>完形填空与语境应用<br/>测量词汇实际运用</small><b>题库建设中</b></button>
