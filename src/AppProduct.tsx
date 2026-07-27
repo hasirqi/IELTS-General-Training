@@ -267,9 +267,11 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
   const [quickChoice,setQuickChoice] = useState("");
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(null);
   const [showResult,setShowResult] = useState(false);
+  const [activeTest,setActiveTest] = useState(false);
   const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
   const startQuick = () => { setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); setQuickChoice(""); };
   const start = (intent: "quick-route" | "vocabulary-cat" = "vocabulary-cat") => {
+    setActiveTest(true);
     setQuickMode(false);
     setShowResult(false);
     setRouteSnapshot(null);
@@ -316,6 +318,7 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
     const routeEstimate = estimateVocabularyRoute(routeResponses);
     if (draft.intent === "quick-route") {
       setRouteSnapshot(routeEstimate);
+      setActiveTest(false);
       update({vocabularyTestDraft:null});
       return;
     }
@@ -342,11 +345,13 @@ function VocabularyTest({state,update}:{state:LearningState;update:UpdateState})
     if (quickDone) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 · 不计入标准测试</div><h1>完成</h1><div className="test-intro compact"><IconCheck/><h2>{quickCorrect}/20</h2><p>这个结果只用于日常复习，不改变词族量级、CAT 结果或模拟 L 值。</p><button className="primary-button" onClick={() => setQuickMode(false)}>返回测试入口<IconArrowLeft/></button></div></section>;
     return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 {quickIndex+1}/20 · 不计入标准测试</div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(quickAnchor.term)} aria-label={`播放 ${quickAnchor.term} 的英语发音`}><IconVolume/></button><h1>{quickAnchor.term}</h1><p>{quickAnchor.frequencyBand}</p></div><div className="test-stage"><h2>选择最合适的中文意思</h2><div className="test-options">{quickAnchor.chineseOptions.map((option) => <button className={quickChoice ? option===quickAnchor.correctChinese?"correct":option===quickChoice?"wrong":"" : ""} disabled={Boolean(quickChoice)} key={option} onClick={() => { setQuickChoice(option); if(option===quickAnchor.correctChinese) setQuickCorrect((value) => value+1); }}>{option}</button>)}</div>{quickChoice && <button className="primary-button" onClick={() => { setQuickIndex((value) => value+1); setQuickChoice(""); }}>下一题<IconArrowRight/></button>}</div></section>;
   }
-  if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={startQuick} onBack={() => setShowResult(false)}/></section>;
-  if (!draft) {
+  if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={startQuick} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
+  if (!activeTest) {
     const lastDate = latest ? new Date(latest.completedAt) : null;
     const daysSince = lastDate ? Math.floor((Date.now()-lastDate.getTime())/86_400_000) : null;
-    const recommendation = routeSnapshot
+    const recommendation = draft
+      ? {eyebrow:"上次测试未完成",title:draft.phase === "route" ? "继续快速定位" : "继续词汇量精测",time:draft.phase === "route" ? "基础路由" : `已答 ${draft.answers.length} 题`,copy:"作答进度已保存在本机，也可以从下方重新选择其他模式",action:() => setActiveTest(true),button:"继续上次测试"}
+      : routeSnapshot
       ? {eyebrow:"定位完成",title:"继续词汇量精测",time:"12–18 分钟",copy:"用英文语境释义题确认真实接受性词汇量",action:() => start("vocabulary-cat"),button:"继续精测"}
       : !latest
         ? {eyebrow:"首次使用推荐",title:"先做快速定位",time:"3–5 分钟",copy:"先花约 3 分钟找到合适起点，不直接计入正式分数",action:() => start("quick-route"),button:"开始定位"}
