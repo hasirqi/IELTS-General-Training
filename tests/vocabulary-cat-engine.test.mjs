@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-330.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-380.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,16 +20,17 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("330 reviewed anchors include completed 1K through 5K M3 batches", () => {
-  assert.equal(anchors.length,330); assert.equal(new Set(anchors.map((item)=>item.id)).size,330);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,330);
+test("380 reviewed anchors include completed 1K through 6K M3 batches", () => {
+  assert.equal(anchors.length,380); assert.equal(new Set(anchors.map((item)=>item.id)).size,380);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,380);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="3K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="4K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="5K").length,60);
-  for(let band=6;band<=8;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,10);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,330);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="6K").length,60);
+  for(let band=7;band<=8;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,10);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,380);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {

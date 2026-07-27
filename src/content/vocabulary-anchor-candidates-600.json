@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.27-v5",
+  "version": "anchor-candidates-600-2026.07.27-v6",
   "generatedAt": "2026-07-27",
   "scoringEligible": false,
-  "currentReviewedCount": 330,
-  "candidateCount": 270,
+  "currentReviewedCount": 380,
+  "candidateCount": 220,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -33,12 +33,11 @@
     "3K": 60,
     "4K": 60,
     "5K": 60,
-    "6K": 10,
+    "6K": 60,
     "7K": 10,
     "8K": 10
   },
   "additionsByBand": {
-    "6K": 50,
     "7K": 50,
     "8K": 50,
     "9K": 15,
@@ -80,1356 +79,6 @@
   "candidates": [
     {
       "candidateId": "candidate-001",
-      "plannedAnchorId": "anchor-331",
-      "familyId": "wf-05005",
-      "lexiconId": "word-1863",
-      "term": "passport",
-      "focusedMeaning": "护照",
-      "meaningNote": "",
-      "contextSentence": "Your passport must remain valid for the entire period of travel.",
-      "collocation": "renew a passport",
-      "frequencyRank": 5005,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1863",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-002",
-      "plannedAnchorId": "anchor-332",
-      "familyId": "wf-05024",
-      "lexiconId": "word-1860",
-      "term": "supportive",
-      "focusedMeaning": "给予支持的",
-      "meaningNote": "",
-      "contextSentence": "My supervisor was supportive when I requested flexible working hours.",
-      "collocation": "a supportive supervisor",
-      "frequencyRank": 5024,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1860",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-003",
-      "plannedAnchorId": "anchor-333",
-      "familyId": "wf-05058",
-      "lexiconId": "word-1879",
-      "term": "flavor",
-      "focusedMeaning": "味道；风味",
-      "meaningNote": "",
-      "contextSentence": "Fresh herbs add flavor without increasing the amount of salt.",
-      "collocation": "add natural flavor",
-      "frequencyRank": 5058,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1879",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-004",
-      "plannedAnchorId": "anchor-334",
-      "familyId": "wf-05075",
-      "lexiconId": "word-1870",
-      "term": "magnificent",
-      "focusedMeaning": "壮丽的；极好的",
-      "meaningNote": "",
-      "contextSentence": "The coastal path offers a magnificent view from the northern cliff.",
-      "collocation": "magnificent sea view",
-      "frequencyRank": 5075,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1870",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-005",
-      "plannedAnchorId": "anchor-335",
-      "familyId": "wf-05092",
-      "lexiconId": "word-1872",
-      "term": "shallow",
-      "focusedMeaning": "浅的；肤浅的",
-      "meaningNote": "",
-      "contextSentence": "Children must stay in the shallow section of the swimming pool.",
-      "collocation": "shallow water area",
-      "frequencyRank": 5092,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1872",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-006",
-      "plannedAnchorId": "anchor-336",
-      "familyId": "wf-05100",
-      "lexiconId": "word-1871",
-      "term": "strengthen",
-      "focusedMeaning": "加强；巩固",
-      "meaningNote": "",
-      "contextSentence": "Regular feedback can strengthen trust between managers and staff.",
-      "collocation": "strengthen workplace trust",
-      "frequencyRank": 5100,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1871",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-007",
-      "plannedAnchorId": "anchor-337",
-      "familyId": "wf-05126",
-      "lexiconId": "word-1898",
-      "term": "differ",
-      "focusedMeaning": "不同；有差异",
-      "meaningNote": "",
-      "contextSentence": "Refund conditions differ between online and in-store purchases.",
-      "collocation": "differ from the standard policy",
-      "frequencyRank": 5126,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1898",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-008",
-      "plannedAnchorId": "anchor-338",
-      "familyId": "wf-05140",
-      "lexiconId": "word-1893",
-      "term": "insist",
-      "focusedMeaning": "坚持要求",
-      "meaningNote": "",
-      "contextSentence": "The customer may insist on a written explanation of the charge.",
-      "collocation": "insist on written confirmation",
-      "frequencyRank": 5140,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1893",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-009",
-      "plannedAnchorId": "anchor-339",
-      "familyId": "wf-05157",
-      "lexiconId": "word-1892",
-      "term": "passive",
-      "focusedMeaning": "被动的；消极的",
-      "meaningNote": "",
-      "contextSentence": "Passive smoking is prohibited throughout the apartment building.",
-      "collocation": "passive smoking risk",
-      "frequencyRank": 5157,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1892",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-010",
-      "plannedAnchorId": "anchor-340",
-      "familyId": "wf-05175",
-      "lexiconId": "word-1894",
-      "term": "threshold",
-      "focusedMeaning": "门槛；临界点",
-      "meaningNote": "",
-      "contextSentence": "Households below the income threshold can apply for heating support.",
-      "collocation": "income eligibility threshold",
-      "frequencyRank": 5175,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1894",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-011",
-      "plannedAnchorId": "anchor-341",
-      "familyId": "wf-05194",
-      "lexiconId": "word-1906",
-      "term": "badge",
-      "focusedMeaning": "徽章；证件",
-      "meaningNote": "",
-      "contextSentence": "All contractors must display an identification badge inside the building.",
-      "collocation": "wear a security badge",
-      "frequencyRank": 5194,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1906",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-012",
-      "plannedAnchorId": "anchor-342",
-      "familyId": "wf-05210",
-      "lexiconId": "word-1915",
-      "term": "dimension",
-      "focusedMeaning": "方面；维度；尺寸",
-      "meaningNote": "",
-      "contextSentence": "Cost is only one dimension of the housing problem.",
-      "collocation": "a social dimension",
-      "frequencyRank": 5210,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1915",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-013",
-      "plannedAnchorId": "anchor-343",
-      "familyId": "wf-05226",
-      "lexiconId": "word-1912",
-      "term": "gut",
-      "focusedMeaning": "肠道；直觉；勇气",
-      "meaningNote": "",
-      "contextSentence": "The health workshop explains how diet affects the gut.",
-      "collocation": "support healthy gut function",
-      "frequencyRank": 5226,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1912",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-014",
-      "plannedAnchorId": "anchor-344",
-      "familyId": "wf-05240",
-      "lexiconId": "word-3751",
-      "term": "mansion",
-      "focusedMeaning": "宅邸；豪宅",
-      "meaningNote": "",
-      "contextSentence": "The historic mansion now houses a public museum and archive.",
-      "collocation": "historic mansion",
-      "frequencyRank": 5240,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-3751",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-015",
-      "plannedAnchorId": "anchor-345",
-      "familyId": "wf-05258",
-      "lexiconId": "word-1909",
-      "term": "subscribe",
-      "focusedMeaning": "订阅；定期缴费",
-      "meaningNote": "",
-      "contextSentence": "You can subscribe to email alerts about local road closures.",
-      "collocation": "subscribe to service updates",
-      "frequencyRank": 5258,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1909",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-016",
-      "plannedAnchorId": "anchor-346",
-      "familyId": "wf-05274",
-      "lexiconId": "word-1925",
-      "term": "bail",
-      "focusedMeaning": "保释；舀水离船",
-      "meaningNote": "",
-      "contextSentence": "The court granted bail with strict conditions on travel.",
-      "collocation": "grant conditional bail",
-      "frequencyRank": 5274,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1925",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-017",
-      "plannedAnchorId": "anchor-347",
-      "familyId": "wf-05301",
-      "lexiconId": "word-1921",
-      "term": "liquor",
-      "focusedMeaning": "烈酒；酒类",
-      "meaningNote": "",
-      "contextSentence": "The shop cannot sell liquor to anyone under the legal age.",
-      "collocation": "liquor licence rules",
-      "frequencyRank": 5301,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1921",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-018",
-      "plannedAnchorId": "anchor-348",
-      "familyId": "wf-05326",
-      "lexiconId": "word-1923",
-      "term": "theoretical",
-      "focusedMeaning": "理论上的",
-      "meaningNote": "",
-      "contextSentence": "The course combines theoretical knowledge with supervised practical work.",
-      "collocation": "theoretical training module",
-      "frequencyRank": 5326,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1923",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-019",
-      "plannedAnchorId": "anchor-349",
-      "familyId": "wf-05361",
-      "lexiconId": "word-1935",
-      "term": "crude",
-      "focusedMeaning": "粗糙的；原油的；粗俗的",
-      "meaningNote": "",
-      "contextSentence": "A crude repair kept the pipe working until the engineer arrived.",
-      "collocation": "crude temporary repair",
-      "frequencyRank": 5361,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1935",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-020",
-      "plannedAnchorId": "anchor-350",
-      "familyId": "wf-05376",
-      "lexiconId": "word-1928",
-      "term": "interim",
-      "focusedMeaning": "临时的；过渡期的",
-      "meaningNote": "",
-      "contextSentence": "An interim manager will lead the team until recruitment finishes.",
-      "collocation": "appoint an interim manager",
-      "frequencyRank": 5376,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1928",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-021",
-      "plannedAnchorId": "anchor-351",
-      "familyId": "wf-05393",
-      "lexiconId": "word-1172",
-      "term": "prescription",
-      "focusedMeaning": "处方",
-      "meaningNote": "",
-      "contextSentence": "The pharmacist checked the name on the prescription.",
-      "collocation": "repeat prescription",
-      "frequencyRank": 5393,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1172",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-022",
-      "plannedAnchorId": "anchor-352",
-      "familyId": "wf-05411",
-      "lexiconId": "word-1940",
-      "term": "affiliate",
-      "focusedMeaning": "附属机构；使隶属",
-      "meaningNote": "",
-      "contextSentence": "The training centre is an affiliate of the national college network.",
-      "collocation": "affiliate organisation status",
-      "frequencyRank": 5411,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1940",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-023",
-      "plannedAnchorId": "anchor-353",
-      "familyId": "wf-05442",
-      "lexiconId": "word-1168",
-      "term": "injection",
-      "focusedMeaning": "注射",
-      "meaningNote": "",
-      "contextSentence": "The nurse asked which arm you preferred for the injection.",
-      "collocation": "receive an injection",
-      "frequencyRank": 5442,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1168",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-024",
-      "plannedAnchorId": "anchor-354",
-      "familyId": "wf-05483",
-      "lexiconId": "word-1942",
-      "term": "weigh",
-      "focusedMeaning": "称重；权衡",
-      "meaningNote": "",
-      "contextSentence": "The pharmacist will weigh the package before calculating postage.",
-      "collocation": "weigh the available options",
-      "frequencyRank": 5483,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1942",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-025",
-      "plannedAnchorId": "anchor-355",
-      "familyId": "wf-05491",
-      "lexiconId": "word-1134",
-      "term": "archive",
-      "focusedMeaning": "档案；存档",
-      "meaningNote": "",
-      "contextSentence": "The clinic will archive inactive records after five years.",
-      "collocation": "digital archive",
-      "frequencyRank": 5491,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1134",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-026",
-      "plannedAnchorId": "anchor-356",
-      "familyId": "wf-05512",
-      "lexiconId": "word-1968",
-      "term": "doctrine",
-      "focusedMeaning": "信条；主义；原则",
-      "meaningNote": "",
-      "contextSentence": "The course explains how legal doctrine develops through court decisions.",
-      "collocation": "legal doctrine lesson",
-      "frequencyRank": 5512,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1968",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-027",
-      "plannedAnchorId": "anchor-357",
-      "familyId": "wf-05526",
-      "lexiconId": "word-1966",
-      "term": "irrelevant",
-      "focusedMeaning": "不相关的",
-      "meaningNote": "",
-      "contextSentence": "Remove irrelevant personal details from your formal complaint letter.",
-      "collocation": "irrelevant background information",
-      "frequencyRank": 5526,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1966",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-028",
-      "plannedAnchorId": "anchor-358",
-      "familyId": "wf-05547",
-      "lexiconId": "word-1956",
-      "term": "prey",
-      "focusedMeaning": "猎物；捕食",
-      "meaningNote": "",
-      "contextSentence": "Small seabirds become prey for introduced animals on the island.",
-      "collocation": "prey on wildlife",
-      "frequencyRank": 5547,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1956",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-029",
-      "plannedAnchorId": "anchor-359",
-      "familyId": "wf-05555",
-      "lexiconId": "word-1961",
-      "term": "satisfy",
-      "focusedMeaning": "满足；使满意",
-      "meaningNote": "",
-      "contextSentence": "The evidence must satisfy all conditions listed in the application guide.",
-      "collocation": "satisfy eligibility requirements",
-      "frequencyRank": 5555,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1961",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-030",
-      "plannedAnchorId": "anchor-360",
-      "familyId": "wf-05578",
-      "lexiconId": "word-1104",
-      "term": "caution",
-      "focusedMeaning": "谨慎；警告",
-      "meaningNote": "",
-      "contextSentence": "Drivers should use caution near the temporary crossing.",
-      "collocation": "exercise caution",
-      "frequencyRank": 5578,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1104",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-031",
-      "plannedAnchorId": "anchor-361",
-      "familyId": "wf-05591",
-      "lexiconId": "word-1976",
-      "term": "frontier",
-      "focusedMeaning": "边界；前沿",
-      "meaningNote": "",
-      "contextSentence": "Researchers described battery storage as a new technological frontier.",
-      "collocation": "frontier of clean technology",
-      "frequencyRank": 5591,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1976",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-032",
-      "plannedAnchorId": "anchor-362",
-      "familyId": "wf-05609",
-      "lexiconId": "word-1145",
-      "term": "mandate",
-      "focusedMeaning": "授权；强制要求",
-      "meaningNote": "",
-      "contextSentence": "The new law gives councils a mandate to inspect rental homes.",
-      "collocation": "legal mandate",
-      "frequencyRank": 5609,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1145",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-033",
-      "plannedAnchorId": "anchor-363",
-      "familyId": "wf-05628",
-      "lexiconId": "word-1979",
-      "term": "succession",
-      "focusedMeaning": "连续；继任",
-      "meaningNote": "",
-      "contextSentence": "A succession of delays affected trains throughout the afternoon.",
-      "collocation": "a succession of delays",
-      "frequencyRank": 5628,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1979",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-034",
-      "plannedAnchorId": "anchor-364",
-      "familyId": "wf-05639",
-      "lexiconId": "word-1091",
-      "term": "wholesale",
-      "focusedMeaning": "批发的；批发",
-      "meaningNote": "",
-      "contextSentence": "The café buys coffee beans at a wholesale price.",
-      "collocation": "wholesale market",
-      "frequencyRank": 5639,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1091",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-035",
-      "plannedAnchorId": "anchor-365",
-      "familyId": "wf-05658",
-      "lexiconId": "word-1986",
-      "term": "conscience",
-      "focusedMeaning": "良心；道德感",
-      "meaningNote": "",
-      "contextSentence": "She acted according to her conscience and reported the unsafe practice.",
-      "collocation": "a matter of conscience",
-      "frequencyRank": 5658,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1986",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-036",
-      "plannedAnchorId": "anchor-366",
-      "familyId": "wf-05710",
-      "lexiconId": "word-1983",
-      "term": "superb",
-      "focusedMeaning": "极好的；卓越的",
-      "meaningNote": "",
-      "contextSentence": "The hotel received superb reviews for its accessible rooms.",
-      "collocation": "superb customer reviews",
-      "frequencyRank": 5710,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1983",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-037",
-      "plannedAnchorId": "anchor-367",
-      "familyId": "wf-05726",
-      "lexiconId": "word-1991",
-      "term": "wreck",
-      "focusedMeaning": "残骸；严重毁坏",
-      "meaningNote": "",
-      "contextSentence": "Divers may visit the ship wreck only with an approved guide.",
-      "collocation": "historic ship wreck",
-      "frequencyRank": 5726,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1991",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-038",
-      "plannedAnchorId": "anchor-368",
-      "familyId": "wf-05744",
-      "lexiconId": "word-2011",
-      "term": "collision",
-      "focusedMeaning": "碰撞；冲突",
-      "meaningNote": "",
-      "contextSentence": "A collision near the bridge delayed buses for an hour.",
-      "collocation": "report a road collision",
-      "frequencyRank": 5744,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2011",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-039",
-      "plannedAnchorId": "anchor-369",
-      "familyId": "wf-05760",
-      "lexiconId": "word-2001",
-      "term": "execute",
-      "focusedMeaning": "执行；实施",
-      "meaningNote": "",
-      "contextSentence": "The contractor will execute the approved safety plan next Monday.",
-      "collocation": "execute an approved plan",
-      "frequencyRank": 5760,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2001",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-040",
-      "plannedAnchorId": "anchor-370",
-      "familyId": "wf-05768",
-      "lexiconId": "word-2006",
-      "term": "hollow",
-      "focusedMeaning": "空心的；空洞的",
-      "meaningNote": "",
-      "contextSentence": "The damaged wall sounded hollow when the surveyor tapped it.",
-      "collocation": "a hollow wall section",
-      "frequencyRank": 5768,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2006",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-041",
-      "plannedAnchorId": "anchor-371",
-      "familyId": "wf-05805",
-      "lexiconId": "word-2012",
-      "term": "spouse",
-      "focusedMeaning": "配偶",
-      "meaningNote": "",
-      "contextSentence": "The policy allows an employee to include a spouse on the health plan.",
-      "collocation": "spouse health coverage",
-      "frequencyRank": 5805,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2012",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-042",
-      "plannedAnchorId": "anchor-372",
-      "familyId": "wf-05809",
-      "lexiconId": "word-2010",
-      "term": "tense",
-      "focusedMeaning": "紧张的；时态",
-      "meaningNote": "",
-      "contextSentence": "The meeting became tense after the budget cut was announced.",
-      "collocation": "a tense workplace meeting",
-      "frequencyRank": 5809,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2010",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-043",
-      "plannedAnchorId": "anchor-373",
-      "familyId": "wf-05842",
-      "lexiconId": "word-2025",
-      "term": "hobby",
-      "focusedMeaning": "业余爱好",
-      "meaningNote": "",
-      "contextSentence": "Photography became an affordable hobby after I bought a used camera.",
-      "collocation": "pursue a relaxing hobby",
-      "frequencyRank": 5842,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2025",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-044",
-      "plannedAnchorId": "anchor-374",
-      "familyId": "wf-05860",
-      "lexiconId": "word-1126",
-      "term": "overtime",
-      "focusedMeaning": "加班",
-      "meaningNote": "",
-      "contextSentence": "Staff must receive approval before working overtime.",
-      "collocation": "overtime pay",
-      "frequencyRank": 5860,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-1126",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-045",
-      "plannedAnchorId": "anchor-375",
-      "familyId": "wf-05911",
-      "lexiconId": "word-2035",
-      "term": "conjunction",
-      "focusedMeaning": "结合；连词",
-      "meaningNote": "",
-      "contextSentence": "The course is delivered in conjunction with the local college.",
-      "collocation": "in conjunction with",
-      "frequencyRank": 5911,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2035",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-046",
-      "plannedAnchorId": "anchor-376",
-      "familyId": "wf-05925",
-      "lexiconId": "word-2034",
-      "term": "halt",
-      "focusedMeaning": "停止；使停下",
-      "meaningNote": "",
-      "contextSentence": "Police had to halt traffic while debris was removed.",
-      "collocation": "halt traffic temporarily",
-      "frequencyRank": 5925,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2034",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-047",
-      "plannedAnchorId": "anchor-377",
-      "familyId": "wf-05945",
-      "lexiconId": "word-2040",
-      "term": "norm",
-      "focusedMeaning": "常态；规范",
-      "meaningNote": "",
-      "contextSentence": "Flexible hours have become the norm in many offices.",
-      "collocation": "become the workplace norm",
-      "frequencyRank": 5945,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2040",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-048",
-      "plannedAnchorId": "anchor-378",
-      "familyId": "wf-05962",
-      "lexiconId": "word-2044",
-      "term": "sanctuary",
-      "focusedMeaning": "庇护所；避难地",
-      "meaningNote": "",
-      "contextSentence": "The wetland provides a sanctuary for migrating birds.",
-      "collocation": "wildlife sanctuary area",
-      "frequencyRank": 5962,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2044",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-049",
-      "plannedAnchorId": "anchor-379",
-      "familyId": "wf-05974",
-      "lexiconId": "word-2043",
-      "term": "sustain",
-      "focusedMeaning": "维持；承受",
-      "meaningNote": "",
-      "contextSentence": "Small donations help sustain the free advice service.",
-      "collocation": "sustain a community service",
-      "frequencyRank": 5974,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2043",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-050",
-      "plannedAnchorId": "anchor-380",
-      "familyId": "wf-05991",
-      "lexiconId": "word-2051",
-      "term": "altitude",
-      "focusedMeaning": "海拔；高度",
-      "meaningNote": "",
-      "contextSentence": "Visitors may feel short of breath at high altitude.",
-      "collocation": "travel at high altitude",
-      "frequencyRank": 5991,
-      "frequencyBand": "6K",
-      "source": {
-        "teachingLexiconId": "word-2051",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
-    },
-    {
-      "candidateId": "candidate-051",
       "plannedAnchorId": "anchor-381",
       "familyId": "wf-06009",
       "lexiconId": "word-2052",
@@ -1453,10 +102,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-052",
+      "candidateId": "candidate-002",
       "plannedAnchorId": "anchor-382",
       "familyId": "wf-06039",
       "lexiconId": "word-2053",
@@ -1480,10 +129,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-053",
+      "candidateId": "candidate-003",
       "plannedAnchorId": "anchor-383",
       "familyId": "wf-06055",
       "lexiconId": "word-2045",
@@ -1507,10 +156,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-054",
+      "candidateId": "candidate-004",
       "plannedAnchorId": "anchor-384",
       "familyId": "wf-06077",
       "lexiconId": "word-2069",
@@ -1534,10 +183,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-055",
+      "candidateId": "candidate-005",
       "plannedAnchorId": "anchor-385",
       "familyId": "wf-06096",
       "lexiconId": "word-2070",
@@ -1561,10 +210,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-056",
+      "candidateId": "candidate-006",
       "plannedAnchorId": "anchor-386",
       "familyId": "wf-06103",
       "lexiconId": "word-2062",
@@ -1588,10 +237,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-057",
+      "candidateId": "candidate-007",
       "plannedAnchorId": "anchor-387",
       "familyId": "wf-06145",
       "lexiconId": "word-2059",
@@ -1615,10 +264,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-058",
+      "candidateId": "candidate-008",
       "plannedAnchorId": "anchor-388",
       "familyId": "wf-06163",
       "lexiconId": "word-2083",
@@ -1642,10 +291,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-059",
+      "candidateId": "candidate-009",
       "plannedAnchorId": "anchor-389",
       "familyId": "wf-06176",
       "lexiconId": "word-2078",
@@ -1669,10 +318,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-060",
+      "candidateId": "candidate-010",
       "plannedAnchorId": "anchor-390",
       "familyId": "wf-06192",
       "lexiconId": "word-2081",
@@ -1696,10 +345,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-061",
+      "candidateId": "candidate-011",
       "plannedAnchorId": "anchor-391",
       "familyId": "wf-06203",
       "lexiconId": "word-2073",
@@ -1723,10 +372,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-062",
+      "candidateId": "candidate-012",
       "plannedAnchorId": "anchor-392",
       "familyId": "wf-06223",
       "lexiconId": "word-2076",
@@ -1750,10 +399,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-063",
+      "candidateId": "candidate-013",
       "plannedAnchorId": "anchor-393",
       "familyId": "wf-06241",
       "lexiconId": "word-2071",
@@ -1777,10 +426,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-064",
+      "candidateId": "candidate-014",
       "plannedAnchorId": "anchor-394",
       "familyId": "wf-06263",
       "lexiconId": "word-2074",
@@ -1804,10 +453,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-065",
+      "candidateId": "candidate-015",
       "plannedAnchorId": "anchor-395",
       "familyId": "wf-06278",
       "lexiconId": "word-2093",
@@ -1831,10 +480,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-066",
+      "candidateId": "candidate-016",
       "plannedAnchorId": "anchor-396",
       "familyId": "wf-06313",
       "lexiconId": "word-1198",
@@ -1858,10 +507,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-067",
+      "candidateId": "candidate-017",
       "plannedAnchorId": "anchor-397",
       "familyId": "wf-06351",
       "lexiconId": "word-2104",
@@ -1885,10 +534,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-068",
+      "candidateId": "candidate-018",
       "plannedAnchorId": "anchor-398",
       "familyId": "wf-06369",
       "lexiconId": "word-2105",
@@ -1912,10 +561,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-069",
+      "candidateId": "candidate-019",
       "plannedAnchorId": "anchor-399",
       "familyId": "wf-06382",
       "lexiconId": "word-2100",
@@ -1939,10 +588,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-070",
+      "candidateId": "candidate-020",
       "plannedAnchorId": "anchor-400",
       "familyId": "wf-06393",
       "lexiconId": "word-2099",
@@ -1966,10 +615,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-071",
+      "candidateId": "candidate-021",
       "plannedAnchorId": "anchor-401",
       "familyId": "wf-06418",
       "lexiconId": "word-2103",
@@ -1993,10 +642,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-072",
+      "candidateId": "candidate-022",
       "plannedAnchorId": "anchor-402",
       "familyId": "wf-06441",
       "lexiconId": "word-2111",
@@ -2020,10 +669,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-073",
+      "candidateId": "candidate-023",
       "plannedAnchorId": "anchor-403",
       "familyId": "wf-06458",
       "lexiconId": "word-2113",
@@ -2047,10 +696,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-074",
+      "candidateId": "candidate-024",
       "plannedAnchorId": "anchor-404",
       "familyId": "wf-06477",
       "lexiconId": "word-2117",
@@ -2074,10 +723,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-075",
+      "candidateId": "candidate-025",
       "plannedAnchorId": "anchor-405",
       "familyId": "wf-06496",
       "lexiconId": "word-1173",
@@ -2101,10 +750,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-076",
+      "candidateId": "candidate-026",
       "plannedAnchorId": "anchor-406",
       "familyId": "wf-06510",
       "lexiconId": "word-2115",
@@ -2128,10 +777,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-077",
+      "candidateId": "candidate-027",
       "plannedAnchorId": "anchor-407",
       "familyId": "wf-06592",
       "lexiconId": "word-2121",
@@ -2155,10 +804,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-078",
+      "candidateId": "candidate-028",
       "plannedAnchorId": "anchor-408",
       "familyId": "wf-06605",
       "lexiconId": "word-2125",
@@ -2182,10 +831,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-079",
+      "candidateId": "candidate-029",
       "plannedAnchorId": "anchor-409",
       "familyId": "wf-06644",
       "lexiconId": "word-2140",
@@ -2209,10 +858,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-080",
+      "candidateId": "candidate-030",
       "plannedAnchorId": "anchor-410",
       "familyId": "wf-06662",
       "lexiconId": "word-2147",
@@ -2236,10 +885,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-081",
+      "candidateId": "candidate-031",
       "plannedAnchorId": "anchor-411",
       "familyId": "wf-06678",
       "lexiconId": "word-2135",
@@ -2263,10 +912,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-082",
+      "candidateId": "candidate-032",
       "plannedAnchorId": "anchor-412",
       "familyId": "wf-06690",
       "lexiconId": "word-2138",
@@ -2290,10 +939,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-083",
+      "candidateId": "candidate-033",
       "plannedAnchorId": "anchor-413",
       "familyId": "wf-06709",
       "lexiconId": "word-2160",
@@ -2317,10 +966,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-084",
+      "candidateId": "candidate-034",
       "plannedAnchorId": "anchor-414",
       "familyId": "wf-06726",
       "lexiconId": "word-2153",
@@ -2344,10 +993,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-085",
+      "candidateId": "candidate-035",
       "plannedAnchorId": "anchor-415",
       "familyId": "wf-06750",
       "lexiconId": "word-2162",
@@ -2371,10 +1020,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-086",
+      "candidateId": "candidate-036",
       "plannedAnchorId": "anchor-416",
       "familyId": "wf-06759",
       "lexiconId": "word-2159",
@@ -2398,10 +1047,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-087",
+      "candidateId": "candidate-037",
       "plannedAnchorId": "anchor-417",
       "familyId": "wf-06776",
       "lexiconId": "word-2152",
@@ -2425,10 +1074,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-088",
+      "candidateId": "candidate-038",
       "plannedAnchorId": "anchor-418",
       "familyId": "wf-06798",
       "lexiconId": "word-2163",
@@ -2452,10 +1101,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-089",
+      "candidateId": "candidate-039",
       "plannedAnchorId": "anchor-419",
       "familyId": "wf-06812",
       "lexiconId": "word-2173",
@@ -2479,10 +1128,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-090",
+      "candidateId": "candidate-040",
       "plannedAnchorId": "anchor-420",
       "familyId": "wf-06827",
       "lexiconId": "word-2175",
@@ -2506,10 +1155,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-091",
+      "candidateId": "candidate-041",
       "plannedAnchorId": "anchor-421",
       "familyId": "wf-06846",
       "lexiconId": "word-2170",
@@ -2533,10 +1182,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-092",
+      "candidateId": "candidate-042",
       "plannedAnchorId": "anchor-422",
       "familyId": "wf-06859",
       "lexiconId": "word-2179",
@@ -2560,10 +1209,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-093",
+      "candidateId": "candidate-043",
       "plannedAnchorId": "anchor-423",
       "familyId": "wf-06883",
       "lexiconId": "word-2172",
@@ -2587,10 +1236,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-094",
+      "candidateId": "candidate-044",
       "plannedAnchorId": "anchor-424",
       "familyId": "wf-06895",
       "lexiconId": "word-2190",
@@ -2614,10 +1263,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-095",
+      "candidateId": "candidate-045",
       "plannedAnchorId": "anchor-425",
       "familyId": "wf-06909",
       "lexiconId": "word-2183",
@@ -2641,10 +1290,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-096",
+      "candidateId": "candidate-046",
       "plannedAnchorId": "anchor-426",
       "familyId": "wf-06922",
       "lexiconId": "word-2184",
@@ -2668,10 +1317,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-097",
+      "candidateId": "candidate-047",
       "plannedAnchorId": "anchor-427",
       "familyId": "wf-06934",
       "lexiconId": "word-2192",
@@ -2695,10 +1344,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-098",
+      "candidateId": "candidate-048",
       "plannedAnchorId": "anchor-428",
       "familyId": "wf-06960",
       "lexiconId": "word-2199",
@@ -2722,10 +1371,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-099",
+      "candidateId": "candidate-049",
       "plannedAnchorId": "anchor-429",
       "familyId": "wf-06976",
       "lexiconId": "word-2187",
@@ -2749,10 +1398,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-100",
+      "candidateId": "candidate-050",
       "plannedAnchorId": "anchor-430",
       "familyId": "wf-06987",
       "lexiconId": "word-2211",
@@ -2776,10 +1425,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-101",
+      "candidateId": "candidate-051",
       "plannedAnchorId": "anchor-431",
       "familyId": "wf-07010",
       "lexiconId": "word-2215",
@@ -2803,10 +1452,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-102",
+      "candidateId": "candidate-052",
       "plannedAnchorId": "anchor-432",
       "familyId": "wf-07028",
       "lexiconId": "word-2205",
@@ -2830,10 +1479,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-103",
+      "candidateId": "candidate-053",
       "plannedAnchorId": "anchor-433",
       "familyId": "wf-07060",
       "lexiconId": "word-2203",
@@ -2857,10 +1506,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-104",
+      "candidateId": "candidate-054",
       "plannedAnchorId": "anchor-434",
       "familyId": "wf-07072",
       "lexiconId": "word-1150",
@@ -2884,10 +1533,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-105",
+      "candidateId": "candidate-055",
       "plannedAnchorId": "anchor-435",
       "familyId": "wf-07097",
       "lexiconId": "word-2222",
@@ -2911,10 +1560,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-106",
+      "candidateId": "candidate-056",
       "plannedAnchorId": "anchor-436",
       "familyId": "wf-07108",
       "lexiconId": "word-2218",
@@ -2938,10 +1587,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-107",
+      "candidateId": "candidate-057",
       "plannedAnchorId": "anchor-437",
       "familyId": "wf-07128",
       "lexiconId": "word-2221",
@@ -2965,10 +1614,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-108",
+      "candidateId": "candidate-058",
       "plannedAnchorId": "anchor-438",
       "familyId": "wf-07136",
       "lexiconId": "word-2224",
@@ -2992,10 +1641,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-109",
+      "candidateId": "candidate-059",
       "plannedAnchorId": "anchor-439",
       "familyId": "wf-07159",
       "lexiconId": "word-2223",
@@ -3019,10 +1668,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-110",
+      "candidateId": "candidate-060",
       "plannedAnchorId": "anchor-440",
       "familyId": "wf-07214",
       "lexiconId": "word-2233",
@@ -3046,10 +1695,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-111",
+      "candidateId": "candidate-061",
       "plannedAnchorId": "anchor-441",
       "familyId": "wf-07219",
       "lexiconId": "word-2234",
@@ -3073,10 +1722,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-112",
+      "candidateId": "candidate-062",
       "plannedAnchorId": "anchor-442",
       "familyId": "wf-07241",
       "lexiconId": "word-2235",
@@ -3100,10 +1749,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-113",
+      "candidateId": "candidate-063",
       "plannedAnchorId": "anchor-443",
       "familyId": "wf-07261",
       "lexiconId": "word-2228",
@@ -3127,10 +1776,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-114",
+      "candidateId": "candidate-064",
       "plannedAnchorId": "anchor-444",
       "familyId": "wf-07293",
       "lexiconId": "word-2250",
@@ -3154,10 +1803,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-115",
+      "candidateId": "candidate-065",
       "plannedAnchorId": "anchor-445",
       "familyId": "wf-07305",
       "lexiconId": "word-2237",
@@ -3181,10 +1830,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-116",
+      "candidateId": "candidate-066",
       "plannedAnchorId": "anchor-446",
       "familyId": "wf-07341",
       "lexiconId": "word-2240",
@@ -3208,10 +1857,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-117",
+      "candidateId": "candidate-067",
       "plannedAnchorId": "anchor-447",
       "familyId": "wf-07354",
       "lexiconId": "word-2251",
@@ -3235,10 +1884,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-118",
+      "candidateId": "candidate-068",
       "plannedAnchorId": "anchor-448",
       "familyId": "wf-07379",
       "lexiconId": "word-1177",
@@ -3262,10 +1911,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-119",
+      "candidateId": "candidate-069",
       "plannedAnchorId": "anchor-449",
       "familyId": "wf-07393",
       "lexiconId": "word-2272",
@@ -3289,10 +1938,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-120",
+      "candidateId": "candidate-070",
       "plannedAnchorId": "anchor-450",
       "familyId": "wf-07406",
       "lexiconId": "word-2259",
@@ -3316,10 +1965,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-121",
+      "candidateId": "candidate-071",
       "plannedAnchorId": "anchor-451",
       "familyId": "wf-07425",
       "lexiconId": "word-2260",
@@ -3343,10 +1992,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-122",
+      "candidateId": "candidate-072",
       "plannedAnchorId": "anchor-452",
       "familyId": "wf-07442",
       "lexiconId": "word-2264",
@@ -3370,10 +2019,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-123",
+      "candidateId": "candidate-073",
       "plannedAnchorId": "anchor-453",
       "familyId": "wf-07457",
       "lexiconId": "word-2273",
@@ -3397,10 +2046,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-124",
+      "candidateId": "candidate-074",
       "plannedAnchorId": "anchor-454",
       "familyId": "wf-07469",
       "lexiconId": "word-2262",
@@ -3424,10 +2073,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-125",
+      "candidateId": "candidate-075",
       "plannedAnchorId": "anchor-455",
       "familyId": "wf-07505",
       "lexiconId": "word-2282",
@@ -3451,10 +2100,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-126",
+      "candidateId": "candidate-076",
       "plannedAnchorId": "anchor-456",
       "familyId": "wf-07508",
       "lexiconId": "word-2280",
@@ -3478,10 +2127,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-127",
+      "candidateId": "candidate-077",
       "plannedAnchorId": "anchor-457",
       "familyId": "wf-07562",
       "lexiconId": "word-2274",
@@ -3505,10 +2154,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-128",
+      "candidateId": "candidate-078",
       "plannedAnchorId": "anchor-458",
       "familyId": "wf-07565",
       "lexiconId": "word-2277",
@@ -3532,10 +2181,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-129",
+      "candidateId": "candidate-079",
       "plannedAnchorId": "anchor-459",
       "familyId": "wf-07575",
       "lexiconId": "word-2275",
@@ -3559,10 +2208,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-130",
+      "candidateId": "candidate-080",
       "plannedAnchorId": "anchor-460",
       "familyId": "wf-07598",
       "lexiconId": "word-2289",
@@ -3586,10 +2235,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-131",
+      "candidateId": "candidate-081",
       "plannedAnchorId": "anchor-461",
       "familyId": "wf-07601",
       "lexiconId": "word-2299",
@@ -3613,10 +2262,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-132",
+      "candidateId": "candidate-082",
       "plannedAnchorId": "anchor-462",
       "familyId": "wf-07626",
       "lexiconId": "word-2295",
@@ -3640,10 +2289,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-133",
+      "candidateId": "candidate-083",
       "plannedAnchorId": "anchor-463",
       "familyId": "wf-07642",
       "lexiconId": "word-2292",
@@ -3667,10 +2316,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-134",
+      "candidateId": "candidate-084",
       "plannedAnchorId": "anchor-464",
       "familyId": "wf-07663",
       "lexiconId": "word-2287",
@@ -3694,10 +2343,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-135",
+      "candidateId": "candidate-085",
       "plannedAnchorId": "anchor-465",
       "familyId": "wf-07670",
       "lexiconId": "word-2283",
@@ -3721,10 +2370,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-136",
+      "candidateId": "candidate-086",
       "plannedAnchorId": "anchor-466",
       "familyId": "wf-07699",
       "lexiconId": "word-2294",
@@ -3748,10 +2397,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-137",
+      "candidateId": "candidate-087",
       "plannedAnchorId": "anchor-467",
       "familyId": "wf-07709",
       "lexiconId": "word-2314",
@@ -3775,10 +2424,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-138",
+      "candidateId": "candidate-088",
       "plannedAnchorId": "anchor-468",
       "familyId": "wf-07726",
       "lexiconId": "word-2306",
@@ -3802,10 +2451,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-139",
+      "candidateId": "candidate-089",
       "plannedAnchorId": "anchor-469",
       "familyId": "wf-07760",
       "lexiconId": "word-2311",
@@ -3829,10 +2478,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-140",
+      "candidateId": "candidate-090",
       "plannedAnchorId": "anchor-470",
       "familyId": "wf-07777",
       "lexiconId": "word-2303",
@@ -3856,10 +2505,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-141",
+      "candidateId": "candidate-091",
       "plannedAnchorId": "anchor-471",
       "familyId": "wf-07795",
       "lexiconId": "word-2315",
@@ -3883,10 +2532,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-142",
+      "candidateId": "candidate-092",
       "plannedAnchorId": "anchor-472",
       "familyId": "wf-07816",
       "lexiconId": "word-2307",
@@ -3910,10 +2559,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-143",
+      "candidateId": "candidate-093",
       "plannedAnchorId": "anchor-473",
       "familyId": "wf-07823",
       "lexiconId": "word-2310",
@@ -3937,10 +2586,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-144",
+      "candidateId": "candidate-094",
       "plannedAnchorId": "anchor-474",
       "familyId": "wf-07840",
       "lexiconId": "word-2321",
@@ -3964,10 +2613,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-145",
+      "candidateId": "candidate-095",
       "plannedAnchorId": "anchor-475",
       "familyId": "wf-07861",
       "lexiconId": "word-2329",
@@ -3991,10 +2640,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-146",
+      "candidateId": "candidate-096",
       "plannedAnchorId": "anchor-476",
       "familyId": "wf-07879",
       "lexiconId": "word-2320",
@@ -4018,10 +2667,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-147",
+      "candidateId": "candidate-097",
       "plannedAnchorId": "anchor-477",
       "familyId": "wf-07919",
       "lexiconId": "word-2319",
@@ -4045,10 +2694,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-148",
+      "candidateId": "candidate-098",
       "plannedAnchorId": "anchor-478",
       "familyId": "wf-07959",
       "lexiconId": "word-2348",
@@ -4072,10 +2721,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-149",
+      "candidateId": "candidate-099",
       "plannedAnchorId": "anchor-479",
       "familyId": "wf-07978",
       "lexiconId": "word-2333",
@@ -4099,10 +2748,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-150",
+      "candidateId": "candidate-100",
       "plannedAnchorId": "anchor-480",
       "familyId": "wf-07993",
       "lexiconId": "word-2349",
@@ -4126,10 +2775,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-151",
+      "candidateId": "candidate-101",
       "plannedAnchorId": "anchor-481",
       "familyId": "wf-08021",
       "lexiconId": "word-2334",
@@ -4153,10 +2802,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-152",
+      "candidateId": "candidate-102",
       "plannedAnchorId": "anchor-482",
       "familyId": "wf-08100",
       "lexiconId": "word-2355",
@@ -4180,10 +2829,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-153",
+      "candidateId": "candidate-103",
       "plannedAnchorId": "anchor-483",
       "familyId": "wf-08173",
       "lexiconId": "word-2366",
@@ -4207,10 +2856,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-154",
+      "candidateId": "candidate-104",
       "plannedAnchorId": "anchor-484",
       "familyId": "wf-08233",
       "lexiconId": "word-2369",
@@ -4234,10 +2883,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-155",
+      "candidateId": "candidate-105",
       "plannedAnchorId": "anchor-485",
       "familyId": "wf-08300",
       "lexiconId": "word-2381",
@@ -4261,10 +2910,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-156",
+      "candidateId": "candidate-106",
       "plannedAnchorId": "anchor-486",
       "familyId": "wf-08368",
       "lexiconId": "word-2406",
@@ -4288,10 +2937,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-157",
+      "candidateId": "candidate-107",
       "plannedAnchorId": "anchor-487",
       "familyId": "wf-08439",
       "lexiconId": "word-2416",
@@ -4315,10 +2964,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-158",
+      "candidateId": "candidate-108",
       "plannedAnchorId": "anchor-488",
       "familyId": "wf-08500",
       "lexiconId": "word-2418",
@@ -4342,10 +2991,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-159",
+      "candidateId": "candidate-109",
       "plannedAnchorId": "anchor-489",
       "familyId": "wf-08565",
       "lexiconId": "word-2424",
@@ -4369,10 +3018,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-160",
+      "candidateId": "candidate-110",
       "plannedAnchorId": "anchor-490",
       "familyId": "wf-08640",
       "lexiconId": "word-2426",
@@ -4396,10 +3045,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-161",
+      "candidateId": "candidate-111",
       "plannedAnchorId": "anchor-491",
       "familyId": "wf-08706",
       "lexiconId": "word-2453",
@@ -4423,10 +3072,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-162",
+      "candidateId": "candidate-112",
       "plannedAnchorId": "anchor-492",
       "familyId": "wf-08773",
       "lexiconId": "word-2452",
@@ -4450,10 +3099,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-163",
+      "candidateId": "candidate-113",
       "plannedAnchorId": "anchor-493",
       "familyId": "wf-08832",
       "lexiconId": "word-2462",
@@ -4477,10 +3126,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-164",
+      "candidateId": "candidate-114",
       "plannedAnchorId": "anchor-494",
       "familyId": "wf-08907",
       "lexiconId": "word-2477",
@@ -4504,10 +3153,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-165",
+      "candidateId": "candidate-115",
       "plannedAnchorId": "anchor-495",
       "familyId": "wf-08960",
       "lexiconId": "word-1187",
@@ -4531,10 +3180,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-166",
+      "candidateId": "candidate-116",
       "plannedAnchorId": "anchor-496",
       "familyId": "wf-09035",
       "lexiconId": "word-1174",
@@ -4558,10 +3207,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-167",
+      "candidateId": "candidate-117",
       "plannedAnchorId": "anchor-497",
       "familyId": "wf-09098",
       "lexiconId": "word-2498",
@@ -4585,10 +3234,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-168",
+      "candidateId": "candidate-118",
       "plannedAnchorId": "anchor-498",
       "familyId": "wf-09177",
       "lexiconId": "word-2508",
@@ -4612,10 +3261,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-169",
+      "candidateId": "candidate-119",
       "plannedAnchorId": "anchor-499",
       "familyId": "wf-09233",
       "lexiconId": "word-2515",
@@ -4639,10 +3288,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-170",
+      "candidateId": "candidate-120",
       "plannedAnchorId": "anchor-500",
       "familyId": "wf-09300",
       "lexiconId": "word-2518",
@@ -4666,10 +3315,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-171",
+      "candidateId": "candidate-121",
       "plannedAnchorId": "anchor-501",
       "familyId": "wf-09361",
       "lexiconId": "word-2529",
@@ -4693,10 +3342,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-172",
+      "candidateId": "candidate-122",
       "plannedAnchorId": "anchor-502",
       "familyId": "wf-09435",
       "lexiconId": "word-2550",
@@ -4720,10 +3369,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-173",
+      "candidateId": "candidate-123",
       "plannedAnchorId": "anchor-503",
       "familyId": "wf-09499",
       "lexiconId": "word-2542",
@@ -4747,10 +3396,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-174",
+      "candidateId": "candidate-124",
       "plannedAnchorId": "anchor-504",
       "familyId": "wf-09572",
       "lexiconId": "word-2558",
@@ -4774,10 +3423,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-175",
+      "candidateId": "candidate-125",
       "plannedAnchorId": "anchor-505",
       "familyId": "wf-09641",
       "lexiconId": "word-2568",
@@ -4801,10 +3450,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-176",
+      "candidateId": "candidate-126",
       "plannedAnchorId": "anchor-506",
       "familyId": "wf-09697",
       "lexiconId": "word-2574",
@@ -4828,10 +3477,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-177",
+      "candidateId": "candidate-127",
       "plannedAnchorId": "anchor-507",
       "familyId": "wf-09770",
       "lexiconId": "word-2573",
@@ -4855,10 +3504,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-178",
+      "candidateId": "candidate-128",
       "plannedAnchorId": "anchor-508",
       "familyId": "wf-09837",
       "lexiconId": "word-2584",
@@ -4882,10 +3531,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-179",
+      "candidateId": "candidate-129",
       "plannedAnchorId": "anchor-509",
       "familyId": "wf-09905",
       "lexiconId": "word-2589",
@@ -4909,10 +3558,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-180",
+      "candidateId": "candidate-130",
       "plannedAnchorId": "anchor-510",
       "familyId": "wf-09968",
       "lexiconId": "word-2611",
@@ -4936,10 +3585,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-181",
+      "candidateId": "candidate-131",
       "plannedAnchorId": "anchor-511",
       "familyId": "wf-10049",
       "lexiconId": "word-1149",
@@ -4963,10 +3612,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-182",
+      "candidateId": "candidate-132",
       "plannedAnchorId": "anchor-512",
       "familyId": "wf-10114",
       "lexiconId": "word-2623",
@@ -4990,10 +3639,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-183",
+      "candidateId": "candidate-133",
       "plannedAnchorId": "anchor-513",
       "familyId": "wf-10169",
       "lexiconId": "word-2620",
@@ -5017,10 +3666,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-184",
+      "candidateId": "candidate-134",
       "plannedAnchorId": "anchor-514",
       "familyId": "wf-10233",
       "lexiconId": "word-2631",
@@ -5044,10 +3693,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-185",
+      "candidateId": "candidate-135",
       "plannedAnchorId": "anchor-515",
       "familyId": "wf-10299",
       "lexiconId": "word-2653",
@@ -5071,10 +3720,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-186",
+      "candidateId": "candidate-136",
       "plannedAnchorId": "anchor-516",
       "familyId": "wf-10373",
       "lexiconId": "word-2676",
@@ -5098,10 +3747,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-187",
+      "candidateId": "candidate-137",
       "plannedAnchorId": "anchor-517",
       "familyId": "wf-10441",
       "lexiconId": "word-2661",
@@ -5125,10 +3774,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-188",
+      "candidateId": "candidate-138",
       "plannedAnchorId": "anchor-518",
       "familyId": "wf-10503",
       "lexiconId": "word-2671",
@@ -5152,10 +3801,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-189",
+      "candidateId": "candidate-139",
       "plannedAnchorId": "anchor-519",
       "familyId": "wf-10569",
       "lexiconId": "word-2693",
@@ -5179,10 +3828,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-190",
+      "candidateId": "candidate-140",
       "plannedAnchorId": "anchor-520",
       "familyId": "wf-10629",
       "lexiconId": "word-2691",
@@ -5206,10 +3855,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-191",
+      "candidateId": "candidate-141",
       "plannedAnchorId": "anchor-521",
       "familyId": "wf-10701",
       "lexiconId": "word-2701",
@@ -5233,10 +3882,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-192",
+      "candidateId": "candidate-142",
       "plannedAnchorId": "anchor-522",
       "familyId": "wf-10766",
       "lexiconId": "word-2706",
@@ -5260,10 +3909,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-193",
+      "candidateId": "candidate-143",
       "plannedAnchorId": "anchor-523",
       "familyId": "wf-10841",
       "lexiconId": "word-2723",
@@ -5287,10 +3936,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-194",
+      "candidateId": "candidate-144",
       "plannedAnchorId": "anchor-524",
       "familyId": "wf-10901",
       "lexiconId": "word-2718",
@@ -5314,10 +3963,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-195",
+      "candidateId": "candidate-145",
       "plannedAnchorId": "anchor-525",
       "familyId": "wf-10965",
       "lexiconId": "word-2738",
@@ -5341,10 +3990,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-196",
+      "candidateId": "candidate-146",
       "plannedAnchorId": "anchor-526",
       "familyId": "wf-11034",
       "lexiconId": "word-2741",
@@ -5368,10 +4017,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-197",
+      "candidateId": "candidate-147",
       "plannedAnchorId": "anchor-527",
       "familyId": "wf-11102",
       "lexiconId": "word-2739",
@@ -5395,10 +4044,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-198",
+      "candidateId": "candidate-148",
       "plannedAnchorId": "anchor-528",
       "familyId": "wf-11162",
       "lexiconId": "word-2757",
@@ -5422,10 +4071,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-199",
+      "candidateId": "candidate-149",
       "plannedAnchorId": "anchor-529",
       "familyId": "wf-11243",
       "lexiconId": "word-2767",
@@ -5449,10 +4098,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-200",
+      "candidateId": "candidate-150",
       "plannedAnchorId": "anchor-530",
       "familyId": "wf-11300",
       "lexiconId": "word-2787",
@@ -5476,10 +4125,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-201",
+      "candidateId": "candidate-151",
       "plannedAnchorId": "anchor-531",
       "familyId": "wf-11365",
       "lexiconId": "word-2779",
@@ -5503,10 +4152,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-202",
+      "candidateId": "candidate-152",
       "plannedAnchorId": "anchor-532",
       "familyId": "wf-11428",
       "lexiconId": "word-2793",
@@ -5530,10 +4179,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-203",
+      "candidateId": "candidate-153",
       "plannedAnchorId": "anchor-533",
       "familyId": "wf-11499",
       "lexiconId": "word-2797",
@@ -5557,10 +4206,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-204",
+      "candidateId": "candidate-154",
       "plannedAnchorId": "anchor-534",
       "familyId": "wf-11573",
       "lexiconId": "word-2800",
@@ -5584,10 +4233,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-205",
+      "candidateId": "candidate-155",
       "plannedAnchorId": "anchor-535",
       "familyId": "wf-11633",
       "lexiconId": "word-2806",
@@ -5611,10 +4260,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-206",
+      "candidateId": "candidate-156",
       "plannedAnchorId": "anchor-536",
       "familyId": "wf-11698",
       "lexiconId": "word-2805",
@@ -5638,10 +4287,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-207",
+      "candidateId": "candidate-157",
       "plannedAnchorId": "anchor-537",
       "familyId": "wf-11761",
       "lexiconId": "word-2828",
@@ -5665,10 +4314,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-208",
+      "candidateId": "candidate-158",
       "plannedAnchorId": "anchor-538",
       "familyId": "wf-11832",
       "lexiconId": "word-2827",
@@ -5692,10 +4341,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-209",
+      "candidateId": "candidate-159",
       "plannedAnchorId": "anchor-539",
       "familyId": "wf-11906",
       "lexiconId": "word-2830",
@@ -5719,10 +4368,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-210",
+      "candidateId": "candidate-160",
       "plannedAnchorId": "anchor-540",
       "familyId": "wf-11964",
       "lexiconId": "word-2838",
@@ -5746,10 +4395,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-211",
+      "candidateId": "candidate-161",
       "plannedAnchorId": "anchor-541",
       "familyId": "wf-12035",
       "lexiconId": "word-2859",
@@ -5773,10 +4422,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-212",
+      "candidateId": "candidate-162",
       "plannedAnchorId": "anchor-542",
       "familyId": "wf-12093",
       "lexiconId": "word-2853",
@@ -5800,10 +4449,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-213",
+      "candidateId": "candidate-163",
       "plannedAnchorId": "anchor-543",
       "familyId": "wf-12160",
       "lexiconId": "word-2863",
@@ -5827,10 +4476,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-214",
+      "candidateId": "candidate-164",
       "plannedAnchorId": "anchor-544",
       "familyId": "wf-12230",
       "lexiconId": "word-2868",
@@ -5854,10 +4503,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-215",
+      "candidateId": "candidate-165",
       "plannedAnchorId": "anchor-545",
       "familyId": "wf-12290",
       "lexiconId": "word-2878",
@@ -5881,10 +4530,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-216",
+      "candidateId": "candidate-166",
       "plannedAnchorId": "anchor-546",
       "familyId": "wf-12368",
       "lexiconId": "word-2894",
@@ -5908,10 +4557,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-217",
+      "candidateId": "candidate-167",
       "plannedAnchorId": "anchor-547",
       "familyId": "wf-12429",
       "lexiconId": "word-2893",
@@ -5935,10 +4584,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-218",
+      "candidateId": "candidate-168",
       "plannedAnchorId": "anchor-548",
       "familyId": "wf-12502",
       "lexiconId": "word-2900",
@@ -5962,10 +4611,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-219",
+      "candidateId": "candidate-169",
       "plannedAnchorId": "anchor-549",
       "familyId": "wf-12576",
       "lexiconId": "word-2907",
@@ -5989,10 +4638,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-220",
+      "candidateId": "candidate-170",
       "plannedAnchorId": "anchor-550",
       "familyId": "wf-12637",
       "lexiconId": "word-2899",
@@ -6016,10 +4665,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-221",
+      "candidateId": "candidate-171",
       "plannedAnchorId": "anchor-551",
       "familyId": "wf-12699",
       "lexiconId": "word-2926",
@@ -6043,10 +4692,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-222",
+      "candidateId": "candidate-172",
       "plannedAnchorId": "anchor-552",
       "familyId": "wf-12756",
       "lexiconId": "word-2927",
@@ -6070,10 +4719,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-223",
+      "candidateId": "candidate-173",
       "plannedAnchorId": "anchor-553",
       "familyId": "wf-12833",
       "lexiconId": "word-2932",
@@ -6097,10 +4746,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-224",
+      "candidateId": "candidate-174",
       "plannedAnchorId": "anchor-554",
       "familyId": "wf-12909",
       "lexiconId": "word-2933",
@@ -6124,10 +4773,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-225",
+      "candidateId": "candidate-175",
       "plannedAnchorId": "anchor-555",
       "familyId": "wf-12970",
       "lexiconId": "word-2935",
@@ -6151,10 +4800,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-226",
+      "candidateId": "candidate-176",
       "plannedAnchorId": "anchor-556",
       "familyId": "wf-13032",
       "lexiconId": "word-2959",
@@ -6178,10 +4827,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-227",
+      "candidateId": "candidate-177",
       "plannedAnchorId": "anchor-557",
       "familyId": "wf-13102",
       "lexiconId": "word-2950",
@@ -6205,10 +4854,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-228",
+      "candidateId": "candidate-178",
       "plannedAnchorId": "anchor-558",
       "familyId": "wf-13186",
       "lexiconId": "word-2968",
@@ -6232,10 +4881,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-229",
+      "candidateId": "candidate-179",
       "plannedAnchorId": "anchor-559",
       "familyId": "wf-13234",
       "lexiconId": "word-2962",
@@ -6259,10 +4908,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-230",
+      "candidateId": "candidate-180",
       "plannedAnchorId": "anchor-560",
       "familyId": "wf-13292",
       "lexiconId": "word-2969",
@@ -6286,10 +4935,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-231",
+      "candidateId": "candidate-181",
       "plannedAnchorId": "anchor-561",
       "familyId": "wf-13364",
       "lexiconId": "word-2984",
@@ -6313,10 +4962,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-232",
+      "candidateId": "candidate-182",
       "plannedAnchorId": "anchor-562",
       "familyId": "wf-13435",
       "lexiconId": "word-2979",
@@ -6340,10 +4989,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-233",
+      "candidateId": "candidate-183",
       "plannedAnchorId": "anchor-563",
       "familyId": "wf-13499",
       "lexiconId": "word-2977",
@@ -6367,10 +5016,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-234",
+      "candidateId": "candidate-184",
       "plannedAnchorId": "anchor-564",
       "familyId": "wf-13565",
       "lexiconId": "word-4089",
@@ -6394,10 +5043,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-235",
+      "candidateId": "candidate-185",
       "plannedAnchorId": "anchor-565",
       "familyId": "wf-13628",
       "lexiconId": "word-2993",
@@ -6421,10 +5070,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-236",
+      "candidateId": "candidate-186",
       "plannedAnchorId": "anchor-566",
       "familyId": "wf-13709",
       "lexiconId": "word-3006",
@@ -6448,10 +5097,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-237",
+      "candidateId": "candidate-187",
       "plannedAnchorId": "anchor-567",
       "familyId": "wf-13773",
       "lexiconId": "word-3004",
@@ -6475,10 +5124,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-238",
+      "candidateId": "candidate-188",
       "plannedAnchorId": "anchor-568",
       "familyId": "wf-13835",
       "lexiconId": "word-3003",
@@ -6502,10 +5151,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-239",
+      "candidateId": "candidate-189",
       "plannedAnchorId": "anchor-569",
       "familyId": "wf-13894",
       "lexiconId": "word-3015",
@@ -6529,10 +5178,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-240",
+      "candidateId": "candidate-190",
       "plannedAnchorId": "anchor-570",
       "familyId": "wf-13969",
       "lexiconId": "word-3023",
@@ -6556,10 +5205,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-241",
+      "candidateId": "candidate-191",
       "plannedAnchorId": "anchor-571",
       "familyId": "wf-14103",
       "lexiconId": "word-3031",
@@ -6583,10 +5232,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-242",
+      "candidateId": "candidate-192",
       "plannedAnchorId": "anchor-572",
       "familyId": "wf-14297",
       "lexiconId": "word-3040",
@@ -6610,10 +5259,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-243",
+      "candidateId": "candidate-193",
       "plannedAnchorId": "anchor-573",
       "familyId": "wf-14507",
       "lexiconId": "word-3055",
@@ -6637,10 +5286,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-244",
+      "candidateId": "candidate-194",
       "plannedAnchorId": "anchor-574",
       "familyId": "wf-14704",
       "lexiconId": "word-3090",
@@ -6664,10 +5313,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-245",
+      "candidateId": "candidate-195",
       "plannedAnchorId": "anchor-575",
       "familyId": "wf-14906",
       "lexiconId": "word-3094",
@@ -6691,10 +5340,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-246",
+      "candidateId": "candidate-196",
       "plannedAnchorId": "anchor-576",
       "familyId": "wf-15097",
       "lexiconId": "word-3105",
@@ -6718,10 +5367,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-247",
+      "candidateId": "candidate-197",
       "plannedAnchorId": "anchor-577",
       "familyId": "wf-15300",
       "lexiconId": "word-3122",
@@ -6745,10 +5394,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-248",
+      "candidateId": "candidate-198",
       "plannedAnchorId": "anchor-578",
       "familyId": "wf-15500",
       "lexiconId": "word-3147",
@@ -6772,10 +5421,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-249",
+      "candidateId": "candidate-199",
       "plannedAnchorId": "anchor-579",
       "familyId": "wf-15695",
       "lexiconId": "word-3155",
@@ -6799,10 +5448,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-250",
+      "candidateId": "candidate-200",
       "plannedAnchorId": "anchor-580",
       "familyId": "wf-15903",
       "lexiconId": "word-3180",
@@ -6826,10 +5475,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-251",
+      "candidateId": "candidate-201",
       "plannedAnchorId": "anchor-581",
       "familyId": "wf-16079",
       "lexiconId": "word-3189",
@@ -6853,10 +5502,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-252",
+      "candidateId": "candidate-202",
       "plannedAnchorId": "anchor-582",
       "familyId": "wf-16302",
       "lexiconId": "word-3206",
@@ -6880,10 +5529,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-253",
+      "candidateId": "candidate-203",
       "plannedAnchorId": "anchor-583",
       "familyId": "wf-16507",
       "lexiconId": "word-3229",
@@ -6907,10 +5556,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-254",
+      "candidateId": "candidate-204",
       "plannedAnchorId": "anchor-584",
       "familyId": "wf-16703",
       "lexiconId": "word-3237",
@@ -6934,10 +5583,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-255",
+      "candidateId": "candidate-205",
       "plannedAnchorId": "anchor-585",
       "familyId": "wf-16901",
       "lexiconId": "word-3243",
@@ -6961,10 +5610,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-256",
+      "candidateId": "candidate-206",
       "plannedAnchorId": "anchor-586",
       "familyId": "wf-17100",
       "lexiconId": "word-3255",
@@ -6988,10 +5637,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-257",
+      "candidateId": "candidate-207",
       "plannedAnchorId": "anchor-587",
       "familyId": "wf-17299",
       "lexiconId": "word-3274",
@@ -7015,10 +5664,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-258",
+      "candidateId": "candidate-208",
       "plannedAnchorId": "anchor-588",
       "familyId": "wf-17504",
       "lexiconId": "word-3294",
@@ -7042,10 +5691,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-259",
+      "candidateId": "candidate-209",
       "plannedAnchorId": "anchor-589",
       "familyId": "wf-17710",
       "lexiconId": "word-3306",
@@ -7069,10 +5718,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-260",
+      "candidateId": "candidate-210",
       "plannedAnchorId": "anchor-590",
       "familyId": "wf-17903",
       "lexiconId": "word-3310",
@@ -7096,10 +5745,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-261",
+      "candidateId": "candidate-211",
       "plannedAnchorId": "anchor-591",
       "familyId": "wf-18085",
       "lexiconId": "word-3315",
@@ -7123,10 +5772,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-262",
+      "candidateId": "candidate-212",
       "plannedAnchorId": "anchor-592",
       "familyId": "wf-18312",
       "lexiconId": "word-3329",
@@ -7150,10 +5799,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-263",
+      "candidateId": "candidate-213",
       "plannedAnchorId": "anchor-593",
       "familyId": "wf-18498",
       "lexiconId": "word-3335",
@@ -7177,10 +5826,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-264",
+      "candidateId": "candidate-214",
       "plannedAnchorId": "anchor-594",
       "familyId": "wf-18707",
       "lexiconId": "word-3344",
@@ -7204,10 +5853,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-265",
+      "candidateId": "candidate-215",
       "plannedAnchorId": "anchor-595",
       "familyId": "wf-18872",
       "lexiconId": "word-3362",
@@ -7231,10 +5880,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-266",
+      "candidateId": "candidate-216",
       "plannedAnchorId": "anchor-596",
       "familyId": "wf-19103",
       "lexiconId": "word-3368",
@@ -7258,10 +5907,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-267",
+      "candidateId": "candidate-217",
       "plannedAnchorId": "anchor-597",
       "familyId": "wf-19290",
       "lexiconId": "word-1147",
@@ -7285,10 +5934,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-268",
+      "candidateId": "candidate-218",
       "plannedAnchorId": "anchor-598",
       "familyId": "wf-19507",
       "lexiconId": "word-3382",
@@ -7312,10 +5961,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-269",
+      "candidateId": "candidate-219",
       "plannedAnchorId": "anchor-599",
       "familyId": "wf-19688",
       "lexiconId": "word-3385",
@@ -7339,10 +5988,10 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     },
     {
-      "candidateId": "candidate-270",
+      "candidateId": "candidate-220",
       "plannedAnchorId": "anchor-600",
       "familyId": "wf-19898",
       "lexiconId": "word-3413",
@@ -7366,7 +6015,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.27-v5"
+      "version": "anchor-candidates-600-2026.07.27-v6"
     }
   ]
 }
