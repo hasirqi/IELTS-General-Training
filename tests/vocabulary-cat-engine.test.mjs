@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-258.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-294.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,15 +20,16 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("258 reviewed anchors include completed 1K through 3K M3 batches", () => {
-  assert.equal(anchors.length,258); assert.equal(new Set(anchors.map((item)=>item.id)).size,258);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,258);
+test("294 reviewed anchors include completed 1K through 4K M3 batches", () => {
+  assert.equal(anchors.length,294); assert.equal(new Set(anchors.map((item)=>item.id)).size,294);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,294);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="3K").length,60);
-  for(let band=4;band<=5;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,24);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="4K").length,60);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="5K").length,24);
   for(let band=6;band<=8;band+=1) assert.equal(anchors.filter((item)=>item.frequencyBand===String(band)+"K").length,10);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,258);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,294);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {

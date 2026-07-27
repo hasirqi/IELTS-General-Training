@@ -6,7 +6,7 @@ import {
   IconTargetArrow, IconVolume, IconWriting, IconX,
 } from "@tabler/icons-react";
 import rawLexicon from "./content/lexicon.json";
-import rawVocabularyAnchors from "./content/vocabulary-anchor-bank-258.json";
+import rawVocabularyAnchors from "./content/vocabulary-anchor-bank-294.json";
 import { buildLearningLexicon, lexiconQuality } from "./content/lexicon-content.mjs";
 import { curriculum, skillMeta, type CourseLesson } from "./content/course-bank";
 import { roadmapWeeks } from "./content/roadmap";
