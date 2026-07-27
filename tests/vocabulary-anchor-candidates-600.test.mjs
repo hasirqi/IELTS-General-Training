@@ -10,7 +10,7 @@ const manifest = JSON.parse(
 );
 const reviewed = JSON.parse(
   fs.readFileSync(
-    new URL("../src/content/vocabulary-anchor-bank-480.json", import.meta.url),
+    new URL("../src/content/vocabulary-anchor-bank-495.json", import.meta.url),
     "utf8",
   ),
 );
@@ -22,8 +22,8 @@ const expectedFinalCounts = {
 };
 
 test("600-anchor expansion manifest has the exact planned distribution", () => {
-  assert.equal(reviewed.length, 480);
-  assert.equal(manifest.candidateCount, 120);
+  assert.equal(reviewed.length, 495);
+  assert.equal(manifest.candidateCount, 105);
   assert.equal(manifest.plannedReviewedTotal, 600);
   assert.deepEqual(manifest.finalCounts, expectedFinalCounts);
   assert.equal(

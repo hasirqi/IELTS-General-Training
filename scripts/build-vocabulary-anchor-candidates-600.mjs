@@ -1,11 +1,12 @@
 import fs from "node:fs";
 import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
-import currentAnchors from "../src/content/vocabulary-anchor-bank-480.json" with { type: "json" };
+import currentAnchors from "../src/content/vocabulary-anchor-bank-495.json" with { type: "json" };
 import familyIndex from "../src/content/word-family-index-20k.json" with { type: "json" };
 import familyMap from "../src/content/teaching-lexicon-family-map.json" with { type: "json" };
 import { buildLearningLexicon } from "../src/content/lexicon-content.mjs";
 
-const VERSION = "anchor-candidates-600-2026.07.28-v8";
+const VERSION = "anchor-candidates-600-2026.07.28-v9";
+const FROZEN_CANDIDATE_ID_BASE = 480;
 const FINAL_TARGETS = {
   "1K": 60, "2K": 60, "3K": 60, "4K": 60, "5K": 60, "6K": 60, "7K": 60, "8K": 60,
   "9K": 15, "10K": 15, "11K": 15, "12K": 15, "13K": 15, "14K": 15,
@@ -112,33 +113,36 @@ for (const [band, finalTarget] of Object.entries(FINAL_TARGETS)) {
     throw new Error(`${band} stratified selection produced ${stratified.length}, expected ${needed}`);
   }
   const selectedOffset = selected.length;
-  selected.push(...stratified.map(({ item, family }, index) => ({
-    candidateId: `candidate-${String(selectedOffset + index + 1).padStart(3, "0")}`,
-    plannedAnchorId: `anchor-${String(currentAnchors.length + selectedOffset + index + 1).padStart(3, "0")}`,
-    familyId: family.familyId,
-    lexiconId: item.id,
-    term: item.term,
-    focusedMeaning: item.meaning,
-    meaningNote: item.meaningNote ?? "",
-    contextSentence: item.example,
-    collocation: item.collocation,
-    frequencyRank: family.frequencyRank,
-    frequencyBand: family.frequencyBand,
-    source: {
-      teachingLexiconId: item.id,
-      wordFamilyIndexVersion: family.version,
-    },
-    reviewStatus: "candidate-unreviewed",
-    requiredReview: [
-      "part-of-speech",
-      "focused-english-definition",
-      "three-same-pos-definition-distractors",
-      "sense-context-match",
-      "option-uniqueness",
-      "cross-bank-duplication",
-    ],
-    version: VERSION,
-  })));
+  selected.push(...stratified.map(({ item, family }, index) => {
+    const plannedAnchorNumber = currentAnchors.length + selectedOffset + index + 1;
+    return {
+      candidateId: `candidate-${String(plannedAnchorNumber - FROZEN_CANDIDATE_ID_BASE).padStart(3, "0")}`,
+      plannedAnchorId: `anchor-${String(plannedAnchorNumber).padStart(3, "0")}`,
+      familyId: family.familyId,
+      lexiconId: item.id,
+      term: item.term,
+      focusedMeaning: item.meaning,
+      meaningNote: item.meaningNote ?? "",
+      contextSentence: item.example,
+      collocation: item.collocation,
+      frequencyRank: family.frequencyRank,
+      frequencyBand: family.frequencyBand,
+      source: {
+        teachingLexiconId: item.id,
+        wordFamilyIndexVersion: family.version,
+      },
+      reviewStatus: "candidate-unreviewed",
+      requiredReview: [
+        "part-of-speech",
+        "focused-english-definition",
+        "three-same-pos-definition-distractors",
+        "sense-context-match",
+        "option-uniqueness",
+        "cross-bank-duplication",
+      ],
+      version: VERSION,
+    };
+  }));
 }
 
 const additionsByBand = selected.reduce((counts, candidate) => {
