@@ -30,7 +30,7 @@ test("back from an active test returns to the five-mode center before home", () 
   assert.ok(app.includes('view === "vocabulary-test" && vocabularyTestActive'));
   assert.ok(app.includes("setVocabularyTestActive(false); return;"));
   assert.ok(app.includes("activeTest={vocabularyTestActive} setActiveTest={setVocabularyTestActive}"));
-  assert.ok(app.includes("if (!activeTest) { setQuickMode(false); setShowResult(false); if (quickAdvanceTimer.current !== null)"));
+  assert.ok(app.includes("if (!activeTest) { setQuickMode(false); setShowResult(false); }"));
   assert.ok(app.includes('? "返回测试中心" : "返回首页"'));
 });
 
@@ -43,9 +43,9 @@ test("precision CAT starts with scored context items instead of repeating the Ye
 });
 
 
-test("daily Chinese quick check advances automatically without a redundant next button", () => {
-  assert.ok(app.includes("window.setTimeout(() => { setQuickIndex"));
-  assert.ok(app.includes("}, 700)"));
-  assert.ok(app.includes("已记录，自动进入下一题"));
+test("daily Chinese quick check advances immediately without feedback delay or a next button", () => {
+  assert.ok(app.includes("setQuickIndex((value) => value + 1)"));
+  assert.ok(!app.includes("quickAdvanceTimer"));
+  assert.ok(!app.includes("已记录，自动进入下一题"));
   assert.ok(!app.includes('quickChoice && <button className="primary-button"'));
 });

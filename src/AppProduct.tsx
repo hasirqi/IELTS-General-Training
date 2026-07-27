@@ -265,20 +265,15 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   const [quickMode,setQuickMode] = useState(false);
   const [quickIndex,setQuickIndex] = useState(0);
   const [quickCorrect,setQuickCorrect] = useState(0);
-  const [quickChoice,setQuickChoice] = useState("");
-  const quickAdvanceTimer = useRef<number | null>(null);
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
   const [showResult,setShowResult] = useState(false);
-  useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); if (quickAdvanceTimer.current !== null) { window.clearTimeout(quickAdvanceTimer.current); quickAdvanceTimer.current = null; } } }, [activeTest]);
-  useEffect(() => () => { if (quickAdvanceTimer.current !== null) window.clearTimeout(quickAdvanceTimer.current); }, []);
+  useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); } }, [activeTest]);
   useEffect(() => { if (state.vocabularyRouteResult) setRouteSnapshot(state.vocabularyRouteResult); }, [state.vocabularyRouteResult]);
   const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
-  const startQuick = () => { if (quickAdvanceTimer.current !== null) window.clearTimeout(quickAdvanceTimer.current); quickAdvanceTimer.current = null; setActiveTest(true); setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); setQuickChoice(""); };
+  const startQuick = () => { setActiveTest(true); setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); };
   const answerQuick = (option:string) => {
-    if (quickChoice) return;
-    setQuickChoice(option);
     if (option === quickAnchor.correctChinese) setQuickCorrect((value) => value + 1);
-    quickAdvanceTimer.current = window.setTimeout(() => { setQuickIndex((value) => value + 1); setQuickChoice(""); quickAdvanceTimer.current = null; }, 700);
+    setQuickIndex((value) => value + 1);
   };
   const start = (intent: "quick-route" | "vocabulary-cat" = "vocabulary-cat") => {
     setActiveTest(true);
@@ -360,7 +355,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   if (quickMode) {
     const quickDone = quickIndex >= 20;
     if (quickDone) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 · 不计入标准测试</div><h1>完成</h1><div className="test-intro compact"><IconCheck/><h2>{quickCorrect}/20</h2><p>这个结果只用于日常复习，不改变词族量级、CAT 结果或模拟 L 值。</p><button className="primary-button" onClick={() => { setQuickMode(false); setActiveTest(false); }}>返回测试入口<IconArrowLeft/></button></div></section>;
-    return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 {quickIndex+1}/20 · 不计入标准测试</div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(quickAnchor.term)} aria-label={`播放 ${quickAnchor.term} 的英语发音`}><IconVolume/></button><h1>{quickAnchor.term}</h1><p>{quickAnchor.frequencyBand}</p></div><div className="test-stage"><h2>选择最合适的中文意思</h2><div className="test-options">{quickAnchor.chineseOptions.map((option) => <button className={quickChoice ? option===quickAnchor.correctChinese?"correct":option===quickChoice?"wrong":"" : ""} disabled={Boolean(quickChoice)} key={option} onClick={() => answerQuick(option)}>{option}</button>)}</div>{quickChoice && <p className="measurement-note" role="status">已记录，自动进入下一题</p>}</div></section>;
+    return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 {quickIndex+1}/20 · 不计入标准测试</div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(quickAnchor.term)} aria-label={`播放 ${quickAnchor.term} 的英语发音`}><IconVolume/></button><h1>{quickAnchor.term}</h1><p>{quickAnchor.frequencyBand}</p></div><div className="test-stage"><h2>选择最合适的中文意思</h2><div className="test-options">{quickAnchor.chineseOptions.map((option) => <button key={option} onClick={() => answerQuick(option)}>{option}</button>)}</div></div></section>;
   }
   if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={startQuick} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
   if (!activeTest) {
