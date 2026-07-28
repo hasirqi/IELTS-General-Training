@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview17K = {
+  ethereal: { partOfSpeech: "adjective", focusedMeaning: "轻盈超凡的", englishDefinition: "very delicate, light, or seeming not to belong to the ordinary world", definitionDistractors: ["heavy and difficult to move safely", "strictly factual and free from emotion", "common in every workplace setting"] },
+  impromptu: { partOfSpeech: "adjective", focusedMeaning: "即兴的；临时的", englishDefinition: "done without preparation or planning", definitionDistractors: ["scheduled months in advance", "required by a written contract", "checked by several inspectors"] },
+  howl: { partOfSpeech: "verb", focusedMeaning: "嚎叫；呼啸", englishDefinition: "to make a long loud cry or sound", definitionDistractors: ["to speak quietly during a meeting", "to repair damage after a storm", "to follow a route on a printed map"] },
+  footnote: { partOfSpeech: "noun", focusedMeaning: "脚注；补充说明", englishDefinition: "a note at the bottom of a page giving extra information", definitionDistractors: ["a title printed at the top of a report", "a signature added to approve a contract", "a chart showing the main survey results"] },
+  foresight: { partOfSpeech: "noun", focusedMeaning: "远见；预见", englishDefinition: "the ability to judge what will be needed or happen in the future", definitionDistractors: ["the habit of remembering old complaints", "a legal notice sent after an accident", "a quick guess made without any evidence"] },
+};

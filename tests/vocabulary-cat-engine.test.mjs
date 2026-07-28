@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-580.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-585.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,9 +20,9 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("580 reviewed anchors extend M3 into the 16K upper band", () => {
-  assert.equal(anchors.length,580); assert.equal(new Set(anchors.map((item)=>item.id)).size,580);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,580);
+test("585 reviewed anchors extend M3 into the 17K upper band", () => {
+  assert.equal(anchors.length,585); assert.equal(new Set(anchors.map((item)=>item.id)).size,585);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,585);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="3K").length,60);
@@ -39,7 +39,8 @@ test("580 reviewed anchors extend M3 into the 16K upper band", () => {
   assert.equal(anchors.filter((item)=>item.frequencyBand==="14K").length,15);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="15K").length,5);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="16K").length,5);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,580);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="17K").length,5);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,585);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {

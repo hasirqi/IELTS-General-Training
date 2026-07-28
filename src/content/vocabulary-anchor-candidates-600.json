@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v16",
+  "version": "anchor-candidates-600-2026.07.28-v17",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 580,
-  "candidateCount": 20,
+  "currentReviewedCount": 585,
+  "candidateCount": 15,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -43,10 +43,10 @@
     "13K": 15,
     "14K": 15,
     "15K": 5,
-    "16K": 5
+    "16K": 5,
+    "17K": 5
   },
   "additionsByBand": {
-    "17K": 5,
     "18K": 5,
     "19K": 5,
     "20K": 5
@@ -76,141 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-101",
-      "plannedAnchorId": "anchor-581",
-      "familyId": "wf-16079",
-      "lexiconId": "word-3189",
-      "term": "ethereal",
-      "focusedMeaning": "轻盈超凡的",
-      "meaningNote": "",
-      "contextSentence": "The gallery uses ethereal music in the final room.",
-      "collocation": "ethereal musical quality",
-      "frequencyRank": 16079,
-      "frequencyBand": "17K",
-      "source": {
-        "teachingLexiconId": "word-3189",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
-    },
-    {
-      "candidateId": "candidate-102",
-      "plannedAnchorId": "anchor-582",
-      "familyId": "wf-16302",
-      "lexiconId": "word-3206",
-      "term": "impromptu",
-      "focusedMeaning": "即兴的；临时的",
-      "meaningNote": "",
-      "contextSentence": "An impromptu meeting in the corridor resolved the delivery problem.",
-      "collocation": "impromptu speech",
-      "frequencyRank": 16302,
-      "frequencyBand": "17K",
-      "source": {
-        "teachingLexiconId": "word-3206",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
-    },
-    {
-      "candidateId": "candidate-103",
-      "plannedAnchorId": "anchor-583",
-      "familyId": "wf-16507",
-      "lexiconId": "word-3229",
-      "term": "howl",
-      "focusedMeaning": "嚎叫；呼啸",
-      "meaningNote": "",
-      "contextSentence": "Residents heard a dog howl throughout the stormy night.",
-      "collocation": "howl with pain",
-      "frequencyRank": 16507,
-      "frequencyBand": "17K",
-      "source": {
-        "teachingLexiconId": "word-3229",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
-    },
-    {
-      "candidateId": "candidate-104",
-      "plannedAnchorId": "anchor-584",
-      "familyId": "wf-16703",
-      "lexiconId": "word-3237",
-      "term": "footnote",
-      "focusedMeaning": "脚注；补充说明",
-      "meaningNote": "",
-      "contextSentence": "A footnote explains how the survey sample was selected.",
-      "collocation": "explanatory footnote",
-      "frequencyRank": 16703,
-      "frequencyBand": "17K",
-      "source": {
-        "teachingLexiconId": "word-3237",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
-    },
-    {
-      "candidateId": "candidate-105",
-      "plannedAnchorId": "anchor-585",
-      "familyId": "wf-16901",
-      "lexiconId": "word-3243",
-      "term": "foresight",
-      "focusedMeaning": "远见；预见",
-      "meaningNote": "",
-      "contextSentence": "With greater foresight, the authority could have prevented the housing shortage.",
-      "collocation": "show remarkable foresight",
-      "frequencyRank": 16901,
-      "frequencyBand": "17K",
-      "source": {
-        "teachingLexiconId": "word-3243",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
-    },
-    {
       "candidateId": "candidate-106",
       "plannedAnchorId": "anchor-586",
       "familyId": "wf-17100",
@@ -235,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-107",
@@ -262,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-108",
@@ -289,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-109",
@@ -316,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-110",
@@ -343,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-111",
@@ -370,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-112",
@@ -397,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-113",
@@ -424,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-114",
@@ -451,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-115",
@@ -478,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-116",
@@ -505,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-117",
@@ -532,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-118",
@@ -559,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-119",
@@ -586,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     },
     {
       "candidateId": "candidate-120",
@@ -613,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v16"
+      "version": "anchor-candidates-600-2026.07.28-v17"
     }
   ]
 }
