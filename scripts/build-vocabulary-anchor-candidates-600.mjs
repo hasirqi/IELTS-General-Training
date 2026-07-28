@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import rawLexicon from "../src/content/lexicon.json" with { type: "json" };
-import currentAnchors from "../src/content/vocabulary-anchor-bank-555.json" with { type: "json" };
+import currentAnchors from "../src/content/vocabulary-anchor-bank-570.json" with { type: "json" };
 import familyIndex from "../src/content/word-family-index-20k.json" with { type: "json" };
 import familyMap from "../src/content/teaching-lexicon-family-map.json" with { type: "json" };
 import { buildLearningLexicon } from "../src/content/lexicon-content.mjs";
 
-const VERSION = "anchor-candidates-600-2026.07.28-v13";
+const VERSION = "anchor-candidates-600-2026.07.28-v14";
 const FROZEN_CANDIDATE_ID_BASE = 480;
 const FINAL_TARGETS = {
   "1K": 60, "2K": 60, "3K": 60, "4K": 60, "5K": 60, "6K": 60, "7K": 60, "8K": 60,

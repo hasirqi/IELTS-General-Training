@@ -9,7 +9,7 @@ import {
   selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "../src/vocabulary-cat-engine.mjs";
 
-const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-555.json", import.meta.url), "utf8"));
+const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-570.json", import.meta.url), "utf8"));
 const familyIndex = JSON.parse(fs.readFileSync(new URL("../src/content/word-family-index-20k.json", import.meta.url), "utf8"));
 
 function answer(anchor, correct, responseMs = 2400) {
@@ -20,9 +20,9 @@ function answer(anchor, correct, responseMs = 2400) {
 }
 function routeResponse(item, recognized) { return {...item,recognized,responseMs:1700}; }
 
-test("555 reviewed anchors extend M3 into the 13K band", () => {
-  assert.equal(anchors.length,555); assert.equal(new Set(anchors.map((item)=>item.id)).size,555);
-  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,555);
+test("570 reviewed anchors complete the 14K M3 precision band", () => {
+  assert.equal(anchors.length,570); assert.equal(new Set(anchors.map((item)=>item.id)).size,570);
+  assert.equal(new Set(anchors.map((item)=>item.familyId)).size,570);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="1K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="2K").length,60);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="3K").length,60);
@@ -36,7 +36,8 @@ test("555 reviewed anchors extend M3 into the 13K band", () => {
   assert.equal(anchors.filter((item)=>item.frequencyBand==="11K").length,15);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="12K").length,15);
   assert.equal(anchors.filter((item)=>item.frequencyBand==="13K").length,15);
-  assert.equal(eligibleVocabularyAnchors(anchors).length,555);
+  assert.equal(anchors.filter((item)=>item.frequencyBand==="14K").length,15);
+  assert.equal(eligibleVocabularyAnchors(anchors).length,570);
 });
 
 test("every scored anchor has reviewed context, English definitions and separate Chinese choices", () => {

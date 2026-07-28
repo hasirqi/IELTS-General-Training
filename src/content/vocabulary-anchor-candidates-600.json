@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v13",
+  "version": "anchor-candidates-600-2026.07.28-v14",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 555,
-  "candidateCount": 45,
+  "currentReviewedCount": 570,
+  "candidateCount": 30,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -40,10 +40,10 @@
     "10K": 15,
     "11K": 15,
     "12K": 15,
-    "13K": 15
+    "13K": 15,
+    "14K": 15
   },
   "additionsByBand": {
-    "14K": 15,
     "15K": 5,
     "16K": 5,
     "17K": 5,
@@ -76,411 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-076",
-      "plannedAnchorId": "anchor-556",
-      "familyId": "wf-13032",
-      "lexiconId": "word-2959",
-      "term": "discredit",
-      "focusedMeaning": "使名誉受损；证明错误",
-      "meaningNote": "",
-      "contextSentence": "False claims can discredit an otherwise valuable campaign.",
-      "collocation": "discredit reliable evidence",
-      "frequencyRank": 13032,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2959",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-077",
-      "plannedAnchorId": "anchor-557",
-      "familyId": "wf-13102",
-      "lexiconId": "word-2950",
-      "term": "pertinent",
-      "focusedMeaning": "相关的；切题的",
-      "meaningNote": "",
-      "contextSentence": "Applicants should include only pertinent work experience.",
-      "collocation": "pertinent information",
-      "frequencyRank": 13102,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2950",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-078",
-      "plannedAnchorId": "anchor-558",
-      "familyId": "wf-13186",
-      "lexiconId": "word-2968",
-      "term": "conjecture",
-      "focusedMeaning": "推测",
-      "meaningNote": "",
-      "contextSentence": "The cause remains conjecture until laboratory results arrive.",
-      "collocation": "based on conjecture",
-      "frequencyRank": 13186,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2968",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-079",
-      "plannedAnchorId": "anchor-559",
-      "familyId": "wf-13234",
-      "lexiconId": "word-2962",
-      "term": "ignite",
-      "focusedMeaning": "点燃；激起",
-      "meaningNote": "",
-      "contextSentence": "A damaged battery can ignite inside a waste vehicle.",
-      "collocation": "ignite public debate",
-      "frequencyRank": 13234,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2962",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-080",
-      "plannedAnchorId": "anchor-560",
-      "familyId": "wf-13292",
-      "lexiconId": "word-2969",
-      "term": "repent",
-      "focusedMeaning": "悔过",
-      "meaningNote": "",
-      "contextSentence": "The documentary asks whether offenders can genuinely repent.",
-      "collocation": "repent of wrongdoing",
-      "frequencyRank": 13292,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2969",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-081",
-      "plannedAnchorId": "anchor-561",
-      "familyId": "wf-13364",
-      "lexiconId": "word-2984",
-      "term": "cognition",
-      "focusedMeaning": "认知",
-      "meaningNote": "",
-      "contextSentence": "Sleep quality has a measurable effect on cognition.",
-      "collocation": "human cognition",
-      "frequencyRank": 13364,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2984",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-082",
-      "plannedAnchorId": "anchor-562",
-      "familyId": "wf-13435",
-      "lexiconId": "word-2979",
-      "term": "libel",
-      "focusedMeaning": "书面诽谤",
-      "meaningNote": "",
-      "contextSentence": "The newspaper corrected the article to avoid a libel claim.",
-      "collocation": "libel proceedings",
-      "frequencyRank": 13435,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2979",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-083",
-      "plannedAnchorId": "anchor-563",
-      "familyId": "wf-13499",
-      "lexiconId": "word-2977",
-      "term": "slander",
-      "focusedMeaning": "口头诽谤",
-      "meaningNote": "",
-      "contextSentence": "The speaker denied that his criticism amounted to slander.",
-      "collocation": "claim of slander",
-      "frequencyRank": 13499,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2977",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-084",
-      "plannedAnchorId": "anchor-564",
-      "familyId": "wf-13565",
-      "lexiconId": "word-4089",
-      "term": "disdain",
-      "focusedMeaning": "轻视；鄙视",
-      "meaningNote": "",
-      "contextSentence": "Officials should not treat public questions with disdain.",
-      "collocation": "show disdain for",
-      "frequencyRank": 13565,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-4089",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-085",
-      "plannedAnchorId": "anchor-565",
-      "familyId": "wf-13628",
-      "lexiconId": "word-2993",
-      "term": "mend",
-      "focusedMeaning": "修补；改善",
-      "meaningNote": "",
-      "contextSentence": "The workshop teaches residents to mend damaged clothing.",
-      "collocation": "mend a broken fence",
-      "frequencyRank": 13628,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-2993",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-086",
-      "plannedAnchorId": "anchor-566",
-      "familyId": "wf-13709",
-      "lexiconId": "word-3006",
-      "term": "antagonist",
-      "focusedMeaning": "对手；拮抗剂",
-      "meaningNote": "",
-      "contextSentence": "The novel's antagonist controls the town through fear.",
-      "collocation": "principal antagonist",
-      "frequencyRank": 13709,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-3006",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-087",
-      "plannedAnchorId": "anchor-567",
-      "familyId": "wf-13773",
-      "lexiconId": "word-3004",
-      "term": "hinge",
-      "focusedMeaning": "铰链；取决于",
-      "meaningNote": "",
-      "contextSentence": "Approval will hinge on evidence of adequate insurance.",
-      "collocation": "hinge on evidence",
-      "frequencyRank": 13773,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-3004",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-088",
-      "plannedAnchorId": "anchor-568",
-      "familyId": "wf-13835",
-      "lexiconId": "word-3003",
-      "term": "rendezvous",
-      "focusedMeaning": "会合地点；会面",
-      "meaningNote": "",
-      "contextSentence": "The rescue team's rendezvous is beside the northern gate.",
-      "collocation": "designated rendezvous point",
-      "frequencyRank": 13835,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-3003",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-089",
-      "plannedAnchorId": "anchor-569",
-      "familyId": "wf-13894",
-      "lexiconId": "word-3015",
-      "term": "bolster",
-      "focusedMeaning": "增强；支撑",
-      "meaningNote": "",
-      "contextSentence": "The grant will bolster training for care workers.",
-      "collocation": "bolster public confidence",
-      "frequencyRank": 13894,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-3015",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
-      "candidateId": "candidate-090",
-      "plannedAnchorId": "anchor-570",
-      "familyId": "wf-13969",
-      "lexiconId": "word-3023",
-      "term": "mammal",
-      "focusedMeaning": "哺乳动物",
-      "meaningNote": "",
-      "contextSentence": "The coastal survey identified a rare marine mammal.",
-      "collocation": "marine mammal",
-      "frequencyRank": 13969,
-      "frequencyBand": "14K",
-      "source": {
-        "teachingLexiconId": "word-3023",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
-    },
-    {
       "candidateId": "candidate-091",
       "plannedAnchorId": "anchor-571",
       "familyId": "wf-14103",
@@ -505,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-092",
@@ -532,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-093",
@@ -559,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-094",
@@ -586,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-095",
@@ -613,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-096",
@@ -640,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-097",
@@ -667,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-098",
@@ -694,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-099",
@@ -721,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-100",
@@ -748,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-101",
@@ -775,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-102",
@@ -802,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-103",
@@ -829,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-104",
@@ -856,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-105",
@@ -883,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-106",
@@ -910,7 +505,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-107",
@@ -937,7 +532,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-108",
@@ -964,7 +559,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-109",
@@ -991,7 +586,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-110",
@@ -1018,7 +613,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-111",
@@ -1045,7 +640,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-112",
@@ -1072,7 +667,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-113",
@@ -1099,7 +694,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-114",
@@ -1126,7 +721,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-115",
@@ -1153,7 +748,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-116",
@@ -1180,7 +775,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-117",
@@ -1207,7 +802,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-118",
@@ -1234,7 +829,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-119",
@@ -1261,7 +856,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     },
     {
       "candidateId": "candidate-120",
@@ -1288,7 +883,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v13"
+      "version": "anchor-candidates-600-2026.07.28-v14"
     }
   ]
 }
