@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview19K = {
+  trespass: { partOfSpeech: "verb", focusedMeaning: "擅自进入；非法侵入", englishDefinition: "to enter land or a building without permission", definitionDistractors: ["to rent a room for a short holiday", "to repair a fence after bad weather", "to invite visitors into a public hall"] },
+  plunder: { partOfSpeech: "verb", focusedMeaning: "掠夺；抢劫", englishDefinition: "to steal goods or valuable things by force, especially during conflict", definitionDistractors: ["to protect valuable objects in a museum", "to buy goods through an approved dealer", "to return lost property to its owner"] },
+  interlude: { partOfSpeech: "noun", focusedMeaning: "插曲；间歇", englishDefinition: "a short period or event between two longer parts of an activity", definitionDistractors: ["the final result of a public vote", "a written list of safety rules", "a permanent change in ownership"] },
+  heterogeneous: { partOfSpeech: "adjective", focusedMeaning: "异质的；多样构成的", englishDefinition: "made up of parts or people that are different from one another", definitionDistractors: ["formed from one identical type only", "kept completely separate from public use", "arranged in a perfectly straight line"] },
+  callous: { partOfSpeech: "adjective", focusedMeaning: "冷酷无情的", englishDefinition: "showing no sympathy for other people's suffering or problems", definitionDistractors: ["quick to notice small improvements", "physically tired after heavy work", "legally responsible for a payment"] },
+};

@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v18",
+  "version": "anchor-candidates-600-2026.07.28-v19",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 590,
-  "candidateCount": 10,
+  "currentReviewedCount": 595,
+  "candidateCount": 5,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -45,10 +45,10 @@
     "15K": 5,
     "16K": 5,
     "17K": 5,
-    "18K": 5
+    "18K": 5,
+    "19K": 5
   },
   "additionsByBand": {
-    "19K": 5,
     "20K": 5
   },
   "finalCounts": {
@@ -76,141 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-111",
-      "plannedAnchorId": "anchor-591",
-      "familyId": "wf-18085",
-      "lexiconId": "word-3315",
-      "term": "trespass",
-      "focusedMeaning": "擅自进入；非法侵入",
-      "meaningNote": "",
-      "contextSentence": "Warning signs state that visitors who enter the quarry trespass on private land.",
-      "collocation": "trespass on private property",
-      "frequencyRank": 18085,
-      "frequencyBand": "19K",
-      "source": {
-        "teachingLexiconId": "word-3315",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
-    },
-    {
-      "candidateId": "candidate-112",
-      "plannedAnchorId": "anchor-592",
-      "familyId": "wf-18312",
-      "lexiconId": "word-3329",
-      "term": "plunder",
-      "focusedMeaning": "掠夺；抢劫",
-      "meaningNote": "",
-      "contextSentence": "The law prevents dealers from selling artefacts that soldiers plunder during conflict.",
-      "collocation": "plunder cultural treasures",
-      "frequencyRank": 18312,
-      "frequencyBand": "19K",
-      "source": {
-        "teachingLexiconId": "word-3329",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
-    },
-    {
-      "candidateId": "candidate-113",
-      "plannedAnchorId": "anchor-593",
-      "familyId": "wf-18498",
-      "lexiconId": "word-3335",
-      "term": "interlude",
-      "focusedMeaning": "插曲；间歇",
-      "meaningNote": "",
-      "contextSentence": "A brief musical interlude allowed the stage crew to change the set.",
-      "collocation": "short peaceful interlude",
-      "frequencyRank": 18498,
-      "frequencyBand": "19K",
-      "source": {
-        "teachingLexiconId": "word-3335",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
-    },
-    {
-      "candidateId": "candidate-114",
-      "plannedAnchorId": "anchor-594",
-      "familyId": "wf-18707",
-      "lexiconId": "word-3344",
-      "term": "heterogeneous",
-      "focusedMeaning": "异质的；多样构成的",
-      "meaningNote": "",
-      "contextSentence": "A heterogeneous sample better reflects the district's varied population.",
-      "collocation": "heterogeneous study group",
-      "frequencyRank": 18707,
-      "frequencyBand": "19K",
-      "source": {
-        "teachingLexiconId": "word-3344",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
-    },
-    {
-      "candidateId": "candidate-115",
-      "plannedAnchorId": "anchor-595",
-      "familyId": "wf-18872",
-      "lexiconId": "word-3362",
-      "term": "callous",
-      "focusedMeaning": "冷酷无情的；硬皮的",
-      "meaningNote": "",
-      "contextSentence": "The report described the neglect of vulnerable residents as callous.",
-      "collocation": "callous disregard for safety",
-      "frequencyRank": 18872,
-      "frequencyBand": "19K",
-      "source": {
-        "teachingLexiconId": "word-3362",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
-    },
-    {
       "candidateId": "candidate-116",
       "plannedAnchorId": "anchor-596",
       "familyId": "wf-19103",
@@ -235,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
+      "version": "anchor-candidates-600-2026.07.28-v19"
     },
     {
       "candidateId": "candidate-117",
@@ -262,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
+      "version": "anchor-candidates-600-2026.07.28-v19"
     },
     {
       "candidateId": "candidate-118",
@@ -289,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
+      "version": "anchor-candidates-600-2026.07.28-v19"
     },
     {
       "candidateId": "candidate-119",
@@ -316,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
+      "version": "anchor-candidates-600-2026.07.28-v19"
     },
     {
       "candidateId": "candidate-120",
@@ -343,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v18"
+      "version": "anchor-candidates-600-2026.07.28-v19"
     }
   ]
 }
