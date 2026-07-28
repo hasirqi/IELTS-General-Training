@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview18K = {
+  drizzle: { partOfSpeech: "noun", focusedMeaning: "毛毛雨", englishDefinition: "light rain falling in very small drops", definitionDistractors: ["a sudden burst of heavy thunder", "dry dust blown across a road", "bright sunshine after a storm"] },
+  asymmetric: { partOfSpeech: "adjective", focusedMeaning: "不对称的", englishDefinition: "having two sides or parts that are not the same in shape or size", definitionDistractors: ["built from identical repeated parts", "placed exactly in the centre of a room", "made from expensive natural materials"] },
+  blunder: { partOfSpeech: "noun", focusedMeaning: "严重错误；犯大错", englishDefinition: "a serious mistake, usually caused by carelessness or poor judgment", definitionDistractors: ["a careful improvement made after review", "a written rule that prevents confusion", "a small reward for completing work early"] },
+  brunt: { partOfSpeech: "noun", focusedMeaning: "主要冲击；首当其冲", englishDefinition: "the main force or worst part of something harmful or difficult", definitionDistractors: ["the safest part of a public building", "a planned benefit shared by all residents", "a minor detail added at the end of a report"] },
+  backfire: { partOfSpeech: "verb", focusedMeaning: "产生反效果", englishDefinition: "to have the opposite and usually bad effect from the one intended", definitionDistractors: ["to succeed exactly as originally planned", "to explain a decision in simple words", "to return unused money to a customer"] },
+};

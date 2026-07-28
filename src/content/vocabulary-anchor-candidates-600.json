@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v17",
+  "version": "anchor-candidates-600-2026.07.28-v18",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 585,
-  "candidateCount": 15,
+  "currentReviewedCount": 590,
+  "candidateCount": 10,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -44,10 +44,10 @@
     "14K": 15,
     "15K": 5,
     "16K": 5,
-    "17K": 5
+    "17K": 5,
+    "18K": 5
   },
   "additionsByBand": {
-    "18K": 5,
     "19K": 5,
     "20K": 5
   },
@@ -76,141 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-106",
-      "plannedAnchorId": "anchor-586",
-      "familyId": "wf-17100",
-      "lexiconId": "word-3255",
-      "term": "drizzle",
-      "focusedMeaning": "毛毛雨",
-      "meaningNote": "",
-      "contextSentence": "Light drizzle made the painted crossing unusually slippery.",
-      "collocation": "persistent morning drizzle",
-      "frequencyRank": 17100,
-      "frequencyBand": "18K",
-      "source": {
-        "teachingLexiconId": "word-3255",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
-    },
-    {
-      "candidateId": "candidate-107",
-      "plannedAnchorId": "anchor-587",
-      "familyId": "wf-17299",
-      "lexiconId": "word-3274",
-      "term": "asymmetric",
-      "focusedMeaning": "不对称的",
-      "meaningNote": "",
-      "contextSentence": "The architect used an asymmetric entrance to preserve the old tree.",
-      "collocation": "asymmetric design",
-      "frequencyRank": 17299,
-      "frequencyBand": "18K",
-      "source": {
-        "teachingLexiconId": "word-3274",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
-    },
-    {
-      "candidateId": "candidate-108",
-      "plannedAnchorId": "anchor-588",
-      "familyId": "wf-17504",
-      "lexiconId": "word-3294",
-      "term": "blunder",
-      "focusedMeaning": "严重错误；犯大错",
-      "meaningNote": "",
-      "contextSentence": "Sending private records to the wrong address was a serious blunder.",
-      "collocation": "costly administrative blunder",
-      "frequencyRank": 17504,
-      "frequencyBand": "18K",
-      "source": {
-        "teachingLexiconId": "word-3294",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
-    },
-    {
-      "candidateId": "candidate-109",
-      "plannedAnchorId": "anchor-589",
-      "familyId": "wf-17710",
-      "lexiconId": "word-3306",
-      "term": "brunt",
-      "focusedMeaning": "主要冲击；首当其冲",
-      "meaningNote": "",
-      "contextSentence": "Low-income households bore the brunt of rising energy prices.",
-      "collocation": "bear the brunt of cuts",
-      "frequencyRank": 17710,
-      "frequencyBand": "18K",
-      "source": {
-        "teachingLexiconId": "word-3306",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
-    },
-    {
-      "candidateId": "candidate-110",
-      "plannedAnchorId": "anchor-590",
-      "familyId": "wf-17903",
-      "lexiconId": "word-3310",
-      "term": "backfire",
-      "focusedMeaning": "产生反效果",
-      "meaningNote": "",
-      "contextSentence": "A punitive attendance policy may backfire and discourage vulnerable learners.",
-      "collocation": "strategy may backfire",
-      "frequencyRank": 17903,
-      "frequencyBand": "18K",
-      "source": {
-        "teachingLexiconId": "word-3310",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
-    },
-    {
       "candidateId": "candidate-111",
       "plannedAnchorId": "anchor-591",
       "familyId": "wf-18085",
@@ -235,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-112",
@@ -262,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-113",
@@ -289,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-114",
@@ -316,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-115",
@@ -343,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-116",
@@ -370,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-117",
@@ -397,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-118",
@@ -424,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-119",
@@ -451,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     },
     {
       "candidateId": "candidate-120",
@@ -478,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v17"
+      "version": "anchor-candidates-600-2026.07.28-v18"
     }
   ]
 }
