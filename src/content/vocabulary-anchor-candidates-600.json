@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v14",
+  "version": "anchor-candidates-600-2026.07.28-v15",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 570,
-  "candidateCount": 30,
+  "currentReviewedCount": 575,
+  "candidateCount": 25,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -41,10 +41,10 @@
     "11K": 15,
     "12K": 15,
     "13K": 15,
-    "14K": 15
+    "14K": 15,
+    "15K": 5
   },
   "additionsByBand": {
-    "15K": 5,
     "16K": 5,
     "17K": 5,
     "18K": 5,
@@ -76,141 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-091",
-      "plannedAnchorId": "anchor-571",
-      "familyId": "wf-14103",
-      "lexiconId": "word-3031",
-      "term": "enrich",
-      "focusedMeaning": "丰富；改善",
-      "meaningNote": "",
-      "contextSentence": "Volunteering can enrich both skills and social connections.",
-      "collocation": "enrich community life",
-      "frequencyRank": 14103,
-      "frequencyBand": "15K",
-      "source": {
-        "teachingLexiconId": "word-3031",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
-    },
-    {
-      "candidateId": "candidate-092",
-      "plannedAnchorId": "anchor-572",
-      "familyId": "wf-14297",
-      "lexiconId": "word-3040",
-      "term": "hasty",
-      "focusedMeaning": "仓促的",
-      "meaningNote": "",
-      "contextSentence": "A hasty decision could increase repair costs.",
-      "collocation": "hasty conclusion",
-      "frequencyRank": 14297,
-      "frequencyBand": "15K",
-      "source": {
-        "teachingLexiconId": "word-3040",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
-    },
-    {
-      "candidateId": "candidate-093",
-      "plannedAnchorId": "anchor-573",
-      "familyId": "wf-14507",
-      "lexiconId": "word-3055",
-      "term": "irreversible",
-      "focusedMeaning": "不可逆转的",
-      "meaningNote": "",
-      "contextSentence": "Untreated damage may cause irreversible structural failure.",
-      "collocation": "irreversible environmental harm",
-      "frequencyRank": 14507,
-      "frequencyBand": "15K",
-      "source": {
-        "teachingLexiconId": "word-3055",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
-    },
-    {
-      "candidateId": "candidate-094",
-      "plannedAnchorId": "anchor-574",
-      "familyId": "wf-14704",
-      "lexiconId": "word-3090",
-      "term": "monologue",
-      "focusedMeaning": "独白；长篇独谈",
-      "meaningNote": "",
-      "contextSentence": "Speaking Part 2 requires a short structured monologue.",
-      "collocation": "dramatic monologue",
-      "frequencyRank": 14704,
-      "frequencyBand": "15K",
-      "source": {
-        "teachingLexiconId": "word-3090",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
-    },
-    {
-      "candidateId": "candidate-095",
-      "plannedAnchorId": "anchor-575",
-      "familyId": "wf-14906",
-      "lexiconId": "word-3094",
-      "term": "morbid",
-      "focusedMeaning": "病态的；与死亡有关的",
-      "meaningNote": "",
-      "contextSentence": "The editor removed unnecessary morbid details from the report.",
-      "collocation": "morbid public curiosity",
-      "frequencyRank": 14906,
-      "frequencyBand": "15K",
-      "source": {
-        "teachingLexiconId": "word-3094",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
-    },
-    {
       "candidateId": "candidate-096",
       "plannedAnchorId": "anchor-576",
       "familyId": "wf-15097",
@@ -235,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-097",
@@ -262,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-098",
@@ -289,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-099",
@@ -316,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-100",
@@ -343,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-101",
@@ -370,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-102",
@@ -397,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-103",
@@ -424,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-104",
@@ -451,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-105",
@@ -478,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-106",
@@ -505,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-107",
@@ -532,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-108",
@@ -559,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-109",
@@ -586,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-110",
@@ -613,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-111",
@@ -640,7 +505,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-112",
@@ -667,7 +532,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-113",
@@ -694,7 +559,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-114",
@@ -721,7 +586,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-115",
@@ -748,7 +613,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-116",
@@ -775,7 +640,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-117",
@@ -802,7 +667,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-118",
@@ -829,7 +694,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-119",
@@ -856,7 +721,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     },
     {
       "candidateId": "candidate-120",
@@ -883,7 +748,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v14"
+      "version": "anchor-candidates-600-2026.07.28-v15"
     }
   ]
 }

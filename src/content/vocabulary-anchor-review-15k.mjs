@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview15K = {
+  enrich: { partOfSpeech: "verb", focusedMeaning: "丰富；改善", englishDefinition: "to improve the quality or value of something", definitionDistractors: ["to remove useful parts from a service", "to delay a plan until next year", "to measure a result without changing it"] },
+  hasty: { partOfSpeech: "adjective", focusedMeaning: "仓促的", englishDefinition: "done too quickly and without enough thought", definitionDistractors: ["planned carefully over a long period", "too expensive for ordinary families", "written clearly for public use"] },
+  irreversible: { partOfSpeech: "adjective", focusedMeaning: "不可逆转的", englishDefinition: "impossible to change back to a previous state", definitionDistractors: ["easy to repair with basic tools", "likely to improve after a short rest", "temporary and expected to end soon"] },
+  monologue: { partOfSpeech: "noun", focusedMeaning: "独白；长篇独谈", englishDefinition: "a long speech by one person without much interruption", definitionDistractors: ["a short conversation between two speakers", "a written list of questions for an interview", "a silent pause before a public announcement"] },
+  morbid: { partOfSpeech: "adjective", focusedMeaning: "病态的；与死亡有关的", englishDefinition: "too interested in unpleasant subjects such as death or disease", definitionDistractors: ["cheerful and suitable for young children", "strictly factual without emotional detail", "healthy because it encourages exercise"] },
+};
