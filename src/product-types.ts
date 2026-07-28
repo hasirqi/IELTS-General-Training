@@ -89,6 +89,14 @@ export type VocabularyTestResult = {
   confidence?: { label: string; reasons: string[] };
   routeSummary?: { theta: number; realRecognized: number; realTotal: number; claimedPseudowords: number; pseudoTotal: number; reliable: boolean };
   bandProfile?: Record<string, { correct: number; total: number }>;
+  guardrails?: {
+    sampledBands: string[];
+    upperProbeReached: boolean;
+    upperProbeRequired: boolean;
+    overexposedBands: string[];
+    retestSafe: boolean;
+  };
+  sampledAnchorIds?: string[];
   engineVersion?: string;
   anchorBankVersion?: string;
   wordFamilyIndexVersion?: string;

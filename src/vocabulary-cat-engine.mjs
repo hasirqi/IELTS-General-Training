@@ -8,6 +8,13 @@ export const VOCABULARY_CAT_LIMITS = Object.freeze({
   targetStandardError: 0.45,
   maximumDurationMs: 18 * 60_000,
 });
+export const VOCABULARY_CAT_GUARDRAILS = Object.freeze({
+  highThetaProbe: 1.25,
+  upperProbeMinimumBand: 9,
+  maximumBandExposure: 8,
+  pathThetaTolerance: 0.6,
+  pathRankTolerance: 1_600,
+});
 
 const MIN_THETA = -4;
 const MAX_THETA = 4;
@@ -21,6 +28,14 @@ export const VOCABULARY_ROUTE_PSEUDOWORDS = Object.freeze([
 
 function clamp(value, minimum, maximum) {
   return Math.max(minimum, Math.min(maximum, value));
+}
+
+function bandNumber(band) {
+  return Number(String(band ?? "1K").replace("K", "")) || 1;
+}
+
+export function allVocabularyBands() {
+  return Array.from({ length: 20 }, (_, index) => `${index + 1}K`);
 }
 
 export function responseProbability(theta, difficulty, discrimination = 1, guessing = 0.25) {
@@ -125,9 +140,27 @@ function itemInformation(anchor, theta) {
   return (anchor.discrimination ** 2) * probability * (1 - probability);
 }
 
-export function selectNextVocabularyAnchor(bank, answers, theta, attempt = 0) {
-  const used = new Set(answers.map((answer) => answer.anchorId));
-  const eligible = eligibleVocabularyAnchors(bank).filter((anchor) => !used.has(anchor.id));
+export function selectNextVocabularyAnchor(bank, answers, theta, attempt = 0, options = {}) {
+  const used = new Set([
+    ...answers.map((answer) => answer.anchorId),
+    ...(options.recentAnchorIds ?? []),
+  ]);
+  const exposureByBand = new Map(allVocabularyBands().map((band) => [band, 0]));
+  for (const answer of answers) exposureByBand.set(answer.frequencyBand, (exposureByBand.get(answer.frequencyBand) ?? 0) + 1);
+  for (const [band, count] of Object.entries(options.exposureByBand ?? {})) {
+    exposureByBand.set(band, Math.max(exposureByBand.get(band) ?? 0, count));
+  }
+  const maxBandExposure = options.maximumBandExposure ?? VOCABULARY_CAT_GUARDRAILS.maximumBandExposure;
+  const needsUpperProbe = options.forceUpperProbe
+    ?? (theta >= VOCABULARY_CAT_GUARDRAILS.highThetaProbe
+      && !answers.some((answer) => bandNumber(answer.frequencyBand) >= VOCABULARY_CAT_GUARDRAILS.upperProbeMinimumBand));
+  const available = eligibleVocabularyAnchors(bank).filter((anchor) => !used.has(anchor.id));
+  let eligible = available.filter((anchor) => (exposureByBand.get(anchor.frequencyBand) ?? 0) < maxBandExposure);
+  if (needsUpperProbe) {
+    const upper = eligible.filter((anchor) => bandNumber(anchor.frequencyBand) >= VOCABULARY_CAT_GUARDRAILS.upperProbeMinimumBand);
+    if (upper.length) eligible = upper;
+  }
+  if (!eligible.length && available.length) eligible = available;
   if (!eligible.length) return null;
   return eligible.map((anchor) => ({
     anchor,
@@ -150,6 +183,10 @@ export function thetaToPilotRank(theta) {
   return Math.round(clamp(1 + ((theta + 2.55) / 4.35) * 7_999, 0, 8_000));
 }
 
+export function thetaToVocabularyRank(theta) {
+  return Math.round(clamp(1 + ((theta + 2.55) / 4.35) * 19_999, 1, 20_000));
+}
+
 export function pilotBandForRank(rank) {
   if (rank < 1_000) return "1K以内";
   if (rank < 2_000) return "1K–2K";
@@ -159,6 +196,45 @@ export function pilotBandForRank(rank) {
   if (rank < 6_000) return "5K–6K";
   if (rank < 8_000) return "6K–8K";
   return "8K+（当前题库上限）";
+}
+
+function bandProfileFor(answers) {
+  return Object.fromEntries(allVocabularyBands().map((band) => {
+    const selected = answers.filter((answer) => answer.frequencyBand === band);
+    return [band, { correct: selected.filter((answer) => answer.correct).length, total: selected.length }];
+  }));
+}
+
+export function vocabularyCatGuardrailSummary(answers, estimate) {
+  const bandProfile = bandProfileFor(answers);
+  const sampledBands = Object.entries(bandProfile).filter(([, value]) => value.total > 0).map(([band]) => band);
+  const upperProbeReached = sampledBands.some((band) => bandNumber(band) >= VOCABULARY_CAT_GUARDRAILS.upperProbeMinimumBand);
+  const overexposedBands = Object.entries(bandProfile)
+    .filter(([, value]) => value.total > VOCABULARY_CAT_GUARDRAILS.maximumBandExposure)
+    .map(([band]) => band);
+  return {
+    sampledBands,
+    upperProbeReached,
+    upperProbeRequired: estimate.theta >= VOCABULARY_CAT_GUARDRAILS.highThetaProbe,
+    overexposedBands,
+    retestSafe: new Set(answers.map((answer) => answer.anchorId)).size === answers.length,
+  };
+}
+
+export function compareVocabularyCatPaths(primaryResult, comparisonResult) {
+  const thetaDelta = Math.abs((primaryResult?.theta ?? 0) - (comparisonResult?.theta ?? 0));
+  const rankDelta = Math.abs(thetaToVocabularyRank(primaryResult?.theta ?? 0) - thetaToVocabularyRank(comparisonResult?.theta ?? 0));
+  const consistent = thetaDelta <= VOCABULARY_CAT_GUARDRAILS.pathThetaTolerance
+    && rankDelta <= VOCABULARY_CAT_GUARDRAILS.pathRankTolerance;
+  return {
+    consistent,
+    thetaDelta: Number(thetaDelta.toFixed(3)),
+    rankDelta,
+    reasons: consistent ? [] : [
+      ...(thetaDelta > VOCABULARY_CAT_GUARDRAILS.pathThetaTolerance ? ["路径 theta 差异过大"] : []),
+      ...(rankDelta > VOCABULARY_CAT_GUARDRAILS.pathRankTolerance ? ["路径词族等级差异过大"] : []),
+    ],
+  };
 }
 
 function confidenceFor(answers, standardError, routeSummary) {
@@ -182,7 +258,7 @@ function confidenceFor(answers, standardError, routeSummary) {
       ...(pseudoRisk ? ["基础路由中误认了多个非词"] : []),
     ] };
   }
-  return { label: "中等", reasons: ["150 锚点实验版本"] };
+  return { label: "中等", reasons: ["600 锚点实验版本"] };
 }
 
 export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString(), savedRoute) {
@@ -193,10 +269,8 @@ export function buildVocabularyPilotResult(answers, routeResponses, startedAt, c
   const lowRank = thetaToPilotRank(estimate.theta - margin);
   const highRank = thetaToPilotRank(estimate.theta + margin);
   const confidence = confidenceFor(answers, estimate.standardError, routeSummary);
-  const bands = Object.fromEntries(["1K", "2K", "3K", "4K", "5K", "6K", "7K", "8K"].map((band) => {
-    const selected = answers.filter((answer) => answer.frequencyBand === band);
-    return [band, { correct: selected.filter((answer) => answer.correct).length, total: selected.length }];
-  }));
+  const bands = bandProfileFor(answers);
+  const guardrails = vocabularyCatGuardrailSummary(answers, estimate);
   return {
     engineVersion: VOCABULARY_CAT_ENGINE_VERSION,
     anchorBankVersion: answers[0]?.anchorBankVersion ?? "unknown",
@@ -204,11 +278,13 @@ export function buildVocabularyPilotResult(answers, routeResponses, startedAt, c
     startedAt, completedAt,
     sampleSize: answers.length,
     correctCount: answers.filter((answer) => answer.correct).length,
+    sampledAnchorIds: answers.map((answer) => answer.anchorId),
     theta: estimate.theta,
     standardError: estimate.standardError,
     broadBand: pilotBandForRank(rank),
     interval: { lowBand: pilotBandForRank(lowRank), highBand: pilotBandForRank(highRank) },
     confidence,
+    guardrails,
     routeSummary,
     bandProfile: bands,
     experimental: true,

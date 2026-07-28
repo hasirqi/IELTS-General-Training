@@ -267,6 +267,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   const [quickCorrect,setQuickCorrect] = useState(0);
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
   const [showResult,setShowResult] = useState(false);
+  const recentAnchorIds = useMemo(() => state.vocabularyTests.flatMap((result) => result.sampledAnchorIds ?? []).slice(-90), [state.vocabularyTests]);
   useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); } }, [activeTest]);
   useEffect(() => { if (state.vocabularyRouteResult) setRouteSnapshot(state.vocabularyRouteResult); }, [state.vocabularyRouteResult]);
   const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
@@ -291,7 +292,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     const routeAge = savedRoute ? Date.now() - new Date(savedRoute.completedAt).getTime() : Number.POSITIVE_INFINITY;
     const recentRoute = savedRoute && routeAge >= 0 && routeAge <= 120 * 86_400_000 ? savedRoute : null;
     const initialTheta = recentRoute?.theta ?? 0;
-    const next = selectNextVocabularyAnchor(vocabularyAnchors,[],initialTheta,attempt);
+    const next = selectNextVocabularyAnchor(vocabularyAnchors,[],initialTheta,attempt,{recentAnchorIds});
     if (!next) return;
     update({vocabularyTestDraft:{mode:"adaptive-v2",phase:"cat",intent,routeItems:[],routeIndex:0,routeResponses:[],currentAnchorId:next.id,initialTheta,answers:[],startedAt:now,presentedAt:now,attempt}});
   };
@@ -348,7 +349,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     const estimate = estimateVocabularyAbility(answers,draft.initialTheta);
     const elapsedMs = now.getTime()-new Date(draft.startedAt).getTime();
     if (shouldStopVocabularyCat(answers,estimate,elapsedMs)) { finish(draft,answers); return; }
-    const next = selectNextVocabularyAnchor(vocabularyAnchors,answers,estimate.theta,draft.attempt);
+    const next = selectNextVocabularyAnchor(vocabularyAnchors,answers,estimate.theta,draft.attempt,{recentAnchorIds});
     if (!next) { finish(draft,answers); return; }
     update({vocabularyTestDraft:{...draft,currentAnchorId:next.id,answers,presentedAt:now.toISOString()}});
   };

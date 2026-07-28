@@ -3,10 +3,12 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { vocabularyAnchorReview1K } from "../src/content/vocabulary-anchor-review-1k.mjs";
 import {
-  VOCABULARY_CAT_LIMITS, VOCABULARY_ROUTE_PSEUDOWORDS,
+  VOCABULARY_CAT_GUARDRAILS, VOCABULARY_CAT_LIMITS, VOCABULARY_ROUTE_PSEUDOWORDS,
   buildVocabularyPilotResult, buildVocabularyRoute, eligibleVocabularyAnchors,
+  compareVocabularyCatPaths,
   estimateVocabularyAbility, estimateVocabularyRoute, responseProbability,
-  selectNextVocabularyAnchor, shouldStopVocabularyCat,
+  selectNextVocabularyAnchor, shouldStopVocabularyCat, thetaToVocabularyRank,
+  vocabularyCatGuardrailSummary,
 } from "../src/vocabulary-cat-engine.mjs";
 
 const anchors = JSON.parse(fs.readFileSync(new URL("../src/content/vocabulary-anchor-bank-600.json", import.meta.url), "utf8"));
@@ -96,6 +98,27 @@ test("adaptive selection never repeats a scored anchor", () => {
   assert.ok(next); assert.ok(!new Set(used.map((item)=>item.anchorId)).has(next.id));
 });
 
+test("adaptive selection avoids recent retest items and caps frequency-band exposure", () => {
+  const lowBand = anchors.filter((anchor) => anchor.frequencyBand === "1K").slice(0, 8);
+  const used = lowBand.map((anchor) => answer(anchor, true));
+  const recentAnchorIds = anchors.slice(100, 120).map((anchor) => anchor.id);
+  const next = selectNextVocabularyAnchor(anchors, used, -1.8, 0, {
+    recentAnchorIds,
+    maximumBandExposure: 8,
+  });
+  assert.ok(next);
+  assert.notEqual(next.frequencyBand, "1K");
+  assert.ok(!recentAnchorIds.includes(next.id));
+});
+
+test("high ability CAT probes the completed 9K to 20K upper bank", () => {
+  const lowerOnly = anchors.filter((anchor) => ["1K", "2K", "3K", "4K", "5K"].includes(anchor.frequencyBand)).slice(0, 12)
+    .map((anchor) => answer(anchor, true));
+  const next = selectNextVocabularyAnchor(anchors, lowerOnly, VOCABULARY_CAT_GUARDRAILS.highThetaProbe, 1);
+  assert.ok(next);
+  assert.ok(Number(next.frequencyBand.replace("K", "")) >= VOCABULARY_CAT_GUARDRAILS.upperProbeMinimumBand);
+});
+
 test("stopping rule counts only 20 to 30 scored contextual questions", () => {
   const sample=Array.from({length:6},(_,index)=>["1K","2K","3K","4K","5K"].map((band)=>anchors.filter((anchor)=>anchor.frequencyBand===band)[index])).flat().map((anchor)=>answer(anchor,true));
   assert.equal(shouldStopVocabularyCat(sample.slice(0,19),{standardError:.2},5_000),false);
@@ -110,8 +133,11 @@ test("pilot result excludes route items from score and reports route credibility
   const sample=anchors.slice(0,24).map((anchor,index)=>answer(anchor,index<18));
   const result=buildVocabularyPilotResult(sample,route,"2026-07-24T00:00:00.000Z");
   assert.equal(result.sampleSize,24); assert.equal(result.correctCount,18);
+  assert.deepEqual(result.sampledAnchorIds, sample.map((item) => item.anchorId));
   assert.equal(result.routeSummary.realTotal,12); assert.equal(result.routeSummary.pseudoTotal,3);
   assert.match(result.broadBand,/K/); assert.ok(!Object.hasOwn(result,"certifiedLexile")); assert.ok(!Object.hasOwn(result,"ieltsScore"));
+  assert.equal(Object.keys(result.bandProfile).length, 20);
+  assert.ok(Object.hasOwn(result.guardrails, "upperProbeReached"));
 });
 
 test("unreviewed or incomplete candidates are blocked from scoring", () => {
@@ -159,4 +185,28 @@ test("direct CAT can reuse a recent route only as its starting estimate", () => 
   assert.equal(result.sampleSize,24);
   assert.equal(result.routeSummary.theta,.35);
   assert.equal(result.routeSummary.realTotal,12);
+});
+
+test("guardrail summary detects upper probing, overexposure and duplicate retest risk", () => {
+  const repeated = anchors.filter((anchor) => anchor.frequencyBand === "2K").slice(0, 9).map((anchor) => answer(anchor, true));
+  repeated.push({ ...answer(anchors.find((anchor) => anchor.frequencyBand === "10K"), true), anchorId: repeated[0].anchorId });
+  const summary = vocabularyCatGuardrailSummary(repeated, { theta: 1.4, standardError: 0.4 });
+  assert.equal(summary.upperProbeRequired, true);
+  assert.equal(summary.upperProbeReached, true);
+  assert.deepEqual(summary.overexposedBands, ["2K"]);
+  assert.equal(summary.retestSafe, false);
+});
+
+test("path consistency gate compares route-first and direct CAT outcomes without official claims", () => {
+  const sampleA = anchors.slice(0, 24).map((anchor, index) => answer(anchor, index < 17));
+  const sampleB = anchors.slice(10, 34).map((anchor, index) => answer(anchor, index < 16));
+  const route = buildVocabularyRoute(anchors, 2).map((item) => routeResponse(item, item.kind === "real"));
+  const routeFirst = buildVocabularyPilotResult(sampleA, route, "2026-07-28T00:00:00.000Z");
+  const direct = buildVocabularyPilotResult(sampleB, [], "2026-07-28T00:00:00.000Z", undefined, routeFirst.routeSummary);
+  const comparison = compareVocabularyCatPaths(routeFirst, direct);
+  assert.equal(comparison.consistent, true);
+  assert.ok(comparison.thetaDelta <= VOCABULARY_CAT_GUARDRAILS.pathThetaTolerance);
+  assert.ok(thetaToVocabularyRank(routeFirst.theta) <= 20_000);
+  assert.ok(!Object.hasOwn(routeFirst, "certifiedLexile"));
+  assert.ok(!Object.hasOwn(direct, "ieltsScore"));
 });
