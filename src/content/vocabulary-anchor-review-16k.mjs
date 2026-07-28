@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview16K = {
+  lament: { partOfSpeech: "verb", focusedMeaning: "哀叹；惋惜", englishDefinition: "to express sadness or regret about something", definitionDistractors: ["to celebrate a result with public praise", "to explain a rule in simple language", "to record a decision without emotion"] },
+  luminous: { partOfSpeech: "adjective", focusedMeaning: "发光的；明亮的", englishDefinition: "giving off light or seeming to shine", definitionDistractors: ["covered with dust after long storage", "difficult to move because of its weight", "written in a style that is hard to follow"] },
+  itinerary: { partOfSpeech: "noun", focusedMeaning: "行程安排", englishDefinition: "a planned route or list of activities for a journey", definitionDistractors: ["a receipt showing the cost of a ticket", "a rule explaining baggage restrictions", "a room reserved for a private meeting"] },
+  intangible: { partOfSpeech: "adjective", focusedMeaning: "无形的；难以量化的", englishDefinition: "real but difficult to measure or touch", definitionDistractors: ["easy to count with a simple checklist", "physically heavy and hard to carry", "legally required before travel begins"] },
+  jingle: { partOfSpeech: "noun", focusedMeaning: "广告短歌；叮当声", englishDefinition: "a short tune used in advertising or a light ringing sound", definitionDistractors: ["a formal speech given at a ceremony", "a printed map for a walking route", "a quiet room used for private study"] },
+};

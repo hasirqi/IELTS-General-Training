@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v15",
+  "version": "anchor-candidates-600-2026.07.28-v16",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 575,
-  "candidateCount": 25,
+  "currentReviewedCount": 580,
+  "candidateCount": 20,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -42,10 +42,10 @@
     "12K": 15,
     "13K": 15,
     "14K": 15,
-    "15K": 5
+    "15K": 5,
+    "16K": 5
   },
   "additionsByBand": {
-    "16K": 5,
     "17K": 5,
     "18K": 5,
     "19K": 5,
@@ -76,141 +76,6 @@
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
   "candidates": [
     {
-      "candidateId": "candidate-096",
-      "plannedAnchorId": "anchor-576",
-      "familyId": "wf-15097",
-      "lexiconId": "word-3105",
-      "term": "lament",
-      "focusedMeaning": "哀叹；悼念",
-      "meaningNote": "",
-      "contextSentence": "Residents lament the loss of the last village shop.",
-      "collocation": "lament a cultural loss",
-      "frequencyRank": 15097,
-      "frequencyBand": "16K",
-      "source": {
-        "teachingLexiconId": "word-3105",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
-    },
-    {
-      "candidateId": "candidate-097",
-      "plannedAnchorId": "anchor-577",
-      "familyId": "wf-15300",
-      "lexiconId": "word-3122",
-      "term": "luminous",
-      "focusedMeaning": "发光的；明亮的",
-      "meaningNote": "",
-      "contextSentence": "Workers placed luminous markers along the dark corridor.",
-      "collocation": "luminous safety sign",
-      "frequencyRank": 15300,
-      "frequencyBand": "16K",
-      "source": {
-        "teachingLexiconId": "word-3122",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
-    },
-    {
-      "candidateId": "candidate-098",
-      "plannedAnchorId": "anchor-578",
-      "familyId": "wf-15500",
-      "lexiconId": "word-3147",
-      "term": "itinerary",
-      "focusedMeaning": "行程安排",
-      "meaningNote": "",
-      "contextSentence": "Send the complete itinerary before your business trip.",
-      "collocation": "detailed travel itinerary",
-      "frequencyRank": 15500,
-      "frequencyBand": "16K",
-      "source": {
-        "teachingLexiconId": "word-3147",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
-    },
-    {
-      "candidateId": "candidate-099",
-      "plannedAnchorId": "anchor-579",
-      "familyId": "wf-15695",
-      "lexiconId": "word-3155",
-      "term": "intangible",
-      "focusedMeaning": "无形的；难以量化的",
-      "meaningNote": "",
-      "contextSentence": "The library provides intangible benefits such as confidence and belonging.",
-      "collocation": "intangible cultural value",
-      "frequencyRank": 15695,
-      "frequencyBand": "16K",
-      "source": {
-        "teachingLexiconId": "word-3155",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
-    },
-    {
-      "candidateId": "candidate-100",
-      "plannedAnchorId": "anchor-580",
-      "familyId": "wf-15903",
-      "lexiconId": "word-3180",
-      "term": "jingle",
-      "focusedMeaning": "广告短歌；叮当声",
-      "meaningNote": "",
-      "contextSentence": "The radio jingle helped listeners remember the safety number.",
-      "collocation": "catchy advertising jingle",
-      "frequencyRank": 15903,
-      "frequencyBand": "16K",
-      "source": {
-        "teachingLexiconId": "word-3180",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
-    },
-    {
       "candidateId": "candidate-101",
       "plannedAnchorId": "anchor-581",
       "familyId": "wf-16079",
@@ -235,7 +100,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-102",
@@ -262,7 +127,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-103",
@@ -289,7 +154,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-104",
@@ -316,7 +181,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-105",
@@ -343,7 +208,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-106",
@@ -370,7 +235,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-107",
@@ -397,7 +262,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-108",
@@ -424,7 +289,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-109",
@@ -451,7 +316,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-110",
@@ -478,7 +343,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-111",
@@ -505,7 +370,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-112",
@@ -532,7 +397,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-113",
@@ -559,7 +424,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-114",
@@ -586,7 +451,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-115",
@@ -613,7 +478,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-116",
@@ -640,7 +505,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-117",
@@ -667,7 +532,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-118",
@@ -694,7 +559,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-119",
@@ -721,7 +586,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     },
     {
       "candidateId": "candidate-120",
@@ -748,7 +613,7 @@
         "option-uniqueness",
         "cross-bank-duplication"
       ],
-      "version": "anchor-candidates-600-2026.07.28-v15"
+      "version": "anchor-candidates-600-2026.07.28-v16"
     }
   ]
 }
