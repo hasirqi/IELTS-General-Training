@@ -1,0 +1,7 @@
+export const vocabularyAnchorReview20K = {
+  amphibious: { partOfSpeech: "adjective", focusedMeaning: "两栖的；水陆两用的", englishDefinition: "able to operate or live both on land and in water", definitionDistractors: ["designed only for use in deep space", "built from identical recycled parts", "unable to move without a fixed track"] },
+  reimburse: { partOfSpeech: "verb", focusedMeaning: "报销；偿还", englishDefinition: "to pay back money that someone has spent or lost", definitionDistractors: ["to refuse a request without discussion", "to measure the weight of luggage", "to delay a meeting until next week"] },
+  ostrich: { partOfSpeech: "noun", focusedMeaning: "鸵鸟", englishDefinition: "a large flightless bird with a long neck and long legs", definitionDistractors: ["a small fish found in cold rivers", "a flowering plant used in medicine", "a tool for cutting metal sheets"] },
+  intrepid: { partOfSpeech: "adjective", focusedMeaning: "勇敢无畏的", englishDefinition: "very brave and willing to do difficult or dangerous things", definitionDistractors: ["careful to avoid all public attention", "easy to damage in ordinary weather", "uncertain about a simple instruction"] },
+  disseminate: { partOfSpeech: "verb", focusedMeaning: "传播；散布", englishDefinition: "to spread information or ideas to many people", definitionDistractors: ["to remove a document from public records", "to fold clothes before storing them", "to compare prices in several shops"] },
+};

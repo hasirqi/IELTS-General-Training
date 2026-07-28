@@ -1,9 +1,9 @@
 {
-  "version": "anchor-candidates-600-2026.07.28-v19",
+  "version": "anchor-candidates-600-2026.07.28-v20",
   "generatedAt": "2026-07-28",
   "scoringEligible": false,
-  "currentReviewedCount": 595,
-  "candidateCount": 5,
+  "currentReviewedCount": 600,
+  "candidateCount": 0,
   "plannedReviewedTotal": 600,
   "finalTargets": {
     "1K": 60,
@@ -46,11 +46,10 @@
     "16K": 5,
     "17K": 5,
     "18K": 5,
-    "19K": 5
-  },
-  "additionsByBand": {
+    "19K": 5,
     "20K": 5
   },
+  "additionsByBand": {},
   "finalCounts": {
     "1K": 60,
     "2K": 60,
@@ -74,141 +73,5 @@
     "20K": 5
   },
   "gate": "Every candidate remains excluded from scoring until all requiredReview checks pass and reviewStatus becomes item-authored.",
-  "candidates": [
-    {
-      "candidateId": "candidate-116",
-      "plannedAnchorId": "anchor-596",
-      "familyId": "wf-19103",
-      "lexiconId": "word-3368",
-      "term": "amphibious",
-      "focusedMeaning": "两栖的；水陆两用的",
-      "meaningNote": "",
-      "contextSentence": "The rescue team used an amphibious vehicle to reach flooded farms.",
-      "collocation": "amphibious rescue vehicle",
-      "frequencyRank": 19103,
-      "frequencyBand": "20K",
-      "source": {
-        "teachingLexiconId": "word-3368",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v19"
-    },
-    {
-      "candidateId": "candidate-117",
-      "plannedAnchorId": "anchor-597",
-      "familyId": "wf-19290",
-      "lexiconId": "word-1147",
-      "term": "reimburse",
-      "focusedMeaning": "报销；偿还",
-      "meaningNote": "",
-      "contextSentence": "The company will reimburse reasonable travel costs.",
-      "collocation": "reimburse expenses",
-      "frequencyRank": 19290,
-      "frequencyBand": "20K",
-      "source": {
-        "teachingLexiconId": "word-1147",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v19"
-    },
-    {
-      "candidateId": "candidate-118",
-      "plannedAnchorId": "anchor-598",
-      "familyId": "wf-19507",
-      "lexiconId": "word-3382",
-      "term": "ostrich",
-      "focusedMeaning": "鸵鸟",
-      "meaningNote": "",
-      "contextSentence": "The wildlife park moved each ostrich to a larger enclosure.",
-      "collocation": "adult African ostrich",
-      "frequencyRank": 19507,
-      "frequencyBand": "20K",
-      "source": {
-        "teachingLexiconId": "word-3382",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v19"
-    },
-    {
-      "candidateId": "candidate-119",
-      "plannedAnchorId": "anchor-599",
-      "familyId": "wf-19688",
-      "lexiconId": "word-3385",
-      "term": "intrepid",
-      "focusedMeaning": "勇敢无畏的",
-      "meaningNote": "",
-      "contextSentence": "An intrepid rescue crew crossed the flooded valley at night.",
-      "collocation": "intrepid explorer",
-      "frequencyRank": 19688,
-      "frequencyBand": "20K",
-      "source": {
-        "teachingLexiconId": "word-3385",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v19"
-    },
-    {
-      "candidateId": "candidate-120",
-      "plannedAnchorId": "anchor-600",
-      "familyId": "wf-19898",
-      "lexiconId": "word-3413",
-      "term": "disseminate",
-      "focusedMeaning": "传播；散布",
-      "meaningNote": "",
-      "contextSentence": "The health authority will disseminate accurate advice through local clinics.",
-      "collocation": "disseminate information",
-      "frequencyRank": 19898,
-      "frequencyBand": "20K",
-      "source": {
-        "teachingLexiconId": "word-3413",
-        "wordFamilyIndexVersion": "wf20k-2026.07.24-v1"
-      },
-      "reviewStatus": "candidate-unreviewed",
-      "requiredReview": [
-        "part-of-speech",
-        "focused-english-definition",
-        "three-same-pos-definition-distractors",
-        "sense-context-match",
-        "option-uniqueness",
-        "cross-bank-duplication"
-      ],
-      "version": "anchor-candidates-600-2026.07.28-v19"
-    }
-  ]
+  "candidates": []
 }
