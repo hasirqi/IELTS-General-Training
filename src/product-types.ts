@@ -94,7 +94,11 @@ export type VocabularyTestResult = {
     upperProbeReached: boolean;
     upperProbeRequired: boolean;
     overexposedBands: string[];
+    recentOverlapIds: string[];
     retestSafe: boolean;
+    coverageSufficient: boolean;
+    validationPassed: boolean;
+    issues: string[];
   };
   sampledAnchorIds?: string[];
   engineVersion?: string;

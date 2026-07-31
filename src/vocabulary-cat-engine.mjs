@@ -1,4 +1,4 @@
-export const VOCABULARY_CAT_ENGINE_VERSION = "vocabulary-cat-context-1pl-v2";
+export const VOCABULARY_CAT_ENGINE_VERSION = "vocabulary-cat-context-1pl-v3";
 export const VOCABULARY_CAT_LIMITS = Object.freeze({
   routeQuestions: 15,
   routeRealQuestions: 12,
@@ -48,7 +48,9 @@ export function estimateVocabularyAbility(answers, priorTheta = -0.4) {
   const points = [];
   let weightTotal = 0;
   for (let theta = MIN_THETA; theta <= MAX_THETA + 0.0001; theta += GRID_STEP) {
-    let logWeight = -0.5 * ((theta - priorTheta) / 1.15) ** 2;
+    const routeInfluence = Math.exp(-answers.length / 4);
+    const effectivePrior = -0.4 + (priorTheta + 0.4) * routeInfluence;
+    let logWeight = -0.5 * ((theta - effectivePrior) / 1.15) ** 2;
     for (const answer of answers) {
       const probability = responseProbability(theta, answer.difficulty, answer.discrimination ?? 1, answer.guessing ?? 0.25);
       logWeight += answer.correct ? Math.log(probability) : Math.log(1 - probability);
@@ -176,7 +178,10 @@ export function shouldStopVocabularyCat(answers, estimate, elapsedMs) {
   if (answers.length >= VOCABULARY_CAT_LIMITS.maximumScoredQuestions) return true;
   if (elapsedMs >= VOCABULARY_CAT_LIMITS.maximumDurationMs) return true;
   if (answers.length < VOCABULARY_CAT_LIMITS.minimumScoredQuestions) return false;
-  return estimate.standardError <= VOCABULARY_CAT_LIMITS.targetStandardError && distinctBands(answers) >= 5;
+  const guardrails = vocabularyCatGuardrailSummary(answers, estimate);
+  return estimate.standardError <= VOCABULARY_CAT_LIMITS.targetStandardError
+    && guardrails.coverageSufficient
+    && (!guardrails.upperProbeRequired || guardrails.upperProbeReached);
 }
 
 export function thetaToPilotRank(theta) {
@@ -185,6 +190,18 @@ export function thetaToPilotRank(theta) {
 
 export function thetaToVocabularyRank(theta) {
   return Math.round(clamp(1 + ((theta + 2.55) / 4.35) * 19_999, 1, 20_000));
+}
+
+export function roundedVocabularyEstimate(theta, standardError) {
+  const margin = 1.64 * standardError;
+  const value = Math.round(thetaToVocabularyRank(theta) / 500) * 500;
+  const low = Math.floor(thetaToVocabularyRank(theta - margin) / 500) * 500;
+  const high = Math.ceil(thetaToVocabularyRank(theta + margin) / 500) * 500;
+  return {
+    value: clamp(value, 500, 20_000),
+    low: clamp(low, 500, 20_000),
+    high: clamp(high, 500, 20_000),
+  };
 }
 
 export function pilotBandForRank(rank) {
@@ -205,19 +222,35 @@ function bandProfileFor(answers) {
   }));
 }
 
-export function vocabularyCatGuardrailSummary(answers, estimate) {
+export function vocabularyCatGuardrailSummary(answers, estimate, options = {}) {
   const bandProfile = bandProfileFor(answers);
   const sampledBands = Object.entries(bandProfile).filter(([, value]) => value.total > 0).map(([band]) => band);
   const upperProbeReached = sampledBands.some((band) => bandNumber(band) >= VOCABULARY_CAT_GUARDRAILS.upperProbeMinimumBand);
   const overexposedBands = Object.entries(bandProfile)
     .filter(([, value]) => value.total > VOCABULARY_CAT_GUARDRAILS.maximumBandExposure)
     .map(([band]) => band);
+  const answerIds = answers.map((answer) => answer.anchorId);
+  const recentIds = new Set(options.recentAnchorIds ?? []);
+  const recentOverlapIds = [...new Set(answerIds.filter((id) => recentIds.has(id)))];
+  const upperProbeRequired = estimate.theta >= VOCABULARY_CAT_GUARDRAILS.highThetaProbe;
+  const coverageSufficient = sampledBands.length >= 5;
+  const retestSafe = new Set(answerIds).size === answerIds.length && recentOverlapIds.length === 0;
+  const issues = [
+    ...(upperProbeRequired && !upperProbeReached ? ["\u9ad8\u9891\u6bb5\u6837\u672c\u4e0d\u8db3"] : []),
+    ...(overexposedBands.length ? ["\u90e8\u5206\u9891\u6bb5\u9898\u76ee\u8fc7\u4e8e\u96c6\u4e2d"] : []),
+    ...(!retestSafe ? ["\u8fd1\u671f\u9898\u76ee\u51fa\u73b0\u91cd\u590d"] : []),
+    ...(!coverageSufficient ? ["\u8986\u76d6\u9891\u6bb5\u4e0d\u8db3"] : []),
+  ];
   return {
     sampledBands,
     upperProbeReached,
-    upperProbeRequired: estimate.theta >= VOCABULARY_CAT_GUARDRAILS.highThetaProbe,
+    upperProbeRequired,
     overexposedBands,
-    retestSafe: new Set(answers.map((answer) => answer.anchorId)).size === answers.length,
+    recentOverlapIds,
+    retestSafe,
+    coverageSufficient,
+    validationPassed: issues.length === 0,
+    issues,
   };
 }
 
@@ -237,7 +270,21 @@ export function compareVocabularyCatPaths(primaryResult, comparisonResult) {
   };
 }
 
-function confidenceFor(answers, standardError, routeSummary) {
+export function summarizeVocabularyCatPathMatrix(comparisons, minimumConsistentRate = 0.8) {
+  const total = comparisons.length;
+  const consistentCount = comparisons.filter((comparison) => comparison.consistent).length;
+  const consistentRate = total ? consistentCount / total : 0;
+  return {
+    total,
+    consistentCount,
+    consistentRate: Number(consistentRate.toFixed(3)),
+    maximumThetaDelta: total ? Math.max(...comparisons.map((comparison) => comparison.thetaDelta)) : 0,
+    maximumRankDelta: total ? Math.max(...comparisons.map((comparison) => comparison.rankDelta)) : 0,
+    passed: total >= 4 && consistentRate >= minimumConsistentRate,
+  };
+}
+
+function confidenceFor(answers, standardError, routeSummary, guardrails) {
   const fast = answers.filter((answer) => answer.responseMs > 0 && answer.responseMs < 750).length;
   const fastRate = answers.length ? fast / answers.length : 0;
   const byBand = new Map();
@@ -250,27 +297,28 @@ function confidenceFor(answers, standardError, routeSummary) {
   const rates = [...byBand.entries()].sort((a, b) => Number(a[0].slice(0, -1)) - Number(b[0].slice(0, -1))).map(([, value]) => value.correct / value.total);
   const inversion = rates.some((rate, index) => index > 0 && rate - rates[index - 1] > 0.65);
   const pseudoRisk = (routeSummary?.claimedPseudowords ?? 0) > 1;
-  if (fastRate > 0.25 || inversion || standardError > 0.62 || pseudoRisk) {
+  if (fastRate > 0.25 || inversion || standardError > 0.62 || pseudoRisk || !guardrails.validationPassed) {
     return { label: "需要谨慎", reasons: [
       ...(fastRate > 0.25 ? ["作答速度过快"] : []),
       ...(inversion ? ["频段表现异常"] : []),
       ...(standardError > 0.62 ? ["估计区间较宽"] : []),
       ...(pseudoRisk ? ["基础路由中误认了多个非词"] : []),
+      ...guardrails.issues,
     ] };
   }
   return { label: "中等", reasons: ["600 锚点实验版本"] };
 }
 
-export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString(), savedRoute) {
+export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString(), savedRoute, options = {}) {
   const routeSummary = routeResponses.length ? estimateVocabularyRoute(routeResponses) : savedRoute;
   const estimate = estimateVocabularyAbility(answers, routeSummary?.theta ?? 0);
   const margin = 1.64 * estimate.standardError;
   const rank = thetaToPilotRank(estimate.theta);
   const lowRank = thetaToPilotRank(estimate.theta - margin);
   const highRank = thetaToPilotRank(estimate.theta + margin);
-  const confidence = confidenceFor(answers, estimate.standardError, routeSummary);
   const bands = bandProfileFor(answers);
-  const guardrails = vocabularyCatGuardrailSummary(answers, estimate);
+  const guardrails = vocabularyCatGuardrailSummary(answers, estimate, options);
+  const confidence = confidenceFor(answers, estimate.standardError, routeSummary, guardrails);
   return {
     engineVersion: VOCABULARY_CAT_ENGINE_VERSION,
     anchorBankVersion: answers[0]?.anchorBankVersion ?? "unknown",
@@ -283,6 +331,7 @@ export function buildVocabularyPilotResult(answers, routeResponses, startedAt, c
     standardError: estimate.standardError,
     broadBand: pilotBandForRank(rank),
     interval: { lowBand: pilotBandForRank(lowRank), highBand: pilotBandForRank(highRank) },
+    vocabulary: roundedVocabularyEstimate(estimate.theta, estimate.standardError),
     confidence,
     guardrails,
     routeSummary,
