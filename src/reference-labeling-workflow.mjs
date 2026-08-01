@@ -144,3 +144,76 @@ export function reconcileIndependentReviews(records, packets, submissions, adjud
     },
   };
 }
+export function validateAiReviewSubmission(packet, submission) {
+  const base = validateReviewSubmission(packet, submission);
+  const issues = [...base.issues];
+  if (submission?.reviewerType !== "ai") issues.push("reviewer-type-must-be-ai");
+  return { valid: issues.length === 0, issues: [...new Set(issues)] };
+}
+
+function validateAiPair(packets, submissions) {
+  if (packets.length !== 2 || submissions.length !== 2) throw new Error("Exactly two AI review packets and submissions are required");
+  const validations = submissions.map((submission, index) => validateAiReviewSubmission(packets[index], submission));
+  if (validations.some((result) => !result.valid)) throw new Error(`Invalid AI review submission: ${validations.flatMap((result) => result.issues).join(",")}`);
+  if (submissions[0].reviewerId.trim() === submissions[1].reviewerId.trim()) throw new Error("Independent AI reviewers must use different reviewer IDs");
+}
+
+export function reconcileIndependentAiReviews(records, packets, submissions, adjudications = []) {
+  validateAiPair(packets, submissions);
+  const responses = submissions.map((submission) => new Map(submission.responses.map((response) => [response.itemId, response])));
+  const adjudicationById = new Map(adjudications.map((item) => [item.itemId, item]));
+  const reviewerIds = new Set(submissions.map((submission) => submission.reviewerId.trim()));
+  let agreements = 0;
+  let adjudicated = 0;
+  const unresolved = [];
+  const mergedRecords = records.map((record) => {
+    const first = responses[0].get(record.id);
+    const second = responses[1].get(record.id);
+    const aiLabels = [
+      { reviewerId: submissions[0].reviewerId.trim(), reviewerType: "ai", level: first.level, confidence: first.confidence, evidenceCodes: first.evidenceCodes, note: first.note ?? "", completedAt: submissions[0].completedAt },
+      { reviewerId: submissions[1].reviewerId.trim(), reviewerType: "ai", level: second.level, confidence: second.confidence, evidenceCodes: second.evidenceCodes, note: second.note ?? "", completedAt: submissions[1].completedAt },
+    ];
+    let internalLevel = null;
+    let reviewStatus = record.reviewStatus;
+    if (first.level === second.level) {
+      agreements += 1;
+      internalLevel = first.level;
+      reviewStatus = "ai-label-reviewed";
+    } else {
+      const decision = adjudicationById.get(record.id);
+      const validAdjudication = decision
+        && decision.reviewerType === "ai"
+        && LEVELS.has(decision.level)
+        && CONFIDENCE.has(decision.confidence)
+        && decision.reviewerId?.trim()
+        && !reviewerIds.has(decision.reviewerId.trim())
+        && Array.isArray(decision.evidenceCodes)
+        && decision.evidenceCodes.length > 0
+        && decision.evidenceCodes.every((code) => EVIDENCE.has(code));
+      if (validAdjudication) {
+        adjudicated += 1;
+        internalLevel = decision.level;
+        reviewStatus = "ai-label-reviewed";
+        aiLabels.push({ ...decision, reviewerId: decision.reviewerId.trim(), reviewerType: "ai", role: "adjudicator", note: decision.note ?? "", completedAt: decision.completedAt ?? null });
+      } else {
+        unresolved.push(record.id);
+      }
+    }
+    return { ...record, aiLabels, labelProvenance: "independent-ai-review-v1", internalLevel, reviewStatus, scoreEligible: false };
+  });
+  return {
+    records: mergedRecords,
+    summary: {
+      total: records.length,
+      agreements,
+      agreementRate: records.length ? Number((agreements / records.length).toFixed(4)) : 0,
+      adjudicated,
+      unresolvedCount: unresolved.length,
+      unresolved,
+      aiLabelReviewed: mergedRecords.filter((record) => record.reviewStatus === "ai-label-reviewed").length,
+      humanLabelReviewed: 0,
+      scoreEligible: 0,
+      provenance: "independent-ai-review-v1",
+    },
+  };
+}

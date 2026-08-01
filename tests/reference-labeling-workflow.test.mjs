@@ -5,9 +5,11 @@ import manifests from "../src/content/reference-review-packets-v1.json" with { t
 import {
   buildBlindedReviewPacket,
   materializeBlindedPacket,
+  reconcileIndependentAiReviews,
   reconcileIndependentReviews,
   REFERENCE_REVIEW_RUBRIC_VERSION,
   REFERENCE_REVIEW_WORKFLOW_VERSION,
+  validateAiReviewSubmission,
   validateReviewSubmission,
 } from "../src/reference-labeling-workflow.mjs";
 
@@ -78,4 +80,29 @@ test("disagreement cannot be averaged and requires a third independent adjudicat
 
 test("the same reviewer cannot fill both independent slots", () => {
   assert.throws(() => reconcileIndependentReviews(corpus.records, [packetA, packetB], [submission(packetA, "same-person"), submission(packetB, "same-person")]), /different reviewer IDs/);
+});
+function aiSubmission(packet, reviewerId, levelFor = () => "L3") {
+  return { ...submission(packet, reviewerId, levelFor), reviewerType: "ai" };
+}
+
+test("AI review is recorded separately and never impersonates human labels", () => {
+  const result = reconcileIndependentAiReviews(corpus.records, [packetA, packetB], [aiSubmission(packetA, "ai-a"), aiSubmission(packetB, "ai-b")]);
+  assert.equal(result.summary.aiLabelReviewed, 120);
+  assert.equal(result.summary.humanLabelReviewed, 0);
+  assert.equal(result.summary.scoreEligible, 0);
+  assert.ok(result.records.every((record) => record.reviewStatus === "ai-label-reviewed" && record.labelProvenance === "independent-ai-review-v1"));
+  assert.ok(result.records.every((record) => record.aiLabels.length === 2 && record.humanLabels.length === 0));
+});
+
+test("AI submissions require explicit provenance and third-AI adjudication", () => {
+  assert.ok(validateAiReviewSubmission(packetA, submission(packetA, "untyped-ai")).issues.includes("reviewer-type-must-be-ai"));
+  const disagreeId = packetA.order[0];
+  const first = aiSubmission(packetA, "ai-a", () => "L3");
+  const second = aiSubmission(packetB, "ai-b", (itemId) => itemId === disagreeId ? "L4" : "L3");
+  const unresolved = reconcileIndependentAiReviews(corpus.records, [packetA, packetB], [first, second]);
+  assert.equal(unresolved.summary.unresolvedCount, 1);
+  const resolved = reconcileIndependentAiReviews(corpus.records, [packetA, packetB], [first, second], [{ itemId: disagreeId, reviewerId: "ai-c", reviewerType: "ai", level: "L4", confidence: "high", evidenceCodes: ["inference-load"] }]);
+  assert.equal(resolved.summary.unresolvedCount, 0);
+  assert.equal(resolved.summary.adjudicated, 1);
+  assert.equal(resolved.records.find((record) => record.id === disagreeId).aiLabels.at(-1).role, "adjudicator");
 });

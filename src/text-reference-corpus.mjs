@@ -2,6 +2,7 @@ export const TEXT_REFERENCE_CORPUS_VERSION = "reference-corpus-v0-2026.08.01";
 export const REFERENCE_TEXT_STATUSES = Object.freeze([
   "candidate-unreviewed",
   "source-reviewed",
+  "ai-label-reviewed",
   "label-reviewed",
   "feature-approved",
 ]);
@@ -66,4 +67,20 @@ export function corpusGateSummary(records) {
     levelCounts,
     targetReached: records.length >= 600 && results.every((result) => result.featureEligible),
   };
+}
+export function validateAiReviewedReferenceTextRecord(record) {
+  const issues = [];
+  if (!record?.id) issues.push("missing-id");
+  if (!record?.title) issues.push("missing-title");
+  if (!record?.source?.name) issues.push("missing-source-name");
+  if (!record?.source?.url && !record?.source?.localPath) issues.push("missing-source-location");
+  if (!record?.source?.licence) issues.push("missing-licence");
+  if (!record?.contentHash) issues.push("missing-content-hash");
+  if (!REFERENCE_TEXT_SPLITS.includes(record?.split)) issues.push("invalid-split");
+  if (record?.reviewStatus !== "ai-label-reviewed") issues.push("invalid-ai-review-status");
+  if (record?.labelProvenance !== "independent-ai-review-v1") issues.push("invalid-ai-label-provenance");
+  if (!Array.isArray(record?.aiLabels) || record.aiLabels.length < 2) issues.push("insufficient-ai-labels");
+  if (record?.aiLabels?.some((label) => label.reviewerType !== "ai")) issues.push("invalid-ai-label-type");
+  if (!record?.internalLevel || !/^L[1-6]$/.test(record.internalLevel)) issues.push("invalid-internal-level");
+  return { valid: issues.length === 0, calibrationEligible: issues.length === 0, scoringEligible: false, issues };
 }
