@@ -7,13 +7,17 @@ export const REFERENCE_TEXT_STATUSES = Object.freeze([
 ]);
 export const REFERENCE_TEXT_SPLITS = Object.freeze(["train", "validation", "holdout"]);
 
-function stableBucket(id) {
+function stableHash(id) {
   let hash = 2166136261;
   for (const character of id) {
     hash ^= character.charCodeAt(0);
     hash = Math.imul(hash, 16777619);
   }
-  return Math.abs(hash >>> 0) % 10;
+  return Math.abs(hash >>> 0);
+}
+
+function stableBucket(id) {
+  return stableHash(id) % 10;
 }
 
 export function referenceTextSplit(id) {
@@ -21,6 +25,16 @@ export function referenceTextSplit(id) {
   if (bucket < 7) return "train";
   if (bucket < 9) return "validation";
   return "holdout";
+}
+
+export function assignReferenceTextSplits(records, ratios = { train: 0.7, validation: 0.2 }) {
+  const ordered = [...records].sort((a, b) => stableHash(String(a.id)) - stableHash(String(b.id)) || String(a.id).localeCompare(String(b.id)));
+  const trainCount = Math.floor(ordered.length * ratios.train);
+  const validationCount = Math.floor(ordered.length * ratios.validation);
+  return ordered.map((record, index) => ({
+    ...record,
+    split: index < trainCount ? "train" : index < trainCount + validationCount ? "validation" : "holdout",
+  }));
 }
 
 export function validateReferenceTextRecord(record) {
