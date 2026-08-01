@@ -22,6 +22,8 @@ import {
   VOCABULARY_CAT_LIMITS, buildVocabularyPilotResult, buildVocabularyRoute,
   estimateVocabularyAbility, estimateVocabularyRoute, selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "./vocabulary-cat-engine.mjs";
+import { AssessmentPractice, type PracticeMode } from "./AssessmentPractice";
+import { createSessionSeed, shuffleWithSeed } from "./assessment-session-engine.mjs";
 import "./product.css";
 
 const lexicon = buildLearningLexicon(rawLexicon) as LexiconItem[];
@@ -263,26 +265,24 @@ function VocabularyResult({result,onRestart,onQuick,onBack}:{result:VocabularyTe
 function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningState;update:UpdateState;activeTest:boolean;setActiveTest:(active:boolean)=>void}) {
   const draft = state.vocabularyTestDraft;
   const latest = state.vocabularyTests.at(-1);
-  const [quickMode,setQuickMode] = useState(false);
-  const [quickIndex,setQuickIndex] = useState(0);
-  const [quickCorrect,setQuickCorrect] = useState(0);
+  const [practiceMode,setPracticeMode] = useState<PracticeMode | null>(null);
+
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
   const [showResult,setShowResult] = useState(false);
   const recentAnchorIds = useMemo(() => state.vocabularyTests.flatMap((result) => result.sampledAnchorIds ?? []).slice(-90), [state.vocabularyTests]);
-  useEffect(() => { if (!activeTest) { setQuickMode(false); setShowResult(false); } }, [activeTest]);
+  useEffect(() => { if (!activeTest) { setPracticeMode(null); setShowResult(false); } }, [activeTest]);
   useEffect(() => { if (state.vocabularyRouteResult) setRouteSnapshot(state.vocabularyRouteResult); }, [state.vocabularyRouteResult]);
-  const quickAnchor = vocabularyAnchors[(state.vocabularyTests.length * 17 + quickIndex) % vocabularyAnchors.length];
-  const startQuick = () => { setActiveTest(true); setQuickMode(true); setQuickIndex(0); setQuickCorrect(0); };
-  const answerQuick = (option:string) => {
-    if (option === quickAnchor.correctChinese) setQuickCorrect((value) => value + 1);
-    setQuickIndex((value) => value + 1);
+  const startPractice = (mode:PracticeMode) => {
+    setActiveTest(true);
+    setPracticeMode(mode);
+    setShowResult(false);
   };
   const start = (intent: "quick-route" | "vocabulary-cat" = "vocabulary-cat") => {
     setActiveTest(true);
-    setQuickMode(false);
+    setPracticeMode(null);
     setShowResult(false);
     setRouteSnapshot(null);
-    const attempt = state.vocabularyTests.length;
+    const attempt = createSessionSeed();
     const now = new Date().toISOString();
     if (intent === "quick-route") {
       const routeItems = buildVocabularyRoute(vocabularyAnchors,attempt);
@@ -354,12 +354,8 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     if (!next) { finish(draft,answers); return; }
     update({vocabularyTestDraft:{...draft,currentAnchorId:next.id,answers,presentedAt:now.toISOString()}});
   };
-  if (quickMode) {
-    const quickDone = quickIndex >= 20;
-    if (quickDone) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 · 不计入标准测试</div><h1>完成</h1><div className="test-intro compact"><IconCheck/><h2>{quickCorrect}/20</h2><p>这个结果只用于日常复习，不改变词族量级、CAT 结果或模拟 L 值。</p><button className="primary-button" onClick={() => { setQuickMode(false); setActiveTest(false); }}>返回测试入口<IconArrowLeft/></button></div></section>;
-    return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">中文释义快速自测 {quickIndex+1}/20 · 不计入标准测试</div><div className="test-word"><button className="round-button" onClick={() => speakEnglish(quickAnchor.term)} aria-label={`播放 ${quickAnchor.term} 的英语发音`}><IconVolume/></button><h1>{quickAnchor.term}</h1><p>{quickAnchor.frequencyBand}</p></div><div className="test-stage"><h2>选择最合适的中文意思</h2><div className="test-options">{quickAnchor.chineseOptions.map((option) => <button key={option} onClick={() => answerQuick(option)}>{option}</button>)}</div></div></section>;
-  }
-  if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={startQuick} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
+  if (practiceMode && activeTest) return <AssessmentPractice mode={practiceMode} lexicon={lexicon} anchors={vocabularyAnchors} curriculum={curriculum} speak={speakEnglish} onBack={() => { setPracticeMode(null); setActiveTest(false); }}/>;
+  if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={() => startPractice("daily")} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
   if (!activeTest) {
     const lastDate = latest ? new Date(latest.completedAt) : null;
     const daysSince = lastDate ? Math.floor((Date.now()-lastDate.getTime())/86_400_000) : null;
@@ -373,14 +369,14 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
           ? {eyebrow:"建议复测",title:"重新完成词汇量精测",time:"12–18 分钟",copy:"距离上次测评已超过 4 个月，重新确认当前层级",action:() => start("vocabulary-cat"),button:"重新精测"}
           : {eyebrow:"推荐",title:"继续词汇量精测",time:"12–18 分钟",copy:"英文语境题是当前正式计分主体",action:() => start("vocabulary-cat"),button:"开始精测"};
     const routeLabel = routeSnapshot ? (routeSnapshot.theta < -1.4 ? "1K–2K 起点" : routeSnapshot.theta < -.5 ? "2K–4K 起点" : "4K–5K 起点") : "";
-    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">当前 {vocabularyAnchors.length} 个已审核锚点进入正式词汇 CAT。阅读模拟 L 值将在文章题库通过门禁后开放。</p>
+    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">五种模式均从各自题池重新随机抽取；只有“继续上次测试”保留原题。阅读练习已开放，模拟 L 值仍等待文章双人标定。</p>
       <article className="assessment-recommendation"><div className="recommend-icon"><IconTargetArrow/></div><div><span>{recommendation.eyebrow}</span><h2>{recommendation.title}</h2><p>{recommendation.time} · {recommendation.copy}</p>{routeSnapshot && <small>{routeLabel} · 非词误认 {routeSnapshot.claimedPseudowords}/{routeSnapshot.pseudoTotal}</small>}</div><button className="primary-button" onClick={recommendation.action}>{recommendation.button}<IconArrowRight/></button></article>
       <div className="assessment-section-title"><h2>选择测试模式</h2><span>五种模式并列展示</span></div><div className="assessment-mode-grid">
         <button className="assessment-mode-card" onClick={() => start("quick-route")}><span className="mode-icon"><IconTargetArrow/></span><strong>快速定位</strong><em>3–5 分钟</em><small>Yes/No 路由＋非词检查<br/>快速确定 1K–5K 起点</small><b>开始定位<IconArrowRight/></b></button>
         <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>直接进入英文语境释义 CAT<br/>{vocabularyAnchors.length} 个已审核计分锚点</small><b>开始精测<IconArrowRight/></b></button>
-        <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>功能短文＋连续篇章 CAT<br/>决定内部模拟 L 值</small><b>题库建设中</b></button>
-        <button className="assessment-mode-card" onClick={startQuick}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
-        <button className="assessment-mode-card unavailable" disabled><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>完形填空与语境应用<br/>测量词汇实际运用</small><b>题库建设中</b></button>
+        <button className="assessment-mode-card" onClick={() => startPractice("reading")}><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>随机抽取 6 篇已审核课程文章<br/>24 道功能短文与连续篇章题</small><b>开始测评<IconArrowRight/></b></button>
+        <button className="assessment-mode-card" onClick={() => startPractice("daily")}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
+        <button className="assessment-mode-card" onClick={() => startPractice("context")}><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>随机抽取 20 道已审核例句完形<br/>独立于英中释义和词汇 CAT</small><b>开始练习<IconArrowRight/></b></button>
       </div>
       <div className="recent-assessment"><div><span>最近一次测评</span><strong>{latest ? "词汇量精测" : "尚无正式结果"}</strong>{latest && <small>{new Date(latest.completedAt).toLocaleDateString("zh-CN")}</small>}</div>{latest ? <><div><span>内部宽层级</span><strong>{latest.broadBand ?? "旧版结果"}</strong></div><div><span>可信度</span><strong>{latest.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => setShowResult(true)}>查看详情<IconArrowRight/></button></> : <p>完成词汇量精测后，这里显示层级、区间和可信度。</p>}</div>
     </section>;
@@ -392,7 +388,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   const anchor = draft.currentAnchorId ? vocabularyAnchorById.get(draft.currentAnchorId) : undefined;
   if (!anchor) return <section className="lesson-content"><div className="empty-state"><IconAlertTriangle/><strong>当前锚点不可用</strong><button className="primary-button" onClick={start}>重新开始</button></div></section>;
   const partLabel = ({noun:"名词",verb:"动词",adjective:"形容词",adverb:"副词"} as const)[anchor.partOfSpeech];
-  return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">英文语境释义 CAT · 已答 {draft.answers.length}/{VOCABULARY_CAT_LIMITS.maximumScoredQuestions} · 已自动保存</div><div className="test-progress" role="progressbar" aria-label="正式词汇测试进度" aria-valuemin={0} aria-valuemax={VOCABULARY_CAT_LIMITS.maximumScoredQuestions} aria-valuenow={draft.answers.length}><span style={{width:`${Math.min(100,draft.answers.length/VOCABULARY_CAT_LIMITS.maximumScoredQuestions*100)}%`}}/></div><div className="test-word contextual"><button className="round-button" onClick={() => speakEnglish(anchor.term)} aria-label={`播放 ${anchor.term} 的英语发音`}><IconVolume/></button><h1>{anchor.term}</h1><p>{partLabel}</p></div><blockquote className="anchor-context">{anchor.contextSentence}</blockquote><div className="test-stage"><h2>Which meaning best matches the word in this sentence?</h2><div className="test-options english-definitions">{anchor.definitionOptions.map((option) => <button key={option} onClick={() => recordCat(option)}>{option}</button>)}</div></div></section>;
+  return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">英文语境释义 CAT · 已答 {draft.answers.length}/{VOCABULARY_CAT_LIMITS.maximumScoredQuestions} · 已自动保存</div><div className="test-progress" role="progressbar" aria-label="正式词汇测试进度" aria-valuemin={0} aria-valuemax={VOCABULARY_CAT_LIMITS.maximumScoredQuestions} aria-valuenow={draft.answers.length}><span style={{width:`${Math.min(100,draft.answers.length/VOCABULARY_CAT_LIMITS.maximumScoredQuestions*100)}%`}}/></div><div className="test-word contextual"><button className="round-button" onClick={() => speakEnglish(anchor.term)} aria-label={`播放 ${anchor.term} 的英语发音`}><IconVolume/></button><h1>{anchor.term}</h1><p>{partLabel}</p></div><blockquote className="anchor-context">{anchor.contextSentence}</blockquote><div className="test-stage"><h2>Which meaning best matches the word in this sentence?</h2><div className="test-options english-definitions">{shuffleWithSeed(anchor.definitionOptions,draft.attempt+draft.answers.length*257).map((option) => <button key={option} onClick={() => recordCat(option)}>{option}</button>)}</div></div></section>;
 }
 
 function SentenceLab({state,update,done}:{state:LearningState;update:UpdateState;done:()=>void}) {

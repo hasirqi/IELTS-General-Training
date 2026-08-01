@@ -142,6 +142,15 @@ function itemInformation(anchor, theta) {
   return (anchor.discrimination ** 2) * probability * (1 - probability);
 }
 
+function seededUnit(value) {
+  let hash = 2166136261;
+  for (const character of String(value)) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) / 4294967296;
+}
+
 export function selectNextVocabularyAnchor(bank, answers, theta, attempt = 0, options = {}) {
   const used = new Set([
     ...answers.map((answer) => answer.anchorId),
@@ -166,7 +175,7 @@ export function selectNextVocabularyAnchor(bank, answers, theta, attempt = 0, op
   if (!eligible.length) return null;
   return eligible.map((anchor) => ({
     anchor,
-    score: itemInformation(anchor, theta) - Math.abs(anchor.difficulty - theta) * 0.015 + (((anchor.frequencyRank + attempt * 31) % 97) / 1_000_000),
+    score: itemInformation(anchor, theta) - Math.abs(anchor.difficulty - theta) * 0.015 + seededUnit(`${attempt}:${answers.length}:${anchor.id}`) * 0.02,
   })).sort((a, b) => b.score - a.score || a.anchor.id.localeCompare(b.anchor.id))[0].anchor;
 }
 

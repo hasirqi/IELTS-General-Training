@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 const app = fs.readFileSync(new URL("../src/AppProduct.tsx", import.meta.url), "utf8").replace(/\r\n/g, "\n");
+const practice = fs.readFileSync(new URL("../src/AssessmentPractice.tsx", import.meta.url), "utf8").replace(/\r\n/g, "\n");
 
 test("entering the test center always shows the five-mode landing page", () => {
   assert.ok(app.includes("const [vocabularyTestActive, setVocabularyTestActive] = useState(false)"));
@@ -19,7 +20,7 @@ test("an unfinished local draft is offered as an explicit resume choice", () => 
 });
 
 test("starting a mode enters its task while quick routing returns to the center", () => {
-  assert.ok(app.includes("setActiveTest(true);\n    setQuickMode(false)"));
+  assert.ok(app.includes("setActiveTest(true);\n    setPracticeMode(null)"));
   assert.ok(app.includes("setRouteSnapshot(routeEstimate);\n    setActiveTest(false)"));
   assert.ok(app.includes("setShowResult(false); setActiveTest(false);"));
 });
@@ -30,7 +31,7 @@ test("back from an active test returns to the five-mode center before home", () 
   assert.ok(app.includes('view === "vocabulary-test" && vocabularyTestActive'));
   assert.ok(app.includes("setVocabularyTestActive(false); return;"));
   assert.ok(app.includes("activeTest={vocabularyTestActive} setActiveTest={setVocabularyTestActive}"));
-  assert.ok(app.includes("if (!activeTest) { setQuickMode(false); setShowResult(false); }"));
+  assert.ok(app.includes("if (!activeTest) { setPracticeMode(null); setShowResult(false); }"));
   assert.ok(app.includes('? "返回测试中心" : "返回首页"'));
 });
 
@@ -43,9 +44,11 @@ test("precision CAT starts with scored context items instead of repeating the Ye
 });
 
 
-test("daily Chinese quick check advances immediately without feedback delay or a next button", () => {
-  assert.ok(app.includes("setQuickIndex((value) => value + 1)"));
-  assert.ok(!app.includes("quickAdvanceTimer"));
-  assert.ok(!app.includes("已记录，自动进入下一题"));
-  assert.ok(!app.includes('quickChoice && <button className="primary-button"'));
+test("all three fixed-length practice modes advance immediately without a next button", () => {
+  assert.ok(app.includes('startPractice("daily")'));
+  assert.ok(app.includes('startPractice("reading")'));
+  assert.ok(app.includes('startPractice("context")'));
+  assert.ok(practice.includes("setIndex((value) => value + 1)"));
+  assert.ok(!practice.includes("quickAdvanceTimer"));
+  assert.ok(!practice.includes(">下一题<"));
 });

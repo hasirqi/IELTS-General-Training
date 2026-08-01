@@ -21,3 +21,12 @@
 .assessment-recommendation{padding:20px 24px;gap:20px}.recommend-icon{width:54px;height:54px}.recommend-icon svg{width:26px;height:26px}.assessment-recommendation h2{font-size:1.65rem}.assessment-mode-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.assessment-mode-card{display:grid;grid-template-columns:50px 1fr auto;grid-template-rows:auto auto 1fr auto;column-gap:15px;min-height:176px;padding:20px}.assessment-mode-card .mode-icon{grid-column:1;grid-row:1/3;margin:0;width:46px;height:46px}.assessment-mode-card>strong{grid-column:2;grid-row:1}.assessment-mode-card>em{grid-column:3;grid-row:1;margin:2px 0 0;white-space:nowrap}.assessment-mode-card>small{grid-column:2/4;grid-row:2/4;margin-top:8px}.assessment-mode-card>b{grid-column:2/4;grid-row:4}.assessment-mode-card.featured{border-top-width:1px;border-left:3px solid var(--teal)}
 @media(max-width:1050px){.assessment-mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.assessment-mode-card{min-height:176px}}
 @media(max-width:700px){.assessment-mode-grid{grid-template-columns:1fr}.assessment-mode-card{min-height:168px}}
+
+/* Randomized assessment sessions */
+.assessment-practice-page{width:min(900px,100%)}
+.assessment-passage{margin:28px 0 20px;padding:24px 28px;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;background:var(--paper);line-height:1.75}
+.assessment-passage>span{display:block;margin-bottom:14px;color:var(--teal);font-size:.82rem;font-weight:800;letter-spacing:.04em}
+.assessment-passage p{margin:0 0 12px}.assessment-passage p:last-child{margin-bottom:0}
+.assessment-context{margin:16px 0 22px;padding:18px 20px;border-left:3px solid var(--teal);background:var(--teal-pale);font-family:var(--display);font-size:1.15rem;line-height:1.65}
+.practice-profile{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}.practice-profile span{padding:8px 12px;border-radius:999px;background:var(--teal-pale);color:var(--teal-dark);font-weight:700}
+@media(max-width:700px){.assessment-passage{padding:18px}.assessment-context{padding:15px 16px}}

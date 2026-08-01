@@ -15,6 +15,6 @@ test("PWA checks for updates and reloads once when a new worker takes control", 
 
 test("the latest reviewed anchor count is visible on home and in the test center", () => {
   assert.ok(app.includes('subtitle:`${vocabularyAnchors.length} 个已审核锚点，自适应定位`'));
-  assert.ok(app.includes("当前 {vocabularyAnchors.length} 个已审核锚点进入正式词汇 CAT"));
   assert.ok(app.includes("{vocabularyAnchors.length} 个已审核计分锚点"));
+  assert.ok(app.includes("五种模式均从各自题池重新随机抽取"));
 });
