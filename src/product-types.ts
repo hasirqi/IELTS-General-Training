@@ -1,6 +1,7 @@
 export type View = "home" | "review" | "words" | "vocabulary-study" | "vocabulary-test" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors";
 export type Skill = "listening" | "reading" | "writing" | "speaking";
 export type MasteryAspect = "form" | "meaning" | "use";
+export type ReadingWeaknessCategory = "vocabulary" | "sentence" | "locating" | "inference" | "mainIdea";
 export type VocabularyStudyMode = "order" | "weak" | "random";
 
 export type LexiconProgress = {
@@ -26,6 +27,9 @@ export type LearningError = {
   expected: string;
   createdAt: string;
   resolvedAt?: string;
+  source?: "vocabulary-cat" | "reading-cat";
+  readingCategory?: ReadingWeaknessCategory;
+  passageId?: string;
 };
 
 export type VocabularyStudyState = {
@@ -126,7 +130,7 @@ export type VocabularyTestDraft = {
 };
 
 export type ReadingAssessmentAnswer = {
-  questionId: string; passageId: string; kind: "functional" | "continuous"; level: number; selectedOption: string; correct: boolean; difficulty: number; discrimination: number; optionCount: number; responseMs: number;
+  questionId: string; passageId: string; kind: "functional" | "continuous"; level: number; weaknessCategory: ReadingWeaknessCategory; selectedOption: string; correct: boolean; difficulty: number; discrimination: number; optionCount: number; responseMs: number;
 };
 
 export type ReadingAssessmentDraft = {
@@ -134,7 +138,7 @@ export type ReadingAssessmentDraft = {
 };
 
 export type ReadingAssessmentResult = {
-  id: string; mode: "reading-cat-v1"; startedAt: string; completedAt: string; engineVersion: string; bankVersion: string; sampleSize: number; passageCount: number; correctCount: number; theta: number; standardError: number; internalReadingValue: number; interval: {low:number;high:number}; internalLevel: string; confidence: {label:string;reasons:string[]}; profile: Record<string,{correct:number;total:number}>; levelProfile: Record<string,{correct:number;total:number}>; sampledPassageIds: string[]; experimental: true; official: false;
+  id: string; mode: "reading-cat-v1"; startedAt: string; completedAt: string; engineVersion: string; bankVersion: string; sampleSize: number; passageCount: number; correctCount: number; theta: number; standardError: number; internalReadingValue: number; interval: {low:number;high:number}; internalLevel: string; confidence: {label:string;reasons:string[]}; profile: Record<string,{correct:number;total:number}>; levelProfile: Record<string,{correct:number;total:number}>; sampledPassageIds: string[]; weaknessProfile?: Record<ReadingWeaknessCategory,{correct:number;total:number;wrong:number}>; wrongQuestionIds?: string[]; experimental: true; official: false;
 };
 
 

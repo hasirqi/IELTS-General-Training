@@ -11,7 +11,6 @@ import rawVocabularyCalibration from "./content/vocabulary-calibration-current.j
 import rawReadingDifficulty from "./content/reading-course-difficulty-v1.json";
 import { buildLearningLexicon, lexiconQuality } from "./content/lexicon-content.mjs";
 import { curriculum, skillMeta, type CourseLesson } from "./content/course-bank";
-import { roadmapWeeks } from "./content/roadmap";
 import { sentenceChallenges } from "./content/sentence-challenges";
 import { speakingDrills } from "./content/speaking-drills";
 import {
@@ -28,6 +27,8 @@ import {
 } from "./vocabulary-cat-engine.mjs";
 import { AssessmentPractice, type PracticeMode } from "./AssessmentPractice";
 import { ReadingAssessmentCat } from "./ReadingAssessmentCat";
+import { AbilityProfile } from "./AbilityProfile";
+import { READING_WEAKNESS_META } from "./ability-profile.mjs";
 import { createSessionSeed, shuffleWithSeed } from "./assessment-session-engine.mjs";
 import "./product.css";
 import "./reading-difficulty.css";
@@ -52,6 +53,8 @@ type ReadingDifficultyRecord = {
 const readingDifficultyById = new Map((rawReadingDifficulty.records as ReadingDifficultyRecord[]).map((record) => [record.lessonId, record]));
 const readingLevelNumber = (level: string) => Number(level.replace("L", "")) || 3;
 function inferReadingTarget(state: LearningState) {
+  const latestReading = state.readingAssessments.at(-1);
+  if (latestReading) return { level: readingLevelNumber(latestReading.internalLevel), source: `按最近阅读 CAT ${latestReading.internalLevel} 推荐` };
   const latest = state.vocabularyTests.at(-1);
   if (latest?.vocabulary?.value) {
     const value = latest.vocabulary.value;
@@ -151,7 +154,7 @@ export function App() {
         {view === "speak" && <QuickSpeak state={state} update={update} onCoach={openChat} done={() => completeStep(3)}/>}
         {view === "courses" && <CourseHub state={state} update={update} initialSkill={courseSkill} onCoach={openChat}/>}
         {view === "library" && <Library/>}
-        {view === "progress" && <Progress state={state}/>}
+        {view === "progress" && <AbilityProfile state={state} onOpenReading={() => { setCourseSkill("reading"); setView("courses"); }}/>}
         {view === "errors" && <Errors state={state}/>}
       </Shell>}
   </div>;
@@ -173,7 +176,7 @@ function Home({state,dueCount,onOpen,onOpenCourse,onReset}:{state:LearningState;
       <div className="foundation-grid">{steps.map((step, index) => { const Icon = step.icon; const done = step.completeKey !== null && state.completedSteps.includes(step.completeKey); return <button key={step.title} onClick={() => onOpen(step.view)}><span className={done ? "foundation-icon done" : "foundation-icon"}>{done ? <IconCheck size={22}/> : <Icon size={25}/>}</span><span><strong>{step.title}</strong><small>{step.subtitle}</small></span><IconArrowRight className="foundation-arrow" size={18}/></button>; })}</div>
     </section>
     <section className="review-strip"><div className="review-count"><IconClipboardText/><span>待复习<span className="review-number"><strong>{dueCount}</strong><small>个</small></span></span></div><div><strong>到期再复习，错词一定回来。</strong><p>不是固定天数，系统会根据正确率和遗忘情况调整。</p></div><button className="outline-button" onClick={() => onOpen("review")}>去复习<IconArrowRight/></button></section>
-    <footer className="home-footer"><button onClick={() => onOpen("progress")}><IconTargetArrow/>能力进度</button><button onClick={() => onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
+    <footer className="home-footer"><button onClick={() => onOpen("progress")}><IconTargetArrow/>能力结果</button><button onClick={() => onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
   </main>;
 }
 
@@ -182,7 +185,7 @@ function GlobalHeader({onHome,onLibrary,onChat}:{onHome:()=>void;onLibrary:()=>v
 }
 
 function Shell({view,back,backLabel,progress,children}:{view:View;back:()=>void;backLabel:string;progress:number;children:React.ReactNode}) {
-  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力进度",errors:"错因档案"};
+  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力结果",errors:"错因档案"};
   return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label={backLabel}><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
 }
 
@@ -353,8 +356,10 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
         progress[item.id] = introduceLexiconItem(progress[item.id],item.id,{confidence:answer.correct?5:1,supportsUse:false});
         if (!answer.correct && !errors.some((error) => error.lexiconId === item.id && !error.resolvedAt)) errors.push({id:crypto.randomUUID(),lexiconId:item.id,aspect:"meaning",prompt:`英文语境释义：${item.term}`,answer:answer.selectedOption,expected:item.meaning,createdAt:now});
       }
+      const wrongReviewIds=[...new Set(answers.filter(answer=>!answer.correct).map(answer=>answer.lexiconId))];
+      const reviewIds=[...current.dailyPlan.reviewIds];for(const id of wrongReviewIds)if(!reviewIds.includes(id))reviewIds.push(id);
       const measurementSession=createMeasurementSession({participantId:current.measurementParticipantId,assessment:"vocabulary-cat",startedAt:currentDraft.startedAt,completedAt:now,engineVersion:result.engineVersion??"unknown",bankVersion:result.anchorBankVersion??"unknown",responses:answers.map(answer=>({itemId:answer.anchorId,correct:answer.correct,responseMs:answer.responseMs,difficulty:answer.difficulty,discrimination:answer.discrimination,guessing:answer.guessing,contentVersion:answer.anchorBankVersion,frequencyBand:answer.frequencyBand}))});
-      return {...current,lexiconProgress:progress,errorLog:errors,vocabularyTestDraft:null,vocabularyTests:[...current.vocabularyTests,result].slice(-20),measurementSessions:mergeMeasurementSessions(current.measurementSessions,[measurementSession]),lastStudied:now};
+      return {...current,lexiconProgress:progress,errorLog:errors,dailyPlan:{...current.dailyPlan,reviewIds},vocabularyTestDraft:null,vocabularyTests:[...current.vocabularyTests,result].slice(-20),measurementSessions:mergeMeasurementSessions(current.measurementSessions,[measurementSession]),lastStudied:now};
     });
   };
   const recordRoute = (recognized:boolean) => {
@@ -592,16 +597,7 @@ function Library() {
   return <section className="lesson-content library-page"><div className="lesson-kicker">全部 {lexicon.length.toLocaleString()} 条均进入学习顺序 · 用法内容分批人工验收</div><h1>离线词库</h1><div className="library-quality"><div><strong>{quality.verified}</strong><span>条形·义·用已审核</span></div><div><strong>{quality.coreOnly}</strong><span>条当前只练形·义</span></div></div><div className="library-tools expanded"><label className="search-field"><span className="sr-only">搜索词库</span><IconSearch/><input aria-label="搜索英文或中文" value={query} onChange={(event) => resetPage(setQuery,event.target.value)} placeholder="搜英文或中文"/></label><label><span>类型</span><select aria-label="按词条类型筛选" value={kind} onChange={(event) => resetPage(setKind,event.target.value)}><option value="all">全部类型</option><option value="chunk">词块 {lexicon.filter((item) => item.kind === "chunk").length}</option><option value="word">单词 {lexicon.filter((item) => item.kind === "word").length}</option></select></label><label><span>内容状态</span><select aria-label="按内容审核状态筛选" value={status} onChange={(event) => resetPage(setStatus,event.target.value)}><option value="all">全部状态</option><option value="verified">形·义·用已审核</option><option value="core-only">当前只练形·义</option></select></label></div><p className="result-count">找到 {filtered.length} 条 · 第 {current}/{pages} 页 · 本页 {list.length} 条</p><div className="lexicon-grid">{list.map((item,index) => <article key={item.id}><div><em>#{(current-1)*PAGE_SIZE+index+1} · {item.kind==="chunk"?"词块":"单词"}</em><button onClick={() => speakEnglish(item.term)} aria-label={`播放 ${item.term} 的英语发音`} title={`播放 ${item.term}`}><IconVolume/></button></div><div className={`mini-status ${item.contentStatus}`}>{item.contentStatus === "verified" ? "用法已审核" : "核心义"}</div><h2>{item.term}</h2><small>{item.phonetic}</small><p>{item.meaning}</p>{item.example && <div className="study-example"><div><span>例句</span><button type="button" className="round-button" onClick={() => speakEnglish(item.example!)} aria-label="播放例句"><IconVolume/></button></div><blockquote>{item.example}</blockquote></div>}</article>)}</div><nav className="library-pagination" aria-label="词库分页"><button disabled={current===1} onClick={() => go(current-1)}><IconArrowLeft/>上一页</button><span>第 <strong>{current}</strong> 页，共 {pages} 页</span><button disabled={current===pages} onClick={() => go(current+1)}>下一页<IconArrowRight/></button></nav></section>;
 }
 
-function Progress({state}:{state:LearningState}) {
-  const stats = masteryStats(state.lexiconProgress);
-  const accuracy = state.attempts ? Math.round(state.correct/state.attempts*100) : 0;
-  const week = Math.min(36,Math.max(1,Math.floor(state.nextLexiconIndex/(lexicon.length/36))+1));
-  const roadmap = roadmapWeeks[week-1];
-  const total = curriculum.length;
-  return <section className="lesson-content progress-page"><div className="lesson-kicker">能力地图 · 只使用真实训练数据</div><h1>当前学习进度</h1><div className="roadmap-current"><span>36 周路线 · 第 {week} 周</span><strong>{roadmap.theme}</strong><p>{roadmap.stage} · {roadmap.skillFocus}</p></div><div className="skill-list">{Object.entries(state.skill).map(([name,value]) => <div key={name}><span>{({listening:"听力",reading:"阅读",writing:"写作",speaking:"口语"} as Record<string,string>)[name]}</span><progress max="6" value={value}/><strong>{value.toFixed(1)}</strong></div>)}</div><div className="metrics expanded"><div><span>词库已接触</span><strong>{stats.introduced}/{lexicon.length}</strong></div><div><span>综合掌握</span><strong>{stats.average}%</strong></div><div><span>回忆正确率</span><strong>{accuracy}%</strong></div><div><span>课程完成</span><strong>{state.completedLessons.length}/{total}</strong></div></div></section>;
-}
-
 function Errors({state}:{state:LearningState}) {
   const unresolved = state.errorLog.filter((error) => !error.resolvedAt);
-  return <section className="lesson-content errors-page"><div className="lesson-kicker">错误不是污点，是下一步路线</div><h1>错因档案</h1>{!unresolved.length ? <div className="empty-state"><IconBrain/><strong>当前没有未解决错题</strong><p>答错的词会进入复习计划；答对后自动标记解决。</p></div> : <div className="error-list">{unresolved.slice().reverse().map((error) => <div key={error.id}><span>{error.aspect?`${aspectName(error.aspect)} · `:""}{error.prompt}</span><p>你的答案：{error.answer||"未作答"}</p><strong>正确答案：{error.expected}</strong></div>)}</div>}</section>;
+  return <section className="lesson-content errors-page"><div className="lesson-kicker">错误不是污点，是下一步路线</div><h1>错因档案</h1>{!unresolved.length ? <div className="empty-state"><IconBrain/><strong>当前没有未解决错题</strong><p>答错的词会进入复习计划；答对后自动标记解决。</p></div> : <div className="error-list">{unresolved.slice().reverse().map((error) => <div key={error.id}><span>{error.readingCategory?`${READING_WEAKNESS_META[error.readingCategory].label} · `:error.aspect?`${aspectName(error.aspect)} · `:""}{error.prompt}</span><p>你的答案：{error.answer||"未作答"}</p><strong>正确答案：{error.expected}</strong>{error.readingCategory&&<small>对应训练：{READING_WEAKNESS_META[error.readingCategory].training}</small>}</div>)}</div>}</section>;
 }
