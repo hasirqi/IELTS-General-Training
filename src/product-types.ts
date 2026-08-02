@@ -125,8 +125,20 @@ export type VocabularyTestDraft = {
   attempt: number;
 };
 
+export type ReadingAssessmentAnswer = {
+  questionId: string; passageId: string; kind: "functional" | "continuous"; level: number; selectedOption: string; correct: boolean; difficulty: number; discrimination: number; optionCount: number; responseMs: number;
+};
+
+export type ReadingAssessmentDraft = {
+  mode: "reading-cat-v1"; currentPassageId: string; questionIndex: number; answers: ReadingAssessmentAnswer[]; initialTheta: number; startedAt: string; presentedAt: string; seed: number;
+};
+
+export type ReadingAssessmentResult = {
+  id: string; mode: "reading-cat-v1"; startedAt: string; completedAt: string; engineVersion: string; bankVersion: string; sampleSize: number; passageCount: number; correctCount: number; theta: number; standardError: number; internalReadingValue: number; interval: {low:number;high:number}; internalLevel: string; confidence: {label:string;reasons:string[]}; profile: Record<string,{correct:number;total:number}>; levelProfile: Record<string,{correct:number;total:number}>; sampledPassageIds: string[]; experimental: true; official: false;
+};
+
 export type LearningState = {
-  schemaVersion: 5;
+  schemaVersion: 6;
   completedSteps: number[];
   completedLessons: string[];
   reviewIndex: number;
@@ -145,6 +157,8 @@ export type LearningState = {
   vocabularyTestDraft: VocabularyTestDraft | null;
   vocabularyRouteResult: VocabularyRouteResult | null;
   vocabularyTests: VocabularyTestResult[];
+  readingAssessmentDraft: ReadingAssessmentDraft | null;
+  readingAssessments: ReadingAssessmentResult[];
 };
 
 export type LexiconItem = {

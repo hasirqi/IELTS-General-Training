@@ -2,7 +2,7 @@ import { openDB } from "idb";
 import type { LearningState } from "./product-types";
 
 const initialState: LearningState = {
-  schemaVersion: 5,
+  schemaVersion: 6,
   completedSteps: [],
   completedLessons: [],
   reviewIndex: 0,
@@ -21,6 +21,8 @@ const initialState: LearningState = {
   vocabularyTestDraft: null,
   vocabularyRouteResult: null,
   vocabularyTests: [],
+  readingAssessmentDraft: null,
+  readingAssessments: [],
 };
 
 const dbPromise = openDB("breakthrough-ielts", 2, {
@@ -35,7 +37,7 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
   return {
     ...structuredClone(initialState),
     ...(saved ?? {}),
-    schemaVersion: 5,
+    schemaVersion: 6,
     skill: { ...initialState.skill, ...(saved?.skill ?? {}) },
     completedSteps: saved?.completedSteps ?? [],
     completedLessons: saved?.completedLessons ?? [],
@@ -49,6 +51,8 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     vocabularyTestDraft: compatibleDraft,
     vocabularyRouteResult: saved?.vocabularyRouteResult ?? null,
     vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result || result.mode === "adaptive-v1" || result.mode === "adaptive-v2"),
+    readingAssessmentDraft: saved?.readingAssessmentDraft?.mode === "reading-cat-v1" ? saved.readingAssessmentDraft : null,
+    readingAssessments: (saved?.readingAssessments ?? []).filter((result) => result.mode === "reading-cat-v1" && result.experimental === true && result.official === false),
   };
 }
 

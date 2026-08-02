@@ -24,6 +24,7 @@ import {
   estimateVocabularyAbility, estimateVocabularyRoute, selectNextVocabularyAnchor, shouldStopVocabularyCat,
 } from "./vocabulary-cat-engine.mjs";
 import { AssessmentPractice, type PracticeMode } from "./AssessmentPractice";
+import { ReadingAssessmentCat } from "./ReadingAssessmentCat";
 import { createSessionSeed, shuffleWithSeed } from "./assessment-session-engine.mjs";
 import "./product.css";
 import "./reading-difficulty.css";
@@ -289,6 +290,8 @@ function VocabularyResult({result,onRestart,onQuick,onBack}:{result:VocabularyTe
 function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningState;update:UpdateState;activeTest:boolean;setActiveTest:(active:boolean)=>void}) {
   const draft = state.vocabularyTestDraft;
   const latest = state.vocabularyTests.at(-1);
+  const readingDraft = state.readingAssessmentDraft;
+  const latestReading = state.readingAssessments.at(-1);
   const [practiceMode,setPracticeMode] = useState<PracticeMode | null>(null);
 
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
@@ -378,6 +381,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
     if (!next) { finish(draft,answers); return; }
     update({vocabularyTestDraft:{...draft,currentAnchorId:next.id,answers,presentedAt:now.toISOString()}});
   };
+  if (practiceMode === "reading" && activeTest) return <ReadingAssessmentCat state={state} update={update} onBack={() => { setPracticeMode(null); setActiveTest(false); }}/>;
   if (practiceMode && activeTest) return <AssessmentPractice mode={practiceMode} lexicon={lexicon} anchors={vocabularyAnchors} curriculum={curriculum} speak={speakEnglish} onBack={() => { setPracticeMode(null); setActiveTest(false); }}/>;
   if (!draft && showResult && latest) return <section className="lesson-content vocabulary-test-page"><div className="lesson-kicker">测试中心 · 本次结果</div><h1>词汇量精测</h1><VocabularyResult result={latest} onRestart={() => start("vocabulary-cat")} onQuick={() => startPractice("daily")} onBack={() => { setShowResult(false); setActiveTest(false); }}/></section>;
   if (!activeTest) {
@@ -393,16 +397,16 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
           ? {eyebrow:"建议复测",title:"重新完成词汇量精测",time:"12–18 分钟",copy:"距离上次测评已超过 4 个月，重新确认当前层级",action:() => start("vocabulary-cat"),button:"重新精测"}
           : {eyebrow:"推荐",title:"继续词汇量精测",time:"12–18 分钟",copy:"英文语境题是当前正式计分主体",action:() => start("vocabulary-cat"),button:"开始精测"};
     const routeLabel = routeSnapshot ? (routeSnapshot.theta < -1.4 ? "1K–2K 起点" : routeSnapshot.theta < -.5 ? "2K–4K 起点" : "4K–5K 起点") : "";
-    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">五种模式均从各自题池重新随机抽取；只有“继续上次测试”保留原题。阅读练习已开放，模拟 L 值仍等待文章双人标定。</p>
+    return <section className="lesson-content vocabulary-test-page assessment-center"><div className="lesson-kicker">内部学习测量 · 所有结果仅用于个人学习</div><p className="assessment-lead">五种模式均从各自题池重新随机抽取；只有“继续上次测试”保留原题。阅读CAT使用110篇原创独立文章和720道客观题，结果为内部实验值。</p>
       <article className="assessment-recommendation"><div className="recommend-icon"><IconTargetArrow/></div><div><span>{recommendation.eyebrow}</span><h2>{recommendation.title}</h2><p>{recommendation.time} · {recommendation.copy}</p>{routeSnapshot && <small>{routeLabel} · 非词误认 {routeSnapshot.claimedPseudowords}/{routeSnapshot.pseudoTotal}</small>}</div><button className="primary-button" onClick={recommendation.action}>{recommendation.button}<IconArrowRight/></button></article>
       <div className="assessment-section-title"><h2>选择测试模式</h2><span>五种模式并列展示</span></div><div className="assessment-mode-grid">
         <button className="assessment-mode-card" onClick={() => start("quick-route")}><span className="mode-icon"><IconTargetArrow/></span><strong>快速定位</strong><em>3–5 分钟</em><small>Yes/No 路由＋非词检查<br/>快速确定 1K–5K 起点</small><b>开始定位<IconArrowRight/></b></button>
         <button className="assessment-mode-card featured" onClick={() => start("vocabulary-cat")}><span className="mode-icon"><IconBrain/></span><strong>词汇量精测</strong><em>12–18 分钟</em><small>直接进入英文语境释义 CAT<br/>{vocabularyAnchors.length} 个已审核计分锚点</small><b>开始精测<IconArrowRight/></b></button>
-        <button className="assessment-mode-card" onClick={() => startPractice("reading")}><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>随机抽取 6 篇已审核课程文章<br/>24 道功能短文与连续篇章题</small><b>开始测评<IconArrowRight/></b></button>
+        <button className="assessment-mode-card" onClick={() => startPractice("reading")}><span className="mode-icon"><IconLibrary/></span><strong>阅读能力测评</strong><em>20–30 分钟</em><small>{readingDraft ? `上次已答 ${readingDraft.answers?.length ?? 0} 题，可继续` : "110篇独立文章＋720道客观题"}<br/>按整篇文章自适应选文</small><b>{readingDraft ? "继续测评" : "开始测评"}<IconArrowRight/></b></button>
         <button className="assessment-mode-card" onClick={() => startPractice("daily")}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
         <button className="assessment-mode-card" onClick={() => startPractice("context")}><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>随机抽取 20 道已审核例句完形<br/>独立于英中释义和词汇 CAT</small><b>开始练习<IconArrowRight/></b></button>
       </div>
-      <div className="recent-assessment"><div><span>最近一次测评</span><strong>{latest ? "词汇量精测" : "尚无正式结果"}</strong>{latest && <small>{new Date(latest.completedAt).toLocaleDateString("zh-CN")}</small>}</div>{latest ? <><div><span>内部宽层级</span><strong>{latest.broadBand ?? "旧版结果"}</strong></div><div><span>可信度</span><strong>{latest.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => setShowResult(true)}>查看详情<IconArrowRight/></button></> : <p>完成词汇量精测后，这里显示层级、区间和可信度。</p>}</div>
+      <div className="recent-assessment"><div><span>最近一次测评</span><strong>{latest ? "词汇量精测" : "尚无正式结果"}</strong>{latest && <small>{new Date(latest.completedAt).toLocaleDateString("zh-CN")}</small>}</div>{latest ? <><div><span>内部宽层级</span><strong>{latest.broadBand ?? "旧版结果"}</strong></div><div><span>可信度</span><strong>{latest.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => setShowResult(true)}>查看详情<IconArrowRight/></button></> : <p>完成词汇量精测后，这里显示层级、区间和可信度。</p>}</div>{latestReading && <div className="recent-assessment reading-recent"><div><span>最近阅读测评</span><strong>{latestReading.internalReadingValue}L · {latestReading.internalLevel}</strong><small>内部实验值</small></div><div><span>文章与题量</span><strong>{latestReading.passageCount}篇 · {latestReading.sampleSize}题</strong></div><div><span>可信度</span><strong>{latestReading.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => startPractice("reading")}>查看详情<IconArrowRight/></button></div>}
     </section>;
   }
   if (draft.phase === "route") {
