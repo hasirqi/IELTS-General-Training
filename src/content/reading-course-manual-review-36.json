@@ -1,0 +1,866 @@
+{
+  "version": "reading-course-manual-review-36-2026.08.02",
+  "sourceDifficultyVersion": "reading-course-difficulty-v1-2026.08.02",
+  "reviewType": "AI-assisted item-by-item desk review; not human participant calibration",
+  "status": "reviewed-for-internal-experimental-display",
+  "count": 36,
+  "perLevel": {
+    "L1": 6,
+    "L2": 6,
+    "L3": 6,
+    "L4": 6,
+    "L5": 6,
+    "L6": 6
+  },
+  "l4l5BoundaryCount": 12,
+  "reviewRounds": 2,
+  "firstPassFindings": [
+    {
+      "lessonIds": [
+        "r100",
+        "r108"
+      ],
+      "issue": "Advanced Section 3 texts were suppressed by reference-corpus distribution shift and low family coverage.",
+      "correction": "Add auditable GT section and 1K-2K coverage calibration."
+    },
+    {
+      "lessonIds": [
+        "r35",
+        "r101"
+      ],
+      "issue": "Functional Section 1 texts could be inflated by long sentences or rare domain terms.",
+      "correction": "Use a Section 1 ceiling while retaining raw model scores."
+    }
+  ],
+  "finalValidation": {
+    "sixLevelsRepresented": true,
+    "sectionMeanProgression": true,
+    "unresolvedSevereInversions": 0
+  },
+  "records": [
+    {
+      "lessonId": "r2",
+      "title": "公寓租赁广告",
+      "section": "Section 1",
+      "modelScore": 2.121,
+      "calibratedScore": 1.721,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 64,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.902,
+        "longestSentenceWords": 11,
+        "obstacles": [
+          "detail-tracking"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "BRIGHT ROOM IN SHARED FLAT — £620 per month, including water and internet. Electricity is separate. Ten minutes by bus from the city centre. Available from 1 September. The room is fully furnished and has a private desk. No smoking and no pets. A deposit equal to one month's rent is required. Minimum stay: six months. Viewings are available on Tuesday and Thursday evenings."
+    },
+    {
+      "lessonId": "r43",
+      "title": "社区活动室租用规则",
+      "section": "Section 1",
+      "modelScore": 2.262,
+      "calibratedScore": 2.012,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 85,
+        "indexedCoverage": 0.988,
+        "highFrequency1K2K": 0.78,
+        "longestSentenceWords": 15,
+        "obstacles": [
+          "low-frequency"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "COMMUNITY ROOM HIRE\nRoom A holds 30 people and Room B holds 55. A refundable £80 deposit is required for either room. Hirers may enter 45 minutes before the booked start time to arrange furniture. Decorations must use the removable hooks provided; tape and pins are prohibited. Cold food may be brought in, but hot-food suppliers must provide an insurance certificate. Cancel at least seven days ahead for a full fee refund. The deposit is returned after staff check the room for damage and cleaning."
+    },
+    {
+      "lessonId": "r125",
+      "title": "社区法律咨询预约规则",
+      "section": "Section 1",
+      "modelScore": 2.365,
+      "calibratedScore": 2.115,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 103,
+        "indexedCoverage": 0.981,
+        "highFrequency1K2K": 0.788,
+        "longestSentenceWords": 15,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "COMMUNITY LEGAL CLINIC\nThe clinic offers one free thirty-minute appointment for housing, employment or consumer problems. It cannot represent clients in court or prepare immigration applications. Book online or by telephone. Bring contracts, letters and a short chronology; do not overfill the form with unrelated history. If you need an interpreter, request one at least three working days ahead. Cancel by noon on the previous working day so another person can use the slot. A missed appointment without notice normally ends eligibility for free advice for six weeks. Staff may abridge copied documents for the case file, but originals remain with the client."
+    },
+    {
+      "lessonId": "r5",
+      "title": "社区节日志愿者招募",
+      "section": "Section 1",
+      "modelScore": 2.469,
+      "calibratedScore": 2.219,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 79,
+        "indexedCoverage": 0.987,
+        "highFrequency1K2K": 0.831,
+        "longestSentenceWords": 16,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "VOLUNTEERS NEEDED — The Hillview Festival takes place on 17 August. We need welcome-desk assistants, activity helpers and people to clear the site after 6 p.m. Morning volunteers must arrive by 8.15 for a safety briefing. Activity helpers should have experience with children, but no formal qualification is required. Lunch and a festival T-shirt are provided. Complete the online form by 30 July and select no more than two preferred roles. Applicants will receive their final role by email."
+    },
+    {
+      "lessonId": "r77",
+      "title": "社区应急避难所开放通知",
+      "section": "Section 1",
+      "modelScore": 2.484,
+      "calibratedScore": 2.234,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 107,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.869,
+        "longestSentenceWords": 18,
+        "obstacles": [
+          "detail-tracking"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "OVERNIGHT WEATHER SHELTER\nThe Civic Hall shelter will open from 7 p.m. on Friday until 9 a.m. on Saturday because temperatures are expected to freeze overnight. Entry is through the adjacent library car park, not the main hall doors. Residents should bring essential medication and one small bag. A blanket and a hot drink will be provided. Animals cannot enter the shared sleeping area, but assistance dogs are welcome. A separate quiet room is available for families with young children. Anyone needing wheelchair transport should call before 4 p.m. The shelter is intended for people who cannot remain safely at home; advance booking is not otherwise required."
+    },
+    {
+      "lessonId": "r19",
+      "title": "家庭回收日历",
+      "section": "Section 1",
+      "modelScore": 2.569,
+      "calibratedScore": 2.319,
+      "assignedLevel": "L1",
+      "reviewedLevel": "L1",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 76,
+        "indexedCoverage": 0.987,
+        "highFrequency1K2K": 0.84,
+        "longestSentenceWords": 15,
+        "obstacles": [
+          "nested-clause"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L1 与当前证据一致。",
+      "text": "GREEN BIN COLLECTIONS\nFood and garden waste is collected every Wednesday. Put bins outside after 7 p.m. on Tuesday and before 6:30 a.m. on Wednesday. Do not place plastic bags in the green bin, even if they are labelled biodegradable. Small branches are accepted if they are shorter than one metre. During the week beginning 24 December, the collection moves from Wednesday to Friday. Missed collections must be reported online by noon on the following day."
+    },
+    {
+      "lessonId": "r29",
+      "title": "员工费用报销规则",
+      "section": "Section 2",
+      "modelScore": 2.402,
+      "calibratedScore": 2.402,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 85,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.786,
+        "longestSentenceWords": 17,
+        "obstacles": [
+          "low-frequency"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "STAFF EXPENSES\nEmployees should use the cheapest reasonable travel option. Rail fares are reimbursed at standard-class rates; first class requires written approval before booking. Meals may be claimed only when work requires an overnight stay, up to £25 for an evening meal. Original digital or paper receipts must be attached. Claims should be submitted within 30 days of the expense. The employee's manager checks the business purpose, while Finance checks receipts and payment limits. Missing receipts require a signed explanation but may still be refused."
+    },
+    {
+      "lessonId": "r119",
+      "title": "餐饮场所过敏原控制",
+      "section": "Section 2",
+      "modelScore": 2.402,
+      "calibratedScore": 2.402,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 115,
+        "indexedCoverage": 0.966,
+        "highFrequency1K2K": 0.784,
+        "longestSentenceWords": 17,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "ALLERGEN CONTROL FOR CATERING STAFF\nNever infer that a dish is safe from its appearance. Check the current ingredient record, including every condiment and garnish. Recipes and suppliers change, so an old label may have been superseded. When a customer reports an allergy, write the request clearly and alert the cook directly. Use clean utensils and a separately prepared surface; removing a visible ingredient does not eliminate cross-contact. Staff must not sneer at, minimize or guess about a customer's concern. If information is incomplete, say that the business cannot guarantee the dish is safe. After service, record the request and any mistake. This evidence can elucidate weaknesses in training and prevent a more serious incident."
+    },
+    {
+      "lessonId": "r113",
+      "title": "社区礼堂租用规则",
+      "section": "Section 1",
+      "modelScore": 2.41,
+      "calibratedScore": 2.51,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 105,
+        "indexedCoverage": 0.943,
+        "highFrequency1K2K": 0.724,
+        "longestSentenceWords": 16,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "RIVERBANK COMMUNITY HALL\nThe hall accommodates sixty seated guests. Hire includes tables, chairs and use of the small kitchen, but not catering or decorations. Users may garnish prepared food in the kitchen, but cooking with an open flame is precluded. Fasten all display boards to the movable screens; never attach them to painted walls. A refundable indemnity deposit of £120 is required. It covers breakage, additional cleaning and lost keys. Cancel at least fourteen days before the event for a full hire-fee refund. The deposit is returned after inspection, normally within five working days. Please report any mishap immediately rather than attempting an improvised repair."
+    },
+    {
+      "lessonId": "r38",
+      "title": "仓库人工搬运守则",
+      "section": "Section 2",
+      "modelScore": 2.55,
+      "calibratedScore": 2.55,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 97,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.794,
+        "longestSentenceWords": 18,
+        "obstacles": [
+          "nested-clause"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "MANUAL HANDLING IN THE WAREHOUSE\nBefore moving an item, check its weight, shape and destination. Test the load gently rather than assuming the label is accurate. Use a trolley for bulky goods even when they are not especially heavy. Keep the load close to your body, bend at the knees and avoid twisting while lifting. Ask for help if the route includes steps or the item blocks your view. Damaged trolleys must be labelled and removed from use immediately. Report pain or a near miss before the end of the shift so the task can be reviewed."
+    },
+    {
+      "lessonId": "r58",
+      "title": "宠物疫苗预约通知",
+      "section": "Section 1",
+      "modelScore": 2.477,
+      "calibratedScore": 2.577,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 93,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.72,
+        "longestSentenceWords": 17,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "VACCINATION APPOINTMENT\nArrive ten minutes early and keep dogs on a short lead; cats must remain in secure carriers. Bring the vaccination record and a list of current medicines. Unless the clinic gives different instructions, pets may eat normally before routine vaccination. The nurse first checks weight and general health. Mild tiredness or tenderness can occur for a day afterward. Contact the clinic promptly if your pet has difficulty breathing, repeated vomiting or swelling around the face. A reminder for the next dose will be emailed, but owners remain responsible for booking it."
+    },
+    {
+      "lessonId": "r6",
+      "title": "健身中心会员方案",
+      "section": "Section 1",
+      "modelScore": 2.885,
+      "calibratedScore": 2.635,
+      "assignedLevel": "L2",
+      "reviewedLevel": "L2",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 77,
+        "indexedCoverage": 0.987,
+        "highFrequency1K2K": 0.811,
+        "longestSentenceWords": 17,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L2 与当前证据一致。",
+      "text": "HARBOUR FITNESS MEMBERSHIP — The Flex plan costs £36 per month and can be cancelled with seven days' notice. The Annual plan costs £360 in one payment and includes two sessions with a personal trainer. Both plans include the gym, pool and weekday classes. Weekend yoga costs an extra £4 per class. New members must attend a thirty-minute safety introduction before using the weight room. Lockers are free during visits, but members should bring their own padlock."
+    },
+    {
+      "lessonId": "r89",
+      "title": "机场行李寄存条款",
+      "section": "Section 1",
+      "modelScore": 2.717,
+      "calibratedScore": 2.817,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 106,
+        "indexedCoverage": 0.991,
+        "highFrequency1K2K": 0.768,
+        "longestSentenceWords": 22,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "TERMINAL BAGGAGE STORAGE\nThe desk opens from 5 a.m. to 11 p.m. Items are charged by size for each twenty-four-hour interval. Jewellery, cash, passports, food and volatile substances must not be stored. Every bag receives a numbered tag; keep the matching receipt because staff cannot release baggage without it and photographic identification. If you lose the receipt, allow at least thirty minutes for additional checks. Unclaimed items are transferred to the airport property office after fourteen days. Report visible damage before leaving the desk. Compensation is limited to the declared value shown on the form, and ordinary wear or damage caused by insufficient packing is excluded."
+    },
+    {
+      "lessonId": "r44",
+      "title": "远程办公信息安全",
+      "section": "Section 2",
+      "modelScore": 2.988,
+      "calibratedScore": 2.988,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 91,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.804,
+        "longestSentenceWords": 19,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "SECURE REMOTE WORKING\nUse the company virtual private network whenever accessing internal systems outside the office. Public Wi-Fi may be used only through this connection; personal phone hotspots are preferred. Position screens where household members and visitors cannot read them, and lock the computer whenever you leave the room. Do not print confidential documents at home unless a manager has approved a secure storage and disposal method. Company files must remain in approved cloud folders, not on personal drives. Report a lost device or accidental disclosure immediately through the security hotline."
+    },
+    {
+      "lessonId": "r7",
+      "title": "新员工仓库安全手册",
+      "section": "Section 2",
+      "modelScore": 3.023,
+      "calibratedScore": 3.023,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 101,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.822,
+        "longestSentenceWords": 16,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "All new warehouse employees must attend safety training before starting independent work. Protective shoes are required in storage areas and are provided by the company. Gloves are compulsory in the cold room and available from the shift supervisor. Report damaged equipment immediately; do not attempt repairs yourself. When lifting a heavy box, use a trolley or ask another employee for help. In an emergency, leave by the nearest marked exit and meet beside the north car park. Supervisors will check names at the meeting point. Do not return to the building until a manager gives permission, even if the alarm stops."
+    },
+    {
+      "lessonId": "r20",
+      "title": "工作场所事故报告",
+      "section": "Section 2",
+      "modelScore": 3.177,
+      "calibratedScore": 3.177,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 97,
+        "indexedCoverage": 0.99,
+        "highFrequency1K2K": 0.856,
+        "longestSentenceWords": 19,
+        "obstacles": [
+          "nested-clause"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "ACCIDENT REPORTING PROCEDURE\nFirst make the area safe and contact a trained first aider if anyone is injured. The employee involved must tell the shift supervisor before leaving work, even if the injury appears minor. The supervisor records the basic facts in the digital incident log before the end of the shift. Photographs may be added, but staff must not photograph an injured person without permission. The Health and Safety Manager reviews all reports within two working days and decides whether further investigation is required. Near misses follow the same process, although no medical section is needed."
+    },
+    {
+      "lessonId": "r107",
+      "title": "农药泄漏应急卡",
+      "section": "Section 2",
+      "modelScore": 2.447,
+      "calibratedScore": 3.197,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 106,
+        "indexedCoverage": 0.981,
+        "highFrequency1K2K": 0.689,
+        "longestSentenceWords": 17,
+        "obstacles": [
+          "low-frequency"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "PESTICIDE SPILL RESPONSE\nKeep all unprotected people away and notify the site supervisor. If fumes are present, move upwind and do not inhale them. Wear the protective equipment specified on the label. Stop the leak only when this can be done without danger. Use barriers to prevent liquid from entering soil, manure stores or drains, then apply the approved absorbent. Never use household detergent unless the product guidance instructs it. Place contaminated material in a labelled container for specialist disposal. Record any skin contact, puncture or damaged clothing and obtain medical advice. A meticulous incident report must state the product, estimated amount, weather and action taken."
+    },
+    {
+      "lessonId": "r105",
+      "title": "职业培训补助资格说明",
+      "section": "Section 1",
+      "modelScore": 3.179,
+      "calibratedScore": 3.279,
+      "assignedLevel": "L3",
+      "reviewedLevel": "L3",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 105,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.733,
+        "longestSentenceWords": 20,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L3 与当前证据一致。",
+      "text": "VOCATIONAL TRAINING GRANT\nThe grant supports adults entering a recognized vocation where local employers report shortages. Applicants must normally live in the district, be at least eighteen and show that the course will improve employment prospects. Previous experience is not a prerequisite, but the provider may test literacy or practical aptitude. The grant can encompass tuition, required equipment and travel; it does not cover optional accommodation. Submit the course offer, cost breakdown and income evidence before enrolment. Ineligible applicants receive written reasons and may request a review within fourteen days. If a funded learner withdraws without a documented reason, the authority may withhold future support."
+    },
+    {
+      "lessonId": "r53",
+      "title": "电脑工位评估流程",
+      "section": "Section 2",
+      "modelScore": 3.316,
+      "calibratedScore": 3.316,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 102,
+        "indexedCoverage": 0.981,
+        "highFrequency1K2K": 0.808,
+        "longestSentenceWords": 22,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "WORKSTATION ASSESSMENT\nComplete the online self-check when joining the company, moving desk or developing discomfort. Adjust the chair so both feet are supported and place the main screen directly ahead, with its top around eye level. Frequently used items should remain within easy reach. After submission, the workplace assessor reviews your answers within five working days and may request photographs that do not show confidential material. Simple equipment such as a footrest can be authorised immediately. Persistent pain, disability-related needs or specialist equipment requests are referred to Occupational Health. Repeat the check after any recommended change has been used for two weeks."
+    },
+    {
+      "lessonId": "r87",
+      "title": "招聘模拟面试与公平评分指南",
+      "section": "Section 2",
+      "modelScore": 3.399,
+      "calibratedScore": 3.399,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 131,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.85,
+        "longestSentenceWords": 21,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "STRUCTURED RECRUITMENT INTERVIEWS\nEvery candidate for the same role must receive the same core questions in the same order. Follow-up prompts may clarify an answer but must not introduce a new requirement. The panel should score evidence against the published criteria rather than rely on instinct or a candidate's similarity to a predecessor. Before the interview, ask whether a reasonable adaptation is needed, such as extra time or step-free access. Do not lower the competence standard; change only how the candidate can demonstrate it. Each panel member records a score independently before discussion. Comments such as 'not our type' are too vague and must never constitute a justification. Keep the notes securely for the stated retention period. A mock interview may be offered to all shortlisted candidates, provided access is equal."
+    },
+    {
+      "lessonId": "r102",
+      "title": "员工绩效评估申诉流程",
+      "section": "Section 2",
+      "modelScore": 2.786,
+      "calibratedScore": 3.536,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 107,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.71,
+        "longestSentenceWords": 20,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "APPRAISAL REVIEW PROCEDURE\nAn employee who believes an appraisal is inaccurate should first ask the manager to identify the evidence behind each rating. The request must be made within ten working days. If disagreement remains, submit the review form with pertinent documents to Human Resources. An impartial reviewer who was subordinate to neither party will compare the objectives, records and written comments. Personal dislike, workplace rumour and anonymous slander are not evidence. The reviewer may confirm a rating, amend it or order a fresh appraisal. Raising a genuine concern must not inhibit promotion or training. A knowingly deceptive claim, however, may be handled under the conduct policy."
+    },
+    {
+      "lessonId": "r71",
+      "title": "网络诈骗受害者处置清单",
+      "section": "Section 2",
+      "modelScore": 3.659,
+      "calibratedScore": 3.659,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 117,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.829,
+        "longestSentenceWords": 22,
+        "obstacles": [
+          "abstract-nouns",
+          "reference"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "IF YOU SUSPECT ONLINE FRAUD\nContact your bank immediately through the number on its official website or your card. Do not use a telephone number contained in the suspect message. Ask the bank to freeze affected cards or transfers and obtain a case reference. Change the password for the relevant account and for any other account using the same password. Keep the original message, payment receipt and screenshots; do not edit them. Report the incident to the national fraud service even if the amount is minor, because multiple reports can reveal a wider pattern. Be honest about any code or personal detail you shared. This information helps investigators and does not remove your right to request assistance."
+    },
+    {
+      "lessonId": "r72",
+      "title": "远程办公是否真正改变城市",
+      "section": "Section 3",
+      "modelScore": 3.422,
+      "calibratedScore": 3.722,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 219,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.841,
+        "longestSentenceWords": 21,
+        "obstacles": [
+          "nested-clause",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "Predictions that remote work would empty city centres were too absolute. Office attendance has certainly fallen in many sectors, and some businesses that depended on the daily crowd have closed. Yet employment is not distributed evenly. Health care, construction, hospitality and numerous service jobs still require workers to be present. Even within office-based organisations, teams often choose a hybrid pattern rather than permanent home working.\n\nThe effects also extend beyond transport. Some employees gain time and flexibility, while others lack a quiet room, reliable internet or social contact. Employers may reduce floor space, but they must invest in secure digital platforms and develop fair ways to judge performance. A policy based only on personal preference can create division if senior staff receive more flexibility than new workers.\n\nCities are adapting rather than disappearing. Several have converted older offices into housing, although the process is difficult because building depth, windows and plumbing may be unsuitable. Public transport agencies are testing fares that reflect less typical travel times. Local centres have gained customers who previously bought lunch near a central office.\n\nThe ultimate outcome is therefore not a simple movement away from cities. Work is becoming more varied across time and place. The most valuable policies will recognise this diversity instead of assuming that one model suits the entire labour force."
+    },
+    {
+      "lessonId": "r115",
+      "title": "工作场所调查与保密指南",
+      "section": "Section 2",
+      "modelScore": 3.049,
+      "calibratedScore": 3.799,
+      "assignedLevel": "L4",
+      "reviewedLevel": "L4",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 121,
+        "indexedCoverage": 0.893,
+        "highFrequency1K2K": 0.669,
+        "longestSentenceWords": 22,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns",
+          "coverage-gap"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L4 与当前证据一致。",
+      "text": "CONDUCTING A FAIR WORKPLACE INQUIRY\nAn investigator must distinguish evidence from hostility, hearsay and personal enmity. Begin with an unambiguous allegation and identify the policy that may have been infringed. Interview people separately, using open questions before testing dissimilar accounts against records. Do not divulge a witness statement merely to quell gossip. Confidentiality cannot be absolute, however: the person responding to an allegation must understand its substance and have a fair opportunity to answer. Avoid coercive language, caustic remarks and questions that preclude an alternative explanation. A painstaking chronology often reveals whether an apparent contradiction matters. The final report should state what can be deduced, what remains tenuous and why. Only an authorised manager may censure, disqualify or dismiss an employee."
+    },
+    {
+      "lessonId": "r118",
+      "title": "轮班人员疲劳管理指南",
+      "section": "Section 2",
+      "modelScore": 3.07,
+      "calibratedScore": 3.82,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 115,
+        "indexedCoverage": 0.922,
+        "highFrequency1K2K": 0.707,
+        "longestSentenceWords": 16,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "MANAGING FATIGUE ON NIGHT SHIFTS\nFatigue can impair judgement before a worker feels ready to doze. Employees should report persistent lethargy, difficulty concentrating or an unsafe journey home to the shift supervisor. A short scheduled break may help, but caffeine must not supersede adequate rest. Supervisors should rotate demanding tasks, avoid inordinate overtime and provide a quiet rest area. Staff must not be penalised for raising a genuine safety concern. Where fatigue could paralyze safe decision-making, the worker should stop the task and request reassignment. Employers remain accountable for staffing levels; they cannot simply describe overwork as an individual failure. Every incident and near miss must be recorded so that recurrent patterns can be identified."
+    },
+    {
+      "lessonId": "r122",
+      "title": "工作场所举报保护程序",
+      "section": "Section 2",
+      "modelScore": 3.207,
+      "calibratedScore": 3.957,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 112,
+        "indexedCoverage": 0.946,
+        "highFrequency1K2K": 0.714,
+        "longestSentenceWords": 19,
+        "obstacles": [
+          "nested-clause",
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "RAISING A SERIOUS CONCERN\nEmployees should report suspected fraud, maltreatment, environmental harm or a deliberate breach of safety rules. Begin with the designated reporting officer unless that person may be involved; in that case contact the independent hotline. State what you observed, when it occurred and which records may corroborate it. Do not embellish, incriminate colleagues through speculation or discuss the allegation widely. The organisation will acknowledge a report within two working days and appoint an investigator. Confidentiality will be protected as far as law and a fair inquiry permit. Retaliation, including demotion, threats or exclusion from training, will contravene policy. A worker who experiences retaliation should notify the ethics director immediately."
+    },
+    {
+      "lessonId": "r103",
+      "title": "防范假票与退款诈骗",
+      "section": "Section 2",
+      "modelScore": 3.333,
+      "calibratedScore": 4.083,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 106,
+        "indexedCoverage": 0.991,
+        "highFrequency1K2K": 0.717,
+        "longestSentenceWords": 21,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "AVOID COUNTERFEIT EVENT TICKETS\nBuy through the venue or an authorized seller and be cautious when a price is negligible compared with the official rate. A polished website, plush imagery or a seller's professional pedigree does not prove legality. Bogus sellers may copy logos, use deceptive countdowns and request payment outside the protected platform. Before paying, verify the web address and seating details. Never send identity documents to an unknown seller. If a ticket is rejected, keep the advertisement, messages and receipt, then contact the platform and card provider. Report blackmail or threats to police; do not pay an additional fee to make the problem vanish."
+    },
+    {
+      "lessonId": "r90",
+      "title": "托儿机构家长同意与紧急处理政策",
+      "section": "Section 2",
+      "modelScore": 4.191,
+      "calibratedScore": 4.191,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 128,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.806,
+        "longestSentenceWords": 23,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "KINDERGARTEN EMERGENCY CONSENT POLICY\nParents must provide two current emergency contacts and update them whenever details change. Staff may give prescribed medicine only when the original label matches a signed parental form. In a life-threatening situation, the foremost duty is to call emergency services; staff will not delay urgent care while trying every contact. A trained employee will accompany a child to hospital and another will continue contacting the parent or guardian. Minor injuries are recorded and explained at collection. If a child may have a fracture, head injury or severe allergic reaction, parents are contacted immediately. Information is confidential but may be disclosed to medical professionals who require it for treatment. Consent does not exclude the provider's responsibility to maintain safe apparatus, competent supervision and adequate staffing."
+    },
+    {
+      "lessonId": "r11",
+      "title": "员工培训费用报销",
+      "section": "Section 2",
+      "modelScore": 4.354,
+      "calibratedScore": 4.354,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 123,
+        "indexedCoverage": 0.992,
+        "highFrequency1K2K": 0.803,
+        "longestSentenceWords": 30,
+        "obstacles": [
+          "long-sentence",
+          "nested-clause",
+          "low-frequency"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "The company may contribute towards courses that are directly relevant to an employee's current role or an agreed future role. Employees must obtain written approval before registering. The standard contribution is 75 per cent of tuition fees, up to £600 in one financial year. Travel, meals and optional materials are not covered. To claim payment, employees should submit the approval email, the provider's receipt and evidence of successful completion within thirty days of the course ending. If a course lasts longer than six months, half the approved amount may be claimed after the midpoint. An employee who leaves voluntarily within six months of receiving payment may be required to repay the contribution, except where the departure results from redundancy or long-term ill health."
+    },
+    {
+      "lessonId": "r21",
+      "title": "灵活工作申请政策",
+      "section": "Section 2",
+      "modelScore": 4.427,
+      "calibratedScore": 4.427,
+      "assignedLevel": "L5",
+      "reviewedLevel": "L5",
+      "verdict": "agree",
+      "boundaryFocus": true,
+      "evidence": {
+        "wordTokens": 104,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.874,
+        "longestSentenceWords": 23,
+        "obstacles": [
+          "nested-clause",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L5 与当前证据一致。",
+      "text": "FLEXIBLE WORKING REQUESTS\nEmployees who have completed 26 weeks of service may submit one formal request in any six-month period. The request must describe the proposed working pattern, the preferred start date and any likely effect on colleagues or customers. Managers should meet the employee within 14 days unless both sides agree that a meeting is unnecessary. A written decision normally follows within seven days of the meeting. If a request is refused, the letter must give a clear business reason. Employees may ask a different manager to review the procedure, but this is not a second decision on whether the pattern is convenient."
+    },
+    {
+      "lessonId": "r8",
+      "title": "弹性工作申请政策",
+      "section": "Section 2",
+      "modelScore": 4.463,
+      "calibratedScore": 4.463,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 111,
+        "indexedCoverage": 0.991,
+        "highFrequency1K2K": 0.899,
+        "longestSentenceWords": 24,
+        "obstacles": [
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "Employees who have completed 26 weeks of service may request a permanent or temporary change to their working hours. Requests must be submitted in writing and should state the proposed schedule, the preferred start date and how the change might affect the team. A manager will arrange a meeting if further information is needed and will normally provide a written decision within 21 days. A request may be refused for a clear business reason, such as an inability to reorganise work or meet customer demand. Employees may appeal within seven days of receiving the decision. A new request cannot normally be made for another twelve months unless personal circumstances change significantly."
+    },
+    {
+      "lessonId": "r24",
+      "title": "城市树木的隐形价值",
+      "section": "Section 3",
+      "modelScore": 4.376,
+      "calibratedScore": 4.676,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 186,
+        "indexedCoverage": 0.995,
+        "highFrequency1K2K": 0.835,
+        "longestSentenceWords": 23,
+        "obstacles": [
+          "nested-clause",
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "City trees are often discussed as decoration, yet their practical value is easier to measure than many people assume. Shade from mature trees lowers surface temperatures on streets and buildings. Leaves slow heavy rain before it reaches drainage systems, and roots help water enter the soil. Trees can also make walking routes more pleasant, encouraging short journeys on foot.\n\nThese benefits are not automatic. A species that grows well in a park may damage a narrow pavement, while a newly planted tree provides little shade for years. Young trees need regular watering and protection from vehicles. If maintenance budgets cover planting but not long-term care, highly publicised projects may produce rows of dead trees rather than cooler streets.\n\nGood planning therefore begins with the problem a neighbourhood needs to solve. A hot shopping street may require broad shade, whereas a flood-prone area needs soil and planting designs that hold water. Residents also need to be involved early, especially where trees could block shop signs or reduce parking. Counting how many trees are planted is simple; measuring survival and the benefits delivered over decades is more meaningful."
+    },
+    {
+      "lessonId": "r56",
+      "title": "学校街道能否减少交通风险",
+      "section": "Section 3",
+      "modelScore": 4.376,
+      "calibratedScore": 4.676,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 157,
+        "indexedCoverage": 1,
+        "highFrequency1K2K": 0.803,
+        "longestSentenceWords": 26,
+        "obstacles": [
+          "long-sentence",
+          "nested-clause",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "A school street restricts most motor traffic near a school during morning arrival and afternoon collection. Barriers or cameras create space for walking and cycling, while residents, emergency vehicles and some disabled users receive exemptions. The immediate goal is safer gates, but supporters also hope families will leave cars at home.\n\nResults depend on design. If drivers simply park on the next street, danger and pollution may move rather than disappear. Authorities therefore need safe crossings on surrounding roads and should monitor access for households with limited mobility. Clear advance communication matters because unexpected fines can quickly damage trust.\n\nCounting vehicles at the gate shows only part of the effect. Surveys can reveal whether children changed travel mode, while air measurements and observations on nearby streets test whether problems were displaced. School streets work best as one element of a wider plan that includes reliable buses, connected cycle routes and practical alternatives for families living farther away."
+    },
+    {
+      "lessonId": "r112",
+      "title": "城市更新能否带来公平复兴",
+      "section": "Section 3",
+      "modelScore": 3.667,
+      "calibratedScore": 4.717,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 169,
+        "indexedCoverage": 0.977,
+        "highFrequency1K2K": 0.655,
+        "longestSentenceWords": 21,
+        "obstacles": [
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "Urban regeneration can transform a desolate industrial district. Renovated buildings entice employers, public transport improves and a nascent cultural sector gives an area new zest. Proponents argue that this interplay creates jobs and augments public revenue.\n\nYet an enchanting public square does not embody social recovery. Rising rents may deprive established traders of premises and banish low-income residents to distant suburbs. A bailout for a prestigious development can appear perverse when rudimentary housing repairs remain unfunded.\n\nPolicy can counteract displacement through secure tenancies, affordable workspace and transparent procurement. These safeguards are sometimes called cumbersome, but relying on goodwill is inept. Officials need the foresight to define who should benefit and collect evidence before land values rise.\n\nRegeneration is justifiable when it replenishes opportunity rather than merely changing an area's image. Its success should be inferred from stable housing, accessible services and local incomes, not from flamboyant architecture or an impromptu festival. A harmonious district requires long-term participation and a steadfast willingness to revise plans when outcomes diverge from promises."
+    },
+    {
+      "lessonId": "r31",
+      "title": "共享办公空间的发展",
+      "section": "Section 3",
+      "modelScore": 4.472,
+      "calibratedScore": 4.772,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 176,
+        "indexedCoverage": 0.983,
+        "highFrequency1K2K": 0.836,
+        "longestSentenceWords": 32,
+        "obstacles": [
+          "long-sentence"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "Shared workspaces first attracted freelancers who wanted a desk without the cost of a permanent office. Their appeal later widened to small companies and remote employees whose homes were unsuitable for full-time work. A membership may include a desk, meeting rooms and internet access, but the less visible attraction is social: people working alone can exchange advice or simply have a reason to leave home.\n\nThe model is not equally useful for everyone. Phone calls and informal conversations may distract workers handling detailed tasks. Companies dealing with private client information must consider who can see screens or hear discussions. Some operators respond with quiet zones, bookable booths and stricter rules for shared tables.\n\nLocation also shapes success. A fashionable building is of limited value if members need a long, expensive journey to reach it. Workspaces near suburban transport hubs may reduce travel to city centres while still separating work from home. The strongest providers therefore sell more than attractive furniture: they manage different kinds of space and understand the working patterns of the people around them."
+    },
+    {
+      "lessonId": "r88",
+      "title": "公共地标能否推动城市更新",
+      "section": "Section 3",
+      "modelScore": 4.041,
+      "calibratedScore": 5.591,
+      "assignedLevel": "L6",
+      "reviewedLevel": "L6",
+      "verdict": "agree",
+      "boundaryFocus": false,
+      "evidence": {
+        "wordTokens": 189,
+        "indexedCoverage": 0.995,
+        "highFrequency1K2K": 0.642,
+        "longestSentenceWords": 23,
+        "obstacles": [
+          "nested-clause",
+          "low-frequency",
+          "abstract-nouns"
+        ]
+      },
+      "reviewNote": "逐篇检查词频覆盖、最长句、从句/指代和任务信息密度；L6 与当前证据一致。",
+      "text": "Cities often commission a landmark building or sculpture to herald urban renewal. A memorable exterior may attract visitors, kindle local pride and place a neglected district in the spotlight. Supporters therefore treat design as an economic tool rather than mere decoration.\n\nThis ambition can become an illusion. An elegant gallery cannot remedy inadequate transport, empty shops or insecure employment. Construction overhead may consume funds needed for ordinary services, while a celebrated architect can dominate discussion and obscure residents' priorities. When promised benefits are vague, public fury is understandable.\n\nYet rejecting landmark projects outright is equally blunt. Their merit depends on how they are incorporated into a wider programme. A public building that includes a nursery, affordable workspaces and inviting leisure areas may create daily value as well as a symbolic identity. Transparent costs and systematic evaluation are essential.\n\nA landmark is most desirable when it does not ask architecture to execute renewal alone. It should unite practical services, competent management and a design that people genuinely use. The measure of success is not the opening-day photograph but whether the surrounding area can sustain improvement after the spotlight moves elsewhere."
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import {
 } from "@tabler/icons-react";
 import rawLexicon from "./content/lexicon.json";
 import rawVocabularyAnchors from "./content/vocabulary-anchor-bank-600.json";
+import rawReadingDifficulty from "./content/reading-course-difficulty-v1.json";
 import { buildLearningLexicon, lexiconQuality } from "./content/lexicon-content.mjs";
 import { curriculum, skillMeta, type CourseLesson } from "./content/course-bank";
 import { roadmapWeeks } from "./content/roadmap";
@@ -25,6 +26,7 @@ import {
 import { AssessmentPractice, type PracticeMode } from "./AssessmentPractice";
 import { createSessionSeed, shuffleWithSeed } from "./assessment-session-engine.mjs";
 import "./product.css";
+import "./reading-difficulty.css";
 
 const lexicon = buildLearningLexicon(rawLexicon) as LexiconItem[];
 const lexiconById = new Map(lexicon.map((item) => [item.id, item]));
@@ -32,6 +34,28 @@ const vocabularyAnchors = rawVocabularyAnchors as VocabularyAnchor[];
 const vocabularyAnchorById = new Map(vocabularyAnchors.map((anchor) => [anchor.id, anchor]));
 const studyOrder = createStudyOrder(lexicon);
 const quality = lexiconQuality(lexicon);
+
+type ReadingDifficultyRecord = {
+  lessonId: string;
+  internalLevel: string;
+  predictedScore: number;
+  calibratedScore: number;
+  coverage: { indexedWordFamilies: number; highFrequency1K2K: number; lowerFrequency6KPlus: number };
+  longestSentence: { text: string; words: number };
+  keyVocabulary: { headword: string; band: string }[];
+  obstacles: { code: string; label: string }[];
+};
+const readingDifficultyById = new Map((rawReadingDifficulty.records as ReadingDifficultyRecord[]).map((record) => [record.lessonId, record]));
+const readingLevelNumber = (level: string) => Number(level.replace("L", "")) || 3;
+function inferReadingTarget(state: LearningState) {
+  const latest = state.vocabularyTests.at(-1);
+  if (latest?.vocabulary?.value) {
+    const value = latest.vocabulary.value;
+    const level = value < 2000 ? 1 : value < 3000 ? 2 : value < 4000 ? 3 : value < 5000 ? 4 : value < 8000 ? 5 : 6;
+    return { level, source: `按最近词汇精测约 ${value.toLocaleString("zh-CN")} 词族推荐` };
+  }
+  return { level: Math.max(1, Math.min(6, Math.round(state.skill.reading))), source: "按当前阅读学习进度推荐" };
+}
 
 const steps = [
   {title:"复习旧词",subtitle:"到期和错词优先回来",icon:IconBook2,view:"review" as View,completeKey:0},
@@ -460,12 +484,16 @@ function QuickSpeak({state,update,onCoach,done}:{state:LearningState;update:Upda
 function CourseHub({state,update,initialSkill,onCoach}:{state:LearningState;update:UpdateState;initialSkill:Skill;onCoach:(extra:string)=>void}) {
   const [skill,setSkill] = useState<Skill>(initialSkill);
   const [selected,setSelected] = useState<CourseLesson|null>(null);
-  if (selected) return <CoursePlayer lesson={selected} onCoach={onCoach} done={(result) => { update((current) => { const ratio = result?.total ? result.correct/result.total : 0; const delta = result?.total ? (ratio>=.75?.1:ratio>=.5?.05:0) : .03; return {...current,completedLessons:[...new Set([...current.completedLessons,selected.id])],lastStudied:new Date().toISOString(),skill:{...current.skill,[selected.skill]:Math.min(6,current.skill[selected.skill]+delta)}}; }); setSelected(null); }} back={() => setSelected(null)}/>;
-  return <section className="lesson-content course-hub"><div className="lesson-kicker">{curriculum.length} 节原创 General Training 训练 · 题目与答案逐项校验</div><h1>听说读写课程</h1><div className="skill-tabs">{Object.entries(skillMeta).map(([key,meta]) => <button key={key} className={skill===key?"selected":""} onClick={() => setSkill(key as Skill)}>{meta.label}<span>{meta.count} 课</span></button>)}</div><div className="lesson-list">{curriculum.filter((lesson) => lesson.skill === skill).map((lesson,index) => <button key={lesson.id} onClick={() => setSelected(lesson)}><span className="lesson-index">{state.completedLessons.includes(lesson.id)?<IconCheck/>:index+1}</span><span><em>{lesson.section} · {lesson.level}</em><strong>{lesson.title}</strong><small>{lesson.focus}</small></span><b>{lesson.minutes} 分钟<IconArrowRight/></b></button>)}</div></section>;
+  const target = inferReadingTarget(state);
+  if (selected) return <CoursePlayer lesson={selected} readingTarget={target.level} onCoach={onCoach} done={(result) => { update((current) => { const ratio = result?.total ? result.correct/result.total : 0; const delta = result?.total ? (ratio>=.75?.1:ratio>=.5?.05:0) : .03; return {...current,completedLessons:[...new Set([...current.completedLessons,selected.id])],lastStudied:new Date().toISOString(),skill:{...current.skill,[selected.skill]:Math.min(6,current.skill[selected.skill]+delta)}}; }); setSelected(null); }} back={() => setSelected(null)}/>;
+  const lessons = curriculum.filter((lesson) => lesson.skill === skill);
+  return <section className="lesson-content course-hub"><div className="lesson-kicker">{curriculum.length} 节原创 General Training 训练 · 题目与答案逐项校验</div><h1>听说读写课程</h1><div className="skill-tabs">{Object.entries(skillMeta).map(([key,meta]) => <button key={key} className={skill===key?"selected":""} onClick={() => setSkill(key as Skill)}>{meta.label}<span>{meta.count} 节</span></button>)}</div>
+    {skill === "reading" && <div className="reading-recommendation"><div><span>阅读推荐 · 内部实验难度</span><strong>优先选择 L{target.level}，相邻一级也适合</strong><small>{target.source}。这不是 MetaMetrics 官方蓝思认证，也不用于完整模拟 L 值。</small></div><b>实验 L1–L6</b></div>}
+    <div className="lesson-list">{lessons.map((lesson,index) => { const profile = readingDifficultyById.get(lesson.id); const recommended = profile && Math.abs(readingLevelNumber(profile.internalLevel)-target.level)<=1; return <button key={lesson.id} onClick={() => setSelected(lesson)}><span className="lesson-index">{state.completedLessons.includes(lesson.id)?<IconCheck/>:index+1}</span><span><em>{lesson.section} · {lesson.level}{profile ? ` · 实验 ${profile.internalLevel}` : ""}{recommended ? " · 适合当前水平" : ""}</em><strong>{lesson.title}</strong><small>{lesson.focus}</small></span><b>{lesson.minutes} 分钟<IconArrowRight/></b></button>; })}</div>
+  </section>;
 }
-
 type LessonResult = { correct:number; total:number } | undefined;
-function CoursePlayer({lesson,done,back,onCoach}:{lesson:CourseLesson;done:(result?:LessonResult)=>void;back:()=>void;onCoach:(extra:string)=>void}) {
+function CoursePlayer({lesson,done,back,onCoach,readingTarget}:{lesson:CourseLesson;done:(result?:LessonResult)=>void;back:()=>void;onCoach:(extra:string)=>void;readingTarget:number}) {
   const objective = lesson.skill === "listening" || lesson.skill === "reading";
   const [question,setQuestion] = useState(0);
   const [answers,setAnswers] = useState<Record<number,string>>({});
@@ -478,6 +506,7 @@ function CoursePlayer({lesson,done,back,onCoach}:{lesson:CourseLesson;done:(resu
   const [listen,setListen] = useState(false);
   const [feedbackText,setFeedbackText] = useState(() => localStorage.getItem(`ielts-feedback-${lesson.id}`) ?? "");
   const audioRef = useRef<HTMLAudioElement|null>(null);
+  const readingProfile = lesson.skill === "reading" ? readingDifficultyById.get(lesson.id) : undefined;
   const current = lesson.questions?.[question];
   const choice = answers[question] ?? "";
   const correct = choice === current?.answer;
@@ -514,7 +543,17 @@ function CoursePlayer({lesson,done,back,onCoach}:{lesson:CourseLesson;done:(resu
   const askSpeakingCoach = () => onCoach(`请按 IELTS Speaking 四个维度给出保守反馈。你没有音频，只能评价转写中的流利连贯、词汇和语法；Pronunciation 必须标注“无法从转写判断”。\n题目：${lesson.task ?? lesson.prompts?.join(" / ")}\n我的回答：\n${spoken}`);
   return <section className="lesson-content course-player"><button className="back-inline" onClick={back}><IconArrowLeft/>返回课程目录</button><div className="lesson-kicker">{lesson.section} · {lesson.minutes} 分钟 · {lesson.focus}</div><h1>{lesson.title}</h1>
     {lesson.skill === "listening" && <><div className="mode-selector" role="group" aria-label="听力模式"><button className={mode==="learn"?"selected":""} onClick={() => resetObjective("learn")}>学习模式<span>可重播，可随时看原文</span></button><button className={mode==="mock"?"selected":""} onClick={() => resetObjective("mock")}>模考模式<span>只能播放一次，不能拖动</span></button></div><div className="audio-card"><div><IconHeadphones/><span><strong>{mode === "mock" ? "一次播放录音" : "标准英式录音"}</strong><small>{lesson.speakers} · 固定 MP3</small></span></div>{mode === "learn" ? <audio ref={audioRef} controls preload="metadata" src={`./audio/${lesson.audioFile}`} onCanPlay={() => setAudioError(false)} onError={() => setAudioError(true)}>你的浏览器不支持音频播放。</audio> : <><audio ref={audioRef} preload="metadata" src={`./audio/${lesson.audioFile}`} onError={() => setAudioError(true)}/><button className="mock-play" disabled={audioStarted} onClick={playMock}>{audioStarted?<IconLock/>:<IconPlayerPlay/>}{audioStarted?"本次录音已经开始，不能重播":"播放本次录音"}</button></>}{audioError && <div className="audio-error"><IconX/><span>固定录音加载失败。</span>{mode === "learn" && <button onClick={() => lesson.text && speakEnglish(lesson.text)}>临时设备朗读</button>}</div>}</div><details open={submitted || undefined}><summary>听力原文</summary><p className="source-text">{lesson.text}</p></details></>}
-    {lesson.skill === "reading" && <article className="reading-passage">{lesson.text?.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</article>}
+    {lesson.skill === "reading" && <>
+      {readingProfile && <aside className="reading-difficulty-panel" aria-label="文章内部实验难度">
+        <div className="reading-difficulty-heading"><div><span>内部难度 · 实验值</span><strong>{readingProfile.internalLevel}</strong></div><p>{Math.abs(readingLevelNumber(readingProfile.internalLevel)-readingTarget)<=1 ? "与你当前能力相近" : readingLevelNumber(readingProfile.internalLevel)>readingTarget ? "高于当前推荐，可用于挑战" : "低于当前推荐，可用于巩固"}</p></div>
+        <div className="reading-metrics"><span><b>{Math.round(readingProfile.coverage.indexedWordFamilies*100)}%</b>词族索引覆盖</span><span><b>{Math.round(readingProfile.coverage.highFrequency1K2K*100)}%</b>1K–2K 高频覆盖</span><span><b>{readingProfile.longestSentence.words} 词</b>最长句</span></div>
+        <div className="reading-obstacles"><span>主要障碍</span>{readingProfile.obstacles.map((item) => <em key={item.code}>{item.label}</em>)}</div>
+        {readingProfile.keyVocabulary.length > 0 && <div className="reading-keywords"><span>关注词族</span>{readingProfile.keyVocabulary.map((item) => <em key={`${item.headword}-${item.band}`}>{item.headword} <small>{item.band}</small></em>)}</div>}
+        <details><summary>查看最长句</summary><p>{readingProfile.longestSentence.text}</p></details>
+        <small className="experimental-notice">实验分层，仅用于本产品选文推荐；不是 MetaMetrics 官方蓝思认证，不生成模拟 L 值。</small>
+      </aside>}
+      <article className="reading-passage">{lesson.text?.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</article>
+    </>}
     {objective && current && !submitted && <div className="question-card"><span>第 {question+1}/{lesson.questions?.length} 题</span><h2>{current.prompt}</h2><div className="option-list">{current.options.map((option) => <button key={option} className={choice===option?(mode==="learn"?(correct?"correct":"wrong"):"selected"):""} onClick={() => setAnswers((values) => ({...values,[question]:option}))} disabled={mode==="learn" && !!choice}>{option}</button>)}</div>{choice && mode === "learn" && <div className={`feedback-line ${correct?"success":"error"}`}>{correct?<IconCheck/>:<IconX/>}<span>{correct?"答对了。":`正确答案：${current.answer}。`} {current.explanation}</span></div>}<button className="primary-button wide" disabled={!choice || (lesson.skill === "listening" && mode === "mock" && !audioStarted)} onClick={nextQuestion}>{question<(lesson.questions?.length??1)-1?"下一题":"提交本课"}<IconArrowRight/></button></div>}
     {objective && submitted && <div className="result-panel"><IconCheck/><div><span>本课结果</span><strong>{result}/{lesson.questions?.length}</strong><p>{result === lesson.questions?.length ? "信息定位稳定。" : "错题已经记录在本课结果中，先看证据再重做。"}</p></div><button className="primary-button" onClick={() => done({correct:result,total:lesson.questions?.length??0})}>记录并完成</button></div>}
     {lesson.skill === "writing" && <><div className="writing-task"><strong>{lesson.task}</strong><ul>{lesson.bullets?.map((item) => <li key={item}>{item}</li>)}</ul></div><label className="writing-area"><span>自动保存到本机 · 当前 {wordCount}/{writingTarget} 词</span><textarea value={draft} onChange={(event) => saveDraft(event.target.value)} placeholder="Start writing here..."/></label><Checklist items={lesson.checklist??[]}/><div className="coach-transfer"><button className="outline-button" disabled={wordCount<30} onClick={askWritingCoach}><IconRobot/>复制作文并打开 ChatGPT</button><label><span>把 ChatGPT 的反馈粘贴回来保存</span><textarea value={feedbackText} onChange={(event) => saveFeedback(event.target.value)} placeholder="Paste feedback here..."/></label></div><button className="primary-button wide" disabled={wordCount<writingTarget} onClick={() => done()}>达到字数并完成本课</button></>}

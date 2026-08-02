@@ -1,0 +1,7414 @@
+{
+  "version": "reading-course-difficulty-v1-2026.08.02",
+  "modelVersion": "text-difficulty-model-comparison-v1-2026.08.02",
+  "featureSchemaVersion": "text-features-v0-2026.08.01",
+  "status": "experimental-internal-not-official-lexile",
+  "scoreEligible": false,
+  "notices": [
+    "内部实验难度 L1-L6",
+    "不是 MetaMetrics 官方蓝思认证",
+    "不得用于完整模拟 L 值计分"
+  ],
+  "calibration": {
+    "type": "fixed-thresholds-with-gt-section-and-coverage-adjustment",
+    "thresholds": [
+      2.4,
+      2.75,
+      3.3,
+      3.8,
+      4.45
+    ],
+    "sectionPrior": {
+      "Section 1": -0.25,
+      "Section 2": 0,
+      "Section 3": 0.3
+    },
+    "vocabularyCoverageAdjustment": [
+      {
+        "below": 0.65,
+        "add": 1.25
+      },
+      {
+        "below": 0.72,
+        "add": 0.75
+      },
+      {
+        "below": 0.78,
+        "add": 0.35
+      },
+      {
+        "above": 0.9,
+        "add": -0.15
+      }
+    ],
+    "rationale": "Correct reference-corpus distribution shift and obvious GT section/vocabulary inversions while preserving the raw model score for audit."
+  },
+  "count": 128,
+  "distribution": {
+    "L1": 23,
+    "L2": 13,
+    "L3": 10,
+    "L4": 23,
+    "L5": 30,
+    "L6": 29
+  },
+  "sectionMeans": {
+    "Section 1": 2.682,
+    "Section 2": 3.493,
+    "Section 3": 3.89
+  },
+  "featureNames": [
+    "sentence.meanLength",
+    "sentence.maximumLength",
+    "sentence.lengthCoefficientOfVariation",
+    "vocabulary.meanLogFrequencyRank",
+    "vocabulary.meanZipfFrequency",
+    "vocabulary.familyCoverage",
+    "vocabulary.typeTokenRatio",
+    "vocabulary.movingAverageTypeTokenRatio",
+    "vocabulary.coverage1K2K",
+    "vocabulary.coverage6KPlus",
+    "wordForm.meanSyllables",
+    "wordForm.longWordRate",
+    "discourse.connectiveRate",
+    "discourse.subordinatorRate",
+    "discourse.pronounReferenceRate",
+    "discourse.nominalisationRate",
+    "discourse.lexicalDensity",
+    "semantics.abstractnessProxy"
+  ],
+  "records": [
+    {
+      "lessonId": "r1",
+      "title": "公交临时通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.484,
+      "calibratedScore": 2.234,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.887,
+        "lowerFrequency6KPlus": 0.038
+      },
+      "longestSentence": {
+        "text": "ROUTE 18 WEEKEND CHANGE — From Saturday 6 April, Route 18 will not stop at Market Square because of road repairs.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "weekday",
+          "band": "15K"
+        },
+        {
+          "headword": "unchanged",
+          "band": "8K"
+        },
+        {
+          "headword": "passenger",
+          "band": "3K"
+        },
+        {
+          "headword": "repair",
+          "band": "3K"
+        },
+        {
+          "headword": "assistance",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r2",
+      "title": "公寓租赁广告",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.121,
+      "calibratedScore": 1.721,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.902,
+        "lowerFrequency6KPlus": 0.016
+      },
+      "longestSentence": {
+        "text": "BRIGHT ROOM IN SHARED FLAT — £620 per month, including water and internet.",
+        "words": 11
+      },
+      "keyVocabulary": [
+        {
+          "headword": "furnished",
+          "band": "9K"
+        },
+        {
+          "headword": "viewing",
+          "band": "5K"
+        },
+        {
+          "headword": "deposit",
+          "band": "4K"
+        },
+        {
+          "headword": "desk",
+          "band": "3K"
+        },
+        {
+          "headword": "pet",
+          "band": "3K"
+        },
+        {
+          "headword": "rent",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "detail-tracking",
+          "label": "细节定位与同义改写"
+        }
+      ]
+    },
+    {
+      "lessonId": "r3",
+      "title": "社区中心秋季课程",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.676,
+      "calibratedScore": 2.426,
+      "rawModelLevel": "L3",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.875,
+        "lowerFrequency6KPlus": 0.042
+      },
+      "longestSentence": {
+        "text": "Family Cooking runs on Saturday mornings and costs £8 per adult, while children under twelve attend free.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "learners",
+          "band": "12K"
+        },
+        {
+          "headword": "riverside",
+          "band": "9K"
+        },
+        {
+          "headword": "borrow",
+          "band": "6K"
+        },
+        {
+          "headword": "computing",
+          "band": "5K"
+        },
+        {
+          "headword": "laptop",
+          "band": "4K"
+        },
+        {
+          "headword": "autumn",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r4",
+      "title": "药房夜间服务说明",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.306,
+      "calibratedScore": 2.056,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.814,
+        "lowerFrequency6KPlus": 0.086
+      },
+      "longestSentence": {
+        "text": "This service is only for prescriptions already sent electronically by a doctor; staff cannot issue new prescriptions.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "electronically",
+          "band": "15K"
+        },
+        {
+          "headword": "pharmacist",
+          "band": "14K"
+        },
+        {
+          "headword": "pharmacy",
+          "band": "7K"
+        },
+        {
+          "headword": "prescription",
+          "band": "6K"
+        },
+        {
+          "headword": "resume",
+          "band": "5K"
+        },
+        {
+          "headword": "urgent",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r5",
+      "title": "社区节日志愿者招募",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.469,
+      "calibratedScore": 2.219,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.831,
+        "lowerFrequency6KPlus": 0.065
+      },
+      "longestSentence": {
+        "text": "We need welcome-desk assistants, activity helpers and people to clear the site after 6 p.m.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "helper",
+          "band": "13K"
+        },
+        {
+          "headword": "briefing",
+          "band": "8K"
+        },
+        {
+          "headword": "qualification",
+          "band": "7K"
+        },
+        {
+          "headword": "applicants",
+          "band": "6K"
+        },
+        {
+          "headword": "volunteers",
+          "band": "4K"
+        },
+        {
+          "headword": "arrive",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r6",
+      "title": "健身中心会员方案",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.885,
+      "calibratedScore": 2.635,
+      "rawModelLevel": "L3",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.811,
+        "lowerFrequency6KPlus": 0.054
+      },
+      "longestSentence": {
+        "text": "HARBOUR FITNESS MEMBERSHIP — The Flex plan costs £36 per month and can be cancelled with seven days' notice.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "weekday",
+          "band": "15K"
+        },
+        {
+          "headword": "flex",
+          "band": "8K"
+        },
+        {
+          "headword": "locker",
+          "band": "6K"
+        },
+        {
+          "headword": "harbour",
+          "band": "6K"
+        },
+        {
+          "headword": "trainer",
+          "band": "5K"
+        },
+        {
+          "headword": "yoga",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r7",
+      "title": "新员工仓库安全手册",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.023,
+      "calibratedScore": 3.023,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.822,
+        "lowerFrequency6KPlus": 0.05
+      },
+      "longestSentence": {
+        "text": "In an emergency, leave by the nearest marked exit and meet beside the north car park.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "trolley",
+          "band": "12K"
+        },
+        {
+          "headword": "compulsory",
+          "band": "9K"
+        },
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        },
+        {
+          "headword": "gloves",
+          "band": "6K"
+        },
+        {
+          "headword": "warehouse",
+          "band": "5K"
+        },
+        {
+          "headword": "protective",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r8",
+      "title": "弹性工作申请政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.463,
+      "calibratedScore": 4.463,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.991,
+        "highFrequency1K2K": 0.899,
+        "lowerFrequency6KPlus": 0.018
+      },
+      "longestSentence": {
+        "text": "Requests must be submitted in writing and should state the proposed schedule, the preferred start date and how the change might affect the team.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "inability",
+          "band": "6K"
+        },
+        {
+          "headword": "arrange",
+          "band": "6K"
+        },
+        {
+          "headword": "submitted",
+          "band": "4K"
+        },
+        {
+          "headword": "twelve",
+          "band": "4K"
+        },
+        {
+          "headword": "temporary",
+          "band": "3K"
+        },
+        {
+          "headword": "refused",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r9",
+      "title": "年假预订规则",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.296,
+      "calibratedScore": 4.146,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.927,
+        "lowerFrequency6KPlus": 0.016
+      },
+      "longestSentence": {
+        "text": "If an employee becomes ill during approved leave, the days may be recorded as sick leave only when a medical certificate is supplied.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unused",
+          "band": "10K"
+        },
+        {
+          "headword": "portal",
+          "band": "6K"
+        },
+        {
+          "headword": "approve",
+          "band": "5K"
+        },
+        {
+          "headword": "certificate",
+          "band": "4K"
+        },
+        {
+          "headword": "exception",
+          "band": "4K"
+        },
+        {
+          "headword": "employee",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        }
+      ]
+    },
+    {
+      "lessonId": "r10",
+      "title": "客户投诉处理流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.849,
+      "calibratedScore": 3.849,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.888,
+        "lowerFrequency6KPlus": 0.052
+      },
+      "longestSentence": {
+        "text": "When a customer makes a complaint, staff should first listen without interrupting and record the order number, date and main problem.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "dissatisfied",
+          "band": "14K"
+        },
+        {
+          "headword": "acknowledgement",
+          "band": "14K"
+        },
+        {
+          "headword": "interrupt",
+          "band": "10K"
+        },
+        {
+          "headword": "accessory",
+          "band": "10K"
+        },
+        {
+          "headword": "straightforward",
+          "band": "7K"
+        },
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r11",
+      "title": "员工培训费用报销",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.354,
+      "calibratedScore": 4.354,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.992,
+        "highFrequency1K2K": 0.803,
+        "lowerFrequency6KPlus": 0.049
+      },
+      "longestSentence": {
+        "text": "An employee who leaves voluntarily within six months of receiving payment may be required to repay the contribution, except where the departure results from redundancy or long-term ill health.",
+        "words": 30
+      },
+      "keyVocabulary": [
+        {
+          "headword": "redundancy",
+          "band": "14K"
+        },
+        {
+          "headword": "repay",
+          "band": "9K"
+        },
+        {
+          "headword": "voluntarily",
+          "band": "9K"
+        },
+        {
+          "headword": "optional",
+          "band": "7K"
+        },
+        {
+          "headword": "receipt",
+          "band": "7K"
+        },
+        {
+          "headword": "tuition",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r12",
+      "title": "通勤方式如何影响城市",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.009,
+      "calibratedScore": 4.309,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.993,
+        "highFrequency1K2K": 0.858,
+        "lowerFrequency6KPlus": 0.03
+      },
+      "longestSentence": {
+        "text": "They make driving less necessary while ensuring that people who cannot easily walk, cycle or use a standard bus are not excluded.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "impractical",
+          "band": "15K"
+        },
+        {
+          "headword": "imperfect",
+          "band": "12K"
+        },
+        {
+          "headword": "excluded",
+          "band": "7K"
+        },
+        {
+          "headword": "reliability",
+          "band": "7K"
+        },
+        {
+          "headword": "readily",
+          "band": "6K"
+        },
+        {
+          "headword": "fare",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r13",
+      "title": "成年人如何形成学习习惯",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.118,
+      "calibratedScore": 4.418,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.844,
+        "lowerFrequency6KPlus": 0.039
+      },
+      "longestSentence": {
+        "text": "Once the first action is easy to begin, a learner can choose to continue, but success does not depend on finding an hour of free time.",
+        "words": 26
+      },
+      "keyVocabulary": [
+        {
+          "headword": "willpower",
+          "band": "20K"
+        },
+        {
+          "headword": "learner",
+          "band": "14K"
+        },
+        {
+          "headword": "learners",
+          "band": "12K"
+        },
+        {
+          "headword": "practise",
+          "band": "11K"
+        },
+        {
+          "headword": "retrieve",
+          "band": "9K"
+        },
+        {
+          "headword": "optional",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r14",
+      "title": "城市绿地不只是装饰",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.45,
+      "calibratedScore": 4.75,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.997,
+        "highFrequency1K2K": 0.879,
+        "lowerFrequency6KPlus": 0.037
+      },
+      "longestSentence": {
+        "text": "Smaller neighbourhood spaces can be more useful in daily life, especially for children and older people, but only if routes to them are safe.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unimportant",
+          "band": "16K"
+        },
+        {
+          "headword": "hectares",
+          "band": "12K"
+        },
+        {
+          "headword": "biodiversity",
+          "band": "12K"
+        },
+        {
+          "headword": "wellbeing",
+          "band": "11K"
+        },
+        {
+          "headword": "overlook",
+          "band": "11K"
+        },
+        {
+          "headword": "neglect",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r15",
+      "title": "远程工作与地方经济",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.293,
+      "calibratedScore": 4.593,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.99,
+        "highFrequency1K2K": 0.861,
+        "lowerFrequency6KPlus": 0.031
+      },
+      "longestSentence": {
+        "text": "If employees no longer travelled to large offices every day, cafés, transport services and shops that depended on commuters would lose customers.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "commuter",
+          "band": "12K"
+        },
+        {
+          "headword": "uneven",
+          "band": "11K"
+        },
+        {
+          "headword": "commute",
+          "band": "10K"
+        },
+        {
+          "headword": "daytime",
+          "band": "9K"
+        },
+        {
+          "headword": "commentators",
+          "band": "9K"
+        },
+        {
+          "headword": "informal",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r16",
+      "title": "维修文化与循环经济",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.468,
+      "calibratedScore": 4.768,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.993,
+        "highFrequency1K2K": 0.813,
+        "lowerFrequency6KPlus": 0.023
+      },
+      "longestSentence": {
+        "text": "Possible rules include requiring manufacturers to supply spare parts for a minimum period, provide repair information and avoid software restrictions that block independent technicians.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "uncontrolled",
+          "band": "17K"
+        },
+        {
+          "headword": "durability",
+          "band": "12K"
+        },
+        {
+          "headword": "technician",
+          "band": "9K"
+        },
+        {
+          "headword": "appliances",
+          "band": "9K"
+        },
+        {
+          "headword": "unsuccessful",
+          "band": "8K"
+        },
+        {
+          "headword": "manufacture",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r17",
+      "title": "夜间药房通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.304,
+      "calibratedScore": 2.054,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.851,
+        "lowerFrequency6KPlus": 0.068
+      },
+      "longestSentence": {
+        "text": "and 6 a.m., patients should call the non-emergency health line on 111.",
+        "words": 12
+      },
+      "keyVocabulary": [
+        {
+          "headword": "cosmetic",
+          "band": "9K"
+        },
+        {
+          "headword": "pharmacy",
+          "band": "7K"
+        },
+        {
+          "headword": "unconscious",
+          "band": "6K"
+        },
+        {
+          "headword": "prescription",
+          "band": "6K"
+        },
+        {
+          "headword": "urgent",
+          "band": "5K"
+        },
+        {
+          "headword": "overnight",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r18",
+      "title": "休闲中心会员方案",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.135,
+      "calibratedScore": 1.885,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.857,
+        "lowerFrequency6KPlus": 0.052
+      },
+      "longestSentence": {
+        "text": "Use the gym and pool whenever the centre is open; two fitness classes are included each week.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "daytime",
+          "band": "9K"
+        },
+        {
+          "headword": "riverside",
+          "band": "9K"
+        },
+        {
+          "headword": "leisure",
+          "band": "7K"
+        },
+        {
+          "headword": "pause",
+          "band": "6K"
+        },
+        {
+          "headword": "anytime",
+          "band": "5K"
+        },
+        {
+          "headword": "swim",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r19",
+      "title": "家庭回收日历",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.569,
+      "calibratedScore": 2.319,
+      "rawModelLevel": "L3",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.84,
+        "lowerFrequency6KPlus": 0.013
+      },
+      "longestSentence": {
+        "text": "Do not place plastic bags in the green bin, even if they are labelled biodegradable.",
+        "words": 15
+      },
+      "keyVocabulary": [
+        {
+          "headword": "metre",
+          "band": "8K"
+        },
+        {
+          "headword": "noon",
+          "band": "5K"
+        },
+        {
+          "headword": "bin",
+          "band": "4K"
+        },
+        {
+          "headword": "label",
+          "band": "3K"
+        },
+        {
+          "headword": "plastic",
+          "band": "3K"
+        },
+        {
+          "headword": "branch",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        }
+      ]
+    },
+    {
+      "lessonId": "r20",
+      "title": "工作场所事故报告",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.177,
+      "calibratedScore": 3.177,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 0.99,
+        "highFrequency1K2K": 0.856,
+        "lowerFrequency6KPlus": 0.021
+      },
+      "longestSentence": {
+        "text": "The Health and Safety Manager reviews all reports within two working days and decides whether further investigation is required.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        },
+        {
+          "headword": "photograph",
+          "band": "4K"
+        },
+        {
+          "headword": "photographs",
+          "band": "4K"
+        },
+        {
+          "headword": "log",
+          "band": "4K"
+        },
+        {
+          "headword": "procedure",
+          "band": "3K"
+        },
+        {
+          "headword": "permission",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        }
+      ]
+    },
+    {
+      "lessonId": "r21",
+      "title": "灵活工作申请政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.427,
+      "calibratedScore": 4.427,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.874,
+        "lowerFrequency6KPlus": 0
+      },
+      "longestSentence": {
+        "text": "Employees may ask a different manager to review the procedure, but this is not a second decision on whether the pattern is convenient.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "flexible",
+          "band": "5K"
+        },
+        {
+          "headword": "convenient",
+          "band": "5K"
+        },
+        {
+          "headword": "unnecessary",
+          "band": "5K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        },
+        {
+          "headword": "colleagues",
+          "band": "4K"
+        },
+        {
+          "headword": "procedure",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r22",
+      "title": "社区护理助理招聘",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.564,
+      "calibratedScore": 2.564,
+      "rawModelLevel": "L3",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.802,
+        "lowerFrequency6KPlus": 0.055
+      },
+      "longestSentence": {
+        "text": "Apply with a CV and a short statement explaining how you would respond if a client refused help.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "cv",
+          "band": "10K"
+        },
+        {
+          "headword": "mileage",
+          "band": "9K"
+        },
+        {
+          "headword": "applicants",
+          "band": "6K"
+        },
+        {
+          "headword": "licence",
+          "band": "6K"
+        },
+        {
+          "headword": "prescription",
+          "band": "6K"
+        },
+        {
+          "headword": "reliable",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r23",
+      "title": "公共图书馆角色的变化",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.572,
+      "calibratedScore": 4.722,
+      "rawModelLevel": "L5",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.916,
+        "lowerFrequency6KPlus": 0.016
+      },
+      "longestSentence": {
+        "text": "Quiet readers may be disturbed by children's activities or group classes, while staff must deal with questions that were once handled by other public offices.",
+        "words": 25
+      },
+      "keyVocabulary": [
+        {
+          "headword": "disturbed",
+          "band": "8K"
+        },
+        {
+          "headword": "incomplete",
+          "band": "7K"
+        },
+        {
+          "headword": "lend",
+          "band": "7K"
+        },
+        {
+          "headword": "indoor",
+          "band": "5K"
+        },
+        {
+          "headword": "divide",
+          "band": "5K"
+        },
+        {
+          "headword": "depend",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        }
+      ]
+    },
+    {
+      "lessonId": "r24",
+      "title": "城市树木的隐形价值",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.995,
+        "highFrequency1K2K": 0.835,
+        "lowerFrequency6KPlus": 0.043
+      },
+      "longestSentence": {
+        "text": "A species that grows well in a park may damage a narrow pavement, while a newly planted tree provides little shade for years.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "pavement",
+          "band": "10K"
+        },
+        {
+          "headword": "drainage",
+          "band": "8K"
+        },
+        {
+          "headword": "planting",
+          "band": "8K"
+        },
+        {
+          "headword": "decoration",
+          "band": "7K"
+        },
+        {
+          "headword": "prone",
+          "band": "6K"
+        },
+        {
+          "headword": "neighbourhood",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r25",
+      "title": "铁路替代公交通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.198,
+      "calibratedScore": 1.948,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.96,
+        "highFrequency1K2K": 0.787,
+        "lowerFrequency6KPlus": 0.053
+      },
+      "longestSentence": {
+        "text": "On Sunday 18 August, trains between Harford and Milton will be replaced by buses from 7 a.m.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "luggage",
+          "band": "8K"
+        },
+        {
+          "headword": "milton",
+          "band": "7K"
+        },
+        {
+          "headword": "wheelchair",
+          "band": "7K"
+        },
+        {
+          "headword": "bicycle",
+          "band": "6K"
+        },
+        {
+          "headword": "fold",
+          "band": "5K"
+        },
+        {
+          "headword": "valid",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r26",
+      "title": "居民停车许可证",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.277,
+      "calibratedScore": 2.027,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.805,
+        "lowerFrequency6KPlus": 0.026
+      },
+      "longestSentence": {
+        "text": "A permit does not guarantee a space and is not valid in loading bays between 8 a.m.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "upload",
+          "band": "6K"
+        },
+        {
+          "headword": "visitor",
+          "band": "6K"
+        },
+        {
+          "headword": "loading",
+          "band": "5K"
+        },
+        {
+          "headword": "permit",
+          "band": "4K"
+        },
+        {
+          "headword": "registration",
+          "band": "4K"
+        },
+        {
+          "headword": "twelve",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r27",
+      "title": "河畔社区节日程",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.552,
+      "calibratedScore": 2.302,
+      "rawModelLevel": "L3",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.806,
+        "lowerFrequency6KPlus": 0.048
+      },
+      "longestSentence": {
+        "text": "If there is heavy rain, the cooking session and theatre move to the school hall, but the history walk is cancelled.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "riverside",
+          "band": "9K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "cancelled",
+          "band": "4K"
+        },
+        {
+          "headword": "outdoor",
+          "band": "4K"
+        },
+        {
+          "headword": "craft",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r28",
+      "title": "独立作业安全政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.359,
+      "calibratedScore": 4.359,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.894,
+        "lowerFrequency6KPlus": 0.053
+      },
+      "longestSentence": {
+        "text": "Lone workers must not enter a property where violence has previously been reported, and they may not use ladders above two metres without another trained person present.",
+        "words": 27
+      },
+      "keyVocabulary": [
+        {
+          "headword": "lone",
+          "band": "7K"
+        },
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        },
+        {
+          "headword": "hazard",
+          "band": "6K"
+        },
+        {
+          "headword": "ladder",
+          "band": "6K"
+        },
+        {
+          "headword": "halfway",
+          "band": "5K"
+        },
+        {
+          "headword": "metres",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r29",
+      "title": "员工费用报销规则",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.402,
+      "calibratedScore": 2.402,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.786,
+        "lowerFrequency6KPlus": 0.06
+      },
+      "longestSentence": {
+        "text": "Meals may be claimed only when work requires an overnight stay, up to £25 for an evening meal.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "reimburse",
+          "band": "20K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "receipt",
+          "band": "7K"
+        },
+        {
+          "headword": "overnight",
+          "band": "5K"
+        },
+        {
+          "headword": "expense",
+          "band": "4K"
+        },
+        {
+          "headword": "submitted",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r30",
+      "title": "急救复训要求",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.402,
+      "calibratedScore": 2.402,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.833,
+        "lowerFrequency6KPlus": 0.077
+      },
+      "longestSentence": {
+        "text": "Anyone whose full certificate expires within the next two months should enrol on the two-day renewal course instead.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "expire",
+          "band": "11K"
+        },
+        {
+          "headword": "refresh",
+          "band": "9K"
+        },
+        {
+          "headword": "renewal",
+          "band": "7K"
+        },
+        {
+          "headword": "portal",
+          "band": "6K"
+        },
+        {
+          "headword": "workplace",
+          "band": "6K"
+        },
+        {
+          "headword": "workshop",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r31",
+      "title": "共享办公空间的发展",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.472,
+      "calibratedScore": 4.772,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.983,
+        "highFrequency1K2K": 0.836,
+        "lowerFrequency6KPlus": 0.028
+      },
+      "longestSentence": {
+        "text": "A membership may include a desk, meeting rooms and internet access, but the less visible attraction is social: people working alone can exchange advice or simply have a reason to leave home.",
+        "words": 32
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unsuitable",
+          "band": "15K"
+        },
+        {
+          "headword": "widened",
+          "band": "14K"
+        },
+        {
+          "headword": "distract",
+          "band": "9K"
+        },
+        {
+          "headword": "informal",
+          "band": "7K"
+        },
+        {
+          "headword": "suburban",
+          "band": "7K"
+        },
+        {
+          "headword": "hub",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        }
+      ]
+    },
+    {
+      "lessonId": "r32",
+      "title": "城市街市为何仍然重要",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.848,
+        "lowerFrequency6KPlus": 0.051
+      },
+      "longestSentence": {
+        "text": "Rather, managers need to understand why people visit and protect the features that ordinary shops cannot easily copy: direct contact with sellers, changing stock and a strong connection to place.",
+        "words": 30
+      },
+      "keyVocabulary": [
+        {
+          "headword": "supermarket",
+          "band": "8K"
+        },
+        {
+          "headword": "stall",
+          "band": "8K"
+        },
+        {
+          "headword": "traders",
+          "band": "6K"
+        },
+        {
+          "headword": "prediction",
+          "band": "6K"
+        },
+        {
+          "headword": "seller",
+          "band": "6K"
+        },
+        {
+          "headword": "adaptation",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r33",
+      "title": "周末渡轮调整通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.48,
+      "calibratedScore": 2.23,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.986,
+        "highFrequency1K2K": 0.786,
+        "lowerFrequency6KPlus": 0.086
+      },
+      "longestSentence": {
+        "text": "Passengers who no longer wish to travel may request a full refund online before 6 p.m.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "harbour",
+          "band": "6K"
+        },
+        {
+          "headword": "bicycle",
+          "band": "6K"
+        },
+        {
+          "headword": "sailing",
+          "band": "6K"
+        },
+        {
+          "headword": "ferry",
+          "band": "6K"
+        },
+        {
+          "headword": "departure",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r34",
+      "title": "居民回收收集变更",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.365,
+      "calibratedScore": 2.115,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.831,
+        "lowerFrequency6KPlus": 0.065
+      },
+      "longestSentence": {
+        "text": "Flatten cardboard and place it inside the blue bin; material left beside the bin will not be taken.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "rinse",
+          "band": "12K"
+        },
+        {
+          "headword": "cardboard",
+          "band": "9K"
+        },
+        {
+          "headword": "recycling",
+          "band": "8K"
+        },
+        {
+          "headword": "container",
+          "band": "6K"
+        },
+        {
+          "headword": "noon",
+          "band": "5K"
+        },
+        {
+          "headword": "beside",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r35",
+      "title": "社区剧院购票规定",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.032,
+      "calibratedScore": 3.782,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.988,
+        "highFrequency1K2K": 0.869,
+        "lowerFrequency6KPlus": 0.036
+      },
+      "longestSentence": {
+        "text": "Wheelchair spaces cannot be booked through the seating map; call the box office so a companion seat can be reserved at the same time.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "wheelchair",
+          "band": "7K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "companion",
+          "band": "5K"
+        },
+        {
+          "headword": "cancelled",
+          "band": "4K"
+        },
+        {
+          "headword": "admitted",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r36",
+      "title": "客户资料处理规范",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.885,
+      "calibratedScore": 3.885,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.867,
+        "lowerFrequency6KPlus": 0.056
+      },
+      "longestSentence": {
+        "text": "Report a lost device, wrongly addressed message or suspicious request to Information Security within one hour, even if no harm is yet known.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unattended",
+          "band": "17K"
+        },
+        {
+          "headword": "login",
+          "band": "12K"
+        },
+        {
+          "headword": "unwanted",
+          "band": "8K"
+        },
+        {
+          "headword": "unlock",
+          "band": "7K"
+        },
+        {
+          "headword": "confidential",
+          "band": "7K"
+        },
+        {
+          "headword": "suspicious",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r37",
+      "title": "员工年假申请规则",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.339,
+      "calibratedScore": 4.189,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.918,
+        "lowerFrequency6KPlus": 0.01
+      },
+      "longestSentence": {
+        "text": "No more than five unused days may be carried into the next leave year unless the employee was unable to take leave because of long-term sickness or family leave.",
+        "words": 30
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unused",
+          "band": "10K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        },
+        {
+          "headword": "absence",
+          "band": "4K"
+        },
+        {
+          "headword": "guarantee",
+          "band": "3K"
+        },
+        {
+          "headword": "employee",
+          "band": "3K"
+        },
+        {
+          "headword": "approval",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r38",
+      "title": "仓库人工搬运守则",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.55,
+      "calibratedScore": 2.55,
+      "rawModelLevel": "L3",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.794,
+        "lowerFrequency6KPlus": 0.031
+      },
+      "longestSentence": {
+        "text": "Report pain or a near miss before the end of the shift so the task can be reviewed.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "bulky",
+          "band": "15K"
+        },
+        {
+          "headword": "trolley",
+          "band": "12K"
+        },
+        {
+          "headword": "warehouse",
+          "band": "5K"
+        },
+        {
+          "headword": "gently",
+          "band": "5K"
+        },
+        {
+          "headword": "bend",
+          "band": "5K"
+        },
+        {
+          "headword": "twist",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        }
+      ]
+    },
+    {
+      "lessonId": "r39",
+      "title": "社区小巴如何填补交通缺口",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.983,
+        "highFrequency1K2K": 0.827,
+        "lowerFrequency6KPlus": 0.05
+      },
+      "longestSentence": {
+        "text": "A minibus will not replace a busy urban network, but in the right area it can prevent lack of transport from becoming isolation.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "inaccessible",
+          "band": "15K"
+        },
+        {
+          "headword": "timetable",
+          "band": "12K"
+        },
+        {
+          "headword": "unreliable",
+          "band": "11K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "coordinator",
+          "band": "7K"
+        },
+        {
+          "headword": "licence",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r40",
+      "title": "公共图书馆开始借工具",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.786,
+        "lowerFrequency6KPlus": 0.072
+      },
+      "longestSentence": {
+        "text": "Tool lending therefore extends the library's educational role: it gives access not only to an object, but also to the knowledge needed to use it well.",
+        "words": 26
+      },
+      "keyVocabulary": [
+        {
+          "headword": "borrowers",
+          "band": "13K"
+        },
+        {
+          "headword": "inspect",
+          "band": "10K"
+        },
+        {
+          "headword": "sewing",
+          "band": "9K"
+        },
+        {
+          "headword": "cutter",
+          "band": "9K"
+        },
+        {
+          "headword": "hedge",
+          "band": "8K"
+        },
+        {
+          "headword": "exclude",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r41",
+      "title": "机场接驳车预订须知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.484,
+      "calibratedScore": 2.234,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.821,
+        "lowerFrequency6KPlus": 0.103
+      },
+      "longestSentence": {
+        "text": "If the flight is delayed, the booking moves automatically to the next available shuttle without an extra charge.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "suitcase",
+          "band": "11K"
+        },
+        {
+          "headword": "luggage",
+          "band": "8K"
+        },
+        {
+          "headword": "pickup",
+          "band": "7K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "shuttle",
+          "band": "7K"
+        },
+        {
+          "headword": "cabin",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r42",
+      "title": "药房送药服务说明",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.506,
+      "calibratedScore": 2.256,
+      "rawModelLevel": "L3",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.827,
+        "lowerFrequency6KPlus": 0.092
+      },
+      "longestSentence": {
+        "text": "If nobody receives a signed delivery, the driver returns it to the pharmacy for collection the next day.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "refrigerated",
+          "band": "19K"
+        },
+        {
+          "headword": "weekday",
+          "band": "15K"
+        },
+        {
+          "headword": "nominate",
+          "band": "10K"
+        },
+        {
+          "headword": "neighbour",
+          "band": "9K"
+        },
+        {
+          "headword": "kilometres",
+          "band": "8K"
+        },
+        {
+          "headword": "pharmacy",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r43",
+      "title": "社区活动室租用规则",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.262,
+      "calibratedScore": 2.012,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.988,
+        "highFrequency1K2K": 0.78,
+        "lowerFrequency6KPlus": 0.085
+      },
+      "longestSentence": {
+        "text": "Cold food may be brought in, but hot-food suppliers must provide an insurance certificate.",
+        "words": 15
+      },
+      "keyVocabulary": [
+        {
+          "headword": "removable",
+          "band": "15K"
+        },
+        {
+          "headword": "decoration",
+          "band": "7K"
+        },
+        {
+          "headword": "suppliers",
+          "band": "7K"
+        },
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "prohibited",
+          "band": "6K"
+        },
+        {
+          "headword": "arrange",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r44",
+      "title": "远程办公信息安全",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.988,
+      "calibratedScore": 2.988,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.804,
+        "lowerFrequency6KPlus": 0.076
+      },
+      "longestSentence": {
+        "text": "Position screens where household members and visitors cannot read them, and lock the computer whenever you leave the room.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "hotspot",
+          "band": "17K"
+        },
+        {
+          "headword": "hotline",
+          "band": "13K"
+        },
+        {
+          "headword": "folder",
+          "band": "8K"
+        },
+        {
+          "headword": "accidental",
+          "band": "7K"
+        },
+        {
+          "headword": "confidential",
+          "band": "7K"
+        },
+        {
+          "headword": "disposal",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r45",
+      "title": "员工导师计划",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.988,
+      "calibratedScore": 2.988,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 0.989,
+        "highFrequency1K2K": 0.793,
+        "lowerFrequency6KPlus": 0.098
+      },
+      "longestSentence": {
+        "text": "Mentors and mentees should meet once a month for six months and agree a short agenda beforehand.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "wellbeing",
+          "band": "11K"
+        },
+        {
+          "headword": "beforehand",
+          "band": "10K"
+        },
+        {
+          "headword": "unlawful",
+          "band": "9K"
+        },
+        {
+          "headword": "participant",
+          "band": "8K"
+        },
+        {
+          "headword": "mentor",
+          "band": "6K"
+        },
+        {
+          "headword": "approve",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r46",
+      "title": "工作事故上报流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.329,
+      "calibratedScore": 3.329,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.99,
+        "highFrequency1K2K": 0.8,
+        "lowerFrequency6KPlus": 0.053
+      },
+      "longestSentence": {
+        "text": "First make the area safe without putting yourself at risk, then contact a trained first aider if anyone is injured.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "authorised",
+          "band": "10K"
+        },
+        {
+          "headword": "inspect",
+          "band": "10K"
+        },
+        {
+          "headword": "restart",
+          "band": "9K"
+        },
+        {
+          "headword": "technician",
+          "band": "9K"
+        },
+        {
+          "headword": "hazard",
+          "band": "6K"
+        },
+        {
+          "headword": "inform",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r47",
+      "title": "旧建筑如何获得新用途",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.831,
+      "calibratedScore": 4.131,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.84,
+        "lowerFrequency6KPlus": 0.041
+      },
+      "longestSentence": {
+        "text": "They preserve a connection to local history while accepting that a building survives only if people can use it well today.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "reuse",
+          "band": "13K"
+        },
+        {
+          "headword": "accessibility",
+          "band": "11K"
+        },
+        {
+          "headword": "alterations",
+          "band": "11K"
+        },
+        {
+          "headword": "adaptive",
+          "band": "10K"
+        },
+        {
+          "headword": "demolition",
+          "band": "10K"
+        },
+        {
+          "headword": "neighbourhood",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r48",
+      "title": "城市为什么需要更多座椅",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.988,
+        "highFrequency1K2K": 0.838,
+        "lowerFrequency6KPlus": 0.046
+      },
+      "longestSentence": {
+        "text": "Yet a bench can determine whether an older person walks to local shops, whether a parent can pause with a child, or whether a public square invites people to stay rather than pass through.",
+        "words": 34
+      },
+      "keyVocabulary": [
+        {
+          "headword": "antisocial",
+          "band": "18K"
+        },
+        {
+          "headword": "overlook",
+          "band": "11K"
+        },
+        {
+          "headword": "decoration",
+          "band": "7K"
+        },
+        {
+          "headword": "wheelchair",
+          "band": "7K"
+        },
+        {
+          "headword": "slope",
+          "band": "7K"
+        },
+        {
+          "headword": "occupy",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r49",
+      "title": "铁路季票续期说明",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.922,
+      "calibratedScore": 3.672,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.833,
+        "lowerFrequency6KPlus": 0.073
+      },
+      "longestSentence": {
+        "text": "Plastic cards ordered online can be collected after two working days from the station selected at checkout; bring the payment card and photo identification.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "expire",
+          "band": "11K"
+        },
+        {
+          "headword": "checkout",
+          "band": "9K"
+        },
+        {
+          "headword": "resemble",
+          "band": "8K"
+        },
+        {
+          "headword": "renew",
+          "band": "8K"
+        },
+        {
+          "headword": "eligibility",
+          "band": "8K"
+        },
+        {
+          "headword": "renewal",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r50",
+      "title": "宠物寄养预订规则",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.402,
+      "calibratedScore": 2.152,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.989,
+        "highFrequency1K2K": 0.867,
+        "lowerFrequency6KPlus": 0.056
+      },
+      "longestSentence": {
+        "text": "Dogs and cats must have current vaccination records, emailed at least 48 hours before arrival.",
+        "words": 14
+      },
+      "keyVocabulary": [
+        {
+          "headword": "paw",
+          "band": "12K"
+        },
+        {
+          "headword": "vaccination",
+          "band": "10K"
+        },
+        {
+          "headword": "cancellation",
+          "band": "8K"
+        },
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "toy",
+          "band": "4K"
+        },
+        {
+          "headword": "instructions",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r51",
+      "title": "社区泳池临时关闭通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.712,
+      "calibratedScore": 3.462,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.989,
+        "highFrequency1K2K": 0.806,
+        "lowerFrequency6KPlus": 0.043
+      },
+      "longestSentence": {
+        "text": "Children's lessons will continue in the teaching pool at their usual times, except Saturday advanced classes, which instructors will rearrange by email.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "ventilation",
+          "band": "10K"
+        },
+        {
+          "headword": "riverside",
+          "band": "9K"
+        },
+        {
+          "headword": "instructor",
+          "band": "6K"
+        },
+        {
+          "headword": "closure",
+          "band": "5K"
+        },
+        {
+          "headword": "mill",
+          "band": "3K"
+        },
+        {
+          "headword": "entrance",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r52",
+      "title": "弹性工作时间政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.382,
+      "calibratedScore": 2.232,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.926,
+        "lowerFrequency6KPlus": 0
+      },
+      "longestSentence": {
+        "text": "The manager will consider service demand, shared duties and meeting access, then confirm a three-month trial.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "flexible",
+          "band": "5K"
+        },
+        {
+          "headword": "arrangement",
+          "band": "4K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        },
+        {
+          "headword": "confirm",
+          "band": "3K"
+        },
+        {
+          "headword": "telephone",
+          "band": "3K"
+        },
+        {
+          "headword": "guarantee",
+          "band": "3K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "detail-tracking",
+          "label": "细节定位与同义改写"
+        }
+      ]
+    },
+    {
+      "lessonId": "r53",
+      "title": "电脑工位评估流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.316,
+      "calibratedScore": 3.316,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.981,
+        "highFrequency1K2K": 0.808,
+        "lowerFrequency6KPlus": 0.067
+      },
+      "longestSentence": {
+        "text": "After submission, the workplace assessor reviews your answers within five working days and may request photographs that do not show confidential material.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "workstation",
+          "band": "20K"
+        },
+        {
+          "headword": "authorised",
+          "band": "10K"
+        },
+        {
+          "headword": "discomfort",
+          "band": "9K"
+        },
+        {
+          "headword": "occupational",
+          "band": "9K"
+        },
+        {
+          "headword": "persistent",
+          "band": "7K"
+        },
+        {
+          "headword": "confidential",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r54",
+      "title": "客户投诉升级流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.182,
+      "calibratedScore": 3.182,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.823,
+        "lowerFrequency6KPlus": 0.039
+      },
+      "longestSentence": {
+        "text": "Refer the case to a supervisor immediately if it involves safety, discrimination, threatened legal action or repeated failure.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unresolved",
+          "band": "15K"
+        },
+        {
+          "headword": "escalate",
+          "band": "14K"
+        },
+        {
+          "headword": "reopened",
+          "band": "12K"
+        },
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        },
+        {
+          "headword": "liability",
+          "band": "5K"
+        },
+        {
+          "headword": "resolve",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r55",
+      "title": "夜间经济如何服务整座城市",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.258,
+      "calibratedScore": 4.558,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.988,
+        "highFrequency1K2K": 0.845,
+        "lowerFrequency6KPlus": 0.012
+      },
+      "longestSentence": {
+        "text": "The aim is not unlimited opening, but a varied centre where people can work, socialise and sleep under rules that respond to real patterns.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "performers",
+          "band": "7K"
+        },
+        {
+          "headword": "blunt",
+          "band": "7K"
+        },
+        {
+          "headword": "hostile",
+          "band": "5K"
+        },
+        {
+          "headword": "unlimited",
+          "band": "5K"
+        },
+        {
+          "headword": "providers",
+          "band": "5K"
+        },
+        {
+          "headword": "lit",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r56",
+      "title": "学校街道能否减少交通风险",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.803,
+        "lowerFrequency6KPlus": 0.025
+      },
+      "longestSentence": {
+        "text": "School streets work best as one element of a wider plan that includes reliable buses, connected cycle routes and practical alternatives for families living farther away.",
+        "words": 26
+      },
+      "keyVocabulary": [
+        {
+          "headword": "exemption",
+          "band": "9K"
+        },
+        {
+          "headword": "restrict",
+          "band": "8K"
+        },
+        {
+          "headword": "displaced",
+          "band": "8K"
+        },
+        {
+          "headword": "farther",
+          "band": "7K"
+        },
+        {
+          "headword": "mobility",
+          "band": "5K"
+        },
+        {
+          "headword": "measurement",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r57",
+      "title": "自助仓储合同要点",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.458,
+      "calibratedScore": 2.208,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.98,
+        "highFrequency1K2K": 0.848,
+        "lowerFrequency6KPlus": 0.03
+      },
+      "longestSentence": {
+        "text": "On the final day, empty and sweep the unit, remove your padlock and upload a photograph before midnight.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "sweep",
+          "band": "6K"
+        },
+        {
+          "headword": "upload",
+          "band": "6K"
+        },
+        {
+          "headword": "prohibited",
+          "band": "6K"
+        },
+        {
+          "headword": "inspection",
+          "band": "5K"
+        },
+        {
+          "headword": "creature",
+          "band": "5K"
+        },
+        {
+          "headword": "photograph",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "detail-tracking",
+          "label": "细节定位与同义改写"
+        }
+      ]
+    },
+    {
+      "lessonId": "r58",
+      "title": "宠物疫苗预约通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.477,
+      "calibratedScore": 2.577,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.72,
+        "lowerFrequency6KPlus": 0.086
+      },
+      "longestSentence": {
+        "text": "Arrive ten minutes early and keep dogs on a short lead; cats must remain in secure carriers.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "vaccination",
+          "band": "10K"
+        },
+        {
+          "headword": "vomiting",
+          "band": "10K"
+        },
+        {
+          "headword": "swelling",
+          "band": "9K"
+        },
+        {
+          "headword": "afterward",
+          "band": "7K"
+        },
+        {
+          "headword": "prompt",
+          "band": "7K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r59",
+      "title": "地方选举选民指引",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.482,
+      "calibratedScore": 3.232,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.806,
+        "lowerFrequency6KPlus": 0.041
+      },
+      "longestSentence": {
+        "text": "You must show one accepted form of photo identification; an expired document is allowed if the photograph still clearly resembles you.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "resemble",
+          "band": "8K"
+        },
+        {
+          "headword": "proxy",
+          "band": "8K"
+        },
+        {
+          "headword": "expired",
+          "band": "8K"
+        },
+        {
+          "headword": "pencil",
+          "band": "6K"
+        },
+        {
+          "headword": "ballot",
+          "band": "5K"
+        },
+        {
+          "headword": "booth",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r60",
+      "title": "消防疏散员轮值规则",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.354,
+      "calibratedScore": 4.704,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.981,
+        "highFrequency1K2K": 0.757,
+        "lowerFrequency6KPlus": 0.087
+      },
+      "longestSentence": {
+        "text": "During an alarm, sweep only the assigned zone while moving toward the exit; do not delay to search locked rooms or collect belongings.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "signage",
+          "band": "17K"
+        },
+        {
+          "headword": "warden",
+          "band": "10K"
+        },
+        {
+          "headword": "evacuation",
+          "band": "8K"
+        },
+        {
+          "headword": "coordinator",
+          "band": "7K"
+        },
+        {
+          "headword": "sweep",
+          "band": "6K"
+        },
+        {
+          "headword": "absent",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r61",
+      "title": "学徒学习假政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.399,
+      "calibratedScore": 3.399,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.825,
+        "lowerFrequency6KPlus": 0.062
+      },
+      "longestSentence": {
+        "text": "Managers can change a requested date when minimum staffing would not be met, but must offer a reasonable alternative before the assessment.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "timetable",
+          "band": "12K"
+        },
+        {
+          "headword": "apprentice",
+          "band": "9K"
+        },
+        {
+          "headword": "preceding",
+          "band": "8K"
+        },
+        {
+          "headword": "revision",
+          "band": "7K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r62",
+      "title": "工作场所噪声防护",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.204,
+      "calibratedScore": 3.554,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.76,
+        "lowerFrequency6KPlus": 0.07
+      },
+      "longestSentence": {
+        "text": "Use the ear protection issued for your task and check seals or cushions for damage before every shift.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "muffled",
+          "band": "20K"
+        },
+        {
+          "headword": "disable",
+          "band": "11K"
+        },
+        {
+          "headword": "rotate",
+          "band": "10K"
+        },
+        {
+          "headword": "cushion",
+          "band": "10K"
+        },
+        {
+          "headword": "headphones",
+          "band": "7K"
+        },
+        {
+          "headword": "confidential",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r63",
+      "title": "补充装商店能否减少包装",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.533,
+      "calibratedScore": 5.183,
+      "rawModelLevel": "L5",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.739,
+        "lowerFrequency6KPlus": 0.14
+      },
+      "longestSentence": {
+        "text": "The visible benefit is less single-use packaging, but the full environmental result depends on transport, cleaning and how often each container is reused.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "dispenser",
+          "band": "20K"
+        },
+        {
+          "headword": "detergent",
+          "band": "17K"
+        },
+        {
+          "headword": "reusable",
+          "band": "16K"
+        },
+        {
+          "headword": "refill",
+          "band": "16K"
+        },
+        {
+          "headword": "reuse",
+          "band": "13K"
+        },
+        {
+          "headword": "footprint",
+          "band": "11K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r64",
+      "title": "社区能源合作社的作用",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.676,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.801,
+        "lowerFrequency6KPlus": 0.062
+      },
+      "longestSentence": {
+        "text": "Some cooperatives address this with low-cost membership, community shares held in trust and grants for insulation rather than payments only to investors.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "rooftop",
+          "band": "11K"
+        },
+        {
+          "headword": "insulation",
+          "band": "9K"
+        },
+        {
+          "headword": "exclude",
+          "band": "8K"
+        },
+        {
+          "headword": "distribute",
+          "band": "8K"
+        },
+        {
+          "headword": "cooperative",
+          "band": "7K"
+        },
+        {
+          "headword": "tenants",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r65",
+      "title": "道路封闭与居民停车许可通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.717,
+      "calibratedScore": 2.467,
+      "rawModelLevel": "L3",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.876,
+        "lowerFrequency6KPlus": 0.019
+      },
+      "longestSentence": {
+        "text": "Residents whose vehicles are normally parked inside the closed section may apply for a temporary permit to use the library car park.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "pedestrian",
+          "band": "9K"
+        },
+        {
+          "headword": "junction",
+          "band": "6K"
+        },
+        {
+          "headword": "closure",
+          "band": "5K"
+        },
+        {
+          "headword": "retain",
+          "band": "5K"
+        },
+        {
+          "headword": "permit",
+          "band": "4K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "detail-tracking",
+          "label": "细节定位与同义改写"
+        }
+      ]
+    },
+    {
+      "lessonId": "r66",
+      "title": "员工差旅费用报销政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.34,
+      "calibratedScore": 3.69,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.991,
+        "highFrequency1K2K": 0.768,
+        "lowerFrequency6KPlus": 0.089
+      },
+      "longestSentence": {
+        "text": "Submit the expense form within 30 days of the journey and attach itemised receipts; a card statement alone is not proof of purchase.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "reimburse",
+          "band": "20K"
+        },
+        {
+          "headword": "accessibility",
+          "band": "11K"
+        },
+        {
+          "headword": "incurred",
+          "band": "10K"
+        },
+        {
+          "headword": "mileage",
+          "band": "9K"
+        },
+        {
+          "headword": "attach",
+          "band": "8K"
+        },
+        {
+          "headword": "incomplete",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r67",
+      "title": "医院门诊检查准备指引",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.96,
+      "calibratedScore": 4.31,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.724,
+        "lowerFrequency6KPlus": 0.095
+      },
+      "longestSentence": {
+        "text": "Because the medication used during the procedure may cause temporary fatigue, you must arrange for a responsible adult to take you home.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "outpatient",
+          "band": "14K"
+        },
+        {
+          "headword": "referral",
+          "band": "10K"
+        },
+        {
+          "headword": "allergy",
+          "band": "10K"
+        },
+        {
+          "headword": "beforehand",
+          "band": "10K"
+        },
+        {
+          "headword": "notify",
+          "band": "8K"
+        },
+        {
+          "headword": "asthma",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r68",
+      "title": "城市如何同时管理洪水与自然栖息地",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.543,
+      "calibratedScore": 4.193,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.995,
+        "highFrequency1K2K": 0.777,
+        "lowerFrequency6KPlus": 0.063
+      },
+      "longestSentence": {
+        "text": "This approach can protect one district, yet it may transfer a larger volume downstream and increase pressure on ageing infrastructure.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "obstruct",
+          "band": "19K"
+        },
+        {
+          "headword": "wetland",
+          "band": "18K"
+        },
+        {
+          "headword": "polluted",
+          "band": "14K"
+        },
+        {
+          "headword": "wetlands",
+          "band": "13K"
+        },
+        {
+          "headword": "paving",
+          "band": "13K"
+        },
+        {
+          "headword": "biodiversity",
+          "band": "12K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r69",
+      "title": "健身中心会籍暂停规定",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.34,
+      "calibratedScore": 3.44,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.778,
+        "lowerFrequency6KPlus": 0.083
+      },
+      "longestSentence": {
+        "text": "A medical pause requires a letter confirming that exercise is not recommended; the letter does not need to state a diagnosis.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "waived",
+          "band": "12K"
+        },
+        {
+          "headword": "pause",
+          "band": "6K"
+        },
+        {
+          "headword": "diagnosis",
+          "band": "4K"
+        },
+        {
+          "headword": "cancelled",
+          "band": "4K"
+        },
+        {
+          "headword": "submit",
+          "band": "4K"
+        },
+        {
+          "headword": "pregnancy",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r70",
+      "title": "配送车辆装载安全程序",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.945,
+      "calibratedScore": 3.945,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.827,
+        "lowerFrequency6KPlus": 0.073
+      },
+      "longestSentence": {
+        "text": "Check the maximum weight for both the entire vehicle and each axle; a load can be unsafe even when the total remains below the vehicle limit.",
+        "words": 26
+      },
+      "keyVocabulary": [
+        {
+          "headword": "axle",
+          "band": "11K"
+        },
+        {
+          "headword": "inspect",
+          "band": "10K"
+        },
+        {
+          "headword": "restraint",
+          "band": "10K"
+        },
+        {
+          "headword": "unsafe",
+          "band": "9K"
+        },
+        {
+          "headword": "strap",
+          "band": "8K"
+        },
+        {
+          "headword": "distribute",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r71",
+      "title": "网络诈骗受害者处置清单",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.659,
+      "calibratedScore": 3.659,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.829,
+        "lowerFrequency6KPlus": 0.026
+      },
+      "longestSentence": {
+        "text": "Report the incident to the national fraud service even if the amount is minor, because multiple reports can reveal a wider pattern.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "screenshot",
+          "band": "8K"
+        },
+        {
+          "headword": "investigators",
+          "band": "7K"
+        },
+        {
+          "headword": "receipt",
+          "band": "7K"
+        },
+        {
+          "headword": "password",
+          "band": "5K"
+        },
+        {
+          "headword": "freeze",
+          "band": "5K"
+        },
+        {
+          "headword": "edit",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        },
+        {
+          "code": "reference",
+          "label": "指代链需要回看"
+        }
+      ]
+    },
+    {
+      "lessonId": "r72",
+      "title": "远程办公是否真正改变城市",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.422,
+      "calibratedScore": 3.722,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.841,
+        "lowerFrequency6KPlus": 0.032
+      },
+      "longestSentence": {
+        "text": "Several have converted older offices into housing, although the process is difficult because building depth, windows and plumbing may be unsuitable.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unsuitable",
+          "band": "15K"
+        },
+        {
+          "headword": "plumbing",
+          "band": "10K"
+        },
+        {
+          "headword": "recognise",
+          "band": "7K"
+        },
+        {
+          "headword": "prediction",
+          "band": "6K"
+        },
+        {
+          "headword": "adapt",
+          "band": "6K"
+        },
+        {
+          "headword": "flexibility",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r73",
+      "title": "市中心手工艺市场摊位申请",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.381,
+      "calibratedScore": 2.131,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.99,
+        "highFrequency1K2K": 0.827,
+        "lowerFrequency6KPlus": 0.031
+      },
+      "longestSentence": {
+        "text": "Stalls are available to independent makers selling genuine handmade products; imported mass-produced goods and food are not accepted.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "handmade",
+          "band": "9K"
+        },
+        {
+          "headword": "stall",
+          "band": "8K"
+        },
+        {
+          "headword": "applicants",
+          "band": "6K"
+        },
+        {
+          "headword": "import",
+          "band": "5K"
+        },
+        {
+          "headword": "liability",
+          "band": "5K"
+        },
+        {
+          "headword": "maker",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r74",
+      "title": "实验室化学品泄漏程序",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.367,
+      "calibratedScore": 4.717,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.992,
+        "highFrequency1K2K": 0.724,
+        "lowerFrequency6KPlus": 0.049
+      },
+      "longestSentence": {
+        "text": "For a known minor spill, trained staff should put on the protective kit stated in the safety sheet, place warning signs at each entrance and prevent the liquid from reaching a drain.",
+        "words": 32
+      },
+      "keyVocabulary": [
+        {
+          "headword": "spill",
+          "band": "7K"
+        },
+        {
+          "headword": "supervisor",
+          "band": "6K"
+        },
+        {
+          "headword": "warn",
+          "band": "6K"
+        },
+        {
+          "headword": "container",
+          "band": "6K"
+        },
+        {
+          "headword": "drain",
+          "band": "5K"
+        },
+        {
+          "headword": "protective",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r75",
+      "title": "员工丧亲与葬礼假期政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.376,
+      "calibratedScore": 4.376,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.792,
+        "lowerFrequency6KPlus": 0.067
+      },
+      "longestSentence": {
+        "text": "An employee may take up to five paid working days after the death of a spouse, partner, child, parent or another person who belonged to the employee's household.",
+        "words": 28
+      },
+      "keyVocabulary": [
+        {
+          "headword": "wellbeing",
+          "band": "11K"
+        },
+        {
+          "headword": "compassionate",
+          "band": "11K"
+        },
+        {
+          "headword": "unpaid",
+          "band": "8K"
+        },
+        {
+          "headword": "confidential",
+          "band": "7K"
+        },
+        {
+          "headword": "spouse",
+          "band": "6K"
+        },
+        {
+          "headword": "sensitivity",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r76",
+      "title": "博物馆如何面对争议遗产",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.313,
+      "calibratedScore": 3.963,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.754,
+        "lowerFrequency6KPlus": 0.015
+      },
+      "longestSentence": {
+        "text": "Contemporary practice is more likely to reveal how an object was collected, who created it and which voices were ignored.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "authoritative",
+          "band": "13K"
+        },
+        {
+          "headword": "transparency",
+          "band": "7K"
+        },
+        {
+          "headword": "uncertainty",
+          "band": "6K"
+        },
+        {
+          "headword": "justify",
+          "band": "5K"
+        },
+        {
+          "headword": "trophy",
+          "band": "5K"
+        },
+        {
+          "headword": "colonial",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r77",
+      "title": "社区应急避难所开放通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.484,
+      "calibratedScore": 2.234,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.869,
+        "lowerFrequency6KPlus": 0.028
+      },
+      "longestSentence": {
+        "text": "The shelter is intended for people who cannot remain safely at home; advance booking is not otherwise required.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "wheelchair",
+          "band": "7K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "civic",
+          "band": "6K"
+        },
+        {
+          "headword": "blanket",
+          "band": "5K"
+        },
+        {
+          "headword": "freeze",
+          "band": "5K"
+        },
+        {
+          "headword": "adjacent",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "detail-tracking",
+          "label": "细节定位与同义改写"
+        }
+      ]
+    },
+    {
+      "lessonId": "r78",
+      "title": "客户资料泄露处理程序",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.463,
+      "calibratedScore": 4.463,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.986,
+        "highFrequency1K2K": 0.796,
+        "lowerFrequency6KPlus": 0.049
+      },
+      "longestSentence": {
+        "text": "A suspected data breach includes an email sent to the wrong person, a lost device, unauthorised access or the accidental publication of personal information.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "encrypted",
+          "band": "13K"
+        },
+        {
+          "headword": "disconnect",
+          "band": "12K"
+        },
+        {
+          "headword": "regulator",
+          "band": "10K"
+        },
+        {
+          "headword": "assign",
+          "band": "9K"
+        },
+        {
+          "headword": "screenshot",
+          "band": "8K"
+        },
+        {
+          "headword": "accidental",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r79",
+      "title": "创新项目小额资助章程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.348,
+      "calibratedScore": 3.698,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.726,
+        "lowerFrequency6KPlus": 0.04
+      },
+      "longestSentence": {
+        "text": "Applicants must provide a cost breakdown, identify one measurable result and explain how the work could continue after the grant ends.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "organisational",
+          "band": "17K"
+        },
+        {
+          "headword": "measurable",
+          "band": "14K"
+        },
+        {
+          "headword": "feasibility",
+          "band": "12K"
+        },
+        {
+          "headword": "informal",
+          "band": "7K"
+        },
+        {
+          "headword": "applicants",
+          "band": "6K"
+        },
+        {
+          "headword": "publish",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r80",
+      "title": "共识不等于没有分歧",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.012,
+      "calibratedScore": 4.662,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.995,
+        "highFrequency1K2K": 0.742,
+        "lowerFrequency6KPlus": 0.038
+      },
+      "longestSentence": {
+        "text": "A junior employee may remain silent before a wealthy client or a dominant manager, not because the argument is convincing but because disagreement seems risky.",
+        "words": 25
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unresolved",
+          "band": "15K"
+        },
+        {
+          "headword": "unequal",
+          "band": "15K"
+        },
+        {
+          "headword": "anonymity",
+          "band": "13K"
+        },
+        {
+          "headword": "disagreement",
+          "band": "9K"
+        },
+        {
+          "headword": "unanimous",
+          "band": "9K"
+        },
+        {
+          "headword": "optimistic",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r81",
+      "title": "市民游泳池浅水区使用通知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.21,
+      "calibratedScore": 1.96,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.991,
+        "highFrequency1K2K": 0.804,
+        "lowerFrequency6KPlus": 0.071
+      },
+      "longestSentence": {
+        "text": "The shallow pool is for children under eight accompanied by an adult in the water.",
+        "words": 15
+      },
+      "keyVocabulary": [
+        {
+          "headword": "inflatable",
+          "band": "16K"
+        },
+        {
+          "headword": "supervise",
+          "band": "14K"
+        },
+        {
+          "headword": "riverside",
+          "band": "9K"
+        },
+        {
+          "headword": "refund",
+          "band": "6K"
+        },
+        {
+          "headword": "locker",
+          "band": "6K"
+        },
+        {
+          "headword": "shallow",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r82",
+      "title": "工作场所骚扰报告程序",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.64,
+      "calibratedScore": 3.64,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.831,
+        "lowerFrequency6KPlus": 0.063
+      },
+      "longestSentence": {
+        "text": "Keep relevant emails, dates and names of witnesses, but do not secretly record a private conversation where this would break the law.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "retaliation",
+          "band": "11K"
+        },
+        {
+          "headword": "unwanted",
+          "band": "8K"
+        },
+        {
+          "headword": "informal",
+          "band": "7K"
+        },
+        {
+          "headword": "prohibited",
+          "band": "6K"
+        },
+        {
+          "headword": "insult",
+          "band": "6K"
+        },
+        {
+          "headword": "interim",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r83",
+      "title": "员工差旅护照与费用政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.301,
+      "calibratedScore": 4.301,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.992,
+        "highFrequency1K2K": 0.826,
+        "lowerFrequency6KPlus": 0.061
+      },
+      "longestSentence": {
+        "text": "Contact the emergency assistance provider immediately after a serious incident; in the meantime, take reasonable action to protect your safety and company equipment.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "reimburse",
+          "band": "20K"
+        },
+        {
+          "headword": "renewal",
+          "band": "7K"
+        },
+        {
+          "headword": "fourteen",
+          "band": "7K"
+        },
+        {
+          "headword": "receipt",
+          "band": "7K"
+        },
+        {
+          "headword": "convenience",
+          "band": "6K"
+        },
+        {
+          "headword": "meantime",
+          "band": "6K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r84",
+      "title": "城市夜间货运是否可行",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.721,
+      "calibratedScore": 4.021,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.781,
+        "lowerFrequency6KPlus": 0.08
+      },
+      "longestSentence": {
+        "text": "Its merit lies not simply in moving traffic to another hour, but in reducing the combined burden of congestion, pollution and disturbance.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "lorry",
+          "band": "16K"
+        },
+        {
+          "headword": "measurable",
+          "band": "14K"
+        },
+        {
+          "headword": "pavement",
+          "band": "10K"
+        },
+        {
+          "headword": "disturbance",
+          "band": "10K"
+        },
+        {
+          "headword": "congestion",
+          "band": "9K"
+        },
+        {
+          "headword": "credible",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r85",
+      "title": "社区花园苗圃开放与购买规则",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.539,
+      "calibratedScore": 2.289,
+      "rawModelLevel": "L3",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.852,
+        "lowerFrequency6KPlus": 0.078
+      },
+      "longestSentence": {
+        "text": "Returns are accepted within seven days only when a plant was damaged at purchase; bring the receipt and a photograph.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "reusable",
+          "band": "16K"
+        },
+        {
+          "headword": "compost",
+          "band": "16K"
+        },
+        {
+          "headword": "supervised",
+          "band": "10K"
+        },
+        {
+          "headword": "unpaid",
+          "band": "8K"
+        },
+        {
+          "headword": "hardy",
+          "band": "7K"
+        },
+        {
+          "headword": "nursery",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r86",
+      "title": "员工保密资料披露规范",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.451,
+      "calibratedScore": 4.801,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.757,
+        "lowerFrequency6KPlus": 0.125
+      },
+      "longestSentence": {
+        "text": "Employees may access only the information required for their role and must not disclose it to a colleague merely because that person works for the same organisation.",
+        "words": 27
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unpublished",
+          "band": "13K"
+        },
+        {
+          "headword": "encrypted",
+          "band": "13K"
+        },
+        {
+          "headword": "sanction",
+          "band": "12K"
+        },
+        {
+          "headword": "regulator",
+          "band": "10K"
+        },
+        {
+          "headword": "disciplinary",
+          "band": "8K"
+        },
+        {
+          "headword": "retention",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r87",
+      "title": "招聘模拟面试与公平评分指南",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.399,
+      "calibratedScore": 3.399,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.85,
+        "lowerFrequency6KPlus": 0.098
+      },
+      "longestSentence": {
+        "text": "The panel should score evidence against the published criteria rather than rely on instinct or a candidate's similarity to a predecessor.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "shortlisted",
+          "band": "17K"
+        },
+        {
+          "headword": "competence",
+          "band": "10K"
+        },
+        {
+          "headword": "retention",
+          "band": "8K"
+        },
+        {
+          "headword": "predecessor",
+          "band": "7K"
+        },
+        {
+          "headword": "justification",
+          "band": "7K"
+        },
+        {
+          "headword": "mock",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r88",
+      "title": "公共地标能否推动城市更新",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.041,
+      "calibratedScore": 5.591,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.995,
+        "highFrequency1K2K": 0.642,
+        "lowerFrequency6KPlus": 0.205
+      },
+      "longestSentence": {
+        "text": "A public building that includes a nursery, affordable workspaces and inviting leisure areas may create daily value as well as a symbolic identity.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "insecure",
+          "band": "8K"
+        },
+        {
+          "headword": "neglect",
+          "band": "8K"
+        },
+        {
+          "headword": "kindle",
+          "band": "8K"
+        },
+        {
+          "headword": "remedy",
+          "band": "7K"
+        },
+        {
+          "headword": "inadequate",
+          "band": "7K"
+        },
+        {
+          "headword": "decoration",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r89",
+      "title": "机场行李寄存条款",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.717,
+      "calibratedScore": 2.817,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 0.991,
+        "highFrequency1K2K": 0.768,
+        "lowerFrequency6KPlus": 0.111
+      },
+      "longestSentence": {
+        "text": "Compensation is limited to the declared value shown on the form, and ordinary wear or damage caused by insufficient packing is excluded.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "volatile",
+          "band": "9K"
+        },
+        {
+          "headword": "jewellery",
+          "band": "8K"
+        },
+        {
+          "headword": "baggage",
+          "band": "8K"
+        },
+        {
+          "headword": "photographic",
+          "band": "8K"
+        },
+        {
+          "headword": "interval",
+          "band": "8K"
+        },
+        {
+          "headword": "insufficient",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r90",
+      "title": "托儿机构家长同意与紧急处理政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.191,
+      "calibratedScore": 4.191,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.806,
+        "lowerFrequency6KPlus": 0.101
+      },
+      "longestSentence": {
+        "text": "In a life-threatening situation, the foremost duty is to call emergency services; staff will not delay urgent care while trying every contact.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "fracture",
+          "band": "9K"
+        },
+        {
+          "headword": "parental",
+          "band": "8K"
+        },
+        {
+          "headword": "foremost",
+          "band": "8K"
+        },
+        {
+          "headword": "exclude",
+          "band": "8K"
+        },
+        {
+          "headword": "apparatus",
+          "band": "8K"
+        },
+        {
+          "headword": "allergic",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r91",
+      "title": "学徒项目阶段评估规范",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.937,
+      "calibratedScore": 4.287,
+      "rawModelLevel": "L4",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.726,
+        "lowerFrequency6KPlus": 0.129
+      },
+      "longestSentence": {
+        "text": "If illness, disability or language creates a barrier to the review format, the provider should modify the process without changing the occupational standard.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "competence",
+          "band": "10K"
+        },
+        {
+          "headword": "misconduct",
+          "band": "9K"
+        },
+        {
+          "headword": "apprentice",
+          "band": "9K"
+        },
+        {
+          "headword": "limitation",
+          "band": "9K"
+        },
+        {
+          "headword": "occupational",
+          "band": "9K"
+        },
+        {
+          "headword": "feasible",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r92",
+      "title": "旅游宣传是否损害高地社区",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.876,
+      "calibratedScore": 4.926,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.994,
+        "highFrequency1K2K": 0.659,
+        "lowerFrequency6KPlus": 0.224
+      },
+      "longestSentence": {
+        "text": "Success means continuity: a place should remain habitable, culturally meaningful and environmentally robust after the latest attraction falls out of vogue.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "longstanding",
+          "band": "17K"
+        },
+        {
+          "headword": "outsiders",
+          "band": "11K"
+        },
+        {
+          "headword": "apt",
+          "band": "9K"
+        },
+        {
+          "headword": "highland",
+          "band": "9K"
+        },
+        {
+          "headword": "vogue",
+          "band": "9K"
+        },
+        {
+          "headword": "litter",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r93",
+      "title": "社区宴会厅使用须知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.413,
+      "calibratedScore": 2.513,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.98,
+        "highFrequency1K2K": 0.735,
+        "lowerFrequency6KPlus": 0.167
+      },
+      "longestSentence": {
+        "text": "Cancellation more than twenty-eight days beforehand receives a full refund; later cancellation is subject to the stated administration charge.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "westfield",
+          "band": "17K"
+        },
+        {
+          "headword": "pavilion",
+          "band": "10K"
+        },
+        {
+          "headword": "beforehand",
+          "band": "10K"
+        },
+        {
+          "headword": "brew",
+          "band": "9K"
+        },
+        {
+          "headword": "scrub",
+          "band": "9K"
+        },
+        {
+          "headword": "ninety",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r94",
+      "title": "实习生岗位分配与监督标准",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.929,
+      "calibratedScore": 4.679,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.67,
+        "lowerFrequency6KPlus": 0.217
+      },
+      "longestSentence": {
+        "text": "Supervisors may assign meaningful work that aligns with the learning plan, but interns must not replace a redundant employee or perform hazardous duties without competence and training.",
+        "words": 27
+      },
+      "keyVocabulary": [
+        {
+          "headword": "clarification",
+          "band": "11K"
+        },
+        {
+          "headword": "retaliation",
+          "band": "11K"
+        },
+        {
+          "headword": "competence",
+          "band": "10K"
+        },
+        {
+          "headword": "redundant",
+          "band": "10K"
+        },
+        {
+          "headword": "align",
+          "band": "10K"
+        },
+        {
+          "headword": "terminate",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r95",
+      "title": "网上银行欺诈交易处理流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.557,
+      "calibratedScore": 3.557,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.797,
+        "lowerFrequency6KPlus": 0.11
+      },
+      "longestSentence": {
+        "text": "A genuine cashier or investigator will never request your full password or ask you to move money into a 'safe account'.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "unexplained",
+          "band": "15K"
+        },
+        {
+          "headword": "intercept",
+          "band": "10K"
+        },
+        {
+          "headword": "cashier",
+          "band": "10K"
+        },
+        {
+          "headword": "fraudulent",
+          "band": "10K"
+        },
+        {
+          "headword": "unfamiliar",
+          "band": "10K"
+        },
+        {
+          "headword": "refresh",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r96",
+      "title": "城市公园翻新是否会带来排斥",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.937,
+      "calibratedScore": 5.487,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.62,
+        "lowerFrequency6KPlus": 0.298
+      },
+      "longestSentence": {
+        "text": "A successful park accommodates a multitude of uses, from solitary rest to gymnastics and a public banquet, without treating any resident as peripheral.",
+        "words": 23
+      },
+      "keyVocabulary": [
+        {
+          "headword": "antisocial",
+          "band": "18K"
+        },
+        {
+          "headword": "affluent",
+          "band": "13K"
+        },
+        {
+          "headword": "newcomers",
+          "band": "12K"
+        },
+        {
+          "headword": "planners",
+          "band": "11K"
+        },
+        {
+          "headword": "superficial",
+          "band": "11K"
+        },
+        {
+          "headword": "liaison",
+          "band": "10K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r97",
+      "title": "紧急旅行证申请说明",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.289,
+      "calibratedScore": 3.389,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.755,
+        "lowerFrequency6KPlus": 0.122
+      },
+      "longestSentence": {
+        "text": "A document may be valid for a single journey through specified countries; it is not a full passport.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "contradictory",
+          "band": "12K"
+        },
+        {
+          "headword": "payable",
+          "band": "11K"
+        },
+        {
+          "headword": "consulate",
+          "band": "10K"
+        },
+        {
+          "headword": "beforehand",
+          "band": "10K"
+        },
+        {
+          "headword": "unavailable",
+          "band": "10K"
+        },
+        {
+          "headword": "imminent",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r98",
+      "title": "食品自助餐过敏原管理",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.155,
+      "calibratedScore": 4.405,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.972,
+        "highFrequency1K2K": 0.602,
+        "lowerFrequency6KPlus": 0.204
+      },
+      "longestSentence": {
+        "text": "If a customer reports nausea, vomiting, swelling or difficulty breathing, stop service, call the trained first-aider and follow the emergency plan.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "crumbs",
+          "band": "14K"
+        },
+        {
+          "headword": "bland",
+          "band": "11K"
+        },
+        {
+          "headword": "wholesome",
+          "band": "11K"
+        },
+        {
+          "headword": "rye",
+          "band": "11K"
+        },
+        {
+          "headword": "outward",
+          "band": "11K"
+        },
+        {
+          "headword": "almond",
+          "band": "11K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r99",
+      "title": "双语医疗口译服务规范",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.952,
+      "calibratedScore": 4.702,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.654,
+        "lowerFrequency6KPlus": 0.221
+      },
+      "longestSentence": {
+        "text": "A patient who believes an interpretation was inaccurate may request the transcript, submit a complaint and ask for another interpreter at the next appointment.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "clinicians",
+          "band": "15K"
+        },
+        {
+          "headword": "fluent",
+          "band": "11K"
+        },
+        {
+          "headword": "bilingual",
+          "band": "11K"
+        },
+        {
+          "headword": "interpreter",
+          "band": "11K"
+        },
+        {
+          "headword": "dialect",
+          "band": "11K"
+        },
+        {
+          "headword": "articulate",
+          "band": "11K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r100",
+      "title": "灾后重建应恢复原貌还是转型",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.437,
+      "calibratedScore": 3.987,
+      "rawModelLevel": "L2",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.994,
+        "highFrequency1K2K": 0.609,
+        "lowerFrequency6KPlus": 0.304
+      },
+      "longestSentence": {
+        "text": "A picturesque bridge or pastoral street may carry intrinsic and sentimental value, so proposals for radical change can provoke grief.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "elevate",
+          "band": "13K"
+        },
+        {
+          "headword": "candid",
+          "band": "12K"
+        },
+        {
+          "headword": "intrinsic",
+          "band": "12K"
+        },
+        {
+          "headword": "consolidate",
+          "band": "12K"
+        },
+        {
+          "headword": "blueprint",
+          "band": "12K"
+        },
+        {
+          "headword": "avalanche",
+          "band": "12K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r101",
+      "title": "租住房屋潮湿与霉菌处理指南",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.168,
+      "calibratedScore": 3.79,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.982,
+        "highFrequency1K2K": 0.633,
+        "lowerFrequency6KPlus": 0.174
+      },
+      "longestSentence": {
+        "text": "The landlord must investigate structural leaks and defective ventilation; tenants remain responsible for ordinary cleaning and for reporting problems promptly.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "dizziness",
+          "band": "18K"
+        },
+        {
+          "headword": "condensation",
+          "band": "18K"
+        },
+        {
+          "headword": "camouflage",
+          "band": "13K"
+        },
+        {
+          "headword": "mould",
+          "band": "12K"
+        },
+        {
+          "headword": "bleach",
+          "band": "11K"
+        },
+        {
+          "headword": "defective",
+          "band": "10K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r102",
+      "title": "员工绩效评估申诉流程",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.786,
+      "calibratedScore": 3.536,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.71,
+        "lowerFrequency6KPlus": 0.159
+      },
+      "longestSentence": {
+        "text": "An employee who believes an appraisal is inaccurate should first ask the manager to identify the evidence behind each rating.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "slander",
+          "band": "14K"
+        },
+        {
+          "headword": "inhibit",
+          "band": "14K"
+        },
+        {
+          "headword": "deceptive",
+          "band": "14K"
+        },
+        {
+          "headword": "pertinent",
+          "band": "14K"
+        },
+        {
+          "headword": "rumour",
+          "band": "13K"
+        },
+        {
+          "headword": "impartial",
+          "band": "13K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r103",
+      "title": "防范假票与退款诈骗",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.333,
+      "calibratedScore": 4.083,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.991,
+        "highFrequency1K2K": 0.717,
+        "lowerFrequency6KPlus": 0.17
+      },
+      "longestSentence": {
+        "text": "Buy through the venue or an authorized seller and be cautious when a price is negligible compared with the official rate.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "plush",
+          "band": "14K"
+        },
+        {
+          "headword": "deceptive",
+          "band": "14K"
+        },
+        {
+          "headword": "pedigree",
+          "band": "14K"
+        },
+        {
+          "headword": "legality",
+          "band": "13K"
+        },
+        {
+          "headword": "vanish",
+          "band": "13K"
+        },
+        {
+          "headword": "negligible",
+          "band": "13K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r104",
+      "title": "城市绿地应精致管理还是自然恢复",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.447,
+      "calibratedScore": 3.497,
+      "rawModelLevel": "L2",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.974,
+        "highFrequency1K2K": 0.658,
+        "lowerFrequency6KPlus": 0.23
+      },
+      "longestSentence": {
+        "text": "An interdisciplinary team can identify where formal gardens matter and where ecological recovery will prosper.",
+        "words": 15
+      },
+      "keyVocabulary": [
+        {
+          "headword": "wetland",
+          "band": "18K"
+        },
+        {
+          "headword": "ornamental",
+          "band": "14K"
+        },
+        {
+          "headword": "glare",
+          "band": "14K"
+        },
+        {
+          "headword": "sanitary",
+          "band": "13K"
+        },
+        {
+          "headword": "conserve",
+          "band": "13K"
+        },
+        {
+          "headword": "botany",
+          "band": "13K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r105",
+      "title": "职业培训补助资格说明",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.179,
+      "calibratedScore": 3.279,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.733,
+        "lowerFrequency6KPlus": 0.171
+      },
+      "longestSentence": {
+        "text": "Applicants must normally live in the district, be at least eighteen and show that the course will improve employment prospects.",
+        "words": 20
+      },
+      "keyVocabulary": [
+        {
+          "headword": "enrolment",
+          "band": "19K"
+        },
+        {
+          "headword": "vocation",
+          "band": "17K"
+        },
+        {
+          "headword": "aptitude",
+          "band": "17K"
+        },
+        {
+          "headword": "prerequisite",
+          "band": "16K"
+        },
+        {
+          "headword": "encompass",
+          "band": "15K"
+        },
+        {
+          "headword": "withhold",
+          "band": "15K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r106",
+      "title": "清晰工作指令标准",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.036,
+      "calibratedScore": 3.786,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.694,
+        "lowerFrequency6KPlus": 0.222
+      },
+      "longestSentence": {
+        "text": "Supervisors should demonstrate unfamiliar tasks, then ask the worker to recite or show the critical safety steps in their own words.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "aptitude",
+          "band": "17K"
+        },
+        {
+          "headword": "diligent",
+          "band": "16K"
+        },
+        {
+          "headword": "jargon",
+          "band": "16K"
+        },
+        {
+          "headword": "revoke",
+          "band": "15K"
+        },
+        {
+          "headword": "hamper",
+          "band": "15K"
+        },
+        {
+          "headword": "lucid",
+          "band": "15K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r107",
+      "title": "农药泄漏应急卡",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.447,
+      "calibratedScore": 3.197,
+      "rawModelLevel": "L2",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 0.981,
+        "highFrequency1K2K": 0.689,
+        "lowerFrequency6KPlus": 0.141
+      },
+      "longestSentence": {
+        "text": "Use barriers to prevent liquid from entering soil, manure stores or drains, then apply the approved absorbent.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "manure",
+          "band": "17K"
+        },
+        {
+          "headword": "detergent",
+          "band": "17K"
+        },
+        {
+          "headword": "puncture",
+          "band": "16K"
+        },
+        {
+          "headword": "meticulous",
+          "band": "16K"
+        },
+        {
+          "headword": "pesticide",
+          "band": "16K"
+        },
+        {
+          "headword": "inhale",
+          "band": "16K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r108",
+      "title": "职业能力应靠学历还是实操证明",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.447,
+      "calibratedScore": 3.997,
+      "rawModelLevel": "L2",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.987,
+        "highFrequency1K2K": 0.603,
+        "lowerFrequency6KPlus": 0.245
+      },
+      "longestSentence": {
+        "text": "A certificate can affirm that a learner completed a defined curriculum and met prerequisites.",
+        "words": 14
+      },
+      "keyVocabulary": [
+        {
+          "headword": "deepen",
+          "band": "17K"
+        },
+        {
+          "headword": "vocation",
+          "band": "17K"
+        },
+        {
+          "headword": "equate",
+          "band": "17K"
+        },
+        {
+          "headword": "aptitude",
+          "band": "17K"
+        },
+        {
+          "headword": "affirm",
+          "band": "17K"
+        },
+        {
+          "headword": "ingenuity",
+          "band": "16K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r109",
+      "title": "共享工作室入驻须知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.584,
+      "calibratedScore": 3.684,
+      "rawModelLevel": "L4",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 1,
+        "highFrequency1K2K": 0.776,
+        "lowerFrequency6KPlus": 0.121
+      },
+      "longestSentence": {
+        "text": "Applicants must describe their work, provide one reference who can vouch for them and certify that any electrical equipment is safe.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "certify",
+          "band": "19K"
+        },
+        {
+          "headword": "obstruct",
+          "band": "19K"
+        },
+        {
+          "headword": "fledgling",
+          "band": "19K"
+        },
+        {
+          "headword": "trespass",
+          "band": "19K"
+        },
+        {
+          "headword": "relinquish",
+          "band": "18K"
+        },
+        {
+          "headword": "hoist",
+          "band": "18K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r110",
+      "title": "医院静脉治疗出院说明",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.306,
+      "calibratedScore": 4.056,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.976,
+        "highFrequency1K2K": 0.677,
+        "lowerFrequency6KPlus": 0.153
+      },
+      "longestSentence": {
+        "text": "Contact the ward if swelling begins to augment, the skin becomes hot or red, or you develop a fever.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "replenish",
+          "band": "20K"
+        },
+        {
+          "headword": "momentary",
+          "band": "19K"
+        },
+        {
+          "headword": "dizziness",
+          "band": "18K"
+        },
+        {
+          "headword": "strenuous",
+          "band": "18K"
+        },
+        {
+          "headword": "intravenous",
+          "band": "18K"
+        },
+        {
+          "headword": "inpatient",
+          "band": "17K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r111",
+      "title": "会议事实核查与纪要标准",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.012,
+      "calibratedScore": 4.762,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.983,
+        "highFrequency1K2K": 0.69,
+        "lowerFrequency6KPlus": 0.173
+      },
+      "longestSentence": {
+        "text": "A chair may reiterate a ruling, mediate a dispute or rebuke personal remarks, but the record should remain neutral rather than emphatic or pompous.",
+        "words": 24
+      },
+      "keyVocabulary": [
+        {
+          "headword": "hearsay",
+          "band": "20K"
+        },
+        {
+          "headword": "pompous",
+          "band": "20K"
+        },
+        {
+          "headword": "paraphrase",
+          "band": "20K"
+        },
+        {
+          "headword": "impart",
+          "band": "19K"
+        },
+        {
+          "headword": "emphatic",
+          "band": "19K"
+        },
+        {
+          "headword": "rebuke",
+          "band": "19K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r112",
+      "title": "城市更新能否带来公平复兴",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.667,
+      "calibratedScore": 4.717,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.977,
+        "highFrequency1K2K": 0.655,
+        "lowerFrequency6KPlus": 0.228
+      },
+      "longestSentence": {
+        "text": "Its success should be inferred from stable housing, accessible services and local incomes, not from flamboyant architecture or an impromptu festival.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "flamboyant",
+          "band": "20K"
+        },
+        {
+          "headword": "tenancy",
+          "band": "20K"
+        },
+        {
+          "headword": "banish",
+          "band": "19K"
+        },
+        {
+          "headword": "nascent",
+          "band": "19K"
+        },
+        {
+          "headword": "inept",
+          "band": "18K"
+        },
+        {
+          "headword": "steadfast",
+          "band": "18K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r113",
+      "title": "社区礼堂租用规则",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.41,
+      "calibratedScore": 2.51,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.943,
+        "highFrequency1K2K": 0.724,
+        "lowerFrequency6KPlus": 0.105
+      },
+      "longestSentence": {
+        "text": "Users may garnish prepared food in the kitchen, but cooking with an open flame is precluded.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "garnish",
+          "band": "20K"
+        },
+        {
+          "headword": "movable",
+          "band": "18K"
+        },
+        {
+          "headword": "improvised",
+          "band": "13K"
+        },
+        {
+          "headword": "catering",
+          "band": "9K"
+        },
+        {
+          "headword": "attach",
+          "band": "8K"
+        },
+        {
+          "headword": "decoration",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r114",
+      "title": "仓库化学品泄漏处置",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.152,
+      "calibratedScore": 4.402,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.906,
+        "highFrequency1K2K": 0.607,
+        "lowerFrequency6KPlus": 0.137
+      },
+      "longestSentence": {
+        "text": "Stop work, keep colleagues afield and disengage nearby machinery if this can be done without entering the affected area.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "tremble",
+          "band": "20K"
+        },
+        {
+          "headword": "dizziness",
+          "band": "18K"
+        },
+        {
+          "headword": "dilute",
+          "band": "17K"
+        },
+        {
+          "headword": "impaired",
+          "band": "9K"
+        },
+        {
+          "headword": "contaminated",
+          "band": "9K"
+        },
+        {
+          "headword": "notify",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r115",
+      "title": "工作场所调查与保密指南",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.049,
+      "calibratedScore": 3.799,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.893,
+        "highFrequency1K2K": 0.669,
+        "lowerFrequency6KPlus": 0.116
+      },
+      "longestSentence": {
+        "text": "Confidentiality cannot be absolute, however: the person responding to an allegation must understand its substance and have a fair opportunity to answer.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "infringed",
+          "band": "20K"
+        },
+        {
+          "headword": "hearsay",
+          "band": "20K"
+        },
+        {
+          "headword": "chronology",
+          "band": "16K"
+        },
+        {
+          "headword": "contradiction",
+          "band": "12K"
+        },
+        {
+          "headword": "allegation",
+          "band": "11K"
+        },
+        {
+          "headword": "hostility",
+          "band": "10K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        },
+        {
+          "code": "coverage-gap",
+          "label": "存在索引外词形"
+        }
+      ]
+    },
+    {
+      "lessonId": "r116",
+      "title": "城市扩张是否必然损害生活质量",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.855,
+      "calibratedScore": 3.905,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.887,
+        "highFrequency1K2K": 0.701,
+        "lowerFrequency6KPlus": 0.077
+      },
+      "longestSentence": {
+        "text": "The relevant contrast is therefore not simply low density against high density, but unplanned expansion against connected neighbourhoods.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "erode",
+          "band": "20K"
+        },
+        {
+          "headword": "coexist",
+          "band": "20K"
+        },
+        {
+          "headword": "unplanned",
+          "band": "18K"
+        },
+        {
+          "headword": "alienated",
+          "band": "15K"
+        },
+        {
+          "headword": "spacious",
+          "band": "13K"
+        },
+        {
+          "headword": "planners",
+          "band": "11K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        },
+        {
+          "code": "coverage-gap",
+          "label": "存在索引外词形"
+        }
+      ]
+    },
+    {
+      "lessonId": "r117",
+      "title": "公共自习室使用须知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.484,
+      "calibratedScore": 2.584,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.973,
+        "highFrequency1K2K": 0.78,
+        "lowerFrequency6KPlus": 0.11
+      },
+      "longestSentence": {
+        "text": "Bookings open seven days in advance and become invalid if the group is more than fifteen minutes tardy.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "faulty",
+          "band": "10K"
+        },
+        {
+          "headword": "suspend",
+          "band": "9K"
+        },
+        {
+          "headword": "cancellation",
+          "band": "8K"
+        },
+        {
+          "headword": "invalid",
+          "band": "8K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "fourteen",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r118",
+      "title": "轮班人员疲劳管理指南",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.07,
+      "calibratedScore": 3.82,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.922,
+        "highFrequency1K2K": 0.707,
+        "lowerFrequency6KPlus": 0.103
+      },
+      "longestSentence": {
+        "text": "Employees should report persistent lethargy, difficulty concentrating or an unsafe journey home to the shift supervisor.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "recurrent",
+          "band": "16K"
+        },
+        {
+          "headword": "rotate",
+          "band": "10K"
+        },
+        {
+          "headword": "unsafe",
+          "band": "9K"
+        },
+        {
+          "headword": "caffeine",
+          "band": "9K"
+        },
+        {
+          "headword": "judgement",
+          "band": "7K"
+        },
+        {
+          "headword": "fatigue",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r119",
+      "title": "餐饮场所过敏原控制",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.402,
+      "calibratedScore": 2.402,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.966,
+        "highFrequency1K2K": 0.784,
+        "lowerFrequency6KPlus": 0.095
+      },
+      "longestSentence": {
+        "text": "Use clean utensils and a separately prepared surface; removing a visible ingredient does not eliminate cross-contact.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "garnish",
+          "band": "20K"
+        },
+        {
+          "headword": "infer",
+          "band": "17K"
+        },
+        {
+          "headword": "superseded",
+          "band": "17K"
+        },
+        {
+          "headword": "utensils",
+          "band": "17K"
+        },
+        {
+          "headword": "allergy",
+          "band": "10K"
+        },
+        {
+          "headword": "catering",
+          "band": "9K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r120",
+      "title": "博物馆设在历史建筑中的得失",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 4.451,
+      "calibratedScore": 5.501,
+      "rawModelLevel": "L4",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.958,
+        "highFrequency1K2K": 0.718,
+        "lowerFrequency6KPlus": 0.071
+      },
+      "longestSentence": {
+        "text": "A building has not been rejuvenated merely because it looks impressive; it must support durable cultural use without sacrificing the history that made it valuable.",
+        "words": 25
+      },
+      "keyVocabulary": [
+        {
+          "headword": "evocative",
+          "band": "20K"
+        },
+        {
+          "headword": "impede",
+          "band": "18K"
+        },
+        {
+          "headword": "excavated",
+          "band": "16K"
+        },
+        {
+          "headword": "imitate",
+          "band": "15K"
+        },
+        {
+          "headword": "conspicuous",
+          "band": "14K"
+        },
+        {
+          "headword": "restrained",
+          "band": "12K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "long-sentence",
+          "label": "长句信息较密"
+        },
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        }
+      ]
+    },
+    {
+      "lessonId": "r121",
+      "title": "短途旅行保险索赔须知",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.455,
+      "calibratedScore": 2.555,
+      "rawModelLevel": "L2",
+      "internalLevel": "L2",
+      "coverage": {
+        "indexedWordFamilies": 0.963,
+        "highFrequency1K2K": 0.729,
+        "lowerFrequency6KPlus": 0.075
+      },
+      "longestSentence": {
+        "text": "This policy covers prepaid transport and accommodation if illness, injury or severe weather prevents your trip.",
+        "words": 16
+      },
+      "keyVocabulary": [
+        {
+          "headword": "prepaid",
+          "band": "15K"
+        },
+        {
+          "headword": "insurer",
+          "band": "11K"
+        },
+        {
+          "headword": "baggage",
+          "band": "8K"
+        },
+        {
+          "headword": "cancellation",
+          "band": "8K"
+        },
+        {
+          "headword": "booking",
+          "band": "7K"
+        },
+        {
+          "headword": "receipt",
+          "band": "7K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r122",
+      "title": "工作场所举报保护程序",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.207,
+      "calibratedScore": 3.957,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.946,
+        "highFrequency1K2K": 0.714,
+        "lowerFrequency6KPlus": 0.098
+      },
+      "longestSentence": {
+        "text": "Begin with the designated reporting officer unless that person may be involved; in that case contact the independent hotline.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "hotline",
+          "band": "13K"
+        },
+        {
+          "headword": "allegation",
+          "band": "11K"
+        },
+        {
+          "headword": "retaliation",
+          "band": "11K"
+        },
+        {
+          "headword": "exclusion",
+          "band": "9K"
+        },
+        {
+          "headword": "appoint",
+          "band": "9K"
+        },
+        {
+          "headword": "notify",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r123",
+      "title": "医院处方集更新说明",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.529,
+      "calibratedScore": 2.879,
+      "rawModelLevel": "L3",
+      "internalLevel": "L3",
+      "coverage": {
+        "indexedWordFamilies": 0.934,
+        "highFrequency1K2K": 0.736,
+        "lowerFrequency6KPlus": 0.113
+      },
+      "longestSentence": {
+        "text": "From 1 October, the older inhaler Breathex will be superseded by Airflow because evidence shows comparable control at lower cost.",
+        "words": 19
+      },
+      "keyVocabulary": [
+        {
+          "headword": "airflow",
+          "band": "19K"
+        },
+        {
+          "headword": "superseded",
+          "band": "17K"
+        },
+        {
+          "headword": "inhale",
+          "band": "16K"
+        },
+        {
+          "headword": "unsuitable",
+          "band": "15K"
+        },
+        {
+          "headword": "clinicians",
+          "band": "15K"
+        },
+        {
+          "headword": "abruptly",
+          "band": "10K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r124",
+      "title": "经济增长能否与资源消耗脱钩",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.467,
+      "calibratedScore": 4.517,
+      "rawModelLevel": "L3",
+      "internalLevel": "L6",
+      "coverage": {
+        "indexedWordFamilies": 0.921,
+        "highFrequency1K2K": 0.707,
+        "lowerFrequency6KPlus": 0.052
+      },
+      "longestSentence": {
+        "text": "Relative decoupling occurs when resource use grows more slowly than the economy; absolute decoupling means total use falls while output rises.",
+        "words": 21
+      },
+      "keyVocabulary": [
+        {
+          "headword": "kilometre",
+          "band": "16K"
+        },
+        {
+          "headword": "encompass",
+          "band": "15K"
+        },
+        {
+          "headword": "insulated",
+          "band": "13K"
+        },
+        {
+          "headword": "rebound",
+          "band": "11K"
+        },
+        {
+          "headword": "inexpensive",
+          "band": "10K"
+        },
+        {
+          "headword": "ecosystem",
+          "band": "8K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "nested-clause",
+          "label": "从句与条件关系"
+        },
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r125",
+      "title": "社区法律咨询预约规则",
+      "section": "Section 1",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 2.365,
+      "calibratedScore": 2.115,
+      "rawModelLevel": "L2",
+      "internalLevel": "L1",
+      "coverage": {
+        "indexedWordFamilies": 0.981,
+        "highFrequency1K2K": 0.788,
+        "lowerFrequency6KPlus": 0.038
+      },
+      "longestSentence": {
+        "text": "Bring contracts, letters and a short chronology; do not overfill the form with unrelated history.",
+        "words": 15
+      },
+      "keyVocabulary": [
+        {
+          "headword": "chronology",
+          "band": "16K"
+        },
+        {
+          "headword": "interpreter",
+          "band": "11K"
+        },
+        {
+          "headword": "eligibility",
+          "band": "8K"
+        },
+        {
+          "headword": "unrelated",
+          "band": "8K"
+        },
+        {
+          "headword": "slot",
+          "band": "5K"
+        },
+        {
+          "headword": "noon",
+          "band": "5K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r126",
+      "title": "培训机构抄袭处理政策",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.128,
+      "calibratedScore": 3.878,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.957,
+        "highFrequency1K2K": 0.713,
+        "lowerFrequency6KPlus": 0.096
+      },
+      "longestSentence": {
+        "text": "Plagiarism means presenting another person's words, structure, data or distinctive idea as your own without adequate acknowledgement.",
+        "words": 17
+      },
+      "keyVocabulary": [
+        {
+          "headword": "plagiarism",
+          "band": "16K"
+        },
+        {
+          "headword": "corrective",
+          "band": "15K"
+        },
+        {
+          "headword": "acknowledgement",
+          "band": "14K"
+        },
+        {
+          "headword": "learner",
+          "band": "14K"
+        },
+        {
+          "headword": "procedural",
+          "band": "11K"
+        },
+        {
+          "headword": "factual",
+          "band": "10K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r127",
+      "title": "弹性工时团队管理指南",
+      "section": "Section 2",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.45,
+      "calibratedScore": 3.45,
+      "rawModelLevel": "L3",
+      "internalLevel": "L4",
+      "coverage": {
+        "indexedWordFamilies": 0.952,
+        "highFrequency1K2K": 0.819,
+        "lowerFrequency6KPlus": 0.048
+      },
+      "longestSentence": {
+        "text": "Repeated failure to cover agreed duties is handled through the normal performance procedure, not by removing the scheme from an entire team.",
+        "words": 22
+      },
+      "keyVocabulary": [
+        {
+          "headword": "disdain",
+          "band": "14K"
+        },
+        {
+          "headword": "restriction",
+          "band": "8K"
+        },
+        {
+          "headword": "arrange",
+          "band": "6K"
+        },
+        {
+          "headword": "starter",
+          "band": "6K"
+        },
+        {
+          "headword": "flexibility",
+          "band": "6K"
+        },
+        {
+          "headword": "repeated",
+          "band": "4K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    },
+    {
+      "lessonId": "r128",
+      "title": "人口普查仍适合快速变化的城市吗",
+      "section": "Section 3",
+      "experimental": true,
+      "officialLexile": false,
+      "scoreEligible": false,
+      "predictedScore": 3.1,
+      "calibratedScore": 4.15,
+      "rawModelLevel": "L3",
+      "internalLevel": "L5",
+      "coverage": {
+        "indexedWordFamilies": 0.947,
+        "highFrequency1K2K": 0.714,
+        "lowerFrequency6KPlus": 0.106
+      },
+      "longestSentence": {
+        "text": "Between counts, transparent modelling can combine several datasets, publish uncertainty and invite local knowledge to gainsay implausible results.",
+        "words": 18
+      },
+      "keyVocabulary": [
+        {
+          "headword": "dataset",
+          "band": "20K"
+        },
+        {
+          "headword": "enrolment",
+          "band": "19K"
+        },
+        {
+          "headword": "infer",
+          "band": "17K"
+        },
+        {
+          "headword": "dashboard",
+          "band": "14K"
+        },
+        {
+          "headword": "breadth",
+          "band": "12K"
+        },
+        {
+          "headword": "wellbeing",
+          "band": "11K"
+        }
+      ],
+      "obstacles": [
+        {
+          "code": "low-frequency",
+          "label": "低频词较集中"
+        },
+        {
+          "code": "abstract-nouns",
+          "label": "抽象名词较多"
+        }
+      ]
+    }
+  ]
+}

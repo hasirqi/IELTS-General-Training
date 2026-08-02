@@ -192,6 +192,8 @@ function fitGbdt(matrix, labels, config) {
   return {
     predict: (input) => input.map((row) => base + trees.reduce((sum, tree) => sum + config.learningRate * predictTree(tree, row), 0)),
     importance,
+    base,
+    trees,
   };
 }
 
@@ -286,18 +288,29 @@ function refitAndHoldout(selection) {
   const holdout = matrices(subsets.holdout, featureIndices);
   if (selection.fit.type === "gbdt") {
     const model = fitGbdt(dev.x, dev.y, selection.fit.config);
-    return metrics(holdout.y, model.predict(holdout.x));
+    return {
+      metrics: metrics(holdout.y, model.predict(holdout.x)),
+      artifact: { type: "gbdt", featureIndices, config: selection.fit.config, base: model.base, trees: model.trees },
+    };
   }
   const scaler = fitScaler(dev.x);
   const scaledDev = scale(dev.x, scaler);
   const scaledHoldout = scale(holdout.x, scaler);
   if (selection.fit.type === "elasticNet") {
     const model = fitElasticNet(scaledDev, dev.y, selection.fit.lambda, selection.fit.l1Ratio);
-    return metrics(holdout.y, model.predict(scaledHoldout));
+    return {
+      metrics: metrics(holdout.y, model.predict(scaledHoldout)),
+      artifact: { type: "elasticNet", featureIndices, scaler, weights: model.weights, intercept: model.intercept },
+    };
   }
   const model = fitRidge(scaledDev, dev.y, selection.fit.lambda);
-  return metrics(holdout.y, model.predict(scaledHoldout));
+  return {
+    metrics: metrics(holdout.y, model.predict(scaledHoldout)),
+    artifact: { type: "ridge", featureIndices, scaler, weights: model.weights },
+  };
 }
+
+const finalFit = refitAndHoldout(selected);
 
 const summarizedWinners = classWinners.map((item) => ({
   name: item.name,
@@ -321,7 +334,8 @@ const payload = {
   searchCounts: { baseline: 1, ridge: ridgeCandidates.length, elasticNet: elasticCandidates.length, gbdt: gbdtCandidates.length },
   classWinners: summarizedWinners,
   selectedModel: selected.name,
-  holdout: refitAndHoldout(selected),
+  holdout: finalFit.metrics,
+  finalModel: finalFit.artifact,
   publicationGate: {
     sixLevelCoverage: true,
     sourceGroupedSplit: true,
