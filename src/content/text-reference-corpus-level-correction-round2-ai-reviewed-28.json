@@ -1,0 +1,3781 @@
+{
+  "version": "reference-corpus-level-correction-round2-ai-reviewed-v1-2026.08.02",
+  "sourceCorpusVersion": "reference-corpus-level-correction-round2-candidates-v1-2026.08.02",
+  "status": "independent-ai-reviewed-awaiting-model-validation",
+  "labelProvenance": "independent-ai-review-v1",
+  "reviewerDisclosure": "Two isolated AI reviewers plus a third independent AI adjudicator; not human labels and not official certification.",
+  "scoreEligible": false,
+  "summary": {
+    "total": 28,
+    "agreements": 27,
+    "agreementRate": 0.9643,
+    "adjudicated": 1,
+    "unresolvedCount": 0,
+    "unresolved": [],
+    "aiLabelReviewed": 28,
+    "humanLabelReviewed": 0,
+    "scoreEligible": 0,
+    "provenance": "independent-ai-review-v1",
+    "levelCounts": {
+      "L1": 19,
+      "L2": 1,
+      "L3": 0,
+      "L4": 0,
+      "L5": 2,
+      "L6": 6
+    }
+  },
+  "records": [
+    {
+      "id": "correction-r2-l5-008",
+      "title": "A Theological-Political Treatise [Part IV] by Benedictus de Spinoza — alternate passage 191",
+      "text": "(17:8) Whatever be the cause which leads a man to obey the commands of the\nsovereign, whether it be fear or hope, or love of his country, or any other\nemotion - the fact remains that the man takes counsel with himself, and\nnevertheless acts as his sovereign orders. (9) We must not, therefore,\nassert that all actions resulting from a man's deliberation with himself are\ndone in obedience to the rights of the individual rather than the sovereign:\nas a matter of fact, all actions spring from a man's deliberation with\nhimself, whether the determining motive be love or fear of punishment;\ntherefore, either dominion does not exist, and has no rights over its\nsubjects, or else it extends over every instance in which it can prevail on\nmen to decide to obey it. (10) Consequently, every action which a subject\nperforms in accordance with the commands of the sovereign, whether such\naction springs from love, or fear, or (as is more frequently the case) from\nhope and fear together, or from reverence, compounded of fear and\nadmiration, or, indeed, any motive whatever, is performed in virtue of his\nsubmission to the sovereign, and not in virtue of his own authority. (17:11) This point is made still more clear by the fact that obedience does\nnot consist so much in the outward act as in the mental state of the person\nobeying; so that he is most under the dominion of another who with his whole\nheart determines to obey another's commands; and consequently the firmest\ndominion belongs to the sovereign who has most influence over the minds of\nhis subjects; if those who are most feared possessed the firmest dominion,\nthe firmest dominion would belong to the subjects of a tyrant, for they are\nalways greatly feared by their ruler. (12) Furthermore, though it is\nimpossible to govern the mind as completely as the tongue, nevertheless\nminds are, to a certain extent, under the control of the sovereign, for he\ncan in many ways bring about that the greatest part of his subjects should\nfollow his wishes in their beliefs, their loves, and their hates.",
+      "contentHash": "sha256:1ba8c2055517a08822cad27935ea7d2f334685d7d0bd1cc02248dda442376459",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/992",
+        "textUrl": "https://www.gutenberg.org/cache/epub/992/pg992.txt",
+        "ebookId": "992",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 191"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "inference-load",
+            "discourse-density"
+          ],
+          "note": "Sovereignty argument proceeds through formal nested deductions.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "inference-load",
+            "discourse-density"
+          ],
+          "note": "Sovereignty argument develops through nested conditional reasoning.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 2053,
+          "paragraphs": 1,
+          "sentences": 5,
+          "tokens": 356,
+          "wordTokens": 351,
+          "uniqueWords": 162,
+          "matchedFamilyTokens": 348,
+          "outOfIndexTokens": 3
+        },
+        "sentence": {
+          "meanLength": 70.2,
+          "logMeanLength": 4.2513,
+          "maximumLength": 99,
+          "lengthCoefficientOfVariation": 0.2752,
+          "profileDiversity": 0.2
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.4349,
+          "meanZipfFrequency": 5.9914,
+          "familyCoverage": 0.9915,
+          "bandCoverage": {
+            "1K": 0.7493,
+            "2K": 0.0883,
+            "3K": 0.0199,
+            "4K": 0.0171,
+            "5K": 0.0142,
+            "6K": 0.0427,
+            "7K": 0.0199,
+            "8K": 0,
+            "9K": 0.0171,
+            "10K": 0.0057,
+            "11K": 0.0114,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0.0028,
+            "15K": 0,
+            "16K": 0.0028,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "firmest"
+          ],
+          "typeTokenRatio": 0.4615,
+          "movingAverageTypeTokenRatio": 0.7543
+        },
+        "wordForm": {
+          "meanSyllables": 1.5071,
+          "longWordRate": 0.2393
+        },
+        "discourse": {
+          "connectiveRate": 0.0285,
+          "subordinatorRate": 0.0627,
+          "pronounReferenceRate": 0.0627,
+          "nominalisationRate": 0.0342,
+          "lexicalDensity": 0.5442
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0342,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-003",
+      "title": "Autobiography by John Stuart Mill — alternate passage 191",
+      "text": "The number\nof new ideas which I received from this remarkable book, and the\nimpulse and stimulus as well as guidance given to my thoughts by its\ncriticism and disquisitions on society and civilization in the Hindoo\npart, on institutions and the acts of governments in the English part,\nmade my early familiarity with it eminently useful to my subsequent\nprogress. And though I can perceive deficiencies in it now as compared\nwith a perfect standard, I still think it, if not the most, one of the\nmost instructive histories ever written, and one of the books from\nwhich most benefit may be derived by a mind in the course of making up\nits opinions. The Preface, among the most characteristic of my father's writings, as\nwell as the richest in materials of thought, gives a picture which may\nbe entirely depended on, of the sentiments and expectations with which\nhe wrote the History. Saturated as the book is with the opinions and\nmodes of judgment of a democratic radicalism then regarded as extreme;\nand treating with a severity, at that time most unusual, the English Constitution, the English law, and all parties and classes who\npossessed any considerable influence in the country; he may have\nexpected reputation, but certainly not advancement in life, from its\npublication; nor could he have supposed that it would raise up anything\nbut enemies for him in powerful quarters: least of all could he have\nexpected favour from the East India Company, to whose commercial\nprivileges he was unqualifiedly hostile, and on the acts of whose\ngovernment he had made so many severe comments: though, in various parts\nof his book, he bore a testimony in their favour, which he felt to be\ntheir just due, namely, that no Government had on the whole given so much\nproof, to the extent of its lights, of good intention towards its subjects;\nand that if the acts of any other Government had the light of publicity\nas completely let in upon them, they would, in all probability, still less\nbear scrutiny.",
+      "contentHash": "sha256:e637fb50d318dba9df849732e9e2988b8f42a3946ae5a93fc4e77c6c6521f560",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/10378",
+        "textUrl": "https://www.gutenberg.org/cache/epub/10378/pg10378.txt",
+        "ebookId": "10378",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 191"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L5",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "discourse-density",
+            "inference-load"
+          ],
+          "note": "Dense evaluation links politics, authorship, and consequences.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L5",
+          "confidence": "high",
+          "evidenceCodes": [
+            "discourse-density",
+            "vocabulary-rarity",
+            "inference-load"
+          ],
+          "note": "Dense political history evaluates motives and consequences.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L5",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 1993,
+          "paragraphs": 1,
+          "sentences": 4,
+          "tokens": 345,
+          "wordTokens": 345,
+          "uniqueWords": 185,
+          "matchedFamilyTokens": 340,
+          "outOfIndexTokens": 5
+        },
+        "sentence": {
+          "meanLength": 86.25,
+          "logMeanLength": 4.4573,
+          "maximumLength": 191,
+          "lengthCoefficientOfVariation": 0.7072,
+          "profileDiversity": 0.25
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.248,
+          "meanZipfFrequency": 6.0957,
+          "familyCoverage": 0.9855,
+          "bandCoverage": {
+            "1K": 0.8029,
+            "2K": 0.0667,
+            "3K": 0.0348,
+            "4K": 0.029,
+            "5K": 0.0058,
+            "6K": 0.0174,
+            "7K": 0.0058,
+            "8K": 0.0058,
+            "9K": 0.0116,
+            "10K": 0.0029,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0.0029,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "disquisitions",
+            "hindoo",
+            "instructive",
+            "radicalism",
+            "unqualifiedly"
+          ],
+          "typeTokenRatio": 0.5362,
+          "movingAverageTypeTokenRatio": 0.7633
+        },
+        "wordForm": {
+          "meanSyllables": 1.5478,
+          "longWordRate": 0.2638
+        },
+        "discourse": {
+          "connectiveRate": 0.0232,
+          "subordinatorRate": 0.0696,
+          "pronounReferenceRate": 0.0667,
+          "nominalisationRate": 0.0522,
+          "lexicalDensity": 0.513
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0522,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-002",
+      "title": "A Treatise Concerning the Principles of Human Knowledge by George Berkeley — alternate passage 961",
+      "text": "On the contrary, I think it were highly to be\nwished that men of great abilities and obstinate application would draw\noff their thoughts from those amusements, and employ them in the study of\nsuch things as lie nearer the concerns of life, or have a more direct\ninfluence on the manners. SECOND OBJECTION OF MATHEMATICIANS.--ANSWER.--If it be said\nthat several theorems undoubtedly true are discovered by methods\nin which infinitesimals are made use of, which could never have\nbeen if their existence included a contradiction in it; I answer\nthat upon a thorough examination it will not be found that in any\ninstance it is necessary to make use of or conceive infinitesimal parts\nof finite lines, or even quantities less than the minimum sensible; nay,\nit will be evident this is never done, it being impossible. IF THE DOCTRINE WERE ONLY AN HYPOTHESIS IT SHOULD BE RESPECTED FOR ITS CONSEQUENCES.--By what we have premised, it is plain that very\nnumerous and important errors have taken their rise from those false Principles which were impugned in the foregoing parts of this treatise;\nand the opposites of those erroneous tenets at the same time appear to be\nmost fruitful Principles, from whence do flow innumerable consequences\nhighly advantageous to true philosophy, as well as to religion. Particularly Matter, or the absolute existence of corporeal objects, has\nbeen shown to be that wherein the most avowed and pernicious enemies of\nall knowledge, whether human or divine, have ever placed their chief\nstrength and confidence. And surely, if by distinguishing the real\nexistence of unthinking things from their being perceived, and allowing\nthem a subsistance of their own out of the minds of spirits, no one thing\nis explained in nature, but on the contrary a great many inexplicable\ndifficulties arise; if the supposition of Matter is barely precarious, as\nnot being grounded on so much as one single reason; if its consequences\ncannot endure the light of examination and free inquiry, but screen\nthemselves under the dark and general pretence of \"infinites being\nincomprehensible\"; if withal the removal of this Matter be not attended\nwith the least evil consequence; if it be not even missed in the world,\nbut everything as well, nay much easier conceived without it; if, lastly,\nboth Sceptics and Atheists are for ever silenced upon supposing only\nspirits and ideas, and this scheme of things is perfectly agreeable both\nto Reason and Religion: methinks we may expect it should be admitted and\nfirmly embraced, though it were proposed only as an hypothesis, and the\nexistence of Matter had been allowed possible, which yet I think we have\nevidently demonstrated that it is not.",
+      "contentHash": "sha256:aa35637a7a75d0e3bae5b9ebb1a66a42b99f2b17c53c38447e001de7e89c7e2b",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/4723",
+        "textUrl": "https://www.gutenberg.org/cache/epub/4723/pg4723.txt",
+        "ebookId": "4723",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 961"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "vocabulary-rarity",
+            "inference-load"
+          ],
+          "note": "Extended philosophical rebuttal uses nested conditional reasoning.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "vocabulary-rarity",
+            "discourse-density"
+          ],
+          "note": "Metaphysical rebuttal forms an extended conditional chain.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 2691,
+          "paragraphs": 1,
+          "sentences": 5,
+          "tokens": 449,
+          "wordTokens": 449,
+          "uniqueWords": 238,
+          "matchedFamilyTokens": 434,
+          "outOfIndexTokens": 15
+        },
+        "sentence": {
+          "meanLength": 89.8,
+          "logMeanLength": 4.4976,
+          "maximumLength": 193,
+          "lengthCoefficientOfVariation": 0.6097,
+          "profileDiversity": 0.2
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.5164,
+          "meanZipfFrequency": 5.967,
+          "familyCoverage": 0.9666,
+          "bandCoverage": {
+            "1K": 0.7327,
+            "2K": 0.0757,
+            "3K": 0.0512,
+            "4K": 0.0156,
+            "5K": 0.0134,
+            "6K": 0.0156,
+            "7K": 0.0156,
+            "8K": 0.0089,
+            "9K": 0.0022,
+            "10K": 0.0022,
+            "11K": 0,
+            "12K": 0.0067,
+            "13K": 0.0045,
+            "14K": 0.0022,
+            "15K": 0.0022,
+            "16K": 0.0045,
+            "17K": 0.0022,
+            "18K": 0.0022,
+            "19K": 0.0067,
+            "20K": 0.0022
+          },
+          "outOfIndexTypes": [
+            "avowed",
+            "corporeal",
+            "impugned",
+            "infinites",
+            "infinitesimal",
+            "infinitesimals",
+            "methinks",
+            "obstinate",
+            "pernicious",
+            "pretence",
+            "sceptics",
+            "subsistance",
+            "supposition",
+            "unthinking",
+            "withal"
+          ],
+          "typeTokenRatio": 0.5301,
+          "movingAverageTypeTokenRatio": 0.8325
+        },
+        "wordForm": {
+          "meanSyllables": 1.6036,
+          "longWordRate": 0.2472
+        },
+        "discourse": {
+          "connectiveRate": 0.0334,
+          "subordinatorRate": 0.0646,
+          "pronounReferenceRate": 0.0624,
+          "nominalisationRate": 0.0356,
+          "lexicalDensity": 0.539
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0356,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-001",
+      "title": "Bacon by R. W. Church — alternate passage 161",
+      "text": "But Hooker himself did not put his finger\nmore truly and more surely on the real mischief of the Puritan movement:\non the immense outbreak in it of unreasonable party spirit and visible\npersonal ambition--\"these are the true successors of Diotrephes and not\nmy lord bishops\"--on the gradual development of the Puritan theory till\nit came at last to claim a supremacy as unquestionable and intolerant as\nthat of the Papacy; on the servile affectation of the fashions of Geneva\nand Strasburg; on the poverty and foolishness of much of the Puritan\nteaching--its inability to satisfy the great questions which it raised\nin the soul, its unworthy dealing with Scripture--\"naked examples,\nconceited inferences, and forced allusions, which mine into all\ncertainty of religion\"--\"the word, the bread of life, they toss up and\ndown, they break it not;\" on their undervaluing of moral worth, if it\ndid not speak in their phraseology--\"as they censure virtuous men by the\nnames of civil and moral, so do they censure men truly and godly\nwise, who see into the vanity of their assertions, by the name of\npolitiques, saying that their wisdom is but carnal and savouring of\nman's brain.\" Bacon saw that the Puritans were aiming at a tyranny\nwhich, if they established it, would be more comprehensive, more\nsearching, and more cruel than that of the older systems; but he thought\nit a remote and improbable danger, and that they might safely be\ntolerated for the work they did in education and preaching, \"because the\nwork of exhortation doth chiefly rest upon these men, and they have a\nzeal and hate of sin.\" But he ends by warning them lest \"that be true\nwhich one of their adversaries said, _that they have but two small\nwants--knowledge and love_.\"",
+      "contentHash": "sha256:6751cf7e1ecb03e632e653be7839331c8e85a9a5a5788804be9578c999e0df71",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/13888",
+        "textUrl": "https://www.gutenberg.org/cache/epub/13888/pg13888.txt",
+        "ebookId": "13888",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 161"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "vocabulary-rarity",
+            "discourse-density"
+          ],
+          "note": "Historical polemic embeds quotations and layered qualifications.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "vocabulary-rarity",
+            "inference-load"
+          ],
+          "note": "Archaic quotations support layered religious political criticism.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 1738,
+          "paragraphs": 1,
+          "sentences": 3,
+          "tokens": 303,
+          "wordTokens": 303,
+          "uniqueWords": 172,
+          "matchedFamilyTokens": 283,
+          "outOfIndexTokens": 20
+        },
+        "sentence": {
+          "meanLength": 101,
+          "logMeanLength": 4.6151,
+          "maximumLength": 202,
+          "lengthCoefficientOfVariation": 0.7343,
+          "profileDiversity": 0.3333
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.2839,
+          "meanZipfFrequency": 6.0584,
+          "familyCoverage": 0.934,
+          "bandCoverage": {
+            "1K": 0.7162,
+            "2K": 0.0561,
+            "3K": 0.0462,
+            "4K": 0.0099,
+            "5K": 0.0066,
+            "6K": 0.0165,
+            "7K": 0.0198,
+            "8K": 0.0099,
+            "9K": 0.0099,
+            "10K": 0.0066,
+            "11K": 0.0066,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0.0033,
+            "15K": 0.0099,
+            "16K": 0.0099,
+            "17K": 0.0033,
+            "18K": 0.0033,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "affectation",
+            "allusions",
+            "carnal",
+            "censure",
+            "conceited",
+            "diotrephes",
+            "exhortation",
+            "papacy",
+            "phraseology",
+            "politiques",
+            "puritan",
+            "puritans",
+            "savouring",
+            "servile",
+            "strasburg",
+            "undervaluing",
+            "unquestionable"
+          ],
+          "typeTokenRatio": 0.5677,
+          "movingAverageTypeTokenRatio": 0.7567
+        },
+        "wordForm": {
+          "meanSyllables": 1.505,
+          "longWordRate": 0.2277
+        },
+        "discourse": {
+          "connectiveRate": 0.0297,
+          "subordinatorRate": 0.0594,
+          "pronounReferenceRate": 0.0891,
+          "nominalisationRate": 0.0297,
+          "lexicalDensity": 0.5116
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0297,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-007",
+      "title": "Essays Towards a Theory of Knowledge by Alexander Philip — alternate passage 941",
+      "text": "At the same time it furnishes Philosophy with a theory of the objectively real thing-in-itself which\nsatisfied those necessities of thought by which we are constrained to\ninterpret our sense-experience by a constant reference to a Reality\nbeyond it--a necessity due to our association as Actors with an Energy\nbeyond that which is the seat of our Presentment. Such a view avoids the\nincurable difficulties and contradictions involved in the theory of the\nreality of extended material substance, or in any theory, indeed, which\nasserts the reality--as presented--of the sensible presentation. Physical Reality thus conceived is consistently thinkable as co-existent\nwith the thing-in-itself--be it ultimately Intelligence or Volition--of\nwhich our cognitive and conative existence is a manifestation. And such\na doctrine, by explaining all phenomena as transmutations proceeding\n(according to the definite mathematical laws prevailing throughout the\nwhole Universe of Energy) at that point in the system which is\norganically related to Consciousness, accounts at once for the apparent\napriority and necessity of the qualities of Space, and at the same time\nfor their evident universality and objectivity. In a word, it would rather seem as if Science, unconscious of its\npregnant possibilities, has not only formulated a theory which\nco-ordinates and unifies the entire fabric of physical knowledge, but\nhas also at length furnished Philosophy with the key to that problem the\nsolution of which has, in the words of Schopenhauer, been the main\nendeavour of philosophers for more than two centuries, namely, to\nseparate by a correctly drawn line of cleavage the Ideal--that which\nbelongs to our knowledge as such--from the Real, that which exists\nindependently of us; and thus to determine the relation of each to the\nother. To us it seems not strange that Philosophy should in the end be indebted\nto Science for this solution--nor should Science, in the hour of her\ngreatest speculative victory, object too hastily to the assistance which\nthe thinker, trained to the study of the process of thought, can render\nin clarifying and restating in its metaphysical aspects a theory which,\nif profoundly conceived, and formulated by men of science from Rumford\nand Davy to Stewart, Tait, and Kelvin, was partially anticipated by the\nmetaphysician who conceived the world as will and idea.",
+      "contentHash": "sha256:809a81a97257a80008c98af1faa612a8d0f68ef6c8e55d9b5a026302768aa668",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/23422",
+        "textUrl": "https://www.gutenberg.org/cache/epub/23422/pg23422.txt",
+        "ebookId": "23422",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 941"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "vocabulary-rarity",
+            "sentence-load",
+            "inference-load"
+          ],
+          "note": "Abstract metaphysics requires sustained conceptual mapping.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "vocabulary-rarity",
+            "inference-load",
+            "sentence-load"
+          ],
+          "note": "Abstract epistemology embeds layered scientific philosophical relations.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 2380,
+          "paragraphs": 1,
+          "sentences": 6,
+          "tokens": 388,
+          "wordTokens": 388,
+          "uniqueWords": 201,
+          "matchedFamilyTokens": 376,
+          "outOfIndexTokens": 12
+        },
+        "sentence": {
+          "meanLength": 64.6667,
+          "logMeanLength": 4.1692,
+          "maximumLength": 106,
+          "lengthCoefficientOfVariation": 0.4256,
+          "profileDiversity": 0.1667
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.4779,
+          "meanZipfFrequency": 5.9571,
+          "familyCoverage": 0.9691,
+          "bandCoverage": {
+            "1K": 0.6933,
+            "2K": 0.0928,
+            "3K": 0.0438,
+            "4K": 0.0206,
+            "5K": 0.0155,
+            "6K": 0.0155,
+            "7K": 0.018,
+            "8K": 0.0103,
+            "9K": 0.0052,
+            "10K": 0.0026,
+            "11K": 0.0129,
+            "12K": 0.0077,
+            "13K": 0.0052,
+            "14K": 0,
+            "15K": 0.0077,
+            "16K": 0.0052,
+            "17K": 0.0026,
+            "18K": 0.0026,
+            "19K": 0.0026,
+            "20K": 0.0052
+          },
+          "outOfIndexTypes": [
+            "apriority",
+            "conative",
+            "metaphysician",
+            "ordinates",
+            "presentment",
+            "restating",
+            "rumford",
+            "schopenhauer",
+            "tait",
+            "thinkable",
+            "transmutations",
+            "volition"
+          ],
+          "typeTokenRatio": 0.518,
+          "movingAverageTypeTokenRatio": 0.7771
+        },
+        "wordForm": {
+          "meanSyllables": 1.6907,
+          "longWordRate": 0.3093
+        },
+        "discourse": {
+          "connectiveRate": 0.0077,
+          "subordinatorRate": 0.0747,
+          "pronounReferenceRate": 0.0438,
+          "nominalisationRate": 0.0644,
+          "lexicalDensity": 0.5052
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0644,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-006",
+      "title": "Literary and Philosophical Essays: French, German and Italian by Montaigne et al. — alternate passage 591",
+      "text": "Si\nquid Socrates et Aristippus contra morem et consuetudinem fecerunt,\nidem sibi ne arbitretur licere: Magis enim illi et divinis bonis\nhanc licentiam assequebantur: \"If Socrates and Aristippus have done ought against custome or good\nmanner, let not a man thinke he may doe the same: for they obtained\nthis licence by their great and excellent good parts:\" He shall be\ntaught not to enter rashly into discourse or contesting, but when he\nshall encounter with a Champion worthie his strength; And then would I not have him imploy all the tricks that may fit his turne, but\nonly such as may stand him in most stead. That he be taught to be\ncurious in making choice of his reasons, loving pertinency, and by\nconsequence brevitie. That above all, he be instructed to yeeld, yea\nto quit his weapons unto truth, as soone as he shall discerne the\nsame, whether it proceed from his adversarie, or upon better advice\nfrom himselfe; for he shall not be preferred to any place of\neminencie above others, for repeating of a prescript part; and he is not engaged to defend any cause,\nfurther than he may approove it; nor shall he bee of that trade\nwhere the libertie for a man to repent and re-advise himselfe is\nsold for readie money, Neque, ut omnia, que praescripta et imperata\nsint, defendat, necessitate ulla cogitur: \"Nor is he inforced by any necessitie to defend and make\ngood all that is prescribed and commanded him.\" If his tutor agree\nwith my humour, he shall frame his affection to be a most loyall and\ntrue subject to his Prince, and a most affectionate and couragious Gentleman in al that may concerne the honor of his Soveraigne or the\ngood of his countrie, and endevour to suppresse in him all manner of\naffection to undertake any action Otherwise than for a publike good\nand dutie.",
+      "contentHash": "sha256:1cbca2815698f400c1332026a58c9809356e02df1a36c538761d6a906f9dca47",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/5637",
+        "textUrl": "https://www.gutenberg.org/cache/epub/5637/pg5637.txt",
+        "ebookId": "5637",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 591"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "vocabulary-rarity",
+            "sentence-load",
+            "discourse-density"
+          ],
+          "note": "Latin quotations and archaic prose intensify complexity.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "vocabulary-rarity",
+            "sentence-load",
+            "discourse-density"
+          ],
+          "note": "Latin quotations and archaic spelling intensify complexity.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 1786,
+          "paragraphs": 1,
+          "sentences": 4,
+          "tokens": 318,
+          "wordTokens": 318,
+          "uniqueWords": 181,
+          "matchedFamilyTokens": 263,
+          "outOfIndexTokens": 55
+        },
+        "sentence": {
+          "meanLength": 79.5,
+          "logMeanLength": 4.3758,
+          "maximumLength": 124,
+          "lengthCoefficientOfVariation": 0.5082,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.4841,
+          "meanZipfFrequency": 5.981,
+          "familyCoverage": 0.827,
+          "bandCoverage": {
+            "1K": 0.6164,
+            "2K": 0.0692,
+            "3K": 0.044,
+            "4K": 0.0094,
+            "5K": 0.022,
+            "6K": 0.0126,
+            "7K": 0.0189,
+            "8K": 0.0031,
+            "9K": 0.0094,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0.0126,
+            "15K": 0.0063,
+            "16K": 0,
+            "17K": 0.0031,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "adversarie",
+            "approove",
+            "arbitretur",
+            "aristippus",
+            "assequebantur",
+            "bonis",
+            "brevitie",
+            "cogitur",
+            "concerne",
+            "consuetudinem",
+            "countrie",
+            "couragious",
+            "custome",
+            "defendat",
+            "discerne",
+            "divinis",
+            "dutie",
+            "eminencie",
+            "endevour",
+            "enim",
+            "fecerunt",
+            "hanc",
+            "himselfe",
+            "idem",
+            "illi",
+            "imperata",
+            "imploy",
+            "inforced",
+            "libertie",
+            "licentiam",
+            "licere",
+            "loyall",
+            "magis",
+            "morem",
+            "necessitate",
+            "necessitie",
+            "neque",
+            "omnia",
+            "pertinency",
+            "praescripta",
+            "prescript",
+            "publike",
+            "readie",
+            "sibi",
+            "sint",
+            "soone",
+            "soveraigne",
+            "suppresse",
+            "thinke",
+            "turne",
+            "ulla",
+            "worthie",
+            "yeeld"
+          ],
+          "typeTokenRatio": 0.5692,
+          "movingAverageTypeTokenRatio": 0.8233
+        },
+        "wordForm": {
+          "meanSyllables": 1.4843,
+          "longWordRate": 0.2044
+        },
+        "discourse": {
+          "connectiveRate": 0.0157,
+          "subordinatorRate": 0.044,
+          "pronounReferenceRate": 0.0943,
+          "nominalisationRate": 0.0094,
+          "lexicalDensity": 0.5755
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0094,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-005",
+      "title": "The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms. by Nietzsche — alternate passage 921",
+      "text": "How could the horned cattle of Germany know how to deal with\nthe délicatesses of such a nature!—And as to Richard Wagner, it is\nobvious, it is even glaringly obvious, that Paris is the very soil for\nhim, the more French music adapts itself to the needs of l'âme moderne,\nthe more Wagnerian it will become,—it is far enough advanced in this\ndirection already.—In this respect one should not allow one's self to be\nmisled by Wagner himself—it was simply disgraceful on Wagner's part to\nscoff at Paris, as he did, in its agony in 1871.... In spite of it all, in Germany Wagner is only a misapprehension.—who could be more incapable of\nunderstanding anything about Wagner than the Kaiser, for instance?—To\neverybody familiar with the movement of European culture, this fact,\nhowever, is certain, that French romanticism and Richard Wagner are most\nintimately related. All dominated by literature, up to their very eyes and\nears—the first European artists with a universal literary culture,—most\nof them writers, poets, mediators and minglers of the senses and the arts,\nall fanatics in expression, great discoverers in the realm of the\nsublime as also of the ugly and the gruesome, and still greater\ndiscoverers in passion, in working for effect, in the art of dressing\ntheir windows,—all possessing talent far above their genius,—virtuosos to\ntheir backbone, knowing of secret passages to all that seduces, lures,\nconstrains or overthrows; born enemies of logic and of straight lines,\nthirsting after the exotic, the strange and the monstrous, and all opiates\nfor the senses and the understanding. On the whole, a daring dare-devil,\nmagnificently violent, soaring and high-springing crew of artists, who\nfirst had to teach their own century—it is the century of the mob—what the\nconcept \"artist\" meant.",
+      "contentHash": "sha256:d090ec69aa27f55a6da23003369bdb3ead4d31622cefde761b9f0570a98d725c",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/25012",
+        "textUrl": "https://www.gutenberg.org/cache/epub/25012/pg25012.txt",
+        "ebookId": "25012",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 921"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "inference-load",
+            "vocabulary-rarity",
+            "sentence-load"
+          ],
+          "note": "Irony and cultural allusions carry nuanced judgment.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L6",
+          "confidence": "high",
+          "evidenceCodes": [
+            "sentence-load",
+            "vocabulary-rarity",
+            "inference-load"
+          ],
+          "note": "Dense cultural rhetoric combines long lists and implications.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L6",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 1799,
+          "paragraphs": 1,
+          "sentences": 4,
+          "tokens": 309,
+          "wordTokens": 308,
+          "uniqueWords": 176,
+          "matchedFamilyTokens": 296,
+          "outOfIndexTokens": 12
+        },
+        "sentence": {
+          "meanLength": 77,
+          "logMeanLength": 4.3438,
+          "maximumLength": 120,
+          "lengthCoefficientOfVariation": 0.449,
+          "profileDiversity": 0.25
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.4672,
+          "meanZipfFrequency": 5.9656,
+          "familyCoverage": 0.961,
+          "bandCoverage": {
+            "1K": 0.6948,
+            "2K": 0.0974,
+            "3K": 0.0292,
+            "4K": 0.026,
+            "5K": 0.0195,
+            "6K": 0.0162,
+            "7K": 0.0032,
+            "8K": 0.0065,
+            "9K": 0.0227,
+            "10K": 0.0097,
+            "11K": 0.0065,
+            "12K": 0.0065,
+            "13K": 0.0032,
+            "14K": 0.0032,
+            "15K": 0.0097,
+            "16K": 0.0065,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "constrains",
+            "discoverers",
+            "licatesses",
+            "minglers",
+            "misapprehension",
+            "moderne",
+            "opiates",
+            "romanticism",
+            "scoff",
+            "virtuosos",
+            "wagnerian"
+          ],
+          "typeTokenRatio": 0.5714,
+          "movingAverageTypeTokenRatio": 0.7967
+        },
+        "wordForm": {
+          "meanSyllables": 1.5552,
+          "longWordRate": 0.2532
+        },
+        "discourse": {
+          "connectiveRate": 0.0032,
+          "subordinatorRate": 0.026,
+          "pronounReferenceRate": 0.0552,
+          "nominalisationRate": 0.0195,
+          "lexicalDensity": 0.5649
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0195,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l5-004",
+      "title": "Initiation into Philosophy by Émile Faguet — alternate passage 971",
+      "text": "Evidence is not a consequence of morality; but\nmorality is the condition of evidence. There is the foundation of the method of Descartes; add to it his advice on\nthe art of reasoning, which even in his time was not at all novel, but\nwhich with him is very precise; not to generalize too hastily, not to be\nput off with words, but to have a clear definition of every word, etc., and\nthus a sufficient idea of it will be obtained. Now first, to this method Descartes was unfaithful, as always happens, and\noften accepted the suggestions of his magnificent imagination as the\nevidences of his reason; secondly, the touchstone of evidence is certainly\nthe best, but is far from being infallible (and Vico has ridiculed it with\nas much sense as wit) and the freest mind can still find false things\nevident; yet, thirdly, favouring freedom of research self-controlled,\nindividual and scornful of all authority, the method of Descartes has\nbecome a banner, a motto, and a flag for all modern philosophy. DESCARTES THE FATHER OF MODERN PHILOSOPHY.--And from all that the\nresult has been that all modern philosophy, with few exceptions, has\nrecognised Descartes as its parent--that individual evidence, if it may be\nthus expressed, favouring temerity and each believing himself closer to the\ntruth the more he differed from others, and consequently was unable to\nsuspect himself of being subject to influences, individual evidence has\nprovided a fresh opportunity for self-deception; finally, that Descartes,\nby a not uncommon metamorphosis, by means of his system which he did not\nfollow, has become the head or the venerated ancestor of doctrines which he\nwould have detested and which he already did detest more than all\nothers. Because he said that evidence alone and the free investigation of\nevidence led to truth, he has become the ancestor of the sceptics who are\npersuaded that surrender must be made only to evidence and that evidence\ncannot be found; and he has become the ancestor of the positivists who\nbelieve that evidence certainly exists somewhere, but not in metaphysics or\nin theodicy, or in knowledge of the soul, of immortality, and of God,\nbranches of knowledge which surpass our means of knowing, which are in fact\noutside knowledge.",
+      "contentHash": "sha256:d9c6ab51631bee14653492d4938e1f4b160de762d0198d89fda0e66a05202a55",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/9304",
+        "textUrl": "https://www.gutenberg.org/cache/epub/9304/pg9304.txt",
+        "ebookId": "9304",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L5",
+        "locator": "sentence window 971"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L5",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L5",
+          "confidence": "high",
+          "evidenceCodes": [
+            "discourse-density",
+            "sentence-load",
+            "vocabulary-rarity"
+          ],
+          "note": "Structured critique tracks contributions, limits, and influence.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L5",
+          "confidence": "medium",
+          "evidenceCodes": [
+            "discourse-density",
+            "inference-load",
+            "vocabulary-rarity"
+          ],
+          "note": "Philosophical evaluation traces influence across several positions.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L5",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 2247,
+          "paragraphs": 1,
+          "sentences": 5,
+          "tokens": 381,
+          "wordTokens": 381,
+          "uniqueWords": 187,
+          "matchedFamilyTokens": 364,
+          "outOfIndexTokens": 17
+        },
+        "sentence": {
+          "meanLength": 76.2,
+          "logMeanLength": 4.3334,
+          "maximumLength": 117,
+          "lengthCoefficientOfVariation": 0.4564,
+          "profileDiversity": 0.4
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.2831,
+          "meanZipfFrequency": 6.0717,
+          "familyCoverage": 0.9554,
+          "bandCoverage": {
+            "1K": 0.7664,
+            "2K": 0.0709,
+            "3K": 0.0315,
+            "4K": 0.0157,
+            "5K": 0.0131,
+            "6K": 0.0157,
+            "7K": 0.0052,
+            "8K": 0.0026,
+            "9K": 0.0052,
+            "10K": 0,
+            "11K": 0.0079,
+            "12K": 0,
+            "13K": 0.0052,
+            "14K": 0.0026,
+            "15K": 0.0026,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0.0026,
+            "19K": 0.0026,
+            "20K": 0.0052
+          },
+          "outOfIndexTypes": [
+            "descartes",
+            "detested",
+            "freest",
+            "generalize",
+            "infallible",
+            "positivists",
+            "sceptics",
+            "temerity",
+            "theodicy",
+            "touchstone",
+            "venerated",
+            "vico"
+          ],
+          "typeTokenRatio": 0.4908,
+          "movingAverageTypeTokenRatio": 0.7371
+        },
+        "wordForm": {
+          "meanSyllables": 1.5906,
+          "longWordRate": 0.2651
+        },
+        "discourse": {
+          "connectiveRate": 0.0236,
+          "subordinatorRate": 0.063,
+          "pronounReferenceRate": 0.0499,
+          "nominalisationRate": 0.0604,
+          "lexicalDensity": 0.5197
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0.0604,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-020",
+      "title": "The Summers Readers: First Reader — passage 90",
+      "text": "After a while they came to the house where the city mouse lived. Oh! What good things the city mouse set before the country mouse! She had bread and cheese and cake. “How good this is!” said the country mouse. “I wish I lived in the city.” Just then a man came into the room. The mice jumped down and ran into a hole. “Do not be afraid,” said the city mouse. “The man can not find us.” By and by the man went away.",
+      "contentHash": "sha256:16b65f317572363388f95ba9eadd56794229509597067d70521495744621c6c1",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/67302",
+        "textUrl": "https://www.gutenberg.org/cache/epub/67302/pg67302.txt",
+        "ebookId": "67302",
+        "locator": "paragraph window 90",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short linear story with common concrete vocabulary.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short sentences present an explicit action sequence.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 414,
+          "paragraphs": 1,
+          "sentences": 12,
+          "tokens": 85,
+          "wordTokens": 85,
+          "uniqueWords": 52,
+          "matchedFamilyTokens": 85,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 7.0833,
+          "logMeanLength": 1.9577,
+          "maximumLength": 13,
+          "lengthCoefficientOfVariation": 0.4331,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.0481,
+          "meanZipfFrequency": 6.1725,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.8471,
+            "2K": 0.0471,
+            "3K": 0.0353,
+            "4K": 0.0706,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6118,
+          "movingAverageTypeTokenRatio": 0.68
+        },
+        "wordForm": {
+          "meanSyllables": 1.1647,
+          "longWordRate": 0.0235
+        },
+        "discourse": {
+          "connectiveRate": 0.0118,
+          "subordinatorRate": 0.0353,
+          "pronounReferenceRate": 0.0235,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5882
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-018",
+      "title": "The Summers Readers: First Reader — passage 73",
+      "text": "The next day Blacky went to town to get a big kettle. As he came back he saw Mr. Fox in the woods. “Oh, what shall I do!” said Blacky. He had just come to the top of a hill. At the foot of the hill he could see his strong brick house. Blacky got into the kettle. It rolled over and over down the hill. At the door of the brick house Blacky jumped out.",
+      "contentHash": "sha256:015db77a51938a86db5dc0c8f642de91a4f281a78c99929a33cb943698115c15",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/67302",
+        "textUrl": "https://www.gutenberg.org/cache/epub/67302/pg67302.txt",
+        "ebookId": "67302",
+        "locator": "paragraph window 73",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Escape actions follow a clear linear sequence.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Actions unfold clearly through basic sentence structures.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 351,
+          "paragraphs": 1,
+          "sentences": 9,
+          "tokens": 76,
+          "wordTokens": 76,
+          "uniqueWords": 50,
+          "matchedFamilyTokens": 72,
+          "outOfIndexTokens": 4
+        },
+        "sentence": {
+          "meanLength": 8.4444,
+          "logMeanLength": 2.1335,
+          "maximumLength": 13,
+          "lengthCoefficientOfVariation": 0.4144,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.9926,
+          "meanZipfFrequency": 6.1956,
+          "familyCoverage": 0.9474,
+          "bandCoverage": {
+            "1K": 0.7895,
+            "2K": 0.1053,
+            "3K": 0,
+            "4K": 0.0263,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0.0263,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "blacky"
+          ],
+          "typeTokenRatio": 0.6579,
+          "movingAverageTypeTokenRatio": 0.74
+        },
+        "wordForm": {
+          "meanSyllables": 1.1184,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0.0132,
+          "pronounReferenceRate": 0.0789,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5789
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-019",
+      "title": "The Summers Readers: First Reader — passage 25",
+      "text": "One day the dove was in a tree near her nest A man came into the woods with a gun. He tried to shoot the dove. The ant passed by and saw him. “Oh, the poor dove!” said the ant. “How can I help her?” She ran to the man and bit his foot. “Oh, my foot! My foot!” said the man. Then he ran out of the woods. “Thank you,” said the dove. “You have helped me, little friend.”",
+      "contentHash": "sha256:fcc0c5c873cb364c6f240fbb130182b6a80c2b6a1aeae3bd0d2e431fb2e2b4f5",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/67302",
+        "textUrl": "https://www.gutenberg.org/cache/epub/67302/pg67302.txt",
+        "ebookId": "67302",
+        "locator": "paragraph window 25",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple actions make the rescue cause explicit.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple rescue story states cause and result directly.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 368,
+          "paragraphs": 1,
+          "sentences": 13,
+          "tokens": 80,
+          "wordTokens": 80,
+          "uniqueWords": 50,
+          "matchedFamilyTokens": 80,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 6.1538,
+          "logMeanLength": 1.8171,
+          "maximumLength": 20,
+          "lengthCoefficientOfVariation": 0.7207,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.2262,
+          "meanZipfFrequency": 6.0846,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.7875,
+            "2K": 0.125,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0.0125,
+            "6K": 0,
+            "7K": 0.025,
+            "8K": 0,
+            "9K": 0.05,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.625,
+          "movingAverageTypeTokenRatio": 0.72
+        },
+        "wordForm": {
+          "meanSyllables": 1.025,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0,
+          "pronounReferenceRate": 0.1125,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.55
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-014",
+      "title": "The New McGuffey First Reader — passage 87",
+      "text": "Oh, Frank! You want too much for your apples. We can not buy them to-day. We can not give so much. Well, then, children, I will tell you what I will do. I will give you as many apples as you want. Thank you, Frank. You are very kind. Will you give one of your sweet apples to each of us? Yes, here are three apples for each of you; and I have four to take home to mother.",
+      "contentHash": "sha256:0222c2bc7b31959686f702de6c342a52f074567b4ae23ce941016cca42676b8d",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/1489",
+        "textUrl": "https://www.gutenberg.org/cache/epub/1489/pg1489.txt",
+        "ebookId": "1489",
+        "locator": "paragraph window 87",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic dialogue presents prices and quantities directly.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short shopping dialogue repeats clear quantity information.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 371,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 80,
+          "wordTokens": 80,
+          "uniqueWords": 46,
+          "matchedFamilyTokens": 80,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 8,
+          "logMeanLength": 2.0794,
+          "maximumLength": 18,
+          "lengthCoefficientOfVariation": 0.5755,
+          "profileDiversity": 0.6667
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.9228,
+          "meanZipfFrequency": 6.2731,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.9125,
+            "2K": 0.0875,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.575,
+          "movingAverageTypeTokenRatio": 0.64
+        },
+        "wordForm": {
+          "meanSyllables": 1.1,
+          "longWordRate": 0.0125
+        },
+        "discourse": {
+          "connectiveRate": 0.0125,
+          "subordinatorRate": 0.025,
+          "pronounReferenceRate": 0.1625,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-015",
+      "title": "The New McGuffey First Reader — passage 115",
+      "text": "He likes to row up and down the river in his boat. The water is not deep, and the children will not fall out of the boat. They like to row here and there on the river. John takes the oars, and May sits in her place and tells him where to go. John has a hook and line. But when May is with him he does not try to catch any fish.",
+      "contentHash": "sha256:f2683f8ddde545fc47ef0d60a2b18009fcfb7105db160683211b9063c13b3599",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/1489",
+        "textUrl": "https://www.gutenberg.org/cache/epub/1489/pg1489.txt",
+        "ebookId": "1489",
+        "locator": "paragraph window 115",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple sentences describe familiar boating activities.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Familiar boating actions use simple sentence patterns.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 327,
+          "paragraphs": 1,
+          "sentences": 6,
+          "tokens": 73,
+          "wordTokens": 73,
+          "uniqueWords": 49,
+          "matchedFamilyTokens": 72,
+          "outOfIndexTokens": 1
+        },
+        "sentence": {
+          "meanLength": 12.1667,
+          "logMeanLength": 2.4987,
+          "maximumLength": 16,
+          "lengthCoefficientOfVariation": 0.2784,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.6922,
+          "meanZipfFrequency": 6.3453,
+          "familyCoverage": 0.9863,
+          "bandCoverage": {
+            "1K": 0.8767,
+            "2K": 0.0685,
+            "3K": 0.0274,
+            "4K": 0.0137,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "oars"
+          ],
+          "typeTokenRatio": 0.6712,
+          "movingAverageTypeTokenRatio": 0.7
+        },
+        "wordForm": {
+          "meanSyllables": 1.0548,
+          "longWordRate": 0.0137
+        },
+        "discourse": {
+          "connectiveRate": 0.0137,
+          "subordinatorRate": 0.0274,
+          "pronounReferenceRate": 0.0959,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4795
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-009",
+      "title": "McGuffey's First Eclectic Reader, Revised Edition — passage 65",
+      "text": "Why, here comes my dog! He was under the cart. Did you see him there? What a good time we have had! Are you not glad that we did not go to the woods with John? The pond is still. How it shines in the hot sun! Let us go into the woods where we can sit in the shade. ] \"Kate, I wish we had a boat to put the dolls in. Don't you?\"",
+      "contentHash": "sha256:2188091091bcbf7136eae0751e037ff10f31d8944053470e2439ecd744124c8a",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14640",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14640/pg14640.txt",
+        "ebookId": "14640",
+        "locator": "paragraph window 65",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short questions and nature descriptions use common words.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple questions and descriptions require factual recognition.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 327,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 74,
+          "wordTokens": 74,
+          "uniqueWords": 54,
+          "matchedFamilyTokens": 74,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 7.4,
+          "logMeanLength": 2.0015,
+          "maximumLength": 14,
+          "lengthCoefficientOfVariation": 0.531,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.9646,
+          "meanZipfFrequency": 6.2286,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.8378,
+            "2K": 0.0811,
+            "3K": 0,
+            "4K": 0.0135,
+            "5K": 0.027,
+            "6K": 0.027,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0.0135,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.7297,
+          "movingAverageTypeTokenRatio": 0.84
+        },
+        "wordForm": {
+          "meanSyllables": 1.027,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0.027,
+          "pronounReferenceRate": 0.1351,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-016",
+      "title": "The Summers Readers: First Reader — passage 29",
+      "text": "One day some raindrops fell out of the sky. They went running down a hillside. By and by they came to a bright, happy brook. “Stop, stop, pretty water!” said the raindrops. “Where are you going?” “I am going to the sea,” said the brook. “I can not stop. I have work to do. I water the grass and the flowers. The cows come here to drink. I make a home for the fishes. The birds like my pure cold water. The boys and the girls come here to play.",
+      "contentHash": "sha256:4537c9f28daa7c4eb999a1f4588ba28bfe50a432e33c1a39c4b027e9829fd005",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/67302",
+        "textUrl": "https://www.gutenberg.org/cache/epub/67302/pg67302.txt",
+        "ebookId": "67302",
+        "locator": "paragraph window 29",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Personified dialogue remains concrete and explicitly sequenced.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Repeated short statements explain the brook directly.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 443,
+          "paragraphs": 1,
+          "sentences": 14,
+          "tokens": 90,
+          "wordTokens": 90,
+          "uniqueWords": 56,
+          "matchedFamilyTokens": 88,
+          "outOfIndexTokens": 2
+        },
+        "sentence": {
+          "meanLength": 6.4286,
+          "logMeanLength": 1.8608,
+          "maximumLength": 10,
+          "lengthCoefficientOfVariation": 0.3363,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.8646,
+          "meanZipfFrequency": 6.2375,
+          "familyCoverage": 0.9778,
+          "bandCoverage": {
+            "1K": 0.8333,
+            "2K": 0.0889,
+            "3K": 0.0111,
+            "4K": 0,
+            "5K": 0.0111,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0.0222,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0.0111,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "raindrops"
+          ],
+          "typeTokenRatio": 0.6222,
+          "movingAverageTypeTokenRatio": 0.7
+        },
+        "wordForm": {
+          "meanSyllables": 1.1111,
+          "longWordRate": 0.0556
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0.0111,
+          "pronounReferenceRate": 0.0333,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5778
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-008",
+      "title": "McGuffey's First Eclectic Reader, Revised Edition — passage 21",
+      "text": "Let us not stop at the pond now, for it is hot. See how still it is! We will go to see Tom and his top. O John! the sun has just set. It is not hot, now. Let us run and jump. I think it is fun to run, and skip, and jump. See the duck on the pond! Her nest is up on the bank, under the rock.",
+      "contentHash": "sha256:7a0504ffd7a48bc7a2fa77419f412ceefbec7754bce5a8b2edd0e889734b8e03",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14640",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14640/pg14640.txt",
+        "ebookId": "14640",
+        "locator": "paragraph window 21",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic suggestions and locations appear in short sentences.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic commands describe familiar outdoor activities directly.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 290,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 70,
+          "wordTokens": 70,
+          "uniqueWords": 43,
+          "matchedFamilyTokens": 70,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 7,
+          "logMeanLength": 1.9459,
+          "maximumLength": 12,
+          "lengthCoefficientOfVariation": 0.4426,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.9706,
+          "meanZipfFrequency": 6.2129,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.8714,
+            "2K": 0.0571,
+            "3K": 0,
+            "4K": 0.0286,
+            "5K": 0.0143,
+            "6K": 0.0286,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6143,
+          "movingAverageTypeTokenRatio": 0.68
+        },
+        "wordForm": {
+          "meanSyllables": 1.0143,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0,
+          "pronounReferenceRate": 0.1,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-017",
+      "title": "The Summers Readers: First Reader — passage 119",
+      "text": "A poor woodman lived in a little house near a great wood. He had three little girls. The oldest one did not like to work. The second one did not do as she was told. But the youngest girl was good and kind. One morning the woodman went to work. He said to the oldest little girl, “Bring me my dinner to-day. I will drop seeds along the path. Then you can find the way.” When the sun was high the oldest girl went into the wood. But she lost her way, for the birds had picked up all the seeds. On and on she went until it was dark. At last she came to a little house in the wood. There was a light at the window.",
+      "contentHash": "sha256:9de284d374d7150570df228a244266a300d7102f10b1cd4bd4ca71b4575dca70",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/67302",
+        "textUrl": "https://www.gutenberg.org/cache/epub/67302/pg67302.txt",
+        "ebookId": "67302",
+        "locator": "paragraph window 119",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Fairy tale events follow a clear sequence.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L2",
+          "confidence": "medium",
+          "evidenceCodes": [
+            "discourse-density",
+            "sentence-load"
+          ],
+          "note": "Connected narrative requires tracking causes and movement.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        },
+        {
+          "itemId": "correction-r2-l1-017",
+          "level": "L2",
+          "confidence": "high",
+          "evidenceCodes": [
+            "discourse-density",
+            "sentence-load"
+          ],
+          "note": "句式总体简单，但需按时间顺序串联送饭、种子被吃和迷路的直接因果。",
+          "reviewerId": "ai-correction-round2-adjudicator-c",
+          "reviewerType": "ai",
+          "completedAt": "2026-08-02T03:45:48.9378685Z",
+          "role": "adjudicator"
+        }
+      ],
+      "internalLevel": "L2",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 610,
+          "paragraphs": 1,
+          "sentences": 14,
+          "tokens": 129,
+          "wordTokens": 129,
+          "uniqueWords": 74,
+          "matchedFamilyTokens": 127,
+          "outOfIndexTokens": 2
+        },
+        "sentence": {
+          "meanLength": 9.2143,
+          "logMeanLength": 2.2208,
+          "maximumLength": 14,
+          "lengthCoefficientOfVariation": 0.2934,
+          "profileDiversity": 0.3333
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.7953,
+          "meanZipfFrequency": 6.305,
+          "familyCoverage": 0.9845,
+          "bandCoverage": {
+            "1K": 0.907,
+            "2K": 0.062,
+            "3K": 0,
+            "4K": 0.0155,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "woodman"
+          ],
+          "typeTokenRatio": 0.5736,
+          "movingAverageTypeTokenRatio": 0.76
+        },
+        "wordForm": {
+          "meanSyllables": 1.1318,
+          "longWordRate": 0.031
+        },
+        "discourse": {
+          "connectiveRate": 0.0155,
+          "subordinatorRate": 0.0233,
+          "pronounReferenceRate": 0.0698,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.5349
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-007",
+      "title": "McGuffey's First Eclectic Reader, Revised Edition — passage 91",
+      "text": "He keeps it in the pond, near his home. He always takes good care of it. Frank has been at work in the garden, and will now row a while. \"What is that?\" said Lucy, as she came out on the steps. \"Oh, it is a little boat! What a pretty one it is!\" \"I will give it to you when it is finished,\" said John, kindly. \"Would you like to have it?\"",
+      "contentHash": "sha256:920135d0b428e656ca52dde5ace81cc2f324a30e079d13765489fa1ae4ee7fd2",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14640",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14640/pg14640.txt",
+        "ebookId": "14640",
+        "locator": "paragraph window 91",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Common words support a short toy-boat exchange.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Brief dialogue describes familiar actions and objects.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 338,
+          "paragraphs": 1,
+          "sentences": 9,
+          "tokens": 73,
+          "wordTokens": 73,
+          "uniqueWords": 53,
+          "matchedFamilyTokens": 73,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 8.1111,
+          "logMeanLength": 2.0932,
+          "maximumLength": 14,
+          "lengthCoefficientOfVariation": 0.4128,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.7172,
+          "meanZipfFrequency": 6.3592,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.9041,
+            "2K": 0.0548,
+            "3K": 0.0137,
+            "4K": 0,
+            "5K": 0.0137,
+            "6K": 0.0137,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.726,
+          "movingAverageTypeTokenRatio": 0.8
+        },
+        "wordForm": {
+          "meanSyllables": 1.1096,
+          "longWordRate": 0.0137
+        },
+        "discourse": {
+          "connectiveRate": 0.0137,
+          "subordinatorRate": 0.0548,
+          "pronounReferenceRate": 0.1781,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.411
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-010",
+      "title": "McGuffey's First Eclectic Reader, Revised Edition — passage 16",
+      "text": "She will now put it in the cage, and hang the cage up. Then the cat can not catch it. Look at Tom and his dog. The dog has a black spot on his back. Do you think he is a good dog? Tom has a big top, too. It is on the box with Kitty's doll. The sun is up. The man has fed the black hen and the fat duck.",
+      "contentHash": "sha256:544e17a09dbd3d3a1cf6af1c53f8a1c171dd7e6d19830e4a3e3a097fd5ee780a",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14640",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14640/pg14640.txt",
+        "ebookId": "14640",
+        "locator": "paragraph window 16",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "train",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short statements identify familiar people and objects.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Independent short sentences use familiar object words.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 302,
+          "paragraphs": 1,
+          "sentences": 9,
+          "tokens": 72,
+          "wordTokens": 72,
+          "uniqueWords": 46,
+          "matchedFamilyTokens": 72,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 8,
+          "logMeanLength": 2.0794,
+          "maximumLength": 13,
+          "lengthCoefficientOfVariation": 0.3227,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.0167,
+          "meanZipfFrequency": 6.1919,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.7917,
+            "2K": 0.0972,
+            "3K": 0.0278,
+            "4K": 0.0139,
+            "5K": 0.0417,
+            "6K": 0.0139,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0.0139,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6389,
+          "movingAverageTypeTokenRatio": 0.72
+        },
+        "wordForm": {
+          "meanSyllables": 1.0139,
+          "longWordRate": 0.0139
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0,
+          "pronounReferenceRate": 0.1111,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4861
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-006",
+      "title": "McGuffey's First Eclectic Reader, Revised Edition — passage 82",
+      "text": "When they toss the ball up in the air, and try to catch it, Ponto runs to get it in his mouth. Now the ball is lost. They all look for it under the trees and in the grass; but they can not see it. Where can it be? See! Ponto has found it. Here he comes with it. He will lay it at little Lucy's feet, or put it in her hand.",
+      "contentHash": "sha256:861174d3d2f699b932745c5fe0fcd962ff9a11721626e76e628f78252c452958",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14640",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14640/pg14640.txt",
+        "ebookId": "14640",
+        "locator": "paragraph window 82",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "validation",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "The lost-ball sequence is simple and explicit.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple actions follow an explicit chronological sequence.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 322,
+          "paragraphs": 1,
+          "sentences": 8,
+          "tokens": 73,
+          "wordTokens": 73,
+          "uniqueWords": 49,
+          "matchedFamilyTokens": 71,
+          "outOfIndexTokens": 2
+        },
+        "sentence": {
+          "meanLength": 9.125,
+          "logMeanLength": 2.211,
+          "maximumLength": 22,
+          "lengthCoefficientOfVariation": 0.7949,
+          "profileDiversity": 0.8333
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.7411,
+          "meanZipfFrequency": 6.3396,
+          "familyCoverage": 0.9726,
+          "bandCoverage": {
+            "1K": 0.8767,
+            "2K": 0.0548,
+            "3K": 0.0137,
+            "4K": 0,
+            "5K": 0.0137,
+            "6K": 0,
+            "7K": 0.0137,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "ponto"
+          ],
+          "typeTokenRatio": 0.6712,
+          "movingAverageTypeTokenRatio": 0.66
+        },
+        "wordForm": {
+          "meanSyllables": 1.0685,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.0137,
+          "subordinatorRate": 0.0274,
+          "pronounReferenceRate": 0.2192,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4521
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-011",
+      "title": "The New McGuffey First Reader — passage 141",
+      "text": "\"Oh, I think it is very pretty. Where did you get it, Frank?\" \"How glad I am that you made it! Will it float in the water?\" \"I think so. All it wants now is the sail. I will soon put that on.\" \"How I should like to see it sail! Does mother know that you have made it?\" \"Not yet; but I will take it to her as soon as I have put the sail on it.",
+      "contentHash": "sha256:5b8ce1427b5f332db71f3875064e8bf730362cba6c5d29b9f05456e124e3461c",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/1489",
+        "textUrl": "https://www.gutenberg.org/cache/epub/1489/pg1489.txt",
+        "ebookId": "1489",
+        "locator": "paragraph window 141",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "validation",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic questions reveal concrete toy-boat details.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic dialogue keeps references and actions clear.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 342,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 78,
+          "wordTokens": 78,
+          "uniqueWords": 44,
+          "matchedFamilyTokens": 78,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 7.8,
+          "logMeanLength": 2.0541,
+          "maximumLength": 19,
+          "lengthCoefficientOfVariation": 0.5122,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.6409,
+          "meanZipfFrequency": 6.3897,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.9231,
+            "2K": 0.0256,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0,
+            "6K": 0.0513,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.5641,
+          "movingAverageTypeTokenRatio": 0.68
+        },
+        "wordForm": {
+          "meanSyllables": 1.0513,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.0385,
+          "subordinatorRate": 0.0769,
+          "pronounReferenceRate": 0.1667,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4487
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-005",
+      "title": "McGuffey's Eclectic Primer, Revised Edition — passage 11",
+      "text": "There are birds in the tree by the pond. Can you see them? Tom will not rob a bird's nest. He is too kind to do so. One old cow has a bell on her neck. She sees our dog, but she will not run. The boat has brave men in it. They will save the five men. Come, boys, and feed the cows. The sun has set, and they are at the barn.",
+      "contentHash": "sha256:1d546063b2ebe3c4dd560c1e26719da3076c5a67b5830b19b4bde448680e224c",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14642",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14642/pg14642.txt",
+        "ebookId": "14642",
+        "locator": "paragraph window 11",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "validation",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Independent short sentences describe familiar animals and actions.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic vocabulary and direct questions require no inference.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 324,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 74,
+          "wordTokens": 74,
+          "uniqueWords": 56,
+          "matchedFamilyTokens": 74,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 7.4,
+          "logMeanLength": 2.0015,
+          "maximumLength": 10,
+          "lengthCoefficientOfVariation": 0.2356,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 4.2212,
+          "meanZipfFrequency": 6.1136,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.7838,
+            "2K": 0.1081,
+            "3K": 0.0135,
+            "4K": 0.027,
+            "5K": 0.0405,
+            "6K": 0.027,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.7568,
+          "movingAverageTypeTokenRatio": 0.86
+        },
+        "wordForm": {
+          "meanSyllables": 1,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.027,
+          "subordinatorRate": 0,
+          "pronounReferenceRate": 0.1351,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.473
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-012",
+      "title": "The New McGuffey First Reader — passage 59",
+      "text": "He is a funny little boy, and I am sure you would like him. He says he will grow very fast and soon be a man. One day Henry took a pail with him and went up the hill. Do you think he went to get a pail of water? I do not think so. After a little he came down; but he would not let me look in his pail.",
+      "contentHash": "sha256:97253aa2492732b80d79ee5edef19d30d8c0485f55c1d220d0f238d42849e8ac",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/1489",
+        "textUrl": "https://www.gutenberg.org/cache/epub/1489/pg1489.txt",
+        "ebookId": "1489",
+        "locator": "paragraph window 59",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "validation",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "A simple narrative uses common everyday vocabulary.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Brief narrative uses common words and simple contrast.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 301,
+          "paragraphs": 1,
+          "sentences": 6,
+          "tokens": 71,
+          "wordTokens": 71,
+          "uniqueWords": 49,
+          "matchedFamilyTokens": 68,
+          "outOfIndexTokens": 3
+        },
+        "sentence": {
+          "meanLength": 11.8333,
+          "logMeanLength": 2.4709,
+          "maximumLength": 16,
+          "lengthCoefficientOfVariation": 0.2904,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.6968,
+          "meanZipfFrequency": 6.3881,
+          "familyCoverage": 0.9577,
+          "bandCoverage": {
+            "1K": 0.9155,
+            "2K": 0.0423,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "pail"
+          ],
+          "typeTokenRatio": 0.6901,
+          "movingAverageTypeTokenRatio": 0.76
+        },
+        "wordForm": {
+          "meanSyllables": 1.0986,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.0282,
+          "subordinatorRate": 0,
+          "pronounReferenceRate": 0.1549,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4648
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-004",
+      "title": "McGuffey's Eclectic Primer, Revised Edition — passage 28",
+      "text": "They will try to cut all of the wood which you see in the pile. It is May, and the air is cool. They hear the birds sing in the trees, and they hear the noise of the frogs in the pond. Bess is so big, I think she should walk up the hill. The goats love Bess, for she feeds them, and is kind to them. Run, boys, and ring the bell. Call some men to put out the fire.",
+      "contentHash": "sha256:bf4559137bba8f0af9830fbf58390df128ce15466cbb752d816e7908938ed892",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14642",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14642/pg14642.txt",
+        "ebookId": "14642",
+        "locator": "paragraph window 28",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "validation",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Direct commands and descriptions use basic words.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short sentences present direct everyday facts clearly.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 364,
+          "paragraphs": 1,
+          "sentences": 7,
+          "tokens": 81,
+          "wordTokens": 81,
+          "uniqueWords": 53,
+          "matchedFamilyTokens": 81,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 11.5714,
+          "logMeanLength": 2.4485,
+          "maximumLength": 19,
+          "lengthCoefficientOfVariation": 0.3662,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.9373,
+          "meanZipfFrequency": 6.1937,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.8148,
+            "2K": 0.0741,
+            "3K": 0.037,
+            "4K": 0,
+            "5K": 0.0123,
+            "6K": 0.0247,
+            "7K": 0.0123,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0.0247
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6543,
+          "movingAverageTypeTokenRatio": 0.68
+        },
+        "wordForm": {
+          "meanSyllables": 1.0123,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.0123,
+          "subordinatorRate": 0.0123,
+          "pronounReferenceRate": 0.1111,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4815
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-013",
+      "title": "The New McGuffey First Reader — passage 39",
+      "text": "At home, she likes to read to her mother. She likes to look at the pictures, too. Some of the boys found it in the woods, as they were going to school one day. He is kind to it and feeds it. but he will not keep it. They have their books, and I think, they will learn very fast. As soon as she can read well, she may go home and play.",
+      "contentHash": "sha256:cde8839b99066bb29e12745c9f6f74d26f4d8b31d721246555659da30770a0e8",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/1489",
+        "textUrl": "https://www.gutenberg.org/cache/epub/1489/pg1489.txt",
+        "ebookId": "1489",
+        "locator": "paragraph window 39",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "holdout",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Reference shifts occur within very simple sentences.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short everyday statements show explicit time relations.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 334,
+          "paragraphs": 1,
+          "sentences": 7,
+          "tokens": 73,
+          "wordTokens": 73,
+          "uniqueWords": 49,
+          "matchedFamilyTokens": 73,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 10.4286,
+          "logMeanLength": 2.3445,
+          "maximumLength": 17,
+          "lengthCoefficientOfVariation": 0.3355,
+          "profileDiversity": 0.5
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.6544,
+          "meanZipfFrequency": 6.3801,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.9726,
+            "2K": 0.0274,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6712,
+          "movingAverageTypeTokenRatio": 0.72
+        },
+        "wordForm": {
+          "meanSyllables": 1.0411,
+          "longWordRate": 0.0137
+        },
+        "discourse": {
+          "connectiveRate": 0.0137,
+          "subordinatorRate": 0.0411,
+          "pronounReferenceRate": 0.2055,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4384
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-003",
+      "title": "McGuffey's Eclectic Primer, Revised Edition — passage 19",
+      "text": "They have come to play on the logs and in the boat. Here are some girls with skates; but they are not on the ice. Their skates roll on the floor. Which way do you like to skate,--on the ice, or on the floor? I will not try to catch them, for I should fall and be hurt. There is ice on the pond, and the mill wheel can not go round.",
+      "contentHash": "sha256:ede14c76a9e2dfe38b8e79875ab7f8295652c6333cc4da1d221be9d3a9fa31fd",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14642",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14642/pg14642.txt",
+        "ebookId": "14642",
+        "locator": "paragraph window 19",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "holdout",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple connectors relate skating and pond facts.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple locations and activities include direct reasons.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 331,
+          "paragraphs": 1,
+          "sentences": 6,
+          "tokens": 73,
+          "wordTokens": 73,
+          "uniqueWords": 48,
+          "matchedFamilyTokens": 73,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 12.1667,
+          "logMeanLength": 2.4987,
+          "maximumLength": 14,
+          "lengthCoefficientOfVariation": 0.2345,
+          "profileDiversity": 0.3333
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.8631,
+          "meanZipfFrequency": 6.254,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.8219,
+            "2K": 0.0822,
+            "3K": 0.0274,
+            "4K": 0.0137,
+            "5K": 0,
+            "6K": 0.0137,
+            "7K": 0,
+            "8K": 0.0411,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6575,
+          "movingAverageTypeTokenRatio": 0.66
+        },
+        "wordForm": {
+          "meanSyllables": 1,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0.0137,
+          "subordinatorRate": 0.0137,
+          "pronounReferenceRate": 0.0685,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4384
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-002",
+      "title": "McGuffey's Eclectic Primer, Revised Edition — passage 37",
+      "text": "Miss May tells them there is a rule that she wants them to keep. It is, \"Do to each one as you would like each one to do to you.\" This is a good rule, and all boys and girls should keep it. It looks like a church, but I think it is a schoolhouse. \"John! come here. Be quick, and tell me what kind of bird this is.\" \"It is the first quail I have seen. Is it good to eat?\"",
+      "contentHash": "sha256:25b7a4e9b8102630fcca38c112d1e6cd6091d4a77727f29aee4a1daead35dc35",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14642",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14642/pg14642.txt",
+        "ebookId": "14642",
+        "locator": "paragraph window 37",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "holdout",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "The rule and bird facts are explicit.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Simple rules and questions are directly understandable.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 370,
+          "paragraphs": 1,
+          "sentences": 9,
+          "tokens": 82,
+          "wordTokens": 82,
+          "uniqueWords": 51,
+          "matchedFamilyTokens": 81,
+          "outOfIndexTokens": 1
+        },
+        "sentence": {
+          "meanLength": 9.1111,
+          "logMeanLength": 2.2095,
+          "maximumLength": 16,
+          "lengthCoefficientOfVariation": 0.5583,
+          "profileDiversity": 0.6667
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.5819,
+          "meanZipfFrequency": 6.4106,
+          "familyCoverage": 0.9878,
+          "bandCoverage": {
+            "1K": 0.939,
+            "2K": 0.0366,
+            "3K": 0,
+            "4K": 0,
+            "5K": 0,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0.0122,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [
+            "schoolhouse"
+          ],
+          "typeTokenRatio": 0.622,
+          "movingAverageTypeTokenRatio": 0.64
+        },
+        "wordForm": {
+          "meanSyllables": 1.0488,
+          "longWordRate": 0.0122
+        },
+        "discourse": {
+          "connectiveRate": 0.0122,
+          "subordinatorRate": 0.0244,
+          "pronounReferenceRate": 0.1341,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.439
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    },
+    {
+      "id": "correction-r2-l1-001",
+      "title": "McGuffey's Eclectic Primer, Revised Edition — passage 72",
+      "text": "It is the first of May. The boys and girls have gone to the woods to have a good time. See them at their play. Now they will crown some one Queen of the May. Who shall it be? It was God, my child. God made the world and all things in it. He made the sun to light the day, and the moon to shine at night. God shows that he loves us by all that he has done for us. Should we not then love him?",
+      "contentHash": "sha256:15c46b921447ab4b36085a174edd0dad9f6a9dabcde32c1a1c8f15cbeb21f915",
+      "source": {
+        "name": "Project Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/14642",
+        "textUrl": "https://www.gutenberg.org/cache/epub/14642/pg14642.txt",
+        "ebookId": "14642",
+        "locator": "paragraph window 72",
+        "licence": "Public domain in the USA; Project Gutenberg licence and trademark text excluded from excerpt",
+        "licenceUrl": "https://www.gutenberg.org/policy/license.html",
+        "licenceStatus": "landing-page-public-domain-verified",
+        "targetLevel": "L1"
+      },
+      "split": "holdout",
+      "reviewStatus": "ai-label-reviewed",
+      "provisionalInternalLevel": "L1",
+      "humanLabels": [],
+      "aiLabels": [
+        {
+          "reviewerId": "ai-correction-round2-reviewer-a",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Short statements present explicit activities and beliefs.",
+          "completedAt": "2026-08-02T03:45:00.571Z"
+        },
+        {
+          "reviewerId": "ai-correction-round2-reviewer-b",
+          "reviewerType": "ai",
+          "level": "L1",
+          "confidence": "high",
+          "evidenceCodes": [
+            "format-support"
+          ],
+          "note": "Basic statements and questions carry explicit meanings.",
+          "completedAt": "2026-08-02T03:45:00.575Z"
+        }
+      ],
+      "internalLevel": "L1",
+      "scoreEligible": false,
+      "features": {
+        "engineVersion": "text-difficulty-v0-2026.08.01",
+        "schemaVersion": "text-features-v0-2026.08.01",
+        "familyIndexVersion": "wf20k-2026.07.24-v1",
+        "status": "features-only",
+        "counts": {
+          "characters": 391,
+          "paragraphs": 1,
+          "sentences": 10,
+          "tokens": 88,
+          "wordTokens": 88,
+          "uniqueWords": 61,
+          "matchedFamilyTokens": 88,
+          "outOfIndexTokens": 0
+        },
+        "sentence": {
+          "meanLength": 8.8,
+          "logMeanLength": 2.1748,
+          "maximumLength": 15,
+          "lengthCoefficientOfVariation": 0.4568,
+          "profileDiversity": 0.6667
+        },
+        "vocabulary": {
+          "meanLogFrequencyRank": 3.5378,
+          "meanZipfFrequency": 6.4198,
+          "familyCoverage": 1,
+          "bandCoverage": {
+            "1K": 0.9318,
+            "2K": 0.0455,
+            "3K": 0.0114,
+            "4K": 0,
+            "5K": 0.0114,
+            "6K": 0,
+            "7K": 0,
+            "8K": 0,
+            "9K": 0,
+            "10K": 0,
+            "11K": 0,
+            "12K": 0,
+            "13K": 0,
+            "14K": 0,
+            "15K": 0,
+            "16K": 0,
+            "17K": 0,
+            "18K": 0,
+            "19K": 0,
+            "20K": 0
+          },
+          "outOfIndexTypes": [],
+          "typeTokenRatio": 0.6932,
+          "movingAverageTypeTokenRatio": 0.76
+        },
+        "wordForm": {
+          "meanSyllables": 1.0114,
+          "longWordRate": 0
+        },
+        "discourse": {
+          "connectiveRate": 0,
+          "subordinatorRate": 0.0341,
+          "pronounReferenceRate": 0.1364,
+          "nominalisationRate": 0,
+          "lexicalDensity": 0.4432
+        },
+        "semantics": {
+          "meanConcreteness": null,
+          "concretenessCoverage": 0,
+          "abstractnessProxy": 0,
+          "proxyOnly": true
+        },
+        "audit": {
+          "insufficientText": false,
+          "lowFamilyCoverage": false,
+          "unavailableFeatures": [
+            "meanConcreteness"
+          ],
+          "scoreEligible": false,
+          "internalLevel": null
+        }
+      },
+      "labelProvenance": "independent-ai-review-v1"
+    }
+  ]
+}
