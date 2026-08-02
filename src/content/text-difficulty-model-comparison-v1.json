@@ -1,0 +1,895 @@
+{
+  "version": "text-difficulty-model-comparison-v1-2026.08.02",
+  "sourceCorpusVersion": "reference-corpus-ai-reviewed-218-v1-2026.08.02",
+  "splitVersion": "text-difficulty-model-split-v1-2026.08.02",
+  "status": "research-only-ai-labels-not-score-eligible",
+  "scoreEligible": false,
+  "humanLabelReviewed": 0,
+  "featureSchemaVersion": "text-features-v0-2026.08.01",
+  "target": "independent AI-reviewed ordinal levels L1-L6",
+  "selectionRule": "Choose on validation macro MAE; move to a more complex class only for at least 0.05 macro-MAE improvement. Holdout is opened once after selection.",
+  "featureNames": [
+    "sentence.meanLength",
+    "sentence.maximumLength",
+    "sentence.lengthCoefficientOfVariation",
+    "vocabulary.meanLogFrequencyRank",
+    "vocabulary.meanZipfFrequency",
+    "vocabulary.familyCoverage",
+    "vocabulary.typeTokenRatio",
+    "vocabulary.movingAverageTypeTokenRatio",
+    "vocabulary.coverage1K2K",
+    "vocabulary.coverage6KPlus",
+    "wordForm.meanSyllables",
+    "wordForm.longWordRate",
+    "discourse.connectiveRate",
+    "discourse.subordinatorRate",
+    "discourse.pronounReferenceRate",
+    "discourse.nominalisationRate",
+    "discourse.lexicalDensity",
+    "semantics.abstractnessProxy"
+  ],
+  "searchCounts": {
+    "baseline": 1,
+    "ridge": 5,
+    "elasticNet": 15,
+    "gbdt": 18
+  },
+  "classWinners": [
+    {
+      "name": "transparent-two-feature-linear",
+      "fit": {
+        "type": "ridge",
+        "featureIndices": [
+          0,
+          3
+        ],
+        "lambda": 1e-8
+      },
+      "train": {
+        "mae": 0.9824,
+        "rmse": 1.1626,
+        "macroMae": 1.0642,
+        "withinOneRate": 0.5197,
+        "extremeErrorCount": 9,
+        "maximumAbsoluteError": 3.5286,
+        "byLevel": {
+          "L1": {
+            "count": 20,
+            "mae": 1.7304
+          },
+          "L2": {
+            "count": 35,
+            "mae": 0.7855
+          },
+          "L3": {
+            "count": 28,
+            "mae": 0.2216
+          },
+          "L4": {
+            "count": 24,
+            "mae": 1.0634
+          },
+          "L5": {
+            "count": 14,
+            "mae": 1.448
+          },
+          "L6": {
+            "count": 31,
+            "mae": 1.1363
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 20,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 35,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 28,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 23,
+            "L4": 1,
+            "L5": 0,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 7,
+            "L4": 0,
+            "L5": 4,
+            "L6": 3
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 4,
+            "L5": 20,
+            "L6": 7
+          }
+        }
+      },
+      "validation": {
+        "mae": 0.9582,
+        "rmse": 1.153,
+        "macroMae": 1.0775,
+        "withinOneRate": 0.5758,
+        "extremeErrorCount": 2,
+        "maximumAbsoluteError": 3.0795,
+        "byLevel": {
+          "L1": {
+            "count": 4,
+            "mae": 1.6675
+          },
+          "L2": {
+            "count": 8,
+            "mae": 0.7597
+          },
+          "L3": {
+            "count": 6,
+            "mae": 0.2398
+          },
+          "L4": {
+            "count": 5,
+            "mae": 1.0512
+          },
+          "L5": {
+            "count": 3,
+            "mae": 1.7621
+          },
+          "L6": {
+            "count": 7,
+            "mae": 0.9846
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 4,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 8,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 6,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 5,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 1,
+            "L4": 0,
+            "L5": 1,
+            "L6": 1
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 4,
+            "L6": 3
+          }
+        }
+      },
+      "overfitGapMae": -0.0242
+    },
+    {
+      "name": "ridge",
+      "fit": {
+        "type": "ridge",
+        "featureIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "lambda": 10
+      },
+      "train": {
+        "mae": 0.4573,
+        "rmse": 0.5723,
+        "macroMae": 0.4702,
+        "withinOneRate": 0.9145,
+        "extremeErrorCount": 0,
+        "maximumAbsoluteError": 1.4532,
+        "byLevel": {
+          "L1": {
+            "count": 20,
+            "mae": 0.427
+          },
+          "L2": {
+            "count": 35,
+            "mae": 0.5099
+          },
+          "L3": {
+            "count": 28,
+            "mae": 0.332
+          },
+          "L4": {
+            "count": 24,
+            "mae": 0.3559
+          },
+          "L5": {
+            "count": 14,
+            "mae": 0.6949
+          },
+          "L6": {
+            "count": 31,
+            "mae": 0.5017
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 14,
+            "L2": 6,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 1,
+            "L2": 23,
+            "L3": 11,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 6,
+            "L3": 22,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 4,
+            "L4": 19,
+            "L5": 1,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 5,
+            "L5": 6,
+            "L6": 3
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 13,
+            "L6": 18
+          }
+        }
+      },
+      "validation": {
+        "mae": 0.4751,
+        "rmse": 0.6525,
+        "macroMae": 0.5392,
+        "withinOneRate": 0.9394,
+        "extremeErrorCount": 1,
+        "maximumAbsoluteError": 2.5148,
+        "byLevel": {
+          "L1": {
+            "count": 4,
+            "mae": 0.2643
+          },
+          "L2": {
+            "count": 8,
+            "mae": 0.3572
+          },
+          "L3": {
+            "count": 6,
+            "mae": 0.4541
+          },
+          "L4": {
+            "count": 5,
+            "mae": 0.3429
+          },
+          "L5": {
+            "count": 3,
+            "mae": 1.3479
+          },
+          "L6": {
+            "count": 7,
+            "mae": 0.4688
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 3,
+            "L2": 1,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 0,
+            "L2": 6,
+            "L3": 2,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 1,
+            "L3": 5,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 1,
+            "L4": 4,
+            "L5": 0,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 1,
+            "L5": 0,
+            "L6": 2
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 3,
+            "L6": 4
+          }
+        }
+      },
+      "overfitGapMae": 0.0178
+    },
+    {
+      "name": "elastic-net",
+      "fit": {
+        "type": "elasticNet",
+        "featureIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "lambda": 0.03,
+        "l1Ratio": 0.25
+      },
+      "train": {
+        "mae": 0.4548,
+        "rmse": 0.5686,
+        "macroMae": 0.4666,
+        "withinOneRate": 0.9079,
+        "extremeErrorCount": 0,
+        "maximumAbsoluteError": 1.4746,
+        "byLevel": {
+          "L1": {
+            "count": 20,
+            "mae": 0.4321
+          },
+          "L2": {
+            "count": 35,
+            "mae": 0.5068
+          },
+          "L3": {
+            "count": 28,
+            "mae": 0.3338
+          },
+          "L4": {
+            "count": 24,
+            "mae": 0.3516
+          },
+          "L5": {
+            "count": 14,
+            "mae": 0.6745
+          },
+          "L6": {
+            "count": 31,
+            "mae": 0.5008
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 14,
+            "L2": 6,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 1,
+            "L2": 23,
+            "L3": 11,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 6,
+            "L3": 22,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 2,
+            "L4": 21,
+            "L5": 1,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 5,
+            "L5": 6,
+            "L6": 3
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 13,
+            "L6": 18
+          }
+        }
+      },
+      "validation": {
+        "mae": 0.4819,
+        "rmse": 0.6585,
+        "macroMae": 0.5456,
+        "withinOneRate": 0.9394,
+        "extremeErrorCount": 1,
+        "maximumAbsoluteError": 2.5223,
+        "byLevel": {
+          "L1": {
+            "count": 4,
+            "mae": 0.2564
+          },
+          "L2": {
+            "count": 8,
+            "mae": 0.3777
+          },
+          "L3": {
+            "count": 6,
+            "mae": 0.4612
+          },
+          "L4": {
+            "count": 5,
+            "mae": 0.3498
+          },
+          "L5": {
+            "count": 3,
+            "mae": 1.3646
+          },
+          "L6": {
+            "count": 7,
+            "mae": 0.4638
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 3,
+            "L2": 1,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 0,
+            "L2": 6,
+            "L3": 2,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 1,
+            "L3": 5,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 1,
+            "L4": 3,
+            "L5": 1,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 1,
+            "L5": 0,
+            "L6": 2
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 2,
+            "L6": 5
+          }
+        }
+      },
+      "overfitGapMae": 0.0271
+    },
+    {
+      "name": "lightweight-gbdt",
+      "fit": {
+        "type": "gbdt",
+        "config": {
+          "trees": 100,
+          "learningRate": 0.06,
+          "maximumDepth": 2,
+          "minimumLeaf": 6
+        }
+      },
+      "train": {
+        "mae": 0.2161,
+        "rmse": 0.286,
+        "macroMae": 0.2259,
+        "withinOneRate": 0.9934,
+        "extremeErrorCount": 0,
+        "maximumAbsoluteError": 1.0898,
+        "byLevel": {
+          "L1": {
+            "count": 20,
+            "mae": 0.1772
+          },
+          "L2": {
+            "count": 35,
+            "mae": 0.2642
+          },
+          "L3": {
+            "count": 28,
+            "mae": 0.2121
+          },
+          "L4": {
+            "count": 24,
+            "mae": 0.2147
+          },
+          "L5": {
+            "count": 14,
+            "mae": 0.361
+          },
+          "L6": {
+            "count": 31,
+            "mae": 0.1263
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 20,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 0,
+            "L2": 30,
+            "L3": 5,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 2,
+            "L3": 26,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 24,
+            "L5": 0,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 2,
+            "L5": 10,
+            "L6": 2
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 1,
+            "L6": 30
+          }
+        }
+      },
+      "validation": {
+        "mae": 0.3371,
+        "rmse": 0.4308,
+        "macroMae": 0.3553,
+        "withinOneRate": 1,
+        "extremeErrorCount": 0,
+        "maximumAbsoluteError": 0.9689,
+        "byLevel": {
+          "L1": {
+            "count": 4,
+            "mae": 0.2667
+          },
+          "L2": {
+            "count": 8,
+            "mae": 0.334
+          },
+          "L3": {
+            "count": 6,
+            "mae": 0.3058
+          },
+          "L4": {
+            "count": 5,
+            "mae": 0.4815
+          },
+          "L5": {
+            "count": 3,
+            "mae": 0.5164
+          },
+          "L6": {
+            "count": 7,
+            "mae": 0.2276
+          }
+        },
+        "confusion": {
+          "L1": {
+            "L1": 4,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L2": {
+            "L1": 1,
+            "L2": 6,
+            "L3": 1,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L3": {
+            "L1": 0,
+            "L2": 2,
+            "L3": 4,
+            "L4": 0,
+            "L5": 0,
+            "L6": 0
+          },
+          "L4": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 1,
+            "L4": 4,
+            "L5": 0,
+            "L6": 0
+          },
+          "L5": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 2,
+            "L6": 1
+          },
+          "L6": {
+            "L1": 0,
+            "L2": 0,
+            "L3": 0,
+            "L4": 0,
+            "L5": 1,
+            "L6": 6
+          }
+        }
+      },
+      "overfitGapMae": 0.121,
+      "featureImportance": {
+        "sentence.meanLength": 1699.6009,
+        "wordForm.longWordRate": 1123.0878,
+        "sentence.maximumLength": 335.0728,
+        "vocabulary.movingAverageTypeTokenRatio": 204.4562,
+        "vocabulary.typeTokenRatio": 105.1071,
+        "sentence.lengthCoefficientOfVariation": 49.1327,
+        "discourse.nominalisationRate": 40.0869,
+        "vocabulary.coverage1K2K": 31.5453
+      }
+    }
+  ],
+  "selectedModel": "lightweight-gbdt",
+  "holdout": {
+    "mae": 0.3609,
+    "rmse": 0.5,
+    "macroMae": 0.3981,
+    "withinOneRate": 0.9091,
+    "extremeErrorCount": 0,
+    "maximumAbsoluteError": 1.3572,
+    "byLevel": {
+      "L1": {
+        "count": 5,
+        "mae": 0.1783
+      },
+      "L2": {
+        "count": 7,
+        "mae": 0.3862
+      },
+      "L3": {
+        "count": 6,
+        "mae": 0.2718
+      },
+      "L4": {
+        "count": 5,
+        "mae": 0.8569
+      },
+      "L5": {
+        "count": 3,
+        "mae": 0.6172
+      },
+      "L6": {
+        "count": 7,
+        "mae": 0.0783
+      }
+    },
+    "confusion": {
+      "L1": {
+        "L1": 5,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0,
+        "L5": 0,
+        "L6": 0
+      },
+      "L2": {
+        "L1": 1,
+        "L2": 5,
+        "L3": 1,
+        "L4": 0,
+        "L5": 0,
+        "L6": 0
+      },
+      "L3": {
+        "L1": 0,
+        "L2": 1,
+        "L3": 5,
+        "L4": 0,
+        "L5": 0,
+        "L6": 0
+      },
+      "L4": {
+        "L1": 0,
+        "L2": 0,
+        "L3": 2,
+        "L4": 1,
+        "L5": 2,
+        "L6": 0
+      },
+      "L5": {
+        "L1": 0,
+        "L2": 0,
+        "L3": 0,
+        "L4": 1,
+        "L5": 2,
+        "L6": 0
+      },
+      "L6": {
+        "L1": 0,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0,
+        "L5": 0,
+        "L6": 7
+      }
+    }
+  },
+  "publicationGate": {
+    "sixLevelCoverage": true,
+    "sourceGroupedSplit": true,
+    "humanLabelsPresent": false,
+    "modelValidatedForLearnerScores": false,
+    "officialLexileClaimAllowed": false
+  }
+}

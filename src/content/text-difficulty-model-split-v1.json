@@ -1,0 +1,1605 @@
+{
+  "version": "text-difficulty-model-split-v1-2026.08.02",
+  "sourceCorpusVersion": "reference-corpus-ai-reviewed-218-v1-2026.08.02",
+  "status": "evaluation-only-not-score-eligible",
+  "method": "deterministic-source-grouped-stratified-greedy-128-restarts",
+  "rationale": "Original audit splits predate final labels and omit levels from validation or holdout. Model splits preserve source isolation and represent all six levels without rewriting audit provenance.",
+  "scoreEligible": false,
+  "ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "holdout": 0.15
+  },
+  "targets": {
+    "train": {
+      "L1": 20,
+      "L2": 35,
+      "L3": 28,
+      "L4": 24,
+      "L5": 14,
+      "L6": 31
+    },
+    "validation": {
+      "L1": 4,
+      "L2": 8,
+      "L3": 6,
+      "L4": 5,
+      "L5": 3,
+      "L6": 7
+    },
+    "holdout": {
+      "L1": 5,
+      "L2": 7,
+      "L3": 6,
+      "L4": 5,
+      "L5": 3,
+      "L6": 7
+    }
+  },
+  "objective": 0,
+  "sourceGroupCount": 188,
+  "sourceLeakageCount": 0,
+  "counts": {
+    "train": {
+      "total": 152,
+      "levels": {
+        "L1": 20,
+        "L2": 35,
+        "L3": 28,
+        "L4": 24,
+        "L5": 14,
+        "L6": 31
+      }
+    },
+    "validation": {
+      "total": 33,
+      "levels": {
+        "L1": 4,
+        "L2": 8,
+        "L3": 6,
+        "L4": 5,
+        "L5": 3,
+        "L6": 7
+      }
+    },
+    "holdout": {
+      "total": 33,
+      "levels": {
+        "L1": 5,
+        "L2": 7,
+        "L3": 6,
+        "L4": 5,
+        "L5": 3,
+        "L6": 7
+      }
+    }
+  },
+  "recordAssignments": [
+    {
+      "recordId": "voa-advanced-030",
+      "sourceGroup": "https://learningenglish.voanews.com/a/it-s-time-to-break-these-old-grammar-rules/4598241.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-031",
+      "sourceGroup": "https://learningenglish.voanews.com/a/part-1-making-comparison-with-as-as/5447902.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-032",
+      "sourceGroup": "https://learningenglish.voanews.com/a/part-2-comparing-equal-amounts-with-as-as/5466442.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-033",
+      "sourceGroup": "https://learningenglish.voanews.com/a/past-ability-could-was-able-to-managed-to/5139503.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-023",
+      "sourceGroup": "https://learningenglish.voanews.com/a/if-and-whether-part-1/5646993.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-034",
+      "sourceGroup": "https://learningenglish.voanews.com/a/phrases-adjectives-determiners-to-describe-autumn/6249266.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-022",
+      "sourceGroup": "https://learningenglish.voanews.com/a/how-to-talk-about-preferences/4605975.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-advanced-035",
+      "sourceGroup": "https://learningenglish.voanews.com/a/sentence-length-are-short-sentences-childish-/6636852.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-021",
+      "sourceGroup": "https://learningenglish.voanews.com/a/how-to-split-infinitives-when-you-have-to/5996599.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-036",
+      "sourceGroup": "https://learningenglish.voanews.com/a/shortened-statements-with-the-word-to-/6007145.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-020",
+      "sourceGroup": "https://learningenglish.voanews.com/a/grammar-games-at-home-simon-says/5382485.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-037",
+      "sourceGroup": "https://learningenglish.voanews.com/a/six-difference-between-britsh-and-american-english/3063743.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-027",
+      "sourceGroup": "https://learningenglish.voanews.com/a/everyday-grammar-infinitives/3778823.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-038",
+      "sourceGroup": "https://learningenglish.voanews.com/a/so-and-neither-short-responses-of-agreement/4878658.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-026",
+      "sourceGroup": "https://learningenglish.voanews.com/a/improve-your-writing-with-inversion-part-2/4509288.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-039",
+      "sourceGroup": "https://learningenglish.voanews.com/a/taking-adjectives-to-the-extreme/5630124.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-025",
+      "sourceGroup": "https://learningenglish.voanews.com/a/improve-your-writing-with-inversion-part-1/4500912.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-041",
+      "sourceGroup": "https://learningenglish.voanews.com/a/the-many-uses-of-would-in-everyday-speech/4455867.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-024",
+      "sourceGroup": "https://learningenglish.voanews.com/a/if-and-whether-part-2/5667799.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-040",
+      "sourceGroup": "https://learningenglish.voanews.com/a/the-exciting-world-of-participial-adjectives/4489551.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-042",
+      "sourceGroup": "https://learningenglish.voanews.com/a/the-progressive-activities-and-places/5109273.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-029",
+      "sourceGroup": "https://learningenglish.voanews.com/a/nine-surprising-facts-about-the-english-language/4806416.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-028",
+      "sourceGroup": "https://learningenglish.voanews.com/a/learning-passive-modals-it-can-be-done/4364766.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-level2-030",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-30/4465315.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-025",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-25/4322773.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-024",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-24/4307612.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-027",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-27/4374632.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-026",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-26/4350607.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-021",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-21/4273059.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-020",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-20/4254704.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-023",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-23/4287922.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-022",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-22/4283017.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-029",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-29/4423736.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-028",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-28/4396849.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-040",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-44-making-healthy-choices/3688552.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-041",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lesson-45-this-land-is-your-land/3710209.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-042",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-46-may-i-borrow-that/3723588.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-022",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-22/3397314.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-043",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-47-how-can-i-help/3737352.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-023",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-23-what-do-you-want/3413753.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-044",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-48-have-you-ever/3753664.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-020",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-20-what-can-you-do/3384429.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-045",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-49-operation-spy/3763537.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-021",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-21-can-you-come-to-the-party/3406732.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-035",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-39-its-unbelieveable/3598920.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-046",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-50-back-to-school/3771173.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-026",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-26-this-game-is-fun/3457248.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-034",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-38-shes-my-best-friend/3591967.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-047",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-51-a-good-habit/3773577.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-027",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-27-i-cant-come-in/3457316.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-037",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-41-teamwork/3635015.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-048",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-52-taking-chances/3805454.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-024",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-24-yesterday-was-amazing/3439164.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-036",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-40-the-woods-are-alive/3630341.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-025",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-25-watch-out/3431138.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-031",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-32-welcome-treehouse/3547306.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-030",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-30-rolling-river/3522798.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-033",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-37-lets-agree-to-disagree/3574029.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-028",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-28-i-passed-it/3487865.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-032",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-35-lets-make-dinner/3571922.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-029",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-29-a-long-time-ago/3509519.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-039",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-43-time-for-plan-b/3666458.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-038",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-42-i-was-minding-my-own-business/3647264.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-advanced-016",
+      "sourceGroup": "https://learningenglish.voanews.com/a/everyday-grammar-fun-with-future-tenses/2935173.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-017",
+      "sourceGroup": "https://learningenglish.voanews.com/a/getting-to-know-gerunds-and-infinitives/3111996.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-014",
+      "sourceGroup": "https://learningenglish.voanews.com/a/everyday-grammar-gerunds-infinitives/2722827.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-015",
+      "sourceGroup": "https://learningenglish.voanews.com/a/fiction-adjective-phrases-and-adjective-clauses/5419952.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-009",
+      "sourceGroup": "https://learningenglish.voanews.com/a/cleft-sentences-in-speaking-writing/5164836.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-012",
+      "sourceGroup": "https://learningenglish.voanews.com/a/describing-your-day-mornings/6241274.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-008",
+      "sourceGroup": "https://learningenglish.voanews.com/a/are-infinitives-really-verbs-/5769834.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-013",
+      "sourceGroup": "https://learningenglish.voanews.com/a/don-t-be-afraid-of-contractions-/4590043.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-010",
+      "sourceGroup": "https://learningenglish.voanews.com/a/everyday-grammar-transition-words/4019183.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-011",
+      "sourceGroup": "https://learningenglish.voanews.com/a/describing-your-day-midday-activities-/6253876.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-001",
+      "sourceGroup": "https://learningenglish.voanews.com/a/but-a-small-common-and-important-word-/6598987.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-003",
+      "sourceGroup": "https://learningenglish.voanews.com/a/a-simple-sentence-with-seven-meanings/4916769.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-018",
+      "sourceGroup": "https://learningenglish.voanews.com/a/grammar-for-giving-gifts/7377191.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-002",
+      "sourceGroup": "https://learningenglish.voanews.com/a/a-journey-with-the-present-perfect-part-two-/5761196.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-019",
+      "sourceGroup": "https://learningenglish.voanews.com/a/grammar-games-at-home-part-1-jeopardy/5345471.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-005",
+      "sourceGroup": "https://learningenglish.voanews.com/a/academic-writing-common-patterns-part-two-everyday-grammar/3997498.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-004",
+      "sourceGroup": "https://learningenglish.voanews.com/a/everyday-grammar-common-patterns/3988378.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "voa-advanced-007",
+      "sourceGroup": "https://learningenglish.voanews.com/a/an-introduction-to-verb-tenses/3123576.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-advanced-006",
+      "sourceGroup": "https://learningenglish.voanews.com/a/adverbs-and-adjectives/3702382.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "voa-level2-018",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-18/4231290.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-019",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-19/4242927.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-014",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-14-made-for-each-other/4159000.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-015",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-15-before-after/4159057.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-009",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-9-pets-are-family-too/4074883.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "validation",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-016",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-16/4198066.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-008",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-8-best-barbecue/4073994.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-017",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-17/4220576.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-007",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lesson-7-tip-your-tour-guide/4064769.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-010",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-10-visit-to-peru/4079037.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-006",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lesson-6-will-it-float/4064553.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-011",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-11-the-big-snow/4102755.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-005",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-5-greatest-vacation/4035571.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-012",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-12-run-bees/4139015.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-004",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-4-run-away-with-the-circus/4034187.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-013",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-13-save-the-bees/4145716.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-003",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-3/4027340.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-002",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-2/3960471.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level2-001",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson1/3960391.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L3"
+    },
+    {
+      "recordId": "voa-level1-008",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-8-are-you-busy/3253185.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-009",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-9-is-it-cold/3261789.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-004",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-4/3168920.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "voa-level1-005",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-5-where-are-you/3168971.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "voa-level1-019",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-19-when-do-you-start/3357760.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-006",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-6-where-is-the-gym/3225958.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-018",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-18-she-always-does-that/3357748.html",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-007",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-7-what-are-you-doing/3240468.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-017",
+      "sourceGroup": "https://learningenglish.voanews.com/a/are-you-free-on-friday-lets-learn-english/3355785.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-016",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-16-where-are-you-from/3355849.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-001",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-one/3111026.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "voa-level1-015",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-15-i-love-people-watching/3343720.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-002",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-2-hello/3113733.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "voa-level1-014",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-14-how-about-this/3323771.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-003",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-3-i-am-here/3126527.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "voa-level1-013",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-13-happy-birthday-william-shakespeare/3312239.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-012",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-12-meet-my-family/3301733.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-011",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-11-this-is-my-neighborhood/3293986.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "voa-level1-010",
+      "sourceGroup": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-10/3285228.html",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-002",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/what-to-do-if-you-have-covid.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-003",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/testing/diagnostic-testing.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-001",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/testing/diagnostic-testing.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-015",
+      "sourceGroup": "https://www.cdc.gov/disability-emergency-preparedness/communication-resources/emergency-preparedness-easy-read.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-006",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/symptoms-testing.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-l1-014",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/prevent-getting-sick/how-covid-spreads.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-l1-007",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/what-to-do-around-someone-with-covid-19.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-017",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/prevent-getting-sick/how-covid-spreads.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-l1-004",
+      "sourceGroup": "https://www.cdc.gov/disability-emergency-preparedness/communication-resources/emergency-plan-easy-read.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-016",
+      "sourceGroup": "https://www.cdc.gov/disability-emergency-preparedness/communication-resources/emergency-plan-easy-read.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-005",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/make-a-plan.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-011",
+      "sourceGroup": "https://www.cdc.gov/disability-emergency-preparedness/communication-resources/emergency-plan-easy-read.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-010",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/get-medicine-for-covid-19.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-013",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/stay-safe-when-people-visit-your-home.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-008",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/what-to-do-if-you-have-covid.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l1-012",
+      "sourceGroup": "https://www.cdc.gov/disability-and-health/covid-19-resources/easy-read-needle-phobia.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l5-011",
+      "sourceGroup": "gutenberg:992",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l1-009",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/make-a-plan.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l5-010",
+      "sourceGroup": "gutenberg:34901",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-013",
+      "sourceGroup": "gutenberg:9304",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l5-012",
+      "sourceGroup": "gutenberg:26495",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-015",
+      "sourceGroup": "gutenberg:4320",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l1-019",
+      "sourceGroup": "https://www.cdc.gov/covid/communication/people-with-disabilities.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-l5-014",
+      "sourceGroup": "gutenberg:6799",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l1-018",
+      "sourceGroup": "https://www.cdc.gov/disability-emergency-preparedness/communication-resources/coping-easy-read.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-l5-017",
+      "sourceGroup": "gutenberg:12004",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-016",
+      "sourceGroup": "gutenberg:23422",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-019",
+      "sourceGroup": "gutenberg:4583",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-018",
+      "sourceGroup": "gutenberg:690",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-018",
+      "sourceGroup": "gutenberg:16833",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-019",
+      "sourceGroup": "gutenberg:1232",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-009",
+      "sourceGroup": "gutenberg:11100",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-012",
+      "sourceGroup": "gutenberg:25110",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-008",
+      "sourceGroup": "gutenberg:28696",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-013",
+      "sourceGroup": "gutenberg:1656",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-010",
+      "sourceGroup": "gutenberg:4363",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-011",
+      "sourceGroup": "gutenberg:35722",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-005",
+      "sourceGroup": "gutenberg:5173",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-016",
+      "sourceGroup": "gutenberg:27597",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-004",
+      "sourceGroup": "gutenberg:22364",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-017",
+      "sourceGroup": "gutenberg:5669",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-007",
+      "sourceGroup": "gutenberg:6762",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-014",
+      "sourceGroup": "gutenberg:4391",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-006",
+      "sourceGroup": "gutenberg:7370",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-015",
+      "sourceGroup": "gutenberg:1998",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-001",
+      "sourceGroup": "gutenberg:59",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-003",
+      "sourceGroup": "gutenberg:35421",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-002",
+      "sourceGroup": "gutenberg:8438",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "correction-l1-020",
+      "sourceGroup": "https://archive.cdc.gov/www_cdc_gov/coronavirus/2019-ncov/easy-to-read/vaccines-people-with-disabilities.html",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-l5-020",
+      "sourceGroup": "gutenberg:19322",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-008",
+      "sourceGroup": "gutenberg:25012",
+      "originalAuditSplit": "validation",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-009",
+      "sourceGroup": "gutenberg:10378",
+      "originalAuditSplit": "validation",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-006",
+      "sourceGroup": "gutenberg:990",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-007",
+      "sourceGroup": "gutenberg:4723",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-004",
+      "sourceGroup": "gutenberg:13888",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-005",
+      "sourceGroup": "gutenberg:27942",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-002",
+      "sourceGroup": "gutenberg:4280",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-003",
+      "sourceGroup": "gutenberg:5637",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l5-001",
+      "sourceGroup": "gutenberg:20887",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-027",
+      "sourceGroup": "gutenberg:22283",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-030",
+      "sourceGroup": "gutenberg:6798",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-026",
+      "sourceGroup": "gutenberg:18440",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-025",
+      "sourceGroup": "gutenberg:11224",
+      "originalAuditSplit": "validation",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-024",
+      "sourceGroup": "gutenberg:991",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-023",
+      "sourceGroup": "gutenberg:989",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-022",
+      "sourceGroup": "gutenberg:25172",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-021",
+      "sourceGroup": "gutenberg:30866",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-l6-020",
+      "sourceGroup": "gutenberg:35420",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-l6-029",
+      "sourceGroup": "gutenberg:25447",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L4"
+    },
+    {
+      "recordId": "correction-l6-028",
+      "sourceGroup": "gutenberg:13316",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-008",
+      "sourceGroup": "gutenberg:992",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-003",
+      "sourceGroup": "gutenberg:10378",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-r2-l5-002",
+      "sourceGroup": "gutenberg:4723",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-001",
+      "sourceGroup": "gutenberg:13888",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-007",
+      "sourceGroup": "gutenberg:23422",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-006",
+      "sourceGroup": "gutenberg:5637",
+      "originalAuditSplit": "train",
+      "modelSplit": "holdout",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-005",
+      "sourceGroup": "gutenberg:25012",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L6"
+    },
+    {
+      "recordId": "correction-r2-l5-004",
+      "sourceGroup": "gutenberg:9304",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L5"
+    },
+    {
+      "recordId": "correction-r2-l1-020",
+      "sourceGroup": "gutenberg:67302",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-018",
+      "sourceGroup": "gutenberg:67302",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-019",
+      "sourceGroup": "gutenberg:67302",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-014",
+      "sourceGroup": "gutenberg:1489",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-015",
+      "sourceGroup": "gutenberg:1489",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-009",
+      "sourceGroup": "gutenberg:14640",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-016",
+      "sourceGroup": "gutenberg:67302",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-008",
+      "sourceGroup": "gutenberg:14640",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-017",
+      "sourceGroup": "gutenberg:67302",
+      "originalAuditSplit": "train",
+      "modelSplit": "validation",
+      "internalLevel": "L2"
+    },
+    {
+      "recordId": "correction-r2-l1-007",
+      "sourceGroup": "gutenberg:14640",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-010",
+      "sourceGroup": "gutenberg:14640",
+      "originalAuditSplit": "train",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-006",
+      "sourceGroup": "gutenberg:14640",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-011",
+      "sourceGroup": "gutenberg:1489",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-005",
+      "sourceGroup": "gutenberg:14642",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-012",
+      "sourceGroup": "gutenberg:1489",
+      "originalAuditSplit": "validation",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-004",
+      "sourceGroup": "gutenberg:14642",
+      "originalAuditSplit": "validation",
+      "modelSplit": "holdout",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-013",
+      "sourceGroup": "gutenberg:1489",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "train",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-003",
+      "sourceGroup": "gutenberg:14642",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-002",
+      "sourceGroup": "gutenberg:14642",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L1"
+    },
+    {
+      "recordId": "correction-r2-l1-001",
+      "sourceGroup": "gutenberg:14642",
+      "originalAuditSplit": "holdout",
+      "modelSplit": "holdout",
+      "internalLevel": "L1"
+    }
+  ]
+}
