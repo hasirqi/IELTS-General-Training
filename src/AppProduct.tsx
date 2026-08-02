@@ -28,6 +28,7 @@ import {
 import { AssessmentPractice, type PracticeMode } from "./AssessmentPractice";
 import { ReadingAssessmentCat } from "./ReadingAssessmentCat";
 import { AbilityProfile } from "./AbilityProfile";
+import { ProductHealth } from "./ProductHealth";
 import { READING_WEAKNESS_META } from "./ability-profile.mjs";
 import { createSessionSeed, shuffleWithSeed } from "./assessment-session-engine.mjs";
 import "./product.css";
@@ -39,6 +40,8 @@ const vocabularyAnchors = applyVocabularyCalibration(rawVocabularyAnchors as Voc
 const vocabularyAnchorById = new Map(vocabularyAnchors.map((anchor) => [anchor.id, anchor]));
 const studyOrder = createStudyOrder(lexicon);
 const quality = lexiconQuality(lexicon);
+const lessonIds = curriculum.map((lesson) => lesson.id);
+const audioFiles = [...new Set(curriculum.filter((lesson) => lesson.skill === "listening").map((lesson) => lesson.audioFile).filter((file): file is string => Boolean(file)))];
 
 type ReadingDifficultyRecord = {
   lessonId: string;
@@ -156,6 +159,7 @@ export function App() {
         {view === "library" && <Library/>}
         {view === "progress" && <AbilityProfile state={state} onOpenReading={() => { setCourseSkill("reading"); setView("courses"); }}/>}
         {view === "errors" && <Errors state={state}/>}
+        {view === "health" && <ProductHealth state={state} update={update} lexiconIds={studyOrder} lessonIds={lessonIds} audioFiles={audioFiles} lexiconCount={lexicon.length} anchorCount={vocabularyAnchors.length}/>}
       </Shell>}
   </div>;
 }
@@ -176,7 +180,7 @@ function Home({state,dueCount,onOpen,onOpenCourse,onReset}:{state:LearningState;
       <div className="foundation-grid">{steps.map((step, index) => { const Icon = step.icon; const done = step.completeKey !== null && state.completedSteps.includes(step.completeKey); return <button key={step.title} onClick={() => onOpen(step.view)}><span className={done ? "foundation-icon done" : "foundation-icon"}>{done ? <IconCheck size={22}/> : <Icon size={25}/>}</span><span><strong>{step.title}</strong><small>{step.subtitle}</small></span><IconArrowRight className="foundation-arrow" size={18}/></button>; })}</div>
     </section>
     <section className="review-strip"><div className="review-count"><IconClipboardText/><span>待复习<span className="review-number"><strong>{dueCount}</strong><small>个</small></span></span></div><div><strong>到期再复习，错词一定回来。</strong><p>不是固定天数，系统会根据正确率和遗忘情况调整。</p></div><button className="outline-button" onClick={() => onOpen("review")}>去复习<IconArrowRight/></button></section>
-    <footer className="home-footer"><button onClick={() => onOpen("progress")}><IconTargetArrow/>能力结果</button><button onClick={() => onOpen("errors")}><IconBrain/>错因档案</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
+    <footer className="home-footer"><button onClick={() => onOpen("progress")}><IconTargetArrow/>能力结果</button><button onClick={() => onOpen("errors")}><IconBrain/>错因档案</button><button onClick={() => onOpen("health")}><IconClipboardText/>数据与健康</button><button onClick={onReset}><IconRefresh/>重置本地进度</button></footer>
   </main>;
 }
 
@@ -185,7 +189,7 @@ function GlobalHeader({onHome,onLibrary,onChat}:{onHome:()=>void;onLibrary:()=>v
 }
 
 function Shell({view,back,backLabel,progress,children}:{view:View;back:()=>void;backLabel:string;progress:number;children:React.ReactNode}) {
-  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力结果",errors:"错因档案"};
+  const labels: Record<View,string> = {home:"学习首页",review:"主动回忆",words:"词义实验室","vocabulary-study":"单词学习","vocabulary-test":"测试中心",sentence:"句型实验室",speak:"开口任务",courses:"四项课程",library:`${lexicon.length.toLocaleString()} 词库`,progress:"能力结果",errors:"错因档案",health:"数据与健康"};
   return <main className="lesson-page"><div className="context-header"><button className="icon-button" onClick={back} aria-label={backLabel}><IconArrowLeft/></button><div><small>当前页面</small><strong>{labels[view]}</strong></div></div><div className="lesson-progress" role="progressbar" aria-label="总体学习进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{width:`${progress}%`}}/></div><span className="progress-caption">总体学习进度 {progress}%</span>{children}</main>;
 }
 

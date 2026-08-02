@@ -4,7 +4,7 @@ import type { LearningState } from "./product-types";
 const createParticipantId=()=>`local-${globalThis.crypto?.randomUUID?.()??`${Date.now()}-${Math.random().toString(36).slice(2)}`}`;
 
 const initialState: LearningState = {
-  schemaVersion: 7,
+  schemaVersion: 8,
   completedSteps: [],
   completedLessons: [],
   reviewIndex: 0,
@@ -27,6 +27,11 @@ const initialState: LearningState = {
   readingAssessments: [],
   measurementParticipantId: createParticipantId(),
   measurementSessions: [],
+  lastBackupAt: "",
+  lastRestoreAt: "",
+  usageValidationStartedAt: "",
+  usageValidationObservations: [],
+  ieltsReadingValidationSamples: [],
 };
 
 const dbPromise = openDB("breakthrough-ielts", 2, {
@@ -35,13 +40,13 @@ const dbPromise = openDB("breakthrough-ielts", 2, {
   },
 });
 
-function migrate(saved?: Partial<LearningState> | null): LearningState {
+export function normalizeLearningState(saved?: Partial<LearningState> | null): LearningState {
   const savedDraft = saved?.vocabularyTestDraft;
   const compatibleDraft = savedDraft?.mode === "adaptive-v2" && !(savedDraft.intent === "vocabulary-cat" && savedDraft.phase === "route") ? savedDraft : null;
   return {
     ...structuredClone(initialState),
     ...(saved ?? {}),
-    schemaVersion: 7,
+    schemaVersion: 8,
     skill: { ...initialState.skill, ...(saved?.skill ?? {}) },
     completedSteps: saved?.completedSteps ?? [],
     completedLessons: saved?.completedLessons ?? [],
@@ -59,16 +64,21 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     readingAssessments: (saved?.readingAssessments ?? []).filter((result) => result.mode === "reading-cat-v1" && result.experimental === true && result.official === false),
     measurementParticipantId: saved?.measurementParticipantId || createParticipantId(),
     measurementSessions: (saved?.measurementSessions ?? []).filter((session) => session && typeof session.id === "string" && Array.isArray(session.responses)).slice(-500),
+    lastBackupAt: saved?.lastBackupAt ?? "",
+    lastRestoreAt: saved?.lastRestoreAt ?? "",
+    usageValidationStartedAt: saved?.usageValidationStartedAt ?? "",
+    usageValidationObservations: (saved?.usageValidationObservations ?? []).filter((item) => item && typeof item.id === "string" && ["stable","problem"].includes(item.status)).slice(-500),
+    ieltsReadingValidationSamples: (saved?.ieltsReadingValidationSamples ?? []).filter((item) => item && typeof item.id === "string" && Number.isFinite(item.officialBand)).slice(-100),
   };
 }
 
 export async function loadLearningState(): Promise<LearningState> {
   try {
     const db = await dbPromise;
-    return migrate(await db.get("learning", "state"));
+    return normalizeLearningState(await db.get("learning", "state"));
   } catch {
     const fallback = localStorage.getItem("breakthrough-ielts-state");
-    return migrate(fallback ? JSON.parse(fallback) : null);
+    return normalizeLearningState(fallback ? JSON.parse(fallback) : null);
   }
 }
 

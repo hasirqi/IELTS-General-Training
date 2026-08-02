@@ -1,4 +1,4 @@
-export type View = "home" | "review" | "words" | "vocabulary-study" | "vocabulary-test" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors";
+export type View = "home" | "review" | "words" | "vocabulary-study" | "vocabulary-test" | "sentence" | "speak" | "courses" | "library" | "progress" | "errors" | "health";
 export type Skill = "listening" | "reading" | "writing" | "speaking";
 export type MasteryAspect = "form" | "meaning" | "use";
 export type ReadingWeaknessCategory = "vocabulary" | "sentence" | "locating" | "inference" | "mainIdea";
@@ -145,8 +145,12 @@ export type ReadingAssessmentResult = {
 export type MeasurementResponse = { itemId:string; correct:boolean; responseMs:number; difficulty:number; discrimination:number; guessing:number; contentVersion:string; frequencyBand?:string; level?:number; };
 export type MeasurementSession = { id:string; participantId:string; assessment:"vocabulary-cat"|"reading-cat"; startedAt:string; completedAt:string; engineVersion:string; bankVersion:string; responses:MeasurementResponse[]; };
 
+export type UsageValidationArea = "recommendation" | "errorReturn" | "difficulty" | "mobile" | "audio";
+export type UsageValidationObservation = { id:string; area:UsageValidationArea; status:"stable"|"problem"; note:string; createdAt:string; };
+export type IeltsReadingValidationSample = { id:string; officialBand:number; testDate:string; readingAssessmentId:string; recordedAt:string; };
+
 export type LearningState = {
-  schemaVersion: 7;
+  schemaVersion: 8;
   completedSteps: number[];
   completedLessons: string[];
   reviewIndex: number;
@@ -169,6 +173,11 @@ export type LearningState = {
   readingAssessments: ReadingAssessmentResult[];
   measurementParticipantId: string;
   measurementSessions: MeasurementSession[];
+  lastBackupAt: string;
+  lastRestoreAt: string;
+  usageValidationStartedAt: string;
+  usageValidationObservations: UsageValidationObservation[];
+  ieltsReadingValidationSamples: IeltsReadingValidationSample[];
 };
 
 export type LexiconItem = {
