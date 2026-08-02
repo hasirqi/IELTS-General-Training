@@ -1,0 +1,6 @@
+import fs from "node:fs";
+import { calibrate2PL } from "../src/irt-2pl-calibration.mjs";
+const inputs=process.argv.slice(2);if(!inputs.length){console.error("Usage: node scripts/calibrate-vocabulary-2pl.mjs <measurement-export.json> [...]");process.exit(1);}
+const payloads=inputs.map(file=>JSON.parse(fs.readFileSync(file,"utf8")));const result=calibrate2PL(payloads,{assessment:"vocabulary-cat",minimumParticipants:50,minimumResponsesPerItem:50,iterations:35});
+const output={version:`vocabulary-calibration-${new Date().toISOString().slice(0,10)}-v1`,generatedAt:new Date().toISOString(),...result,note:result.status==="calibrated"?"Empirical parameters passed minimum sample gates; review diagnostics before replacing current calibration.":"No parameters published because real response data did not pass the sample gates."};
+fs.mkdirSync("calibration",{recursive:true});fs.writeFileSync("calibration/vocabulary-calibration-candidate.json",`${JSON.stringify(output,null,2)}\n`);console.log(`status=${output.status} participants=${output.participantCount??output.participants?.length??0} responses=${output.responseCount??output.responses?.length??0} eligible=${output.eligibleItemCount??output.eligibleItemIds?.length??0}`);if(output.status!=="calibrated")process.exitCode=2;

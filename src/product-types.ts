@@ -137,8 +137,12 @@ export type ReadingAssessmentResult = {
   id: string; mode: "reading-cat-v1"; startedAt: string; completedAt: string; engineVersion: string; bankVersion: string; sampleSize: number; passageCount: number; correctCount: number; theta: number; standardError: number; internalReadingValue: number; interval: {low:number;high:number}; internalLevel: string; confidence: {label:string;reasons:string[]}; profile: Record<string,{correct:number;total:number}>; levelProfile: Record<string,{correct:number;total:number}>; sampledPassageIds: string[]; experimental: true; official: false;
 };
 
+
+export type MeasurementResponse = { itemId:string; correct:boolean; responseMs:number; difficulty:number; discrimination:number; guessing:number; contentVersion:string; frequencyBand?:string; level?:number; };
+export type MeasurementSession = { id:string; participantId:string; assessment:"vocabulary-cat"|"reading-cat"; startedAt:string; completedAt:string; engineVersion:string; bankVersion:string; responses:MeasurementResponse[]; };
+
 export type LearningState = {
-  schemaVersion: 6;
+  schemaVersion: 7;
   completedSteps: number[];
   completedLessons: string[];
   reviewIndex: number;
@@ -159,6 +163,8 @@ export type LearningState = {
   vocabularyTests: VocabularyTestResult[];
   readingAssessmentDraft: ReadingAssessmentDraft | null;
   readingAssessments: ReadingAssessmentResult[];
+  measurementParticipantId: string;
+  measurementSessions: MeasurementSession[];
 };
 
 export type LexiconItem = {

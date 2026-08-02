@@ -1,0 +1,2802 @@
+[
+  {
+    "term": "time",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a particular point or period when something happens",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "What time does the last train leave?"
+  },
+  {
+    "term": "make",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to create, produce, or prepare something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Please make a copy of the form."
+  },
+  {
+    "term": "say",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to express information or an opinion in words",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Please say your full name clearly."
+  },
+  {
+    "term": "place",
+    "partOfSpeech": "noun",
+    "englishDefinition": "to happen or occur at a particular time or location",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The interview will take place in Room 4."
+  },
+  {
+    "term": "care",
+    "partOfSpeech": "noun",
+    "englishDefinition": "medical treatment or attention given to someone",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The clinic provides emergency care throughout the night."
+  },
+  {
+    "term": "line",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a marked boundary that people should stand behind",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Wait behind the yellow line until the train stops."
+  },
+  {
+    "term": "video",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a recording of moving images, usually with sound",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Watch the safety video before entering the workshop."
+  },
+  {
+    "term": "hit",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to strike or affect a place suddenly and forcefully",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The storm hit the coast early on Friday."
+  },
+  {
+    "term": "short",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "lasting a small amount of time or having little length",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The office closes for a short break at noon."
+  },
+  {
+    "term": "final",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "last in a series or happening at the end",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The final decision will be announced after the public meeting."
+  },
+  {
+    "term": "energy",
+    "partOfSpeech": "noun",
+    "englishDefinition": "power obtained from fuel, sunlight, or other physical sources",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Solar panels can reduce energy costs over time."
+  },
+  {
+    "term": "perfect",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "completely suitable for a particular purpose or situation",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The quiet garden is a perfect place to read."
+  },
+  {
+    "term": "alone",
+    "partOfSpeech": "adverb",
+    "englishDefinition": "without another person being present",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Children under twelve must not use the lift alone."
+  },
+  {
+    "term": "federal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "relating to the central government of a federation",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Federal law sets minimum standards for workplace safety."
+  },
+  {
+    "term": "quality",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the standard of how good or effective something is",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The survey measures service quality and waiting times."
+  },
+  {
+    "term": "cover",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to include or pay for a particular cost",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The fee will cover the cost of all materials."
+  },
+  {
+    "term": "practice",
+    "partOfSpeech": "noun",
+    "englishDefinition": "Repetition of an activity to improve a skill.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Daily practice helps new vocabulary remain active."
+  },
+  {
+    "term": "growth",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an increase in size, number, or amount over time",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Population growth has increased demand for local schools."
+  },
+  {
+    "term": "beat",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to defeat an opponent in a competition",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The home team managed to beat the league leaders."
+  },
+  {
+    "term": "travel",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the activity of going from one place to another",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Staff can claim travel expenses for approved business journeys."
+  },
+  {
+    "term": "collection",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a group of objects gathered and kept together",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The museum's photography collection is displayed upstairs."
+  },
+  {
+    "term": "insurance",
+    "partOfSpeech": "noun",
+    "englishDefinition": "financial protection against loss, damage, illness, or accident",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Travel insurance is included in the premium bank account."
+  },
+  {
+    "term": "organization",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a structured group of people working for a purpose",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The organization provides meals for older residents."
+  },
+  {
+    "term": "fish",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an animal that lives in water, also used as food",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Fresh fish is delivered to the restaurant every morning."
+  },
+  {
+    "term": "shop",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a place where goods or services are sold",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The museum shop closes thirty minutes before the main building."
+  },
+  {
+    "term": "accept",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To receive, especially with a consent, with favour, or with approval.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The ticket machine does not accept cash after nine o'clock."
+  },
+  {
+    "term": "solution",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an answer or practical way of solving a problem",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A later bus may provide a solution for night-shift workers."
+  },
+  {
+    "term": "profile",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a summary of information about a person or organisation",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Update your online profile after changing your phone number."
+  },
+  {
+    "term": "option",
+    "partOfSpeech": "noun",
+    "englishDefinition": "One of a set of choices that can be made.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A vegetarian option is available if requested in advance."
+  },
+  {
+    "term": "influence",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the power to affect a person's choices or behaviour",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Advertising can influence the food choices of young children."
+  },
+  {
+    "term": "dress",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to put clothes on oneself in a particular way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Staff should dress appropriately for outdoor visits."
+  },
+  {
+    "term": "youth",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The part of life following childhood; the period of existence preceding maturity or age; the whole early part of life, from childhood, or, sometimes, from infancy, to adulthood.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The youth club runs free activities during school holidays."
+  },
+  {
+    "term": "tea",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a drink made by adding hot water to dried leaves",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Tea and coffee are available during the morning break."
+  },
+  {
+    "term": "climate",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The long-term manifestations of weather and other atmospheric conditions in a given area or country, now usually represented by the statistical summary of its weather conditions during a period long enough to ensure that representative values are obtained (generally 30 years).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The housing plan considers future climate risks."
+  },
+  {
+    "term": "suit",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to be convenient or appropriate for someone",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The flexible timetable may suit parents with young children."
+  },
+  {
+    "term": "transport",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a system or means of moving people or goods",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Public transport is limited in the village after six."
+  },
+  {
+    "term": "internal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of or situated on the inside.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Internal applicants must still complete the online form."
+  },
+  {
+    "term": "numerous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Indefinitely large numerically; many.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Numerous residents objected to the proposed night-time deliveries."
+  },
+  {
+    "term": "determine",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to find out or decide something after checking evidence",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The inspection will determine whether repairs are necessary."
+  },
+  {
+    "term": "selection",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a range of things from which a choice can be made",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The café offers a wide selection of dairy-free snacks."
+  },
+  {
+    "term": "facility",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The physical means or contrivances to make something (especially a public service) possible; the required equipment, infrastructure, location etc.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The sports facility has separate changing rooms and showers."
+  },
+  {
+    "term": "rural",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Relating to the countryside or to agriculture.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Rural communities often have fewer evening transport options."
+  },
+  {
+    "term": "bunch",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A group of similar things, either growing together, or in a cluster or clump, usually fastened together.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A bunch of keys was handed to reception."
+  },
+  {
+    "term": "crown",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an artificial cap fitted over a damaged tooth",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The dentist recommended a crown for the damaged tooth."
+  },
+  {
+    "term": "deliver",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to take goods or items to a person or place",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The supplier will deliver the new desks on Tuesday morning."
+  },
+  {
+    "term": "incident",
+    "partOfSpeech": "noun",
+    "englishDefinition": "An event or occurrence.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Staff recorded the incident in the safety log."
+  },
+  {
+    "term": "reform",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an official change intended to improve a system",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The proposed reform would simplify the benefits system."
+  },
+  {
+    "term": "aim",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a result that a plan or activity is intended to achieve",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The scheme has an aim of reducing food waste by half."
+  },
+  {
+    "term": "employee",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A person who provides labor to a company or another person.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Every employee must complete the online safety course."
+  },
+  {
+    "term": "highway",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a major public road connecting places",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A collision has closed the highway in both directions."
+  },
+  {
+    "term": "pocket",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a small cloth bag sewn into clothing for carrying things",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Keep the locker key safely in your pocket."
+  },
+  {
+    "term": "technique",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The practical aspects of a given art, occupation etc.; formal requirements.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The instructor demonstrated a safer lifting technique."
+  },
+  {
+    "term": "superior",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "better in quality or effectiveness than another thing",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The new filter provides superior protection against dust."
+  },
+  {
+    "term": "refer",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to look at a particular part of a document for information",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Please refer to section four for cancellation rules."
+  },
+  {
+    "term": "boring",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Causing boredom or tiredness; making one feel tired and impatient.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The induction video was informative but rather boring."
+  },
+  {
+    "term": "comic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "relating to humorous drawings or stories",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The library runs a weekly comic drawing club."
+  },
+  {
+    "term": "bureau",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an office or organisation providing a specialised public service",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The consumer bureau publishes advice about online shopping."
+  },
+  {
+    "term": "decline",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to become smaller or lower over time",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Passenger numbers began to decline after fares increased."
+  },
+  {
+    "term": "abroad",
+    "partOfSpeech": "adverb",
+    "englishDefinition": "Beyond the bounds of a country; in foreign countries.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Employees travelling abroad must check their insurance cover."
+  },
+  {
+    "term": "angle",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a particular way of considering an issue",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The article examines the issue from a financial angle."
+  },
+  {
+    "term": "genuine",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Belonging to, or proceeding from the original stock; native",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Only genuine tickets purchased from the official site are valid."
+  },
+  {
+    "term": "consent",
+    "partOfSpeech": "noun",
+    "englishDefinition": "permission given for something to happen",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The clinic needs your written consent before sharing medical records."
+  },
+  {
+    "term": "epic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "very impressive in scale or relating to a long heroic story",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The exhibition tells an epic story of coastal migration."
+  },
+  {
+    "term": "ease",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make a problem, pain, or difficulty less severe",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The new ramp will ease access for wheelchair users."
+  },
+  {
+    "term": "fundamental",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Essential; extremely important.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Safe housing is a fundamental human need."
+  },
+  {
+    "term": "diversity",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The quality of being diverse or different; a difference or unlikeness.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Language diversity can strengthen a multicultural workplace."
+  },
+  {
+    "term": "define",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To describe, explain, or make definite and clear; used to request the listener or other person to elaborate or explain more clearly his or her intended meaning of a word or expression.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The agreement should define each person's responsibilities."
+  },
+  {
+    "term": "bow",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to bend the head or upper body as a sign of respect",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Visitors traditionally bow when entering the memorial room."
+  },
+  {
+    "term": "default",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a setting that is used automatically unless another is chosen",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The app uses large text as the default setting."
+  },
+  {
+    "term": "worthy",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "deserving respect, attention, or support",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The charity supports a worthy local cause."
+  },
+  {
+    "term": "revenge",
+    "partOfSpeech": "noun",
+    "englishDefinition": "harm done in return for harm received",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The policy protects staff from threats and revenge after reporting misconduct."
+  },
+  {
+    "term": "parallel",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "similar and happening or developing in a comparable way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The cycle path runs parallel to the main road."
+  },
+  {
+    "term": "scope",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the range of matters or opportunities included",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The review is limited in scope to workplace safety."
+  },
+  {
+    "term": "shelter",
+    "partOfSpeech": "noun",
+    "englishDefinition": "protection from weather or danger",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The station entrance provides shelter from heavy rain."
+  },
+  {
+    "term": "noble",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Having honorable qualities; having moral eminence and freedom from anything petty, mean or dubious in conduct and character.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Protecting vulnerable residents is a noble aim."
+  },
+  {
+    "term": "expense",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A spending or consuming, often a disbursement of funds.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Keep each receipt when claiming a travel expense."
+  },
+  {
+    "term": "cruise",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to travel by ship for pleasure",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The river cruise includes lunch and a guided walk."
+  },
+  {
+    "term": "advocate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to publicly support a policy or course of action",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Local groups advocate better access to mental health care."
+  },
+  {
+    "term": "snap",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to break suddenly with a sharp sound",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The plastic handle may snap under heavy pressure."
+  },
+  {
+    "term": "implement",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to put a plan, decision, or system into effect",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The company will implement the new rota next month."
+  },
+  {
+    "term": "destiny",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the future that a person or place is believed able to shape or experience",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The documentary follows a village trying to shape its own destiny."
+  },
+  {
+    "term": "animation",
+    "partOfSpeech": "noun",
+    "englishDefinition": "moving images created from drawings, models, or computer graphics",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The training video uses animation to explain the process."
+  },
+  {
+    "term": "proceed",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To pass from one point, topic, or stage, to another.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Do not proceed beyond the gate without a visitor pass."
+  },
+  {
+    "term": "grammar",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the rules and structures used to form a language",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Accurate grammar helps the reader follow a complex argument."
+  },
+  {
+    "term": "embrace",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To enfold, to include (ideas, principles, etc.); to encompass.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Many small firms now embrace flexible working."
+  },
+  {
+    "term": "yield",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to produce a particular result, crop, or amount",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Drivers must yield to pedestrians at this crossing."
+  },
+  {
+    "term": "strain",
+    "partOfSpeech": "noun",
+    "englishDefinition": "pressure or difficulty caused by excessive demands",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Long shifts can place strain on family life."
+  },
+  {
+    "term": "justify",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To give reasons for one’s actions; to make an argument to prove that one is in the right.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The expected benefit does not justify the enormous cost."
+  },
+  {
+    "term": "cabin",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The section of a passenger plane having the same class of service.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Each passenger may take one small bag into the cabin."
+  },
+  {
+    "term": "prospect",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the possibility that something may happen in the future",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The prospect of stable work encouraged her to finish the course."
+  },
+  {
+    "term": "rap",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a style of popular music with spoken rhythmic words",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The youth centre runs a weekly rap workshop."
+  },
+  {
+    "term": "harmony",
+    "partOfSpeech": "noun",
+    "englishDefinition": "peaceful and cooperative relations between people or groups",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The programme aims to promote harmony between different communities."
+  },
+  {
+    "term": "fatal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "causing or resulting in death",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A fatal accident closed the country road for several hours."
+  },
+  {
+    "term": "disagree",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To fail to agree; to have a different opinion or belief.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Residents disagree about where the new bus stop should be placed."
+  },
+  {
+    "term": "vacuum",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a machine that cleans by sucking up dirt and dust",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Please use the vacuum after the meeting room has been cleared."
+  },
+  {
+    "term": "myth",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a widely believed idea that is not true",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The article challenges the myth that older workers cannot learn technology."
+  },
+  {
+    "term": "continent",
+    "partOfSpeech": "noun",
+    "englishDefinition": "One of the main continuous landmasses, separated by water or geological features, on the surface of a planet, sometimes including its continental shelves and the islands on them.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The exhibition compares rail networks across the European continent."
+  },
+  {
+    "term": "submission",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The act of submitting or giving e.g. a completed piece of work.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Late submission requires written approval from the tutor."
+  },
+  {
+    "term": "laundry",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a room or service for washing clothes",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Guests may use the shared laundry between seven and nine."
+  },
+  {
+    "term": "foul",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "very unpleasant, dirty, or offensive",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A foul smell from the basement was reported to the caretaker."
+  },
+  {
+    "term": "withdraw",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to remove, take back, or stop taking part",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Applicants may withdraw their consent before the research interview."
+  },
+  {
+    "term": "meantime",
+    "partOfSpeech": "adverb",
+    "englishDefinition": "During the interval; meanwhile.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The lift is being repaired; in the meantime, use the stairs."
+  },
+  {
+    "term": "elect",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To choose or make a decision (to do something).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Members will elect a new committee chair at the annual meeting."
+  },
+  {
+    "term": "abandon",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to leave someone or something behind without protection or intention to return",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Do not abandon a vehicle on the emergency access road."
+  },
+  {
+    "term": "gauge",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to measure or form an estimate of something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The survey will gauge public support for the proposed cycle route."
+  },
+  {
+    "term": "adaptation",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The process of adapting something or becoming adapted to a situation; adjustment, modification.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The ramp is a practical adaptation for visitors with limited mobility."
+  },
+  {
+    "term": "tan",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "light brown in colour",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The witness remembered a tan leather bag beside the chair."
+  },
+  {
+    "term": "indirect",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "not happening or communicated in a direct way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The project created indirect benefits for nearby small businesses."
+  },
+  {
+    "term": "denial",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a refusal to accept, provide, or approve something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The insurer sent a written denial of the claim with reasons."
+  },
+  {
+    "term": "wicked",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "morally wrong, cruel, or evil",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The novel follows a wicked ruler who abuses public power."
+  },
+  {
+    "term": "intake",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the number of people admitted or the amount taken in",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The September course intake is limited to thirty students."
+  },
+  {
+    "term": "clan",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A group of people all descended from a common ancestor, in fact or belief, especially when the exact genealogies are not known.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The exhibition explores the history of a Highland clan."
+  },
+  {
+    "term": "memorable",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Worthy to be remembered; very important or remarkable.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A helpful guide made our first visit especially memorable."
+  },
+  {
+    "term": "integral",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "necessary and forming an essential part of something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Clear communication is integral to safe patient care."
+  },
+  {
+    "term": "absurd",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "completely unreasonable or illogical",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Charging that fee twice would be completely absurd."
+  },
+  {
+    "term": "hike",
+    "partOfSpeech": "verb",
+    "englishDefinition": "a long walk in the countryside or an increase in price",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "We plan to hike along the marked coastal path tomorrow."
+  },
+  {
+    "term": "cement",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make a relationship or agreement stronger",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Workers will use quick-setting cement to repair the entrance step."
+  },
+  {
+    "term": "sober",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not under the influence of any recreational drug.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Drivers must remain sober throughout the company event."
+  },
+  {
+    "term": "guild",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A group or association mainly of tradespeople made up of merchants, craftspeople, or artisans, particularly in the Middle Ages, established to oversee and protect their specific commercial interests and to provide mutual aid.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The craft guild offers apprenticeships to young furniture makers."
+  },
+  {
+    "term": "affection",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a feeling of fondness, care, or love",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "She spoke with affection about the neighbourhood where she grew up."
+  },
+  {
+    "term": "hail",
+    "partOfSpeech": "noun",
+    "englishDefinition": "small balls of ice falling from clouds",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Heavy hail damaged cars in the station car park."
+  },
+  {
+    "term": "catalog",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a systematic list of items in a collection",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The online catalog lists every item in the local archive."
+  },
+  {
+    "term": "offshore",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Located in the sea away from the coast.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The region is investing in offshore wind power."
+  },
+  {
+    "term": "cardinal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "most important or fundamental",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The cardinal rule is never to share your access code."
+  },
+  {
+    "term": "sensation",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a physical feeling experienced in the body",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A burning sensation may indicate an allergic reaction."
+  },
+  {
+    "term": "bury",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to put something underground and cover it with earth",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Do not bury electrical cable without marking its location."
+  },
+  {
+    "term": "nursery",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a place that cares for young children during the day",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The workplace nursery accepts children from twelve months old."
+  },
+  {
+    "term": "haul",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to pull or transport something heavy",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The company will haul the damaged vehicle away tonight."
+  },
+  {
+    "term": "appetite",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A desire to eat food or consume drinks.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A sudden loss of appetite can be a warning sign."
+  },
+  {
+    "term": "hypothesis",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an idea proposed as a possible explanation to be tested",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The research team will test its hypothesis using travel data."
+  },
+  {
+    "term": "vague",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not clearly expressed; stated in indefinite terms.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The landlord gave a vague answer about the repair date."
+  },
+  {
+    "term": "lime",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a small green citrus fruit",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Add a slice of lime to the sparkling water."
+  },
+  {
+    "term": "bait",
+    "partOfSpeech": "noun",
+    "englishDefinition": "food or another object used to attract an animal",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Rangers use safe bait to monitor invasive animals."
+  },
+  {
+    "term": "mock",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "made as a practice version rather than the real event",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The college holds a mock interview before the real assessment."
+  },
+  {
+    "term": "disclose",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To expose to the knowledge of others; to make known; state openly; reveal (something).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The clinic cannot disclose patient details without lawful authority."
+  },
+  {
+    "term": "testify",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To make a declaration, or give evidence, under oath.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The witness will testify by video from another city."
+  },
+  {
+    "term": "inherent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Naturally as part or consequence of something.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Remote mountain travel has inherent risks in winter."
+  },
+  {
+    "term": "accidental",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "happening by chance and not planned",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Accidental disclosure must still be reported to the privacy officer."
+  },
+  {
+    "term": "hatch",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to come out of an egg or cause an egg to open",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The eggs usually hatch near the end of May."
+  },
+  {
+    "term": "absorb",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to take in liquid, sound, heat, or information",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The new insulation can absorb noise from the busy road."
+  },
+  {
+    "term": "hawk",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a bird of prey with a hooked beak and sharp claws",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A wildlife guide identified a hawk above the valley."
+  },
+  {
+    "term": "submarine",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a vessel designed to travel underwater",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The maritime museum displays equipment from a historic submarine."
+  },
+  {
+    "term": "flush",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to clean a pipe or tap by running water through it",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Flush the tap for two minutes after the water supply returns."
+  },
+  {
+    "term": "curb",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to control or limit something undesirable",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The city introduced lower speeds to curb serious collisions."
+  },
+  {
+    "term": "kindergarten",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a school or class for young children before primary education",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The new kindergarten includes a secure outdoor play area."
+  },
+  {
+    "term": "surround",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To encircle something or simultaneously extend in all directions.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Temporary barriers will surround the damaged section of pavement."
+  },
+  {
+    "term": "forge",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to shape metal, make a false copy, or build something strong",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Community projects can forge stronger links between neighbours."
+  },
+  {
+    "term": "abundant",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "present or available in large quantities",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The region has abundant wind resources along its coast."
+  },
+  {
+    "term": "immortal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Never to be forgotten; that merits being always remembered.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The biography presents the poet's work as immortal."
+  },
+  {
+    "term": "prohibition",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an official rule that forbids an activity",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The park has a strict prohibition on open fires."
+  },
+  {
+    "term": "statutory",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of, relating to, enacted or regulated by a statute.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Employees are entitled to statutory holiday pay."
+  },
+  {
+    "term": "transplant",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an operation that moves an organ or tissue to another body",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The hospital provides follow-up care after an organ transplant."
+  },
+  {
+    "term": "forensic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Relating to the use of science and technology in the investigation and establishment of facts or evidence in a court of law.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Forensic specialists examined the damaged device for evidence."
+  },
+  {
+    "term": "splendid",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Brilliant, excellent, of a very high standard.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The restored hall provides a splendid setting for public concerts."
+  },
+  {
+    "term": "ecology",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The branch of biology dealing with the relationships of organisms with their environment and with each other.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The course examines the ecology of the local river."
+  },
+  {
+    "term": "potent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Possessing authority or influence; persuasive, convincing.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Clear personal stories can be a potent form of evidence."
+  },
+  {
+    "term": "analog",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "using continuously variable physical quantities rather than digital values",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The museum keeps an analog recording beside the digital copy."
+  },
+  {
+    "term": "greed",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A selfish or excessive desire for more than is needed or deserved, especially of money, wealth, food, or other possessions.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The documentary links unsafe working conditions to corporate greed."
+  },
+  {
+    "term": "thrive",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To increase in wealth or success; to prosper, be profitable.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Small shops thrive when the town centre attracts regular visitors."
+  },
+  {
+    "term": "disguise",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to change the appearance of something so it is not recognised",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Scammers may disguise a harmful link as a delivery notice."
+  },
+  {
+    "term": "obstacle",
+    "partOfSpeech": "noun",
+    "englishDefinition": "something that blocks progress or makes action difficult",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Cost remains the main obstacle to installing the new lift."
+  },
+  {
+    "term": "volatile",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of a price, variable or erratic.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Fuel prices remain volatile during supply disruption."
+  },
+  {
+    "term": "disadvantage",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to put someone in a less favourable position",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A digital-only process may disadvantage older applicants."
+  },
+  {
+    "term": "milestone",
+    "partOfSpeech": "noun",
+    "englishDefinition": "An important event in a person's life or career, in the history of a nation, in the life of some project, etc.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Passing the final safety audit was a major milestone."
+  },
+  {
+    "term": "vogue",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a fashion or activity that is popular at a particular time",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Shared workspaces came into vogue before remote work expanded."
+  },
+  {
+    "term": "comprehend",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To understand or grasp fully and thoroughly; to plumb.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Clear diagrams help patients comprehend the treatment options."
+  },
+  {
+    "term": "limb",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an arm or leg of a person or a large branch of a tree",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The physiotherapist checked movement in the injured limb."
+  },
+  {
+    "term": "transcript",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an official written record of academic results or spoken words",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Applicants must attach an official academic transcript."
+  },
+  {
+    "term": "contingent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "dependent on something else happening or being true",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Funding is contingent on the project passing its safety review."
+  },
+  {
+    "term": "manipulate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to operate or control something skilfully with the hands",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The training shows carers how to manipulate the lifting controls safely."
+  },
+  {
+    "term": "stigma",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a mark of shame or negative social judgement",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Public education can reduce the stigma around mental illness."
+  },
+  {
+    "term": "disastrous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of the nature of a disaster; calamitous.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A delayed evacuation could have disastrous consequences."
+  },
+  {
+    "term": "revive",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to bring something back to activity, strength, or use",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The grant aims to revive trade in the old market district."
+  },
+  {
+    "term": "advent",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the arrival or beginning of an important development",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The advent of online banking changed everyday payments."
+  },
+  {
+    "term": "govern",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To make and administer the public policy and affairs of; to exercise sovereign authority in.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Clear rules govern how personal records are stored."
+  },
+  {
+    "term": "peculiar",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Out of the ordinary; odd; strange; unusual.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A peculiar smell led the caretaker to inspect the basement."
+  },
+  {
+    "term": "vibrant",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Pulsing with energy or activity.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Independent cafés helped create a vibrant town centre."
+  },
+  {
+    "term": "erase",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to remove written or recorded information",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Do not erase the original recording before the appeal ends."
+  },
+  {
+    "term": "novelty",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The state of being new or novel; newness.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The novelty of the new app faded after repeated errors."
+  },
+  {
+    "term": "trivial",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Ignorable; of little significance or value.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A loose handrail is not a trivial safety issue."
+  },
+  {
+    "term": "formidable",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Difficult to defeat or overcome.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Finding affordable housing remains a formidable challenge."
+  },
+  {
+    "term": "intervene",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To become involved in a situation, so as to alter or prevent an action. [with in]",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A supervisor should intervene when bullying becomes apparent."
+  },
+  {
+    "term": "terminate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to bring an agreement, activity, or employment to an end",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Either party may terminate the agreement with thirty days' notice."
+  },
+  {
+    "term": "corpus",
+    "partOfSpeech": "noun",
+    "englishDefinition": "Such a collection in form of an electronic database used for linguistic analyses.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Researchers used a large language corpus to compare common phrases."
+  },
+  {
+    "term": "lever",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a rigid bar used to move or release something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Pull the red lever to release the emergency door."
+  },
+  {
+    "term": "stitch",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a loop of thread used to join material or close a wound",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The nurse removed each stitch after the wound healed."
+  },
+  {
+    "term": "align",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to bring into agreement with a standard or position",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The course must align with the published competence standard."
+  },
+  {
+    "term": "inactive",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not active, temporarily or permanently.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The account becomes inactive after twelve months without use."
+  },
+  {
+    "term": "refrain",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to stop oneself from doing something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Please refrain from using flash photography in the gallery."
+  },
+  {
+    "term": "assert",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To declare with assurance or plainly and strongly; to state positively.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Tenants may assert their legal right to safe housing."
+  },
+  {
+    "term": "fuss",
+    "partOfSpeech": "noun",
+    "englishDefinition": "unnecessary excitement, worry, or activity about a small matter",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The receptionist resolved the booking error without unnecessary fuss."
+  },
+  {
+    "term": "presume",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to suppose something is true without complete proof",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Do not presume that every applicant can use the online portal."
+  },
+  {
+    "term": "addictive",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Causing or tending to cause addiction; habit-forming.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The workshop discusses how addictive design affects young users."
+  },
+  {
+    "term": "handicap",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make progress more difficult for someone",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Poor transport can handicap people seeking rural employment."
+  },
+  {
+    "term": "perpetual",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "continuing repeatedly or for an indefinitely long time",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Perpetual delays have weakened confidence in the rail operator."
+  },
+  {
+    "term": "utmost",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "The most extreme; greatest, ultimate.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Staff must treat confidential records with the utmost care."
+  },
+  {
+    "term": "climax",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the most exciting or important point of an event",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The fireworks form the climax of the winter festival."
+  },
+  {
+    "term": "isolate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To set apart or cut off from others.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Technicians must isolate the power before replacing the fuse."
+  },
+  {
+    "term": "sarcastic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Containing sarcasm.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A sarcastic reply may offend an already anxious customer."
+  },
+  {
+    "term": "browse",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to look through information or goods in a relaxed way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Visitors can browse the digital catalog before arriving."
+  },
+  {
+    "term": "grin",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To smile, parting the lips so as to show the teeth.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "He gave a broad grin when the results were announced."
+  },
+  {
+    "term": "precautions",
+    "partOfSpeech": "noun",
+    "englishDefinition": "actions taken in advance to reduce danger or risk",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Take extra precautions when driving in icy conditions."
+  },
+  {
+    "term": "contagious",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Easily transmitted to others.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "People with a contagious illness should avoid the shared waiting room."
+  },
+  {
+    "term": "emblem",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an object or image that represents an idea or place",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The oak tree became an emblem of the town's recovery."
+  },
+  {
+    "term": "rotate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To spin, turn, or revolve.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Rotate staff duties to reduce repetitive strain."
+  },
+  {
+    "term": "cashier",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a person who takes payments and gives receipts",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The cashier provided a receipt for the returned item."
+  },
+  {
+    "term": "hassle",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an irritating difficulty or inconvenience",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Online renewal saves customers the hassle of visiting the office."
+  },
+  {
+    "term": "offend",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To annoy, cause discomfort or resent.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Careless humour may offend people from different backgrounds."
+  },
+  {
+    "term": "antarctic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of, from, or pertaining to Antarctica and the south polar regions.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The exhibition presents recent Antarctic climate research."
+  },
+  {
+    "term": "endeavor",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a serious organised effort to achieve something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The renovation is a joint endeavor between residents and the council."
+  },
+  {
+    "term": "oasis",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a pleasant peaceful place within difficult surroundings",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The shaded garden is an oasis beside the busy station."
+  },
+  {
+    "term": "tame",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "not wild or dangerous and accustomed to people",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Even a tame animal may react badly when frightened."
+  },
+  {
+    "term": "blur",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make a difference or image less clear",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Poor lighting may blur the difference between the two signs."
+  },
+  {
+    "term": "intricate",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Having a great deal of fine detail or complexity.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The guide explained the intricate pattern on the historic ceiling."
+  },
+  {
+    "term": "prevail",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To triumph; to be victorious.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Safety should prevail when cost and speed conflict."
+  },
+  {
+    "term": "administer",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to manage an organisation or give a medicine",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Only trained staff may administer the prescribed injection."
+  },
+  {
+    "term": "dialect",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a variety of language used by a particular region or group",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The archive records a dialect spoken in coastal villages."
+  },
+  {
+    "term": "menace",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a person or thing that threatens danger or causes serious trouble",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Speeding vehicles are a menace near the primary school."
+  },
+  {
+    "term": "prosecute",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To start criminal proceedings against.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Authorities may prosecute anyone who sells fraudulent tickets."
+  },
+  {
+    "term": "backbone",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the main support of a system or the line of bones in the back",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Reliable buses form the backbone of rural transport."
+  },
+  {
+    "term": "hoax",
+    "partOfSpeech": "noun",
+    "englishDefinition": "Anything deliberately intended to deceive or trick.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Police confirmed that the bomb warning was a hoax."
+  },
+  {
+    "term": "quota",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A prescribed number or percentage that may serve as, for example, a maximum, a minimum, or a goal.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The programme reserves a quota of places for rural applicants."
+  },
+  {
+    "term": "vulgar",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "rude, offensive, or lacking good taste",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The platform removes vulgar abuse directed at staff."
+  },
+  {
+    "term": "curl",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to form or make something form a curved or spiral shape",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The damp paper began to curl at the edges."
+  },
+  {
+    "term": "inherit",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To receive (property, a title, etc.), by legal succession or bequest after the previous owner's death.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Children may inherit the property under the written will."
+  },
+  {
+    "term": "outward",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Outer; located towards the outside.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The outward appearance concealed serious structural damage."
+  },
+  {
+    "term": "turmoil",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a state of great confusion, uncertainty, or disorder",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The closure caused turmoil for families relying on the service."
+  },
+  {
+    "term": "derive",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to obtain something from a particular source",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Many residents derive practical benefit from the shared garden."
+  },
+  {
+    "term": "parachute",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a fabric device used to slow a fall through the air",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The museum displays a parachute used in a rescue mission."
+  },
+  {
+    "term": "symmetry",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a balanced arrangement of matching parts",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The architect used symmetry to organize the entrance façade."
+  },
+  {
+    "term": "buckle",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a fastening device on a belt, strap, or safety restraint",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Fasten the buckle before the vehicle begins moving."
+  },
+  {
+    "term": "humid",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Containing perceptible moisture (usually describing air or atmosphere); damp; moist; somewhat wet or watery.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Humid conditions can worsen mould inside older homes."
+  },
+  {
+    "term": "overdue",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "not done, paid, or returned by the expected time",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The library sent a reminder about the overdue book."
+  },
+  {
+    "term": "tedious",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Boring, monotonous, time-consuming, wearisome, livelong.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Manual data entry is slow and tedious."
+  },
+  {
+    "term": "commemorate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To honour the memory of someone or something with a ceremony or object.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The plaque will commemorate volunteers who rebuilt the hall."
+  },
+  {
+    "term": "knob",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a round handle or control used to open or adjust something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Turn the red knob clockwise to close the valve."
+  },
+  {
+    "term": "pragmatic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "dealing with problems in a practical and realistic way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The committee chose a pragmatic short-term repair."
+  },
+  {
+    "term": "abolish",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To end a law, system, institution, custom or practice.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Campaigners want to abolish the unfair booking fee."
+  },
+  {
+    "term": "concede",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to admit that something is true or yield a position",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The operator had to concede that the timetable was unrealistic."
+  },
+  {
+    "term": "hysterical",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "in a state of uncontrolled fear, emotion, or laughter",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The caller sounded hysterical, so the operator spoke slowly."
+  },
+  {
+    "term": "postpone",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To delay or put off an event, appointment, etc.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Organisers may postpone the walk during a blizzard."
+  },
+  {
+    "term": "teamwork",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The cooperative effort of a team of people to achieve a common goal.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Effective teamwork allowed the crew to evacuate everyone quickly."
+  },
+  {
+    "term": "crave",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To desire strongly, so as to satisfy an appetite; to long or yearn for.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Tired workers often crave sugary food late at night."
+  },
+  {
+    "term": "leash",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a strap or cord used to control an animal",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Dogs must remain on a short leash near livestock."
+  },
+  {
+    "term": "turbulent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Violently disturbed or agitated; tempestuous, tumultuous.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The ferry returned early because the sea was turbulent."
+  },
+  {
+    "term": "boredom",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The state of being bored.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Varied tasks reduce boredom during repetitive training."
+  },
+  {
+    "term": "imbalance",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The property of not being in balance.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The report identifies a regional imbalance in medical staffing."
+  },
+  {
+    "term": "simplify",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To make simpler, either by reducing in complexity, reducing to component parts, or making easier to understand.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The council will simplify the housing application form."
+  },
+  {
+    "term": "smear",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to spread a substance over a surface or damage a reputation",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Apply a thin smear of cream to the affected skin."
+  },
+  {
+    "term": "cunning",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "clever at achieving a purpose, sometimes by deception",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The fraud relied on a cunning imitation of the bank website."
+  },
+  {
+    "term": "hideous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Extremely or shockingly ugly.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Residents described the persistent factory noise as hideous."
+  },
+  {
+    "term": "prosper",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to become successful, wealthy, or strong",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Small shops can prosper when local streets attract visitors."
+  },
+  {
+    "term": "subordinate",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "lower in rank or less important",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Safety must not become subordinate to short-term profit."
+  },
+  {
+    "term": "everlasting",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Happening all the time, especially to a tiresome extent; constant, incessant, unending.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The memorial was not intended to create everlasting conflict."
+  },
+  {
+    "term": "mania",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The state of abnormally elevated or irritable mood, arousal, and/or energy levels.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A brief fitness mania increased demand for local classes."
+  },
+  {
+    "term": "relocate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to move (something) from one place to another.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The clinic will relocate while its roof is repaired."
+  },
+  {
+    "term": "appraisal",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A judgment or assessment of the value of something, especially a formal one.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Every employee receives a formal appraisal in June."
+  },
+  {
+    "term": "clement",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "mild in weather or merciful in behaviour",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Clement weather allowed the outdoor repairs to continue."
+  },
+  {
+    "term": "insomnia",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A sleeping disorder that is known for its symptoms of unrest and the inability to sleep.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Persistent insomnia can affect concentration at work."
+  },
+  {
+    "term": "petite",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of small size; intended for small-framed adult women.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The uniform supplier offers a petite size range."
+  },
+  {
+    "term": "upbringing",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The raising or training of a child.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "His rural upbringing shaped his attitude to conservation."
+  },
+  {
+    "term": "cultivate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to develop a quality or relationship through careful effort",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The programme aims to cultivate trust between neighbours."
+  },
+  {
+    "term": "lavish",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "very expensive, generous, or provided in large amounts",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The committee rejected a lavish redesign of the entrance."
+  },
+  {
+    "term": "psyche",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The human mind as the central force in thought, emotion, and behavior of an individual.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Long isolation can affect the human psyche."
+  },
+  {
+    "term": "adultery",
+    "partOfSpeech": "noun",
+    "englishDefinition": "voluntary sexual relations between a married person and someone else",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The legal seminar examined how adultery affects divorce claims."
+  },
+  {
+    "term": "evasion",
+    "partOfSpeech": "noun",
+    "englishDefinition": "The act of eluding or evading or avoiding, particularly the pressure of an argument, accusation, charge, or interrogation; artful means of eluding.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The audit uncovered deliberate tax evasion."
+  },
+  {
+    "term": "monstrous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Hideous or frightful.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Residents opposed the monstrous concrete wall beside the park."
+  },
+  {
+    "term": "barren",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "unable to support much plant growth or produce useful results",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Years of erosion left the hillside barren."
+  },
+  {
+    "term": "daunting",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Discouraging; inspiring fear.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Completing a long application can seem daunting at first."
+  },
+  {
+    "term": "gorge",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a deep narrow valley with steep sides",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The footpath follows a narrow gorge below the waterfall."
+  },
+  {
+    "term": "ominous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "suggesting that something bad is likely to happen",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "An ominous crack appeared in the retaining wall."
+  },
+  {
+    "term": "thrift",
+    "partOfSpeech": "noun",
+    "englishDefinition": "careful use of money and resources",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The workshop promotes thrift through repairing household items."
+  },
+  {
+    "term": "counterfeit",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "made to look genuine in order to deceive",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Officers seized counterfeit tickets at the stadium entrance."
+  },
+  {
+    "term": "glacial",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "relating to glaciers or moving extremely slowly",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Glacial melt has altered the valley's water supply."
+  },
+  {
+    "term": "negligible",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Able to be neglected, ignored or excluded from consideration; too small or unimportant to be of concern.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The new insulation reduced heat loss to a negligible level."
+  },
+  {
+    "term": "spherical",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "having the shape of a ball",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The exhibition includes a spherical model of the planet."
+  },
+  {
+    "term": "botany",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A branch of biology concerned with the scientific study of plants.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "She enrolled in an introductory botany course."
+  },
+  {
+    "term": "elevate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to raise something to a higher position or level",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Engineers will elevate the walkway above flood level."
+  },
+  {
+    "term": "lash",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to strike violently or fasten securely",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Strong waves continued to lash the harbour wall."
+  },
+  {
+    "term": "uphill",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "sloping upwards or difficult to accomplish",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The final kilometre is an uphill walk on loose ground."
+  },
+  {
+    "term": "bandit",
+    "partOfSpeech": "noun",
+    "englishDefinition": "One who robs others in a lawless area, especially as part of a group.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The museum exhibition describes a notorious mountain bandit."
+  },
+  {
+    "term": "enlist",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To recruit the aid or membership of others.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The council will enlist volunteers to inspect footpaths."
+  },
+  {
+    "term": "illiterate",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Unable to read and write.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The service offers confidential help to an illiterate applicant."
+  },
+  {
+    "term": "sanitary",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Clean and free from pathogens; hygienic.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Food must be stored under sanitary conditions."
+  },
+  {
+    "term": "apron",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a protective garment worn over the front of clothes",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Kitchen staff must wear a clean apron during service."
+  },
+  {
+    "term": "cosmopolitan",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "including people and influences from many countries",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The port developed into a cosmopolitan trading city."
+  },
+  {
+    "term": "herbal",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Made from or with herbs.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Tell your doctor about every herbal remedy you use."
+  },
+  {
+    "term": "slump",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a sudden large fall or period of poor performance",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A tourism slump reduced seasonal employment."
+  },
+  {
+    "term": "torment",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to cause severe physical or mental suffering",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Persistent construction noise can torment nearby residents."
+  },
+  {
+    "term": "contradict",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To deny the truth or validity of (a statement or statements).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The receipts contradict the amount stated in the claim."
+  },
+  {
+    "term": "giggle",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To laugh gently in a playful, nervous, or affected manner.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The children began to giggle during the puppet show."
+  },
+  {
+    "term": "pedigree",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a record of ancestry or a strong history of relevant experience",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The candidate has a strong pedigree in public health research."
+  },
+  {
+    "term": "prowess",
+    "partOfSpeech": "noun",
+    "englishDefinition": "Skillfulness or extraordinary ability in a particular area of expertise; dexterity, mastery, or proficiency.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Her technical prowess helped the team restore the database."
+  },
+  {
+    "term": "benevolent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Having a disposition to do good.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A benevolent fund helps staff facing financial hardship."
+  },
+  {
+    "term": "deceptive",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Likely or attempting to deceive.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The regulator banned a deceptive price comparison."
+  },
+  {
+    "term": "inflict",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To thrust upon; to impose.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Unsafe work practices can inflict lasting injury."
+  },
+  {
+    "term": "pancreatic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Belonging or relating to the pancreas.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The hospital funds research into pancreatic disease."
+  },
+  {
+    "term": "vigilant",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Watchful, especially for danger or disorder; alert; wary",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Travellers should remain vigilant in crowded stations."
+  },
+  {
+    "term": "adept",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Well skilled; completely versed; thoroughly proficient",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The adviser is adept at explaining complex benefit rules."
+  },
+  {
+    "term": "glide",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to move smoothly and quietly",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Electric boats glide quietly across the protected lake."
+  },
+  {
+    "term": "joyous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Full of joy; happy.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The reunion was a joyous occasion for the whole family."
+  },
+  {
+    "term": "plush",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "luxurious and comfortable",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The company replaced basic offices with a plush reception area."
+  },
+  {
+    "term": "ultraviolet",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of electromagnetic radiation beyond (higher in frequency than) light visible to the human eye; radiation with wavelengths from 380 to 10 nanometres.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Ultraviolet light can damage unprotected skin."
+  },
+  {
+    "term": "eyewitness",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a person who directly sees an event happen",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "An eyewitness recorded the vehicle leaving the car park."
+  },
+  {
+    "term": "manifold",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "many in number and varied in type",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The new rail link offers manifold benefits to rural communities."
+  },
+  {
+    "term": "pervert",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to distort the meaning or proper purpose of something",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Selective statistics can pervert the purpose of public consultation."
+  },
+  {
+    "term": "relapse",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a return of illness or unwanted behaviour after improvement",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Contact the clinic immediately if symptoms relapse."
+  },
+  {
+    "term": "dissatisfied",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not satisfied (e.g. with the quality of something).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Dissatisfied customers can request a written review."
+  },
+  {
+    "term": "gloom",
+    "partOfSpeech": "noun",
+    "englishDefinition": "darkness or a feeling of pessimism and sadness",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Economic gloom reduced spending in the town centre."
+  },
+  {
+    "term": "nurture",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To nourish or nurse.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Mentoring can nurture confidence in new employees."
+  },
+  {
+    "term": "stagnant",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Lacking freshness, motion, or flow; decaying through stillness.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Stagnant water near homes can attract insects."
+  },
+  {
+    "term": "considerate",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Consciously thoughtful and observant (often of other people and their rights, needs, feelings and comfort).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Considerate neighbours keep shared corridors clear."
+  },
+  {
+    "term": "overtake",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to catch up with and pass something moving or developing",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Online bookings may overtake telephone reservations this year."
+  },
+  {
+    "term": "adversary",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an opponent or hostile force",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The debate treats misinformation as a serious adversary."
+  },
+  {
+    "term": "imitate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To follow as a model or a pattern; to make a copy, counterpart or semblance of.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Fraudulent websites imitate the official payment page."
+  },
+  {
+    "term": "proficient",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Good at something; skilled; fluent; practiced, especially in relation to a task or skill.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The role requires staff proficient in spreadsheet software."
+  },
+  {
+    "term": "barbarian",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a person described as uncivilised or outside a particular culture",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The museum explains how outsiders were labelled barbarian by ancient writers."
+  },
+  {
+    "term": "frail",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "In an infirm state leading one to be easily subject to disease or other health problems, especially regarding the elderly.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The transport service assists frail older passengers."
+  },
+  {
+    "term": "specialize",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To focus one's study upon a particular skill, field, topic, or genre.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The clinic will specialize in rehabilitation after injury."
+  },
+  {
+    "term": "dogma",
+    "partOfSpeech": "noun",
+    "englishDefinition": "An authoritative principle, belief or statement of opinion, especially one considered to be absolutely true and indisputable, regardless of evidence or without evidence to support it.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Good policy should respond to evidence rather than political dogma."
+  },
+  {
+    "term": "mutiny",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an organised refusal by soldiers or sailors to obey authority",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The exhibition describes a naval mutiny over poor conditions."
+  },
+  {
+    "term": "snag",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an unexpected problem that delays progress",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A licensing snag delayed the café opening."
+  },
+  {
+    "term": "excise",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to remove damaged tissue by cutting it out",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The surgeon may excise the damaged tissue."
+  },
+  {
+    "term": "inversion",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a reversal of the usual order, direction, or temperature pattern",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Temperature inversion can trap pollution above the city."
+  },
+  {
+    "term": "revoke",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To cancel or invalidate by withdrawing or reversing.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The authority may revoke a licence after repeated breaches."
+  },
+  {
+    "term": "emeritus",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Retired, but retaining an honorific version of a previous title.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A professor emeritus will lead the public seminar."
+  },
+  {
+    "term": "inhale",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To draw air or any form of gas (either in a pure form, or mixed with small particles in the form of aerosols/smoke, sometimes stemming from a medicament) into the lungs, through the nose or mouth by action of the diaphragm.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Move outdoors if you inhale smoke or chemical fumes."
+  },
+  {
+    "term": "sluggish",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Slow; having little motion.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A sluggish housing market reduced construction work."
+  },
+  {
+    "term": "denounce",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to condemn publicly in strong terms",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Community leaders denounce intimidation of local witnesses."
+  },
+  {
+    "term": "malnutrition",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A lack of adequate nourishment.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The clinic screens young children for malnutrition."
+  },
+  {
+    "term": "seduce",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to attract or persuade someone into a costly or unwise choice",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Low introductory prices can seduce buyers into costly contracts."
+  },
+  {
+    "term": "confederacy",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an alliance of states or groups",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The history course examines a regional confederacy of states."
+  },
+  {
+    "term": "inorganic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "not derived from living matter",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The laboratory separates organic and inorganic waste."
+  },
+  {
+    "term": "puncture",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a small hole made by a sharp object, especially in a tyre",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A sharp fragment caused a puncture in the bicycle tyre."
+  },
+  {
+    "term": "calamity",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an event that causes great damage or suffering",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The drought became a calamity for farming communities."
+  },
+  {
+    "term": "homogeneous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "made up of parts that are all similar",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The sample was too homogeneous to represent the whole city."
+  },
+  {
+    "term": "shatter",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to break suddenly into many pieces or cause severe shock",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Extreme cold can shatter untreated glass."
+  },
+  {
+    "term": "detain",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to keep someone in official custody or delay them",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Border officers may detain travellers for further questioning."
+  },
+  {
+    "term": "indecent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not in keeping with conventional moral values; improper, immodest, or unseemly.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The platform removes indecent material reported by users."
+  },
+  {
+    "term": "superstition",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A belief or beliefs, not based on human reason or scientific knowledge, that events may be influenced by one's behavior in some magical or mystical way.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The exhibition explores superstition surrounding lunar events."
+  },
+  {
+    "term": "brisk",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "quick and energetic or pleasantly cool",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A brisk twenty-minute walk helps residents reach the station before rush hour."
+  },
+  {
+    "term": "equate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To consider equal or equivalent (to or with).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Employers should not equate an accent with limited ability."
+  },
+  {
+    "term": "repel",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to drive something away or cause strong dislike",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The coating helps repel rain from the outer wall."
+  },
+  {
+    "term": "caricature",
+    "partOfSpeech": "noun",
+    "englishDefinition": "an exaggerated and oversimplified representation of a person or subject",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The article presents a caricature of rural life rather than a balanced account."
+  },
+  {
+    "term": "exaggerate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To overstate, to describe more than the fact.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Applicants should describe their experience honestly and never exaggerate their responsibilities."
+  },
+  {
+    "term": "renounce",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To decline further association with someone or something, disown.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Officials must renounce any private interest that conflicts with public duties."
+  },
+  {
+    "term": "allege",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To make a claim as justification or proof; to make an assertion without proof.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Several tenants allege that the landlord ignored repeated safety warnings."
+  },
+  {
+    "term": "frantically",
+    "partOfSpeech": "adverb",
+    "englishDefinition": "in a hurried, desperate, or panicked way",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Staff searched frantically for the passenger's lost medical bag."
+  },
+  {
+    "term": "repulsive",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Having the capacity to repel.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Residents reported a repulsive smell coming from the blocked drain."
+  },
+  {
+    "term": "anemia",
+    "partOfSpeech": "noun",
+    "englishDefinition": "A medical condition in which the capacity of the blood to transport oxygen to the tissues is reduced, either because of too few red blood cells, or because of too little hemoglobin, resulting in pallor and fatigue.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A blood test confirmed anemia after months of unusual tiredness."
+  },
+  {
+    "term": "esoteric",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "understood by only a small group with specialised knowledge",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The adviser translated esoteric legal language into practical steps."
+  },
+  {
+    "term": "rapture",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a feeling of extreme pleasure or happiness",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The audience responded with rapture to the musician's final performance."
+  },
+  {
+    "term": "bailout",
+    "partOfSpeech": "noun",
+    "englishDefinition": "financial assistance intended to prevent failure",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The proposed bailout would protect services but increase public debt."
+  },
+  {
+    "term": "fable",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a short traditional story that teaches a moral lesson",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The teacher used a short fable to discuss honesty and trust."
+  },
+  {
+    "term": "procure",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To acquire or obtain.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The hospital must procure protective equipment from an approved supplier."
+  },
+  {
+    "term": "allure",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the quality of being powerfully attractive",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The allure of cheap rent must be balanced against a long commute."
+  },
+  {
+    "term": "embankment",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a long mound of earth, stone, or similar material, usually built for purposes such as to hold back or store water, for protection from weather or enemies, or to support a road or railway.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Engineers reinforced the railway embankment after heavy rain."
+  },
+  {
+    "term": "outburst",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a sudden strong expression of emotion or activity",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A sudden outburst during the meeting prevented calm discussion."
+  },
+  {
+    "term": "sharpen",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make an edge sharper or an ability stronger",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Regular practice can sharpen a learner's ability to identify key details."
+  },
+  {
+    "term": "zenith",
+    "partOfSpeech": "noun",
+    "englishDefinition": "the highest or most successful point",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The local shipbuilding industry reached its zenith in the 1960s."
+  },
+  {
+    "term": "impede",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To get in the way of; to hinder.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Parked vehicles impede access for fire engines and ambulances."
+  },
+  {
+    "term": "refute",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to prove that a statement or claim is wrong",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "New evidence may refute the claim that the water is unsafe."
+  },
+  {
+    "term": "astray",
+    "partOfSpeech": "adverb",
+    "englishDefinition": "In a wrong or unknown and wrongly-motivated direction.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Outdated signs may lead walkers astray after the junction."
+  },
+  {
+    "term": "lenient",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Lax; not strict; tolerant of dissent or deviation.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The examiner cannot be lenient when a safety rule is ignored."
+  },
+  {
+    "term": "scorn",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to treat someone or something with strong disrespect",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Public officials should not scorn questions from concerned residents."
+  },
+  {
+    "term": "vouch",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To affirm or warrant the correctness or truth of (something); also, to affirm or warrant (the truth of an assertion or statement).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A former supervisor can vouch for the applicant's reliability."
+  },
+  {
+    "term": "hoist",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to raise something heavy using ropes or machinery",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Workers used a crane to hoist the damaged boat from the water."
+  },
+  {
+    "term": "relinquish",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To give up, abandon or retire from something; to trade away.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Visitors must relinquish their temporary pass when leaving the site."
+  },
+  {
+    "term": "wrinkle",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a small fold or line in cloth, skin, or paper",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Smooth each wrinkle before attaching the safety label to the package."
+  },
+  {
+    "term": "gully",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a narrow channel cut into the ground by running water",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Storm water carved a deep gully beside the footpath."
+  },
+  {
+    "term": "momentous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Outstanding in importance, of great consequence.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The vote was a momentous decision for the island community."
+  },
+  {
+    "term": "sprout",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to begin to grow or produce new shoots",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Seeds will sprout within a week if the soil remains moist."
+  },
+  {
+    "term": "dispel",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To remove (fears, doubts, objections etc.) by proving them unjustified.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Clear evidence can dispel rumours about the vaccination programme."
+  },
+  {
+    "term": "impeach",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To bring a legal proceeding against a public official.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The constitution allows parliament to impeach an official for serious misconduct."
+  },
+  {
+    "term": "oblige",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to force someone by law or circumstances, or do them a favour",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Severe weather may oblige the operator to cancel the crossing."
+  },
+  {
+    "term": "tangle",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to become twisted together in a confused mass",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Keep electrical cables tidy so they do not tangle across the exit."
+  },
+  {
+    "term": "deduct",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To take one thing from another; remove from; make smaller or less by some amount.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The employer may deduct tax but must explain every amount on the payslip."
+  },
+  {
+    "term": "inert",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Unable to move or act; inanimate.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The laboratory stores the sample in an inert container."
+  },
+  {
+    "term": "propagate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To cause to continue or multiply by generation, or successive production.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Misleading posts can propagate rapidly through neighbourhood groups."
+  },
+  {
+    "term": "wayward",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Given to wilful, perverse deviation from the expected norm; tending to stray.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A barrier stopped the wayward trolley from entering the road."
+  },
+  {
+    "term": "huddle",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to crowd closely together or meet privately in a small group",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Passengers huddle beneath the shelter during heavy rain."
+  },
+  {
+    "term": "nascent",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "newly formed and beginning to develop",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The council offered workspace to the nascent technology sector."
+  },
+  {
+    "term": "venomous",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "producing venom or expressing extreme malice",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The guide warned hikers that a venomous snake had been seen nearby."
+  },
+  {
+    "term": "banish",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To expel, especially from the mind.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Better street lighting may banish fear from the evening route."
+  },
+  {
+    "term": "inconceivable",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Unable to be conceived or imagined; unbelievable.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "It is inconceivable that a modern clinic would lack clean water."
+  },
+  {
+    "term": "penchant",
+    "partOfSpeech": "noun",
+    "englishDefinition": "Taste, liking, or inclination (for).",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "He has a penchant for restoring neglected public gardens."
+  },
+  {
+    "term": "averse",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Having a repugnance or opposition of mind.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Some employers are averse to flexible hours despite staff demand."
+  },
+  {
+    "term": "egalitarian",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Characterized by social equality and equal rights for all people.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "An egalitarian admissions policy considers potential as well as prior opportunity."
+  },
+  {
+    "term": "mime",
+    "partOfSpeech": "noun",
+    "englishDefinition": "communication or performance using gesture without speech",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The trainer used mime to demonstrate the emergency signal without speech."
+  },
+  {
+    "term": "purify",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To cleanse, or rid of impurities.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "A portable filter can purify river water during an emergency."
+  },
+  {
+    "term": "xenophobic",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Exhibiting or characterised by xenophobia, a fear or hatred of strangers, foreigners, or extraterrestial life.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The organisation challenged xenophobic remarks directed at migrant workers."
+  },
+  {
+    "term": "deluge",
+    "partOfSpeech": "noun",
+    "englishDefinition": "a severe flood or an overwhelming quantity",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "A deluge of applications overwhelmed the temporary booking system."
+  },
+  {
+    "term": "renovate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To renew; to revamp something to make it look new again.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The association will renovate the hall while preserving its original windows."
+  },
+  {
+    "term": "acupuncture",
+    "partOfSpeech": "noun",
+    "englishDefinition": "treatment involving thin needles inserted at specific body points",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The clinic offers acupuncture alongside conventional pain management."
+  },
+  {
+    "term": "extinguish",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to put out a fire or stop something burning",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Use the correct equipment to extinguish an electrical fire."
+  },
+  {
+    "term": "insatiable",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Not satiable; incapable of being satisfied or appeased; very greedy.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "An insatiable demand for sand threatens the coastal habitat."
+  },
+  {
+    "term": "replenish",
+    "partOfSpeech": "verb",
+    "englishDefinition": "To refill; to renew; to supply again or to add a fresh quantity to.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "Volunteers replenish the food bank shelves every Friday."
+  },
+  {
+    "term": "alienate",
+    "partOfSpeech": "verb",
+    "englishDefinition": "to make someone feel isolated, unwelcome, or unfriendly",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "Overly technical notices may alienate residents who need practical guidance."
+  },
+  {
+    "term": "devious",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "dishonest or using an indirect complicated route",
+    "definitionSource": "project-sense-override",
+    "senseCheckedAgainst": "The adviser warned customers about a devious scheme to collect bank details."
+  },
+  {
+    "term": "innumerable",
+    "partOfSpeech": "adjective",
+    "englishDefinition": "Of a very high number; extremely numerous.",
+    "definitionSource": "datamuse-wordnet",
+    "senseCheckedAgainst": "The coastal path offers innumerable opportunities to observe migrating birds."
+  }
+]

@@ -1,4 +1,4 @@
-export const VOCABULARY_CAT_ENGINE_VERSION = "vocabulary-cat-context-1pl-v3";
+export const VOCABULARY_CAT_ENGINE_VERSION = "vocabulary-cat-context-1pl-2pl-v4";
 export const VOCABULARY_CAT_LIMITS = Object.freeze({
   routeQuestions: 15,
   routeRealQuestions: 12,
@@ -315,7 +315,7 @@ function confidenceFor(answers, standardError, routeSummary, guardrails) {
       ...guardrails.issues,
     ] };
   }
-  return { label: "中等", reasons: ["600 锚点实验版本"] };
+  return { label: "中等", reasons: ["1,000 锚点完整版本"] };
 }
 
 export function buildVocabularyPilotResult(answers, routeResponses, startedAt, completedAt = new Date().toISOString(), savedRoute, options = {}) {

@@ -1,8 +1,10 @@
 import { openDB } from "idb";
 import type { LearningState } from "./product-types";
 
+const createParticipantId=()=>`local-${globalThis.crypto?.randomUUID?.()??`${Date.now()}-${Math.random().toString(36).slice(2)}`}`;
+
 const initialState: LearningState = {
-  schemaVersion: 6,
+  schemaVersion: 7,
   completedSteps: [],
   completedLessons: [],
   reviewIndex: 0,
@@ -23,6 +25,8 @@ const initialState: LearningState = {
   vocabularyTests: [],
   readingAssessmentDraft: null,
   readingAssessments: [],
+  measurementParticipantId: createParticipantId(),
+  measurementSessions: [],
 };
 
 const dbPromise = openDB("breakthrough-ielts", 2, {
@@ -37,7 +41,7 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
   return {
     ...structuredClone(initialState),
     ...(saved ?? {}),
-    schemaVersion: 6,
+    schemaVersion: 7,
     skill: { ...initialState.skill, ...(saved?.skill ?? {}) },
     completedSteps: saved?.completedSteps ?? [],
     completedLessons: saved?.completedLessons ?? [],
@@ -53,6 +57,8 @@ function migrate(saved?: Partial<LearningState> | null): LearningState {
     vocabularyTests: (saved?.vocabularyTests ?? []).filter((result) => "vocabulary" in result || result.mode === "adaptive-v1" || result.mode === "adaptive-v2"),
     readingAssessmentDraft: saved?.readingAssessmentDraft?.mode === "reading-cat-v1" ? saved.readingAssessmentDraft : null,
     readingAssessments: (saved?.readingAssessments ?? []).filter((result) => result.mode === "reading-cat-v1" && result.experimental === true && result.official === false),
+    measurementParticipantId: saved?.measurementParticipantId || createParticipantId(),
+    measurementSessions: (saved?.measurementSessions ?? []).filter((session) => session && typeof session.id === "string" && Array.isArray(session.responses)).slice(-500),
   };
 }
 

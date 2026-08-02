@@ -1,0 +1,13 @@
+{
+  "version": "vocabulary-calibration-awaiting-real-data-v1",
+  "generatedAt": "2026-08-02",
+  "status": "awaiting-data",
+  "model": "2PL",
+  "minimumParticipants": 50,
+  "minimumResponsesPerItem": 50,
+  "participantCount": 0,
+  "responseCount": 0,
+  "eligibleItemCount": 0,
+  "parameters": {},
+  "note": "No empirical parameters are published until real voluntary responses pass sample and quality gates. Runtime therefore uses the authored 1PL parameters."
+}

@@ -1,0 +1,3 @@
+import type { VocabularyAnchor } from "./product-types";
+type Calibration={status:string;version:string;parameters:Record<string,{difficulty:number;discrimination:number;sampleSize:number}>};
+export function applyVocabularyCalibration(bank:VocabularyAnchor[],calibration:Calibration){if(calibration.status!=="calibrated")return bank;return bank.map(anchor=>{const parameter=calibration.parameters[anchor.id];if(!parameter||parameter.sampleSize<50||parameter.discrimination<.35||parameter.discrimination>2.5)return anchor;return{...anchor,difficulty:parameter.difficulty,discrimination:parameter.discrimination,reviewStatus:"calibrated",version:`${anchor.version}+${calibration.version}`};});}

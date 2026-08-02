@@ -6,7 +6,8 @@ import {
   IconTargetArrow, IconVolume, IconWriting, IconX,
 } from "@tabler/icons-react";
 import rawLexicon from "./content/lexicon.json";
-import rawVocabularyAnchors from "./content/vocabulary-anchor-bank-600.json";
+import rawVocabularyAnchors from "./content/vocabulary-anchor-bank-1000.json";
+import rawVocabularyCalibration from "./content/vocabulary-calibration-current.json";
 import rawReadingDifficulty from "./content/reading-course-difficulty-v1.json";
 import { buildLearningLexicon, lexiconQuality } from "./content/lexicon-content.mjs";
 import { curriculum, skillMeta, type CourseLesson } from "./content/course-bank";
@@ -19,6 +20,8 @@ import {
 } from "./learning-engine.mjs";
 import { freshState, loadLearningState, saveLearningState } from "./product-storage";
 import type { LearningState, LexiconItem, MasteryAspect, Skill, View, VocabularyAnchor, VocabularyTestAnswer, VocabularyTestResult } from "./product-types";
+import { applyVocabularyCalibration } from "./vocabulary-calibration";
+import { createMeasurementSession, downloadMeasurementExport, mergeMeasurementSessions, parseMeasurementExport } from "./measurement-data";
 import {
   VOCABULARY_CAT_LIMITS, buildVocabularyPilotResult, buildVocabularyRoute,
   estimateVocabularyAbility, estimateVocabularyRoute, selectNextVocabularyAnchor, shouldStopVocabularyCat,
@@ -31,7 +34,7 @@ import "./reading-difficulty.css";
 
 const lexicon = buildLearningLexicon(rawLexicon) as LexiconItem[];
 const lexiconById = new Map(lexicon.map((item) => [item.id, item]));
-const vocabularyAnchors = rawVocabularyAnchors as VocabularyAnchor[];
+const vocabularyAnchors = applyVocabularyCalibration(rawVocabularyAnchors as VocabularyAnchor[],rawVocabularyCalibration);
 const vocabularyAnchorById = new Map(vocabularyAnchors.map((anchor) => [anchor.id, anchor]));
 const studyOrder = createStudyOrder(lexicon);
 const quality = lexiconQuality(lexicon);
@@ -293,6 +296,9 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
   const readingDraft = state.readingAssessmentDraft;
   const latestReading = state.readingAssessments.at(-1);
   const [practiceMode,setPracticeMode] = useState<PracticeMode | null>(null);
+  const measurementFileRef = useRef<HTMLInputElement>(null);
+  const measurementResponseCount=state.measurementSessions.reduce((sum,session)=>sum+session.responses.length,0);
+  const importMeasurementData=async(event:React.ChangeEvent<HTMLInputElement>)=>{const file=event.target.files?.[0];if(!file)return;try{const sessions=parseMeasurementExport(JSON.parse(await file.text()));update(current=>({...current,measurementSessions:mergeMeasurementSessions(current.measurementSessions,sessions)}));}catch(error){window.alert(error instanceof Error?error.message:"数据文件无法读取");}finally{event.target.value="";}};
 
   const [routeSnapshot,setRouteSnapshot] = useState<ReturnType<typeof estimateVocabularyRoute> | null>(state.vocabularyRouteResult);
   const [showResult,setShowResult] = useState(false);
@@ -347,7 +353,8 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
         progress[item.id] = introduceLexiconItem(progress[item.id],item.id,{confidence:answer.correct?5:1,supportsUse:false});
         if (!answer.correct && !errors.some((error) => error.lexiconId === item.id && !error.resolvedAt)) errors.push({id:crypto.randomUUID(),lexiconId:item.id,aspect:"meaning",prompt:`英文语境释义：${item.term}`,answer:answer.selectedOption,expected:item.meaning,createdAt:now});
       }
-      return {...current,lexiconProgress:progress,errorLog:errors,vocabularyTestDraft:null,vocabularyTests:[...current.vocabularyTests,result].slice(-20),lastStudied:now};
+      const measurementSession=createMeasurementSession({participantId:current.measurementParticipantId,assessment:"vocabulary-cat",startedAt:currentDraft.startedAt,completedAt:now,engineVersion:result.engineVersion??"unknown",bankVersion:result.anchorBankVersion??"unknown",responses:answers.map(answer=>({itemId:answer.anchorId,correct:answer.correct,responseMs:answer.responseMs,difficulty:answer.difficulty,discrimination:answer.discrimination,guessing:answer.guessing,contentVersion:answer.anchorBankVersion,frequencyBand:answer.frequencyBand}))});
+      return {...current,lexiconProgress:progress,errorLog:errors,vocabularyTestDraft:null,vocabularyTests:[...current.vocabularyTests,result].slice(-20),measurementSessions:mergeMeasurementSessions(current.measurementSessions,[measurementSession]),lastStudied:now};
     });
   };
   const recordRoute = (recognized:boolean) => {
@@ -406,7 +413,7 @@ function VocabularyTest({state,update,activeTest,setActiveTest}:{state:LearningS
         <button className="assessment-mode-card" onClick={() => startPractice("daily")}><span className="mode-icon"><IconLanguage/></span><strong>每日词汇自测</strong><em>2–3 分钟</em><small>英中释义快速检查<br/>只用于日常巩固</small><b>开始自测<IconArrowRight/></b></button>
         <button className="assessment-mode-card" onClick={() => startPractice("context")}><span className="mode-icon"><IconFlask2/></span><strong>语境运用练习</strong><em>5–8 分钟</em><small>随机抽取 20 道已审核例句完形<br/>独立于英中释义和词汇 CAT</small><b>开始练习<IconArrowRight/></b></button>
       </div>
-      <div className="recent-assessment"><div><span>最近一次测评</span><strong>{latest ? "词汇量精测" : "尚无正式结果"}</strong>{latest && <small>{new Date(latest.completedAt).toLocaleDateString("zh-CN")}</small>}</div>{latest ? <><div><span>内部宽层级</span><strong>{latest.broadBand ?? "旧版结果"}</strong></div><div><span>可信度</span><strong>{latest.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => setShowResult(true)}>查看详情<IconArrowRight/></button></> : <p>完成词汇量精测后，这里显示层级、区间和可信度。</p>}</div>{latestReading && <div className="recent-assessment reading-recent"><div><span>最近阅读测评</span><strong>{latestReading.internalReadingValue}L · {latestReading.internalLevel}</strong><small>内部实验值</small></div><div><span>文章与题量</span><strong>{latestReading.passageCount}篇 · {latestReading.sampleSize}题</strong></div><div><span>可信度</span><strong>{latestReading.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => startPractice("reading")}>查看详情<IconArrowRight/></button></div>}
+      <div className="recent-assessment"><div><span>最近一次测评</span><strong>{latest ? "词汇量精测" : "尚无正式结果"}</strong>{latest && <small>{new Date(latest.completedAt).toLocaleDateString("zh-CN")}</small>}</div>{latest ? <><div><span>内部宽层级</span><strong>{latest.broadBand ?? "旧版结果"}</strong></div><div><span>可信度</span><strong>{latest.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => setShowResult(true)}>查看详情<IconArrowRight/></button></> : <p>完成词汇量精测后，这里显示层级、区间和可信度。</p>}</div><div className="measurement-data-panel"><div><span>本地真实作答数据</span><strong>{state.measurementSessions.length} 次测评 · {measurementResponseCount} 条响应</strong><small>不含姓名、邮箱、录音、答案文本或IP；只在你主动导出时生成文件。</small></div><button className="outline-button" disabled={!state.measurementSessions.length} onClick={()=>downloadMeasurementExport(state.measurementParticipantId,state.measurementSessions)}>导出校准数据</button><button className="outline-button" onClick={()=>measurementFileRef.current?.click()}>合并数据文件</button><input ref={measurementFileRef} className="sr-only" type="file" accept="application/json" onChange={importMeasurementData}/></div>{latestReading && <div className="recent-assessment reading-recent"><div><span>最近阅读测评</span><strong>{latestReading.internalReadingValue}L · {latestReading.internalLevel}</strong><small>内部实验值</small></div><div><span>文章与题量</span><strong>{latestReading.passageCount}篇 · {latestReading.sampleSize}题</strong></div><div><span>可信度</span><strong>{latestReading.confidence?.label ?? "未标注"}</strong></div><button className="outline-button" onClick={() => startPractice("reading")}>查看详情<IconArrowRight/></button></div>}
     </section>;
   }
   if (draft.phase === "route") {
